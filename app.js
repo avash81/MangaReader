@@ -910,9 +910,29 @@ function initCampaignCountdown() {
 // ==========================================================================
 // 7. ANIME-PLANET 3-STATE TAG ALGEBRA ENGINE
 // ==========================================================================
+function toggleTagsDrawer() {
+  const drawer = document.getElementById("tagFilterDrawer");
+  const btn = document.getElementById("toggleTagsBtn");
+  if (!drawer) return;
+  const isOpen = drawer.classList.toggle("open");
+  drawer.classList.toggle("collapsed", !isOpen);
+  if (btn) btn.classList.toggle("active", isOpen);
+}
+
 function renderTagChips() {
   const container = document.getElementById("tagsContainer");
   if (!container) return;
+
+  const badge = document.getElementById("activeTagsBadge");
+  if (badge) {
+    const count = AppState.includedTags.size + AppState.excludedTags.size;
+    if (count > 0) {
+      badge.textContent = count;
+      badge.style.display = "inline-flex";
+    } else {
+      badge.style.display = "none";
+    }
+  }
 
   container.innerHTML = ALL_GENRE_TAGS.map(tag => {
     let stateClass = "";
@@ -1113,24 +1133,25 @@ function clearDirSearch() {
 // ==========================================================================
 // 8. ADVANCED 4-MODE FULLSCREEN READER ENGINE (MangaPlus Evolution)
 // ==========================================================================
-async function openReader(mangaId, chapterNum = 1) {
+async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
   const manga = MANGA_DATABASE.find(m => m.id === mangaId);
   if (!manga) return;
+
+  // Clear previous live pages so stale images don't show for a new chapter
+  manga.customPages = null;
 
   AppState.activeReader.isOpen = true;
   AppState.activeReader.manga = manga;
   AppState.activeReader.chapterNumber = chapterNum;
   AppState.activeReader.currentPage = 1;
-  AppState.activeReader.totalPages = (manga.customPages && manga.customPages.length > 0) ? manga.customPages.length : 8;
+  AppState.activeReader.totalPages = 8; // placeholder until real pages load
   AppState.activeReader._offlinePages = null;
 
-  // Check if offline chapter is stored
+  // Check if offline chapter is stored first
   try {
     const offlineCh = await MangaDB.getOfflineChapter(`${manga.id}-ch${chapterNum}`);
     if (offlineCh) {
-      if (offlineCh.pdfData) {
-        manga.pdfData = offlineCh.pdfData;
-      }
+      if (offlineCh.pdfData) manga.pdfData = offlineCh.pdfData;
       if (offlineCh.pages && offlineCh.pages.length > 0) {
         AppState.activeReader.totalPages = offlineCh.pages.length;
         AppState.activeReader._offlinePages = offlineCh.pages;
@@ -1142,15 +1163,61 @@ async function openReader(mangaId, chapterNum = 1) {
   if (modal) modal.classList.add("open");
 
   document.getElementById("readerMangaTitle").textContent = manga.title;
-  const select = document.getElementById("readerChapterSelect");
-  if (select) {
-    select.innerHTML = Array.from({ length: manga.totalChapters }, (_, i) => i + 1)
-      .map(ch => `<option value="${ch}" ${ch === chapterNum ? "selected" : ""}>Chapter ${ch}</option>`)
-      .join("");
+
+  // If we have a resolved chapterMap from the detail modal, use it
+  // Otherwise fall back to the passed-in mangadexChapterId
+  let resolvedChapterId = mangadexChapterId;
+  if (!resolvedChapterId && manga._chapterMap) {
+    resolvedChapterId = manga._chapterMap[String(chapterNum)];
   }
 
-  // Scrubber slider setup
+  // Build chapter select from chapterMap keys if available, else use totalChapters
+  const select = document.getElementById("readerChapterSelect");
+  if (select) {
+    if (manga._chapterMap) {
+      const keys = Object.keys(manga._chapterMap).sort((a, b) => parseFloat(a) - parseFloat(b));
+      select.innerHTML = keys.map(ch =>
+        `<option value="${ch}" ${String(ch) === String(chapterNum) ? "selected" : ""}>Chapter ${ch}</option>`
+      ).join("");
+    } else {
+      select.innerHTML = Array.from({ length: manga.totalChapters }, (_, i) => i + 1)
+        .map(ch => `<option value="${ch}" ${ch == chapterNum ? "selected" : ""}>Chapter ${ch}</option>`)
+        .join("");
+    }
+  }
+
   const slider = document.getElementById("pageScrubber");
+
+  // Show loading state in viewport immediately
+  const viewport = document.getElementById("readerViewport");
+  if (viewport) {
+    viewport.innerHTML = `<div class="reader-pages-loading"><div class="chapter-spinner"></div><span>Loading chapter pages...</span></div>`;
+  }
+
+  // Fetch real pages from MangaDex at-home server if we have a chapter ID
+  if (resolvedChapterId && !AppState.activeReader._offlinePages && !manga.pdfData) {
+    try {
+      const atHomeRes = await fetch(`https://api.mangadex.org/at-home/server/${resolvedChapterId}`);
+      if (atHomeRes.ok) {
+        const atHome = await atHomeRes.json();
+        const baseUrl = atHome.baseUrl;
+        const hash = atHome.chapter.hash;
+        const pageFiles = atHome.chapter.dataSaver; // compressed, faster load
+        if (pageFiles && pageFiles.length > 0) {
+          manga.customPages = pageFiles.map(p => `${baseUrl}/data-saver/${hash}/${p}`);
+          AppState.activeReader.totalPages = manga.customPages.length;
+        }
+      }
+    } catch (e) {
+      console.error("At-home fetch error:", e);
+    }
+  }
+
+  // If still no pages found, fall back to totalChapters count with SVG placeholders
+  if (!manga.customPages && !AppState.activeReader._offlinePages && !manga.pdfData) {
+    AppState.activeReader.totalPages = manga.totalChapters || 8;
+  }
+
   if (slider) {
     slider.max = AppState.activeReader.totalPages;
     slider.value = 1;
@@ -1199,6 +1266,7 @@ function renderReaderViewport() {
   if (!viewport) return;
 
   const { manga, chapterNumber, currentPage, totalPages, theme, mode } = AppState.activeReader;
+  if (!manga) return;
   viewport.className = `reader-viewport-container reader-theme-${theme}`;
 
   // Update page number label
@@ -1420,13 +1488,13 @@ function openMangaDetails(mangaId) {
         <div style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:2px;">Author: <b style="color:var(--text-primary);">${safeAuthor}</b></div>
         <div style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:12px;">Artist: <b style="color:var(--text-primary);">${safeArtist}</b></div>
         <p style="font-size:0.88rem; line-height:1.6; color:var(--text-secondary); margin-bottom:18px;">${safeSynopsis}</p>
-        
+
         <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
           <button class="btn-start-read" onclick="closeMangaDetails(); openReader('${manga.id}', 1)">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
             Start Chapter 1
           </button>
-          
+
           <div class="shelf-dropdown-wrap">
             <button class="btn-shelf-trigger" onclick="toggleShelfDropdown(event)" aria-haspopup="true">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
@@ -1443,9 +1511,128 @@ function openMangaDetails(mangaId) {
         </div>
       </div>
     </div>
+
+    <div id="chapterListSection">
+      <div class="chapter-list-header">
+        <span class="chapter-list-title">Chapters</span>
+        <span id="chapterScheduleTag" class="chapter-schedule-tag"></span>
+      </div>
+      <div id="chapterListContainer" class="chapter-list">
+        <div class="chapter-list-loading">
+          <div class="chapter-spinner"></div>
+          <span>Loading chapters from MangaDex...</span>
+        </div>
+      </div>
+    </div>
   `;
 
   modal.classList.add("open");
+
+  // Kick off async chapter fetch after modal is shown
+  if (manga.mangadexId) {
+    _fetchAndRenderChapters(manga);
+  } else {
+    // Fallback for manga without mangadexId: render static chapter list
+    const container = document.getElementById("chapterListContainer");
+    if (!container) return;
+    const rows = Array.from({ length: manga.totalChapters }, (_, i) => {
+      const ch = i + 1;
+      return `<div class="chapter-row" onclick="closeMangaDetails(); openReader('${manga.id}', ${ch})">
+        <span class="chapter-num">Ch. ${ch}</span>
+        <span class="chapter-title">Chapter ${ch}</span>
+        <button class="chapter-read-btn">Read</button>
+      </div>`;
+    }).join("");
+    container.innerHTML = rows || `<div style="padding:16px; color:var(--text-muted); font-size:0.85rem;">No chapters available.</div>`;
+  }
+}
+
+async function _fetchAndRenderChapters(manga) {
+  const container = document.getElementById("chapterListContainer");
+  const scheduleTag = document.getElementById("chapterScheduleTag");
+  if (!container) return;
+
+  try {
+    // MangaDex feed — fetch up to 500 chapters in pages of 100
+    const allChapters = [];
+    let offset = 0;
+    const limit = 100;
+
+    while (true) {
+      const url = `https://api.mangadex.org/manga/${manga.mangadexId}/feed?translatedLanguage[]=en&order[chapter]=asc&limit=${limit}&offset=${offset}&includeExternalUrl=0&contentRating[]=safe&contentRating[]=suggestive&contentRating[]=erotica&contentRating[]=pornographic`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`MangaDex API error: ${res.status}`);
+      const data = await res.json();
+      const batch = data.data || [];
+      allChapters.push(...batch);
+      if (batch.length < limit || allChapters.length >= data.total) break;
+      offset += limit;
+      if (offset >= 500) break; // cap at 500 to avoid runaway
+    }
+
+    if (allChapters.length === 0) {
+      container.innerHTML = `<div style="padding:16px; color:var(--text-muted); font-size:0.85rem;">No English chapters found on MangaDex.</div>`;
+      return;
+    }
+
+    // Build chapter map: chapterNumber (string) -> chapterId
+    // Keep only one entry per chapter number (prefer lower externalUrl-free entries)
+    const chapterMap = {};
+    for (const ch of allChapters) {
+      const num = ch.attributes.chapter;
+      if (num && !chapterMap[num]) {
+        chapterMap[num] = ch.id;
+      }
+    }
+    manga._chapterMap = chapterMap;
+
+    // Determine schedule label
+    const lastCh = allChapters[allChapters.length - 1];
+    const lastPublish = lastCh ? new Date(lastCh.attributes.publishAt) : null;
+
+    if (scheduleTag) {
+      if (manga.releaseDay && manga.releaseDay !== "Archive") {
+        // Ongoing — estimate next drop
+        if (lastPublish) {
+          const nextDrop = new Date(lastPublish.getTime() + 7 * 24 * 60 * 60 * 1000);
+          const now = new Date();
+          if (nextDrop > now) {
+            const diffDays = Math.ceil((nextDrop - now) / (1000 * 60 * 60 * 24));
+            scheduleTag.textContent = `Weekly — next chapter in ~${diffDays} day${diffDays !== 1 ? "s" : ""}`;
+          } else {
+            scheduleTag.textContent = `Weekly — new chapter expected`;
+          }
+        } else {
+          scheduleTag.textContent = `Updates ${manga.releaseDay}`;
+        }
+        scheduleTag.classList.add("ongoing");
+      } else {
+        scheduleTag.textContent = `Completed — ${allChapters.length} chapters`;
+        scheduleTag.classList.add("completed");
+      }
+    }
+
+    // Render chapter rows
+    const rows = allChapters.map(ch => {
+      const attrs = ch.attributes;
+      const chNum = attrs.chapter || "?";
+      const chTitle = attrs.title ? escapeHtml(attrs.title) : "";
+      const pubDate = attrs.publishAt ? new Date(attrs.publishAt).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }) : "";
+      const displayTitle = chTitle || `Chapter ${chNum}`;
+      return `<div class="chapter-row" onclick="closeMangaDetails(); openReader('${manga.id}', '${chNum}', '${ch.id}')">
+        <span class="chapter-num">Ch. ${chNum}</span>
+        <span class="chapter-title">${displayTitle}</span>
+        <span class="chapter-date">${pubDate}</span>
+        <button class="chapter-read-btn">Read</button>
+      </div>`;
+    }).join("");
+
+    container.innerHTML = rows;
+
+  } catch (err) {
+    console.error("Chapter fetch error:", err);
+    container.innerHTML = `<div style="padding:16px; color:var(--text-muted); font-size:0.85rem;">Could not load chapters. Check your connection.</div>`;
+  }
 }
 
 function toggleShelfDropdown(event) {

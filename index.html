@@ -168,31 +168,28 @@
         </div>
       </div>
 
-      <!-- Filter Dashboard -->
-      <div class="filter-dashboard">
-        <!-- Directory Quick Search Input (Screen 5) -->
-        <div class="dir-search-wrap">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="dirSearchInput" class="dir-search-input" placeholder="Search by title, author, or keyword (e.g. Sukuna, Leveling)..." aria-label="Search directory" autocomplete="off"/>
-          <button id="clearDirSearchBtn" class="dir-search-clear" onclick="clearDirSearch()" aria-label="Clear search" style="display:none;">✕</button>
-        </div>
+      <!-- Compact Filter Dashboard -->
+      <div class="filter-dashboard compact-toolbar">
+        <!-- Hidden input for JS compatibility with directory search handlers -->
+        <input type="hidden" id="dirSearchInput" value=""/>
+        <button id="clearDirSearchBtn" style="display:none;" onclick="clearDirSearch()" aria-label="Clear"></button>
 
-        <div class="filter-inputs-grid">
+        <div class="filter-row-inline">
           <!-- Format Select -->
-          <div class="filter-group-wrap filter-group-format">
-            <label for="formatSelect" class="filter-input-label">FORMAT</label>
-            <select id="formatSelect" class="select-dropdown" aria-label="Filter by format">
-              <option value="All">All Formats (Manga, Manhwa, Manhua)</option>
+          <div class="filter-cell">
+            <span class="filter-cell-label">FORMAT</span>
+            <select id="formatSelect" class="select-dropdown compact-select" aria-label="Filter by format">
+              <option value="All">All Formats</option>
               <option value="Manga">Manga (Japan)</option>
-              <option value="Manhwa">Manhwa (Korea / Webtoon)</option>
-              <option value="Manhua">Manhua (China / Wuxia)</option>
+              <option value="Manhwa">Manhwa (Korea)</option>
+              <option value="Manhua">Manhua (China)</option>
             </select>
           </div>
 
           <!-- Demographic Select -->
-          <div class="filter-group-wrap">
-            <label for="demoSelect" class="filter-input-label">DEMOGRAPHIC</label>
-            <select id="demoSelect" class="select-dropdown" aria-label="Filter by demographic">
+          <div class="filter-cell">
+            <span class="filter-cell-label">DEMOGRAPHIC</span>
+            <select id="demoSelect" class="select-dropdown compact-select" aria-label="Filter by demographic">
               <option value="All">All Demographics</option>
               <option value="Shōnen">Shōnen</option>
               <option value="Seinen">Seinen</option>
@@ -202,20 +199,37 @@
           </div>
 
           <!-- Sorting Select -->
-          <div class="filter-group-wrap">
-            <label for="sortSelect" class="filter-input-label">SORT METRIC</label>
-            <select id="sortSelect" class="select-dropdown" aria-label="Sort catalog">
-              <option value="popularity">Popularity (Views + Rating)</option>
+          <div class="filter-cell">
+            <span class="filter-cell-label">SORT</span>
+            <select id="sortSelect" class="select-dropdown compact-select" aria-label="Sort catalog">
+              <option value="popularity">Popularity</option>
               <option value="rating">Highest Rating</option>
-              <option value="newest">Latest Chapter Drop</option>
+              <option value="newest">Latest Drop</option>
               <option value="chapters">Most Chapters</option>
-              <option value="alphabetical">Alphabetical (A - Z)</option>
+              <option value="alphabetical">A - Z</option>
             </select>
+          </div>
+
+          <!-- Tags Drawer Toggle Button -->
+          <div class="filter-cell filter-toggle-cell">
+            <span class="filter-cell-label">GENRES</span>
+            <button id="toggleTagsBtn" class="btn-tags-toggle" onclick="toggleTagsDrawer()" type="button" aria-expanded="false">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+              <span>Filters</span>
+              <span id="activeTagsBadge" class="filter-badge" style="display:none;">0</span>
+              <span class="toggle-arrow">▾</span>
+            </button>
+          </div>
+
+          <!-- Reset Button -->
+          <div class="filter-cell filter-reset-cell">
+            <span class="filter-cell-label">&nbsp;</span>
+            <button class="btn-reset-filters" onclick="resetAllFilters()" type="button" title="Reset all filters">Reset</button>
           </div>
         </div>
 
-        <!-- 3-State Tag Algebra Chips (Anime-Planet Logic) -->
-        <div class="tag-algebra-container">
+        <!-- Collapsible 3-State Tag Algebra Drawer -->
+        <div id="tagFilterDrawer" class="tag-algebra-drawer collapsed">
           <div class="tag-legend-bar">
             <span><b>Tag Filter:</b> Click 1x to <span style="color:var(--accent-terracotta);">Include (+)</span> • Click 2x to <span style="color:#dc2626;">Exclude (-)</span> • Click 3x to Reset</span>
             <button style="background:transparent; border:none; color:var(--accent-terracotta); font-weight:600; cursor:pointer;" onclick="resetAllFilters()">Reset Filters</button>

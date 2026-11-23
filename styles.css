@@ -2297,3 +2297,267 @@ body {
   border: none;
   background: #18181b;
 }
+
+/* ==========================================================================
+   COMPACT CATALOG FILTER TOOLBAR & COLLAPSIBLE DRAWER
+   ========================================================================== */
+.compact-toolbar {
+  padding: 14px 18px !important;
+  margin-bottom: 20px !important;
+}
+
+.filter-row-inline {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1 1 140px;
+  min-width: 120px;
+}
+
+.filter-cell-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.compact-select {
+  height: 38px !important;
+  font-size: 0.85rem !important;
+  padding: 6px 10px !important;
+  background-color: var(--bg-surface-2) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+.btn-tags-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 38px;
+  padding: 0 14px;
+  background: var(--bg-surface-2);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-tags-toggle:hover,
+.btn-tags-toggle.active {
+  border-color: var(--accent-terracotta);
+  color: var(--accent-terracotta);
+  background: rgba(194, 65, 12, 0.06);
+}
+
+.filter-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 9px;
+  background: var(--accent-terracotta);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.toggle-arrow {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.btn-tags-toggle.active .toggle-arrow {
+  transform: rotate(180deg);
+}
+
+.filter-reset-cell {
+  flex: 0 0 auto;
+  min-width: auto;
+}
+
+.btn-reset-filters {
+  height: 38px;
+  padding: 0 14px;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-reset-filters:hover {
+  color: var(--accent-terracotta);
+  border-color: var(--accent-terracotta);
+}
+
+.tag-algebra-drawer {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, margin 0.25s ease;
+}
+
+.tag-algebra-drawer.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  pointer-events: none;
+}
+
+.tag-algebra-drawer:not(.collapsed) {
+  max-height: 320px;
+  opacity: 1;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   CHAPTER LIST & REAL MANGADEX DETAIL PAGE
+   ========================================================================== */
+#chapterListSection {
+  margin-top: 18px;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 14px;
+}
+
+.chapter-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.chapter-list-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.chapter-schedule-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--bg-surface-2);
+  color: var(--text-secondary);
+}
+
+.chapter-schedule-tag.ongoing {
+  background: rgba(194, 65, 12, 0.1);
+  color: var(--accent-terracotta);
+}
+
+.chapter-schedule-tag.completed {
+  background: rgba(22, 163, 74, 0.1);
+  color: #16a34a;
+}
+
+.chapter-list {
+  max-height: 280px;
+  overflow-y: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-2);
+}
+
+.chapter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.chapter-row:last-child {
+  border-bottom: none;
+}
+
+.chapter-row:hover {
+  background: var(--bg-surface-1);
+}
+
+.chapter-num {
+  font-weight: 700;
+  color: var(--accent-terracotta);
+  font-size: 0.85rem;
+  min-width: 60px;
+}
+
+.chapter-title {
+  color: var(--text-primary);
+  font-size: 0.84rem;
+  flex: 1;
+  margin: 0 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chapter-date {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  margin-right: 12px;
+}
+
+.chapter-read-btn {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: var(--accent-terracotta);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.chapter-read-btn:hover {
+  opacity: 0.9;
+}
+
+.chapter-list-loading,
+.reader-pages-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 30px 16px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.chapter-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-subtle);
+  border-top-color: var(--accent-terracotta);
+  border-radius: 50%;
+  animation: chSpin 0.7s linear infinite;
+}
+
+@keyframes chSpin {
+  to { transform: rotate(360deg); }
+}
