@@ -1,0 +1,40 @@
+name: ⚡ MangaVerse Automated Ingestion Bot
+
+on:
+  schedule:
+    # Runs automatically every 3 hours (Tokyo time & Global drops)
+    - cron: '0 */3 * * *'
+  workflow_dispatch: # Allows manual 1-click trigger in GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Check out repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🟢 Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 🤖 Execute MangaVerse Ingestion Bot
+        run: |
+          node manga-bot.js
+
+      - name: 🧪 Run Automated Verification Tests
+        run: |
+          node test-suite.js
+          node test-deep-functions.js
+
+      - name: 🚀 Auto-Commit & Push Updated Catalog
+        run: |
+          git config --global user.name "mangaverse-bot[bot]"
+          git config --global user.email "mangaverse-bot[bot]@users.noreply.github.com"
+          git add app.js sync-log.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "⚡ [Bot] Auto-synced latest manga releases [skip ci]" && git push)

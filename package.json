@@ -1,0 +1,23 @@
+{
+  "name": "mangaverse",
+  "version": "2.4.0",
+  "description": "MangaVerse - Free Online Manga, Manhwa & Manhua Reader with Live Simulpub & Power Catalog",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test-suite.js && node test-deep-functions.js",
+    "sync-bot": "node manga-bot.js",
+    "validate": "node validate-recent-changes.js && node validate-one-by-one.js"
+  },
+  "keywords": [
+    "manga",
+    "manhwa",
+    "manhua",
+    "webtoon",
+    "reader",
+    "pwa",
+    "simulpub"
+  ],
+  "author": "MangaVerse Team",
+  "license": "MIT"
+}
