@@ -1686,13 +1686,30 @@ function renderReaderViewport() {
     return;
   }
 
+  // Smart previous / next chapter calculation
+  let prevCh = null;
+  let nextCh = null;
+  if (AppState.activeSeriesChapters && AppState.activeSeriesChapters.length > 0) {
+    const sortedNums = AppState.activeSeriesChapters
+      .map(c => c.number)
+      .sort((a, b) => parseFloat(a) - parseFloat(b));
+    const curIdx = sortedNums.indexOf(String(chapterNumber));
+    if (curIdx > 0) prevCh = sortedNums[curIdx - 1];
+    if (curIdx !== -1 && curIdx < sortedNums.length - 1) nextCh = sortedNums[curIdx + 1];
+  }
+  if (!prevCh && Number(chapterNumber) > 1) prevCh = String(Number(chapterNumber) - 1);
+  if (!nextCh && Number(chapterNumber) < manga.totalChapters) nextCh = String(Number(chapterNumber) + 1);
+
+  const prevAttr = prevCh ? `onclick="openReader('${manga.id}', '${prevCh}')"` : "disabled";
+  const nextAttr = nextCh ? `onclick="openReader('${manga.id}', '${nextCh}')"` : "disabled";
+
   const quickNavHtml = `
     <div class="reader-chapter-quicknav">
-      <button class="quicknav-btn" onclick="openReader('${manga.id}', ${chapterNumber - 1})" ${chapterNumber <= 1 ? "disabled" : ""}>
+      <button class="quicknav-btn" ${prevAttr}>
         ← Previous
       </button>
       <span class="quicknav-chapter-title">${escapeHtml(manga.title)} • Chapter ${chapterNumber}</span>
-      <button class="quicknav-btn" onclick="openReader('${manga.id}', ${chapterNumber + 1})" ${chapterNumber >= manga.totalChapters ? "disabled" : ""}>
+      <button class="quicknav-btn" ${nextAttr}>
         Next →
       </button>
     </div>
@@ -1706,16 +1723,16 @@ function renderReaderViewport() {
         ${Array.from({ length: totalPages }, (_, i) => {
           const pageNum = i + 1;
           const pageSrc = getReaderPageSrc(manga, chapterNumber, pageNum, totalPages);
-          return `<img class="manga-page-img" src="${pageSrc}" alt="Page ${pageNum}" loading="lazy"/>`;
+          return `<img class="manga-page-img" src="${pageSrc}" alt="Page ${pageNum}" loading="lazy" referrerpolicy="no-referrer"/>`;
         }).join("")}
 
         <!-- Screen 4 Chapter Climax Card -->
         <div class="reader-climax-card">
           <span class="climax-badge">CHAPTER CLIMAX</span>
           <h3 class="climax-title">TO BE CONTINUED</h3>
-          <p class="climax-desc">Chapter ${Math.min(manga.totalChapters, chapterNumber + 1)}: Next episode drops in 3 days. Unlock early with MangaVerse Pass.</p>
+          <p class="climax-desc">Chapter ${nextCh || Math.min(manga.totalChapters, Number(chapterNumber) + 1)}: Next episode drops in 3 days. Unlock early with MangaVerse Pass.</p>
           <div class="climax-actions">
-            <button class="climax-next-btn" onclick="openReader('${manga.id}', ${Math.min(manga.totalChapters, chapterNumber + 1)})">Next Chapter →</button>
+            <button class="climax-next-btn" ${nextAttr}>Next Chapter →</button>
             <button class="climax-fav-btn" onclick="setMangaShelf('${manga.id}', 'favorites')" title="Favorite" aria-label="Favorite">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </button>
@@ -1749,8 +1766,8 @@ function renderReaderViewport() {
       <div class="tap-zone-left" onclick="prevReaderPage()" title="Previous Page"></div>
       <div class="tap-zone-right" onclick="nextReaderPage()" title="Next Page"></div>
       <div class="reader-viewport-spread">
-        <img class="spread-page-img" src="${src1}" alt="Page ${page1}"/>
-        ${page2 !== page1 ? `<img class="spread-page-img" src="${src2}" alt="Page ${page2}"/>` : ""}
+        <img class="spread-page-img" src="${src1}" alt="Page ${page1}" referrerpolicy="no-referrer"/>
+        ${page2 !== page1 ? `<img class="spread-page-img" src="${src2}" alt="Page ${page2}" referrerpolicy="no-referrer"/>` : ""}
       </div>
     `;
   } else {
@@ -1761,7 +1778,7 @@ function renderReaderViewport() {
       <div class="tap-zone-left" onclick="${mode === 'single-rtl' ? 'nextReaderPage()' : 'prevReaderPage()'}" title="Flip"></div>
       <div class="tap-zone-right" onclick="${mode === 'single-rtl' ? 'prevReaderPage()' : 'nextReaderPage()'}" title="Flip"></div>
       <div class="reader-viewport-single">
-        <img class="paginated-img" src="${src}" alt="Page ${currentPage}"/>
+        <img class="paginated-img" src="${src}" alt="Page ${currentPage}" referrerpolicy="no-referrer"/>
       </div>
     `;
   }
