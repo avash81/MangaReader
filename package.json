@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "node test-suite.js",
-    "ingest": "node scripts/category-ingestor.js"
+    "ingest": "node scripts/category-ingestor.js",
+    "sync-real": "node scripts/sync-real-manga.js"
   },
   "keywords": [
     "manga",

@@ -8,545 +8,483 @@
 // ==========================================================================
 const MANGA_DATABASE = [
   {
-    "id": "solo-necromancer",
-    "title": "The Cataclysmic Necromancer",
-    "altTitle": "死霊術士の神化録",
+    "id": "mv-32d76d19",
+    "mangadexId": "32d76d19-8a05-4db0-9fc2-e0b0648fe9d0",
+    "title": "Na Honjaman Level-Up",
+    "altTitle": "Ore Dake Level Up na Ken",
     "type": "Manhwa",
-    "demographic": "Seinen",
+    "demographic": "Shōnen",
     "genres": [
+      "Award Winning",
+      "Monsters",
       "Action",
-      "Fantasy",
-      "Leveling",
-      "Dungeon"
+      "Adventure",
+      "Magic"
     ],
-    "rating": 4.95,
-    "totalChapters": 2,
-    "releaseDay": "Sun",
+    "rating": 4.96,
+    "totalChapters": 200,
+    "releaseDay": "Archive",
     "latestChapter": {
-      "number": 2,
-      "title": "Chapter 2",
-      "views": "120K",
-      "dropTime": "Today (Auto-Synced)"
-    },
-    "isSimulpub": true,
-    "isFeatured": false,
-    "coverPath": null,
-    "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-02.pdf",
-    "chapters": [
-      {
-        "number": 1,
-        "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-01.pdf"
-      },
-      {
-        "number": 2,
-        "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-02.pdf"
-      }
-    ],
-    "author": "Han Jin-Woo",
-    "artist": "Independent Creator",
-    "synopsis": "When the sky shattered into crimson portals, only one necromancer retained memories of Earth's fall, ready to conquer the dungeon towers."
-  },
-  {
-    "id": "bot-noble-villainess-tea",
-    "title": "The Banished Noblewoman's Afternoon Tea Empire",
-    "altTitle": "追放令嬢の紅茶喫茶録",
-    "type": "Manga",
-    "demographic": "Shōjo",
-    "genres": [
-      "Slice of Life",
-      "Romance",
-      "Food/Cooking",
-      "Reijo/Villainess",
-      "Nobility"
-    ],
-    "rating": 4.89,
-    "totalChapters": 34,
-    "releaseDay": "Wed",
-    "latestChapter": {
-      "number": 34,
-      "title": "The Earl's Secret Blend",
-      "views": "180K",
-      "comments": 290,
-      "dropTime": "Today (Auto-Synced by Bot)"
-    },
-    "isSimulpub": true,
-    "isFeatured": false,
-    "campaignKey": "princess",
-    "coverColor": {
-      "bg1": "#831843",
-      "bg2": "#180718",
-      "accent": "#f472b6"
-    },
-    "kanjiSeal": "紅茶",
-    "author": "Haruka Shirasaki",
-    "artist": "Haruka Shirasaki",
-    "synopsis": "After her royal engagement was unjustly dissolved, Eleanor moved to the border port town to establish the kingdom's first boutique tea salon."
-  },
-  {
-    "id": "bot-solo-necromancer",
-    "title": "The Cataclysmic Necromancer: Reborn as God",
-    "altTitle": "死霊術士の神化録",
-    "type": "Manhwa",
-    "demographic": "Seinen",
-    "genres": [
-      "Action",
-      "Fantasy",
-      "Leveling",
-      "Dungeon",
-      "Supernatural"
-    ],
-    "rating": 4.95,
-    "totalChapters": 88,
-    "releaseDay": "Sun",
-    "latestChapter": {
-      "number": 88,
-      "title": "Army of the Ashen Sovereign",
-      "views": "320K",
-      "comments": 480,
-      "dropTime": "Today (Auto-Synced by Bot)"
-    },
-    "isSimulpub": true,
-    "isFeatured": true,
-    "campaignKey": "isekai",
-    "coverColor": {
-      "bg1": "#1e1b4b",
-      "bg2": "#0f172a",
-      "accent": "#a855f7"
-    },
-    "kanjiSeal": "死霊",
-    "author": "Han Jin-Woo",
-    "artist": "Studio BlackMist",
-    "synopsis": "When the sky shattered into crimson portals, only one necromancer retained memories of Earth's fall, ready to conquer the dungeon towers."
-  },
-  {
-    "id": "mv-villainess-destiny",
-    "title": "The Reincarnated Villainess Rewires Her Destiny",
-    "altTitle": "悪役令嬢の運命書き換え録",
-    "type": "Manga",
-    "demographic": "Shōjo",
-    "genres": [
-      "Romance",
-      "Fantasy",
-      "Reijo/Villainess",
-      "Magic",
-      "Nobility"
-    ],
-    "rating": 4.92,
-    "totalChapters": 64,
-    "releaseDay": "Wed",
-    "latestChapter": {
-      "number": 64,
-      "title": "Grand Banquet of the Grand Duke",
-      "views": "1.4M",
-      "comments": 920,
-      "dropTime": "Today (Simulpub)"
-    },
-    "isSimulpub": true,
-    "isFeatured": true,
-    "campaignKey": "princess",
-    "coverColor": {
-      "bg1": "#581c87",
-      "bg2": "#1e1b4b",
-      "accent": "#f472b6"
-    },
-    "kanjiSeal": "悪役",
-    "author": "Elena Rostova",
-    "artist": "Chiyo Hoshino",
-    "synopsis": "Reborn as the notorious Duchess Clarissa who met a tragic end in the original otome game, she resolves to dismantle the royal corruption using her modern corporate finance knowledge."
-  },
-  {
-    "id": "mv-body-switch-knight",
-    "title": "Body-Switched With the Imperial Knight Captain",
-    "altTitle": "騎士団長と入れ替わった聖女",
-    "type": "Manga",
-    "demographic": "Josei",
-    "genres": [
-      "Romance",
-      "Action",
-      "Fantasy",
-      "Body Swap",
-      "Nobility"
-    ],
-    "rating": 4.88,
-    "totalChapters": 48,
-    "releaseDay": "Fri",
-    "latestChapter": {
-      "number": 48,
-      "title": "Clash of Steel and Sanctuary",
-      "views": "980K",
-      "comments": 640,
-      "dropTime": "2 days ago"
-    },
-    "isSimulpub": true,
-    "isFeatured": true,
-    "campaignKey": "princess",
-    "coverColor": {
-      "bg1": "#831843",
-      "bg2": "#180718",
-      "accent": "#fb7185"
-    },
-    "kanjiSeal": "騎士",
-    "author": "Kotoko Morinaga",
-    "artist": "Ren Takagi",
-    "synopsis": "A gentle sanctuary healer suddenly awakens in the battle-hardened body of the Empire's fiercest swordsman right on the eve of a dragon subjugation campaign."
-  },
-  {
-    "id": "mv-aromatic-alchemist",
-    "title": "The Solitary Alchemist's Fragrant Apothecary",
-    "altTitle": "宮廷調香師のひだまり工房",
-    "type": "Manga",
-    "demographic": "Shōjo",
-    "genres": [
-      "Slice of Life",
-      "Fantasy",
-      "Romance",
-      "Magic",
-      "Food/Cooking"
-    ],
-    "rating": 4.85,
-    "totalChapters": 38,
-    "releaseDay": "Sun",
-    "latestChapter": {
-      "number": 38,
-      "title": "The Elixir of Moonlit Petals",
-      "views": "650K",
-      "comments": 410,
-      "dropTime": "4 days ago"
+      "number": 200,
+      "title": "Chapter 200",
+      "views": "5.8M",
+      "dropTime": "Archive Vault"
     },
     "isSimulpub": false,
     "isFeatured": true,
-    "campaignKey": "isekai",
-    "coverColor": {
-      "bg1": "#065f46",
-      "bg2": "#022c22",
-      "accent": "#34d399"
-    },
-    "kanjiSeal": "調香",
-    "author": "Aoi Minami",
-    "artist": "Riko Tachibana",
-    "synopsis": "Banished from the royal palace for concocting soothing botanical remedies instead of war poison, Iris starts her own cozy provincial clinic."
+    "coverUrl": "https://uploads.mangadex.org/covers/32d76d19-8a05-4db0-9fc2-e0b0648fe9d0/e90bdc47-c8b9-4df7-b2c0-17641b645ee1.jpg.512.jpg",
+    "author": "h-goon (현군)",
+    "artist": "REDICE Studio (레드아이스 스튜디오)",
+    "synopsis": "10 years ago, after “the Gate” that connected the real world with the monster world opened, some of the ordinary, everyday people received the power to hunt monsters within the Gate. They are known as “Hunters”. However, not all Hunters are powerful. My name is Sung Jin-Woo, a..."
   },
   {
-    "id": "mv-chrono-samurai",
-    "title": "Chrono Blade: 10,000 Slash Paradox",
-    "altTitle": "時空の刃：無限斬撃",
+    "id": "mv-77bee52c",
+    "mangadexId": "77bee52c-d2d6-44ad-a33a-1734c1fe696a",
+    "title": "Kage no Jitsuryokusha ni Naritakute!",
+    "altTitle": "陰の実力者になりたくて！",
     "type": "Manga",
     "demographic": "Shōnen",
     "genres": [
+      "Reincarnation",
       "Action",
-      "Supernatural",
-      "Samurai",
-      "Martial Arts",
-      "Sci-Fi"
+      "Demons",
+      "Comedy",
+      "Martial Arts"
     ],
-    "rating": 4.96,
-    "totalChapters": 124,
-    "releaseDay": "Sun",
+    "rating": 4.95,
+    "totalChapters": 92,
+    "releaseDay": "Mon",
     "latestChapter": {
-      "number": 124,
-      "title": "Zero Domain of Edo",
-      "views": "3.8M",
-      "comments": 3400,
-      "dropTime": "Live Now (Tokyo Sync)"
+      "number": 92,
+      "title": "Chapter 92",
+      "views": "5.5M",
+      "dropTime": "Today (Tokyo Sync)"
     },
     "isSimulpub": true,
     "isFeatured": true,
-    "campaignKey": "jumpfest",
-    "coverColor": {
-      "bg1": "#991b1b",
-      "bg2": "#18181b",
-      "accent": "#ff2a5f"
-    },
-    "kanjiSeal": "時空",
-    "author": "Kenjiro Murata",
-    "artist": "Kenjiro Murata",
-    "synopsis": "A cursed ronin sentenced to repeat the final 30 seconds of historical battles until he can cut down the immortal chrono-demons orchestrating Japan's downfall."
+    "coverUrl": "https://uploads.mangadex.org/covers/77bee52c-d2d6-44ad-a33a-1734c1fe696a/6079dd31-838b-4d61-87c4-121f3ad19158.jpg.512.jpg",
+    "author": "Sakano Anri",
+    "artist": "Sakano Anri",
+    "synopsis": "Just like how everyone adored heroes in their childhood, a certain young man adored those powers hidden in shadows. Ninjas, rogues, shadowy mentor types, that sort of deal.   After hiding his strength and living the mediocre life of a NPC by day while undergoing frenzied train..."
   },
   {
-    "id": "mv-abyssal-sorcerer",
-    "title": "Abyssal Sorcery & The Cursed Seal",
-    "altTitle": "深淵の呪術師",
+    "id": "mv-e78a489b",
+    "mangadexId": "e78a489b-6632-4d61-b00b-5206f5b8b22b",
+    "title": "Tensei Shitara Slime datta Ken",
+    "altTitle": "Tensei Slime",
     "type": "Manga",
     "demographic": "Shōnen",
     "genres": [
-      "Action",
-      "Dark Fantasy",
-      "Supernatural",
-      "School Life"
-    ],
-    "rating": 4.93,
-    "totalChapters": 180,
-    "releaseDay": "Sun",
-    "latestChapter": {
-      "number": 180,
-      "title": "Unsealing the Void God",
-      "views": "4.2M",
-      "comments": 4800,
-      "dropTime": "Live Now (Tokyo Sync)"
-    },
-    "isSimulpub": true,
-    "isFeatured": true,
-    "campaignKey": "jumpfest",
-    "coverColor": {
-      "bg1": "#1e1b4b",
-      "bg2": "#0f172a",
-      "accent": "#818cf8"
-    },
-    "kanjiSeal": "呪術",
-    "author": "Satoru Kanzaki",
-    "artist": "Satoru Kanzaki",
-    "synopsis": "In modern Tokyo, high schoolers awaken ancient abyssal contracts to fight monstrous anomalies that feed on collective human grief."
-  },
-  {
-    "id": "mv-void-hunter",
-    "title": "Solo Hunter of the Stellar Gate",
-    "altTitle": "星門の無双狩人",
-    "type": "Manhwa",
-    "demographic": "Seinen",
-    "genres": [
-      "Action",
-      "Dungeon",
-      "Leveling",
+      "Reincarnation",
       "Monsters",
-      "Supernatural"
-    ],
-    "rating": 4.97,
-    "totalChapters": 210,
-    "releaseDay": "Thu",
-    "latestChapter": {
-      "number": 210,
-      "title": "S-Rank Gate: Eclipse Sovereign",
-      "views": "5.1M",
-      "comments": 6200,
-      "dropTime": "Today (Simulpub)"
-    },
-    "isSimulpub": true,
-    "isFeatured": true,
-    "campaignKey": "isekai",
-    "coverColor": {
-      "bg1": "#0f172a",
-      "bg2": "#020617",
-      "accent": "#00f2fe"
-    },
-    "kanjiSeal": "覚醒",
-    "author": "Chul-soo Park",
-    "artist": "Studio RedMoon",
-    "synopsis": "Left for dead in a catastrophic Double Dungeon collapse, Sung Jin awakens an ancient planetary interface granting infinite quest progression."
-  },
-  {
-    "id": "mv-cyber-ghost-neo-tokyo",
-    "title": "CyberGhost 2099: Neo-Tokyo Syndicate",
-    "altTitle": "電脳怪異録2099",
-    "type": "Manga",
-    "demographic": "Seinen",
-    "genres": [
-      "Cyberpunk",
-      "Sci-Fi",
       "Action",
-      "Psychological",
-      "Mystery"
+      "Demons",
+      "Comedy"
     ],
-    "rating": 4.89,
-    "totalChapters": 56,
+    "rating": 4.94,
+    "totalChapters": 96,
     "releaseDay": "Tue",
     "latestChapter": {
-      "number": 56,
-      "title": "Neural Ghost Protocol",
-      "views": "820K",
-      "comments": 750,
-      "dropTime": "Yesterday"
+      "number": 96,
+      "title": "Chapter 96",
+      "views": "5.3M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": true,
+    "coverUrl": "https://uploads.mangadex.org/covers/e78a489b-6632-4d61-b00b-5206f5b8b22b/420ec3c0-2dab-47f2-8f9e-a9e0c3faf16d.jpg.512.jpg",
+    "author": "Fuse",
+    "artist": "Kawakami Taiki",
+    "synopsis": "The ordinary Mikami Satoru found himself dying after being stabbed by a slasher. It should have been the end of his meager 37 years, but he found himself deaf and blind after hearing a mysterious voice.   He had been reincarnated into a slime!      While complaining about beco..."
+  },
+  {
+    "id": "mv-b0b721ff",
+    "mangadexId": "b0b721ff-c388-4486-aa0f-c2b0bb321512",
+    "title": "Sousou no Frieren",
+    "altTitle": "葬送のフリーレン",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Award Winning",
+      "Monsters",
+      "Demons",
+      "Adventure",
+      "Magic"
+    ],
+    "rating": 4.93,
+    "totalChapters": 100,
+    "releaseDay": "Wed",
+    "latestChapter": {
+      "number": 100,
+      "title": "Chapter 100",
+      "views": "5.0M",
+      "dropTime": "Today (Tokyo Sync)"
     },
     "isSimulpub": true,
     "isFeatured": false,
-    "campaignKey": "jumpfest",
-    "coverColor": {
-      "bg1": "#1e1e38",
-      "bg2": "#0a0a14",
-      "accent": "#00f2fe"
-    },
-    "kanjiSeal": "電脳",
-    "author": "Takeshi Endo",
-    "artist": "Kuroda Visuals",
-    "synopsis": "A rogue detective equipped with black-market neural implants investigates corporate paranormal AI cults in the neon underbelly of Neo-Tokyo."
+    "coverUrl": "https://uploads.mangadex.org/covers/b0b721ff-c388-4486-aa0f-c2b0bb321512/b9a049b0-186b-4714-a83e-bb965458914a.jpg.512.jpg",
+    "author": "Yamada Kanehito",
+    "artist": "Abe Tsukasa",
+    "synopsis": "The adventure is over but life goes on for an elf mage just beginning to learn what living is all about. Elf mage Frieren and her courageous fellow adventurers have defeated the Demon King and brought peace to the land. With the great struggle over, they all go their separate ..."
   },
   {
-    "id": "mv-celestial-immortal",
-    "title": "The Heavenly Sovereign's Return",
-    "altTitle": "万古至尊归来",
+    "id": "mv-a96676e5",
+    "mangadexId": "a96676e5-8ae2-425e-b549-7f15dd34a6d8",
+    "title": "Komi-san wa Komyushou Desu.",
+    "altTitle": "Comi-san ha Comyusho Desu.",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Award Winning",
+      "Romance",
+      "Comedy",
+      "School Life",
+      "Slice of Life"
+    ],
+    "rating": 4.92,
+    "totalChapters": 500,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 500,
+      "title": "Chapter 500",
+      "views": "4.8M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://uploads.mangadex.org/covers/a96676e5-8ae2-425e-b549-7f15dd34a6d8/f8f44329-1dd7-4301-9ec7-a4a76182e8eb.jpg.512.jpg",
+    "author": "Oda Tomohito",
+    "artist": "Oda Tomohito",
+    "synopsis": "Komi-san is a beautiful and admirable girl that no one can take their eyes off of. Almost the whole school sees her as the cold beauty that's out of their league, but Tadano Hitohito knows the truth: she's just really bad at communicating with others. Komi-san, who wishes to f..."
+  },
+  {
+    "id": "mv-eb2d1a45",
+    "mangadexId": "eb2d1a45-d4e7-4e32-a171-b5b029c5b0cb",
+    "title": "Kumo desu ga, Nani ka?",
+    "altTitle": "kumoko",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Reincarnation",
+      "Monsters",
+      "Action",
+      "Demons",
+      "Comedy"
+    ],
+    "rating": 4.91,
+    "totalChapters": 108,
+    "releaseDay": "Fri",
+    "latestChapter": {
+      "number": 108,
+      "title": "Chapter 108",
+      "views": "4.5M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://uploads.mangadex.org/covers/eb2d1a45-d4e7-4e32-a171-b5b029c5b0cb/4ac61d4b-77d6-4946-b24f-0935eafa0305.jpg.512.jpg",
+    "author": "Baba Okina",
+    "artist": "Kakashi Asahiro",
+    "synopsis": "When a mysterious explosion killed an entire class full of high school students, the souls of everyone in class were transported into a fantasy world and reincarnated. While some students were reincarnated as princes or prodigies, others were not as blessed.   Our heroine, who..."
+  },
+  {
+    "id": "mv-9d3d3403",
+    "mangadexId": "9d3d3403-1a87-4737-9803-bc3d99db1424",
+    "title": "Ki ni Natteru Hito ga Otoko ja Nakatta",
+    "altTitle": "気になってる人が男じゃなかった",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Award Winning",
+      "Romance",
+      "Girls' Love",
+      "School Life",
+      "Slice of Life"
+    ],
+    "rating": 4.9,
+    "totalChapters": 112,
+    "releaseDay": "Sat",
+    "latestChapter": {
+      "number": 112,
+      "title": "Chapter 112",
+      "views": "4.3M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://uploads.mangadex.org/covers/9d3d3403-1a87-4737-9803-bc3d99db1424/fac191d0-96c1-4ebb-bf79-b7616d7162ac.jpg.512.jpg",
+    "author": "Arai Sumiko",
+    "artist": "Arai Sumiko",
+    "synopsis": "Fashionable and upbeat high schooler Aya falls head over heels for an employee at a local CD shop. He’s got an air of mystery about him, always dressed well, and has impeccable taste in music. Little does she know — this supposedly male employee is actually her female classmat..."
+  },
+  {
+    "id": "mv-d7037b2a",
+    "mangadexId": "d7037b2a-874a-4360-8a7b-07f2899152fd",
+    "title": "Mairimashita! Iruma-kun",
+    "altTitle": "魔入りました！入間くん",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Monsters",
+      "Action",
+      "Demons",
+      "Romance",
+      "Comedy"
+    ],
+    "rating": 4.89,
+    "totalChapters": 116,
+    "releaseDay": "Sun",
+    "latestChapter": {
+      "number": 116,
+      "title": "Chapter 116",
+      "views": "4.0M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://uploads.mangadex.org/covers/d7037b2a-874a-4360-8a7b-07f2899152fd/59ab55ed-a537-426e-b755-6337740df580.jpg.512.jpg",
+    "author": "Nishi Osamu ",
+    "artist": "Nishi Osamu ",
+    "synopsis": "Hopeless pushover Iruma Suzuki has found himself in a devil of a predicament... His trashy parents have sold off his soul, and he now has to live and attend school in the Netherworld. But with his unique survival skills and doting demon grandfather’s support, Iruma will surely..."
+  },
+  {
+    "id": "mv-878634d2",
+    "mangadexId": "878634d2-ea39-4001-a4bf-31458020d16a",
+    "title": "Akuyaku Reijou Level 99 ~Watashi wa Ura Boss desuga Maou de wa Arimasen~",
+    "altTitle": "悪役令嬢レベル９９～私は裏ボスですが魔王ではありません～",
+    "type": "Manga",
+    "demographic": "Josei",
+    "genres": [
+      "Reincarnation",
+      "Monsters",
+      "Action",
+      "Demons",
+      "Romance"
+    ],
+    "rating": 4.88,
+    "totalChapters": 120,
+    "releaseDay": "Mon",
+    "latestChapter": {
+      "number": 120,
+      "title": "Chapter 120",
+      "views": "3.8M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://uploads.mangadex.org/covers/878634d2-ea39-4001-a4bf-31458020d16a/4d34538d-e76b-44db-ba7e-f7e7d13c9ade.jpg.512.jpg",
+    "author": "Tanabata Satori",
+    "artist": "Nokomi (のこみ)",
+    "synopsis": "I reincarnated as the \"Villainess Eumiella\" from an RPG Otome game. In the main story, Eumiella is merely a side character, but after the ending, she re-enters the story as the Hidden Boss, a character boasting high stats on par with the heroes! Lighting a fire in my gamer's s..."
+  },
+  {
+    "id": "mv-96471a2c",
+    "mangadexId": "96471a2c-59f3-4a08-be7d-640bc0c022a4",
+    "title": "Saigo ni Hitotsu Dake Onegai Shite mo Yoroshii Deshou ka",
+    "altTitle": "最後にひとつだけお願いしてもよろしいでしょうか",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Monsters",
+      "Action",
+      "Romance",
+      "Comedy",
+      "Martial Arts"
+    ],
+    "rating": 4.87,
+    "totalChapters": 124,
+    "releaseDay": "Tue",
+    "latestChapter": {
+      "number": 124,
+      "title": "Chapter 124",
+      "views": "3.5M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://uploads.mangadex.org/covers/96471a2c-59f3-4a08-be7d-640bc0c022a4/149f1fd9-59d6-4267-8ead-f6c7859945b5.jpg.512.jpg",
+    "author": "Otori Nana",
+    "artist": "Hoonoki Sora",
+    "synopsis": "The engagement between Scarlet, a noblewoman from a ducal family, and Second Prince Kyle was suddenly annulled during a ball. She had been falsely accused of harassing a girl called Terenezza, daughter to a baron, whom the Prince doted on heavily. Condemned by everyone around ..."
+  },
+  {
+    "id": "mv-c6bbbeca",
+    "mangadexId": "c6bbbeca-f4fd-4595-9d4d-4ba31370d08c",
+    "title": "Otome Game no Hametsu Flag shika nai Akuyaku Reijou ni Tensei shite shimatta...",
+    "altTitle": "Bakarina",
+    "type": "Manga",
+    "demographic": "Josei",
+    "genres": [
+      "Reincarnation",
+      "Romance",
+      "Comedy",
+      "Reverse Harem",
+      "Video Games"
+    ],
+    "rating": 4.86,
+    "totalChapters": 128,
+    "releaseDay": "Wed",
+    "latestChapter": {
+      "number": 128,
+      "title": "Chapter 128",
+      "views": "3.3M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://uploads.mangadex.org/covers/c6bbbeca-f4fd-4595-9d4d-4ba31370d08c/146fa3e4-a671-433c-b667-4a2e9e3e537f.jpg.512.jpg",
+    "author": "Yamaguchi Satoru",
+    "artist": "Hidaka Nami",
+    "synopsis": "I recovered my past memories when I was hit on the head by a rock. I am Katarina Claes, the eight year old daughter of the duke. In a feverish nightmare, in which the prince’s fiancee was determined, I have realized that this is the otome game from the previous life. Also, I h..."
+  },
+  {
+    "id": "mv-af38f328",
+    "mangadexId": "af38f328-8df1-4b4c-a272-e737625c3ddc",
+    "title": "Senpai ga Uzai Kouhai no Hanashi",
+    "altTitle": "先輩がうざい後輩の話",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Award Winning",
+      "Romance",
+      "Comedy",
+      "Office Workers",
+      "Slice of Life"
+    ],
+    "rating": 4.85,
+    "totalChapters": 236,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 236,
+      "title": "Chapter 236",
+      "views": "3.0M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://uploads.mangadex.org/covers/af38f328-8df1-4b4c-a272-e737625c3ddc/a3673b0d-7bab-42ff-aab0-c4c54c9fc563.jpg.512.jpg",
+    "author": "Shiro Manta",
+    "artist": "Shiro Manta",
+    "synopsis": "Futaba Igarashi is a diminutive office lady who finds that her towering and boisterous work senpai Harumi Takeda always gets in her hair, but he always has her back, he always keeps her company, and she starts noticing that her heart is slowly veering towards him… Won 1st plac..."
+  },
+  {
+    "id": "mv-829fc3a7",
+    "mangadexId": "829fc3a7-d4f4-42e9-9032-0917083f9e0d",
+    "title": "Nán Hào Shàng Fēng",
+    "altTitle": "南号と尚風",
     "type": "Manhua",
     "demographic": "Shōnen",
     "genres": [
-      "Cultivation",
-      "Action",
-      "Martial Arts",
-      "Fantasy",
-      "Reincarnation"
-    ],
-    "rating": 4.79,
-    "totalChapters": 320,
-    "releaseDay": "Mon",
-    "latestChapter": {
-      "number": 320,
-      "title": "Shattering the Nine Heavens",
-      "views": "1.9M",
-      "comments": 1100,
-      "dropTime": "3 days ago"
-    },
-    "isSimulpub": true,
-    "isFeatured": false,
-    "campaignKey": "isekai",
-    "coverColor": {
-      "bg1": "#78350f",
-      "bg2": "#451a03",
-      "accent": "#f59e0b"
-    },
-    "kanjiSeal": "至尊",
-    "author": "Li Tian",
-    "artist": "Dragon Cloud Manhua",
-    "synopsis": "Betrayed by his sworn brotherhood after reaching the pinnacle of the Martial Emperor realm, Xiao Yan reincarnates into the body of a disgraced merchant clan heir."
-  },
-  {
-    "id": "mv-tokyo-sweetheart",
-    "title": "After-Hours Romance at the Tokyo Bistro",
-    "altTitle": "深夜ビストロの甘い罠",
-    "type": "Manga",
-    "demographic": "Josei",
-    "genres": [
-      "Romance",
-      "Slice of Life",
-      "Food/Cooking",
-      "Drama",
-      "Workplace"
-    ],
-    "rating": 4.87,
-    "totalChapters": 44,
-    "releaseDay": "Sat",
-    "latestChapter": {
-      "number": 44,
-      "title": "Vintage Wine and Confessions",
-      "views": "710K",
-      "comments": 530,
-      "dropTime": "5 days ago"
-    },
-    "isSimulpub": false,
-    "isFeatured": false,
-    "campaignKey": "princess",
-    "coverColor": {
-      "bg1": "#831843",
-      "bg2": "#2a0818",
-      "accent": "#f472b6"
-    },
-    "kanjiSeal": "純情",
-    "author": "Sayaka Ono",
-    "artist": "Sayaka Ono",
-    "synopsis": "An overworked senior marketing director discovers solace in a cozy tucked-away Ginza bistro, where the quiet head chef crafts custom dishes to mend broken hearts."
-  },
-  {
-    "id": "mv-valkyrie-rebellion",
-    "title": "Valkyrie Protocol: Ragnarok Zero",
-    "altTitle": "ワルキューレ零式",
-    "type": "Manga",
-    "demographic": "Seinen",
-    "genres": [
-      "Mecha",
-      "Action",
-      "Sci-Fi",
-      "Military",
-      "Post-Apocalyptic"
-    ],
-    "rating": 4.82,
-    "totalChapters": 72,
-    "releaseDay": "Tue",
-    "latestChapter": {
-      "number": 72,
-      "title": "Operation Bifrost Breakdown",
-      "views": "1.1M",
-      "comments": 840,
-      "dropTime": "Yesterday"
-    },
-    "isSimulpub": true,
-    "isFeatured": false,
-    "campaignKey": "jumpfest",
-    "coverColor": {
-      "bg1": "#1e3a8a",
-      "bg2": "#0f172a",
-      "accent": "#38bdf8"
-    },
-    "kanjiSeal": "戦乙女",
-    "author": "Daisuke Ogata",
-    "artist": "MechaWorks Tokyo",
-    "synopsis": "When cybernetic Norse deities descend to harvest the dying Earth's geothermal core, humanity's last stand rests with a rogue squad of mecha-piloting Valkyrie units."
-  },
-  {
-    "id": "mv-demon-school-renegade",
-    "title": "The Honor Student at the Demon Realm Academy",
-    "altTitle": "魔界名門校の首席人間",
-    "type": "Manga",
-    "demographic": "Shōnen",
-    "genres": [
+      "Award Winning",
       "Comedy",
-      "Supernatural",
       "School Life",
-      "Fantasy",
-      "Action"
-    ],
-    "rating": 4.91,
-    "totalChapters": 95,
-    "releaseDay": "Thu",
-    "latestChapter": {
-      "number": 95,
-      "title": "The High Inquisitor's Pop Quiz",
-      "views": "2.3M",
-      "comments": 1650,
-      "dropTime": "Today"
-    },
-    "isSimulpub": true,
-    "isFeatured": false,
-    "campaignKey": "jumpfest",
-    "coverColor": {
-      "bg1": "#4c1d95",
-      "bg2": "#1e1b4b",
-      "accent": "#a78bfa"
-    },
-    "kanjiSeal": "魔界",
-    "author": "Kouji Asahi",
-    "artist": "Kouji Asahi",
-    "synopsis": "Through an administrative mishap in the underworld bureaucracy, a thoroughly normal human high school student is enrolled as the prestigious top-ranking demon prodigy."
-  },
-  {
-    "id": "mv-whispering-shadows",
-    "title": "Whispers in the Starlight Library",
-    "altTitle": "星詠み図書館の古文書録",
-    "type": "Manga",
-    "demographic": "Shōjo",
-    "genres": [
-      "Mystery",
-      "Supernatural",
-      "Fantasy",
-      "Drama"
+      "Slice of Life"
     ],
     "rating": 4.84,
-    "totalChapters": 52,
+    "totalChapters": 136,
+    "releaseDay": "Fri",
+    "latestChapter": {
+      "number": 136,
+      "title": "Chapter 136",
+      "views": "2.8M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://uploads.mangadex.org/covers/829fc3a7-d4f4-42e9-9032-0917083f9e0d/e4368bbd-a339-4091-8e32-141e9694d9b6.png.512.jpg",
+    "author": "Brownie (布朗尼)",
+    "artist": "Brownie (布朗尼)",
+    "synopsis": "A comedy about two ordinary high school boys. Alt Official Raw: AC.QQ Buy: - Taobao: Volume 1, Volume 2"
+  },
+  {
+    "id": "mv-812f9696",
+    "mangadexId": "812f9696-048f-496d-9ed4-84c99345d1fb",
+    "title": "Yāo Shén Jì",
+    "altTitle": "Cuentos de Demonios y Dioses",
+    "type": "Manhua",
+    "demographic": "Shōnen",
+    "genres": [
+      "Time Travel",
+      "Action",
+      "Romance",
+      "Martial Arts",
+      "Adventure"
+    ],
+    "rating": 4.83,
+    "totalChapters": 140,
     "releaseDay": "Sat",
     "latestChapter": {
-      "number": 52,
-      "title": "The Forbidden Book of constellations",
-      "views": "540K",
-      "comments": 390,
-      "dropTime": "5 days ago"
+      "number": 140,
+      "title": "Chapter 140",
+      "views": "2.5M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://uploads.mangadex.org/covers/812f9696-048f-496d-9ed4-84c99345d1fb/4dcdd628-9195-4fa8-8079-50541ed60515.jpg.512.jpg",
+    "author": "Mad Snail",
+    "artist": "Jiang Ruotai",
+    "synopsis": "Nie Li became the strongest Demon Spiritualist and stood at the pinnacle of the martial world. However, he lost his life during the battle with the Sage-Emperor and six deity-ranked beasts.      His soul was then brought back to when he was still 13 years old. At this point in..."
+  },
+  {
+    "id": "mv-3f1453fb",
+    "mangadexId": "3f1453fb-9dac-4aca-a2ea-69613856c952",
+    "title": "Tāmen De Gùshì",
+    "altTitle": "SQ 君の名前から始まる",
+    "type": "Manhua",
+    "demographic": "Shōnen",
+    "genres": [
+      "Romance",
+      "Comedy",
+      "Girls' Love",
+      "Drama",
+      "School Life"
+    ],
+    "rating": 4.82,
+    "totalChapters": 144,
+    "releaseDay": "Sun",
+    "latestChapter": {
+      "number": 144,
+      "title": "Chapter 144",
+      "views": "2.3M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://uploads.mangadex.org/covers/3f1453fb-9dac-4aca-a2ea-69613856c952/d61cd6e5-7ae2-4e7d-a2a7-a6e8dce808a9.png.512.jpg",
+    "author": "Tan Jiu (坛九)",
+    "artist": "Tan Jiu (坛九)",
+    "synopsis": "The funny romantic story of how Qiu Tong and Sun Jing met and fell in love. Also contains insert art of the characters by the author. --- - Original Manhua <AC.QQ> - Japanese Translation"
+  },
+  {
+    "id": "mv-17a56d33",
+    "mangadexId": "17a56d33-9443-433a-9e0d-70459893ed8f",
+    "title": "Wǒ Jiā Lǎopo Láizì Yīqiān Nián Qián",
+    "altTitle": "我家老婆来自一千年前",
+    "type": "Manhua",
+    "demographic": "Shōnen",
+    "genres": [
+      "Time Travel",
+      "Romance",
+      "Comedy",
+      "Martial Arts",
+      "Drama"
+    ],
+    "rating": 4.82,
+    "totalChapters": 456,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 456,
+      "title": "Chapter 456",
+      "views": "2.0M",
+      "dropTime": "Archive Vault"
     },
     "isSimulpub": false,
     "isFeatured": false,
-    "campaignKey": "princess",
-    "coverColor": {
-      "bg1": "#1e293b",
-      "bg2": "#0f172a",
-      "accent": "#94a3b8"
-    },
-    "kanjiSeal": "星詠",
-    "author": "Mirei Kasumi",
-    "artist": "Mirei Kasumi",
-    "synopsis": "Deep beneath the Royal Observatory lies a library where every book is written by the stars themselves, revealing the exact lifespan and fate of every citizen."
+    "coverUrl": "https://uploads.mangadex.org/covers/17a56d33-9443-433a-9e0d-70459893ed8f/8d105d4e-a60e-4284-8321-d0904906574e.png.512.jpg",
+    "author": "Yuewen Manhua (阅文漫画)",
+    "artist": "Painting Culture (之画文化)",
+    "synopsis": "Jiang He, a girl from the Tang Dynasty, traveled through a thousand years and appeared in front of Xu Qing. Fate brought together this love that spanned a thousand years. Everything the girl was familiar with has become history. Relatives, friends, and enemies have all been le..."
   }
 ];
 
@@ -590,6 +528,12 @@ const CAMPAIGN_PRESETS = {
 // 2. SVG DYNAMIC ARTWORK GENERATOR
 // ==========================================================================
 function generateCoverSVG(manga) {
+  if (manga.coverUrl) {
+    return manga.coverUrl;
+  }
+  if (manga.coverPath) {
+    return manga.coverPath;
+  }
   if (manga.customCoverDataUrl) {
     return manga.customCoverDataUrl;
   }
