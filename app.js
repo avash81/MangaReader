@@ -8,74 +8,64 @@
 // ==========================================================================
 const MANGA_DATABASE = [
   {
-    "id": "solo-necromancer",
-    "title": "The Cataclysmic Necromancer",
-    "altTitle": "死霊術士の神化録",
-    "type": "Manhwa",
-    "demographic": "Seinen",
-    "genres": [
-      "Action",
-      "Fantasy",
-      "Leveling",
-      "Dungeon"
-    ],
-    "rating": 4.95,
-    "totalChapters": 2,
-    "releaseDay": "Sun",
-    "latestChapter": {
-      "number": 2,
-      "title": "Chapter 2",
-      "views": "120K",
-      "dropTime": "Today (Auto-Synced)"
-    },
-    "isSimulpub": true,
-    "isFeatured": false,
-    "coverPath": null,
-    "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-02.pdf",
-    "chapters": [
-      {
-        "number": 1,
-        "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-01.pdf"
-      },
-      {
-        "number": 2,
-        "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-02.pdf"
-      }
-    ],
-    "author": "Han Jin-Woo",
-    "artist": "Independent Creator",
-    "synopsis": "When the sky shattered into crimson portals, only one necromancer retained memories of Earth's fall, ready to conquer the dungeon towers."
-  },
-  {
-    "id": "villainess-tea-empire",
-    "title": "The Banished Noblewoman's Afternoon Tea Empire",
-    "altTitle": "追放令嬢の紅茶喫茶録",
+    "id": "mv-e7eabe96",
+    "mangadexId": "e7eabe96-aa17-476f-b431-2497d5e9d060",
+    "title": "Black Clover",
+    "altTitle": "ブラッククローバー",
     "type": "Manga",
-    "demographic": "Shōjo",
+    "demographic": "Shōnen",
     "genres": [
-      "Slice of Life",
-      "Romance",
-      "Food/Cooking",
-      "Nobility",
-      "Reijo/Villainess"
+      "Monsters",
+      "Action",
+      "Demons",
+      "Comedy",
+      "Adventure"
     ],
-    "rating": 4.89,
-    "totalChapters": 1,
+    "rating": 4.93,
+    "totalChapters": 392,
     "releaseDay": "Archive",
     "latestChapter": {
-      "number": 1,
-      "title": "Chapter 1",
-      "views": "120K",
+      "number": 392,
+      "title": "Chapter 392",
+      "views": "7.8M",
       "dropTime": "Archive Vault"
     },
     "isSimulpub": false,
     "isFeatured": false,
-    "coverPath": null,
-    "pdfData": null,
-    "chapters": [],
-    "author": "Haruka Shirasaki",
-    "artist": "Independent Creator",
-    "synopsis": "After her royal engagement was unjustly dissolved, Eleanor moved to the border port town to establish the kingdom's first boutique tea salon."
+    "coverUrl": "mangas/covers/mv-e7eabe96.jpg",
+    "author": "Tabata Yuuki",
+    "artist": "Tabata Yuuki",
+    "synopsis": "Asta and Yuno were abandoned together at the same church and have been inseparable since. As children, they promised to compete to become the next Emperor Magus. As they grew up, Yuno became skilled at magic while Asta could not use it at all. When they turned 15, Yuno received a spectacular magical grimoire and Asta received none — until a person in distress came and an unexpected power was unleashed."
+  },
+  {
+    "id": "mv-789642f8",
+    "mangadexId": "789642f8-ca89-4e4e-8f7b-eee4d17ea08b",
+    "title": "Demon Slayer: Kimetsu no Yaiba",
+    "altTitle": "Kimetsu no Yaiba",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Historical",
+      "Action",
+      "Demons",
+      "Comedy",
+      "Martial Arts"
+    ],
+    "rating": 4.95,
+    "totalChapters": 205,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 205,
+      "title": "Final Chapter",
+      "views": "12.4M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": true,
+    "coverUrl": "mangas/covers/mv-789642f8.png",
+    "author": "Gotouge Koyoharu",
+    "artist": "Gotouge Koyoharu",
+    "synopsis": "Since ancient times, rumors have abounded of man-eating demons lurking in the woods. Ever since the death of his father, Tanjirou has been the sole breadwinner for his family of seven. After returning home from selling charcoal, he discovers his entire family slaughtered — except for his sister Nezuko, who has been turned into a demon. Vowing to restore Nezuko to humanity, Tanjirou sets off on a journey of revenge and redemption."
   },
   {
     "id": "mv-32d76d19",
@@ -102,7 +92,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": false,
     "isFeatured": true,
-    "coverUrl": "https://uploads.mangadex.org/covers/32d76d19-8a05-4db0-9fc2-e0b0648fe9d0/e90bdc47-c8b9-4df7-b2c0-17641b645ee1.jpg.512.jpg",
+    "coverUrl": "mangas/covers/mv-32d76d19.jpg",
     "author": "h-goon (현군)",
     "artist": "REDICE Studio (레드아이스 스튜디오)",
     "synopsis": "10 years ago, after “the Gate” that connected the real world with the monster world opened, some of the ordinary, everyday people received the power to hunt monsters within the Gate. They are known as “Hunters”. However, not all Hunters are powerful. My name is Sung Jin-Woo, a..."
@@ -132,7 +122,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": true,
     "isFeatured": true,
-    "coverUrl": "https://uploads.mangadex.org/covers/77bee52c-d2d6-44ad-a33a-1734c1fe696a/6079dd31-838b-4d61-87c4-121f3ad19158.jpg.512.jpg",
+    "coverUrl": "mangas/covers/mv-77bee52c.jpg",
     "author": "Sakano Anri",
     "artist": "Sakano Anri",
     "synopsis": "Just like how everyone adored heroes in their childhood, a certain young man adored those powers hidden in shadows. Ninjas, rogues, shadowy mentor types, that sort of deal.   After hiding his strength and living the mediocre life of a NPC by day while undergoing frenzied train..."
@@ -162,7 +152,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": true,
     "isFeatured": true,
-    "coverUrl": "https://uploads.mangadex.org/covers/e78a489b-6632-4d61-b00b-5206f5b8b22b/420ec3c0-2dab-47f2-8f9e-a9e0c3faf16d.jpg.512.jpg",
+    "coverUrl": "mangas/covers/mv-e78a489b.jpg",
     "author": "Fuse",
     "artist": "Kawakami Taiki",
     "synopsis": "The ordinary Mikami Satoru found himself dying after being stabbed by a slasher. It should have been the end of his meager 37 years, but he found himself deaf and blind after hearing a mysterious voice.   He had been reincarnated into a slime!      While complaining about beco..."
@@ -192,7 +182,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": true,
     "isFeatured": false,
-    "coverUrl": "https://uploads.mangadex.org/covers/b0b721ff-c388-4486-aa0f-c2b0bb321512/b9a049b0-186b-4714-a83e-bb965458914a.jpg.512.jpg",
+    "coverUrl": "mangas/covers/mv-b0b721ff.jpg",
     "author": "Yamada Kanehito",
     "artist": "Abe Tsukasa",
     "synopsis": "The adventure is over but life goes on for an elf mage just beginning to learn what living is all about. Elf mage Frieren and her courageous fellow adventurers have defeated the Demon King and brought peace to the land. With the great struggle over, they all go their separate ..."
@@ -222,7 +212,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": false,
     "isFeatured": false,
-    "coverUrl": "https://uploads.mangadex.org/covers/a96676e5-8ae2-425e-b549-7f15dd34a6d8/f8f44329-1dd7-4301-9ec7-a4a76182e8eb.jpg.512.jpg",
+    "coverUrl": "mangas/covers/mv-a96676e5.jpg",
     "author": "Oda Tomohito",
     "artist": "Oda Tomohito",
     "synopsis": "Komi-san is a beautiful and admirable girl that no one can take their eyes off of. Almost the whole school sees her as the cold beauty that's out of their league, but Tadano Hitohito knows the truth: she's just really bad at communicating with others. Komi-san, who wishes to f..."
@@ -252,7 +242,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": true,
     "isFeatured": false,
-    "coverUrl": "https://uploads.mangadex.org/covers/eb2d1a45-d4e7-4e32-a171-b5b029c5b0cb/4ac61d4b-77d6-4946-b24f-0935eafa0305.jpg.512.jpg",
+    "coverUrl": "mangas/covers/mv-eb2d1a45.jpg",
     "author": "Baba Okina",
     "artist": "Kakashi Asahiro",
     "synopsis": "When a mysterious explosion killed an entire class full of high school students, the souls of everyone in class were transported into a fantasy world and reincarnated. While some students were reincarnated as princes or prodigies, others were not as blessed.   Our heroine, who..."
@@ -282,7 +272,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": true,
     "isFeatured": false,
-    "coverUrl": "https://uploads.mangadex.org/covers/9d3d3403-1a87-4737-9803-bc3d99db1424/fac191d0-96c1-4ebb-bf79-b7616d7162ac.jpg.512.jpg",
+    "coverUrl": "mangas/covers/mv-9d3d3403.jpg",
     "author": "Arai Sumiko",
     "artist": "Arai Sumiko",
     "synopsis": "Fashionable and upbeat high schooler Aya falls head over heels for an employee at a local CD shop. He’s got an air of mystery about him, always dressed well, and has impeccable taste in music. Little does she know — this supposedly male employee is actually her female classmat..."
@@ -312,7 +302,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": true,
     "isFeatured": false,
-    "coverUrl": "https://uploads.mangadex.org/covers/d7037b2a-874a-4360-8a7b-07f2899152fd/59ab55ed-a537-426e-b755-6337740df580.jpg.512.jpg",
+    "coverUrl": "mangas/covers/mv-d7037b2a.jpg",
     "author": "Nishi Osamu ",
     "artist": "Nishi Osamu ",
     "synopsis": "Hopeless pushover Iruma Suzuki has found himself in a devil of a predicament... His trashy parents have sold off his soul, and he now has to live and attend school in the Netherworld. But with his unique survival skills and doting demon grandfather’s support, Iruma will surely..."
@@ -342,7 +332,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": true,
     "isFeatured": false,
-    "coverUrl": "https://uploads.mangadex.org/covers/878634d2-ea39-4001-a4bf-31458020d16a/4d34538d-e76b-44db-ba7e-f7e7d13c9ade.jpg.512.jpg",
+    "coverUrl": "mangas/covers/mv-878634d2.jpg",
     "author": "Tanabata Satori",
     "artist": "Nokomi (のこみ)",
     "synopsis": "I reincarnated as the \"Villainess Eumiella\" from an RPG Otome game. In the main story, Eumiella is merely a side character, but after the ending, she re-enters the story as the Hidden Boss, a character boasting high stats on par with the heroes! Lighting a fire in my gamer's s..."
@@ -372,7 +362,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": true,
     "isFeatured": false,
-    "coverUrl": "https://uploads.mangadex.org/covers/96471a2c-59f3-4a08-be7d-640bc0c022a4/149f1fd9-59d6-4267-8ead-f6c7859945b5.jpg.512.jpg",
+    "coverUrl": "mangas/covers/mv-96471a2c.jpg",
     "author": "Otori Nana",
     "artist": "Hoonoki Sora",
     "synopsis": "The engagement between Scarlet, a noblewoman from a ducal family, and Second Prince Kyle was suddenly annulled during a ball. She had been falsely accused of harassing a girl called Terenezza, daughter to a baron, whom the Prince doted on heavily. Condemned by everyone around ..."
@@ -402,7 +392,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": true,
     "isFeatured": false,
-    "coverUrl": "https://uploads.mangadex.org/covers/c6bbbeca-f4fd-4595-9d4d-4ba31370d08c/146fa3e4-a671-433c-b667-4a2e9e3e537f.jpg.512.jpg",
+    "coverUrl": "mangas/covers/mv-c6bbbeca.jpg",
     "author": "Yamaguchi Satoru",
     "artist": "Hidaka Nami",
     "synopsis": "I recovered my past memories when I was hit on the head by a rock. I am Katarina Claes, the eight year old daughter of the duke. In a feverish nightmare, in which the prince’s fiancee was determined, I have realized that this is the otome game from the previous life. Also, I h..."
@@ -432,7 +422,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": false,
     "isFeatured": false,
-    "coverUrl": "https://uploads.mangadex.org/covers/af38f328-8df1-4b4c-a272-e737625c3ddc/a3673b0d-7bab-42ff-aab0-c4c54c9fc563.jpg.512.jpg",
+    "coverUrl": "mangas/covers/mv-af38f328.jpg",
     "author": "Shiro Manta",
     "artist": "Shiro Manta",
     "synopsis": "Futaba Igarashi is a diminutive office lady who finds that her towering and boisterous work senpai Harumi Takeda always gets in her hair, but he always has her back, he always keeps her company, and she starts noticing that her heart is slowly veering towards him… Won 1st plac..."
@@ -461,7 +451,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": true,
     "isFeatured": false,
-    "coverUrl": "https://uploads.mangadex.org/covers/829fc3a7-d4f4-42e9-9032-0917083f9e0d/e4368bbd-a339-4091-8e32-141e9694d9b6.png.512.jpg",
+    "coverUrl": "mangas/covers/mv-829fc3a7.png",
     "author": "Brownie (布朗尼)",
     "artist": "Brownie (布朗尼)",
     "synopsis": "A comedy about two ordinary high school boys. Alt Official Raw: AC.QQ Buy: - Taobao: Volume 1, Volume 2"
@@ -491,7 +481,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": true,
     "isFeatured": false,
-    "coverUrl": "https://uploads.mangadex.org/covers/812f9696-048f-496d-9ed4-84c99345d1fb/4dcdd628-9195-4fa8-8079-50541ed60515.jpg.512.jpg",
+    "coverUrl": "mangas/covers/mv-812f9696.jpg",
     "author": "Mad Snail",
     "artist": "Jiang Ruotai",
     "synopsis": "Nie Li became the strongest Demon Spiritualist and stood at the pinnacle of the martial world. However, he lost his life during the battle with the Sage-Emperor and six deity-ranked beasts.      His soul was then brought back to when he was still 13 years old. At this point in..."
@@ -521,7 +511,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": true,
     "isFeatured": false,
-    "coverUrl": "https://uploads.mangadex.org/covers/3f1453fb-9dac-4aca-a2ea-69613856c952/d61cd6e5-7ae2-4e7d-a2a7-a6e8dce808a9.png.512.jpg",
+    "coverUrl": "mangas/covers/mv-3f1453fb.png",
     "author": "Tan Jiu (坛九)",
     "artist": "Tan Jiu (坛九)",
     "synopsis": "The funny romantic story of how Qiu Tong and Sun Jing met and fell in love. Also contains insert art of the characters by the author. --- - Original Manhua <AC.QQ> - Japanese Translation"
@@ -551,7 +541,7 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": false,
     "isFeatured": false,
-    "coverUrl": "https://uploads.mangadex.org/covers/17a56d33-9443-433a-9e0d-70459893ed8f/8d105d4e-a60e-4284-8321-d0904906574e.png.512.jpg",
+    "coverUrl": "mangas/covers/mv-17a56d33.png",
     "author": "Yuewen Manhua (阅文漫画)",
     "artist": "Painting Culture (之画文化)",
     "synopsis": "Jiang He, a girl from the Tang Dynasty, traveled through a thousand years and appeared in front of Xu Qing. Fate brought together this love that spanned a thousand years. Everything the girl was familiar with has become history. Relatives, friends, and enemies have all been le..."
