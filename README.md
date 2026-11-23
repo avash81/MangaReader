@@ -1,6 +1,24 @@
 # ⚡ MangaVerse — Next-Gen Manga Platform
 
-> **Synthesizing the best features of MangaPlus, MangaPlaza, and Anime-Planet into an ultra-scalable, original reading platform.**
+[![Live Demo](https://img.shields.io/badge/Live_Demo-manga--reader--tau--six.vercel.app-c2410c?style=for-the-badge&logo=vercel&logoColor=white)](https://manga-reader-tau-six.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![Status: Online](https://img.shields.io/badge/Status-Online_24%2F7-brightgreen.svg?style=for-the-badge)](https://manga-reader-tau-six.vercel.app/)
+
+> 🚀 **Live Production Deployment:** **[https://manga-reader-tau-six.vercel.app/](https://manga-reader-tau-six.vercel.app/)**
+> 
+> **MangaVerse is a high-performance, modern online manga reading platform featuring real-time Tokyo simulpub sync, full PDF & chapter upload support, 3-state tag algebra filtering, and zero-latency client-side search.**
+
+---
+
+## 🌐 Live Production Website
+
+Users and contributors can access the live production build anytime here:
+
+👉 **[https://manga-reader-tau-six.vercel.app/](https://manga-reader-tau-six.vercel.app/)**
+
+- **Hosting**: Vercel Global Edge Network (Instant sub-50ms TTFB worldwide)
+- **Deployment**: Automatic CI/CD pipeline triggered on every Git commit
+- **Reader Support**: Manga (RTL), Manhwa (Webtoon continuous scroll), Manhua (Full-color), and Real PDF Manuscripts
 
 ---
 
@@ -8,7 +26,7 @@
 
 - **Brand Name**: **MangaVerse** (`MANGA•VERSE`)
 - **Tagline**: *Infinite Worlds • Real-Time Tokyo Simulpub*
-- **Theme**: Deep Space Cyberpunk (`#07090e`, `#ff2a5f` neon crimson, `#00f2fe` electric cyan, `#f6d365` gold) + Tokyo Paper light mode.
+- **Theme**: Clean SaaS terracotta palette (`#c2410c`, `#fafafa` dot-grid canvas, `#ffffff` card surfaces) with dark mode reader engine.
 - **Location**: Completely isolated in `E:\Manga\` (never merged with any other project).
 
 ---
@@ -17,7 +35,7 @@
 
 1. **100% Client-Side Edge Architecture**:
    - Zero centralized database bottleneck.
-   - Fully cacheable on Edge CDNs (Cloudflare / Fastly / Vercel / Netlify) with sub-50ms Time-to-First-Byte (TTFB).
+   - Fully cacheable on Edge CDNs (Vercel / Cloudflare) with sub-50ms Time-to-First-Byte (TTFB).
 2. **Off-Main-Thread Web Worker (`search-worker.js`)**:
    - Full inverted-index tokenizer.
    - Executes multi-token fuzzy search and 3-state tag algebra in `<5ms` without dropping a single animation frame.
@@ -48,15 +66,16 @@
 
 ### 3. 📚 Power Directory & 3-State Tag Algebra (Anime-Planet Evolution)
 - **3-State Tag Matrix**:
-  - Click 1x = **Include (+)** (cyan)
+  - Click 1x = **Include (+)** (accent orange)
   - Click 2x = **Exclude (-)** (crimson)
   - Click 3x = **Reset**
 - **Demographic Slicing**: Shōnen, Seinen, Shōjo, Josei.
 - **Format Slicing**: Japanese Manga, Korean Manhwa/Webtoons, Chinese Manhua.
 - **Multi-criteria Sorting**: Popularity, Rating (★), Latest Chapter Drops, Chapter Count, Alphabetical.
 
-### 4. 📖 Master Manga Reader Engine
+### 4. 📖 Master Manga & PDF Reader Engine
 - **Vertical Webtoon Continuous Scroll** with reading progress tracker.
+- **Real Manga PDF Viewer**: Embedded zoomable viewport supporting up to 50MB PDF manuscripts.
 - **4 Reading Themes**: OLED Pure Black, Charcoal, Vintage Sepia, Tokyo Paper White.
 - **Live Chapter Discussions**: Community comments with user sentiment.
 - **Keyboard Shortcuts**: `Esc` (Exit), `F` (Fullscreen), arrow keys.
@@ -68,19 +87,12 @@
 To run the automated test suite verifying all 28 functions:
 
 ```bash
-node E:\Manga\test-suite.js
+npm test
 ```
 
-All 28 tests passing:
+All suites passing:
 - Core files verification (`index.html`, `styles.css`, `app.js`, `db.js`, `search-worker.js`, `sw.js`, `manifest.json`, `robots.txt`, `sitemap.xml`)
 - Inverted-index tokenizer in Web Worker
 - IndexedDB CRUD operations
 - SVG art and manga page generators
 - SEO tags, JSON-LD Schema.org graphs, and accessibility landmarks
-
----
-
-## 🌐 Live Preview Server
-
-The local preview server is running on:
-**[http://localhost:7890](http://localhost:7890)**
