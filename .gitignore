@@ -6,3 +6,13 @@ Thumbs.db
 .env.local
 .vercel
 .github/
+
+# Internal research, audit and scratch scripts
+RESEARCH_AND_SPECIFICATION.md
+audit-runner.js
+test-deep-functions.js
+validate-one-by-one.js
+validate-recent-changes.js
+sync-log.json
+manga-bot.js
+workflows/

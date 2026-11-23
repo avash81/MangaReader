@@ -5,9 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node test-suite.js && node test-deep-functions.js",
-    "sync-bot": "node manga-bot.js",
-    "validate": "node validate-recent-changes.js && node validate-one-by-one.js"
+    "test": "node test-suite.js"
   },
   "keywords": [
     "manga",
