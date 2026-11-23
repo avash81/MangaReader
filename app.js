@@ -715,6 +715,10 @@ const AppState = {
   // Active Campaign
   currentCampaignKey: "princess",
 
+  // User Favorites Set for 1-click quick-bookmarking
+  userFavorites: new Set(),
+  activeDailySchedule: "All",
+
   // Quest Stamp System
   userQuestStamps: 3,
 
@@ -793,6 +797,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     await MangaDB.init();
     await refreshLibraryCountBadge();
     await refreshWalletBadge();
+    await refreshUserFavorites();
   } catch (err) {
     console.warn("IndexedDB fallback to memory:", err);
   }
@@ -807,7 +812,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     AppState.searchWorker.onmessage = (e) => {
       if (e.data.action === "FILTER_RESULTS") {
-        AppState.filteredManga = e.data.results;
+        let results = e.data.results;
+        if (AppState.activeDailySchedule && AppState.activeDailySchedule !== "All") {
+          let target = AppState.activeDailySchedule;
+          if (target === "Today") {
+            const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            target = days[new Date().getDay()];
+          }
+          if (target === "Archive") {
+            results = results.filter(m => m.releaseDay === "Archive");
+          } else {
+            results = results.filter(m => m.releaseDay === target);
+          }
+        }
+        AppState.filteredManga = results;
         AppState.catalogPage = 1;
         renderCatalog();
         updateCatalogResultsCount();
@@ -1087,10 +1105,78 @@ function executeFallbackSearch(payload) {
     res = res.filter(m => !payload.excludedTags.some(exc => m.genres.includes(exc)));
   }
 
+  // WEBTOON style Daily Release filter
+  if (AppState.activeDailySchedule && AppState.activeDailySchedule !== "All") {
+    let target = AppState.activeDailySchedule;
+    if (target === "Today") {
+      const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      target = days[new Date().getDay()];
+    }
+    if (target === "Archive") {
+      res = res.filter(m => m.releaseDay === "Archive");
+    } else {
+      res = res.filter(m => m.releaseDay === target);
+    }
+  }
+
   AppState.filteredManga = res;
   AppState.catalogPage = 1;
   renderCatalog();
   updateCatalogResultsCount();
+}
+
+function selectDailySchedule(day) {
+  AppState.activeDailySchedule = day;
+  document.querySelectorAll(".day-tab-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.day === day);
+  });
+  triggerSearch();
+}
+
+async function refreshUserFavorites() {
+  try {
+    const lib = await MangaDB.getLibrary();
+    AppState.userFavorites = new Set(
+      (lib || []).filter(item => item.shelf === "favorites").map(item => item.id || item.mangaId)
+    );
+  } catch (e) {
+    AppState.userFavorites = new Set();
+  }
+}
+
+async function toggleCardFavorite(event, mangaId) {
+  if (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+  const manga = MANGA_DATABASE.find(m => m.id === mangaId);
+  if (!manga) return;
+
+  const isFav = AppState.userFavorites && AppState.userFavorites.has(mangaId);
+  const newShelf = isFav ? "none" : "favorites";
+
+  try {
+    await MangaDB.setLibraryShelf(mangaId, newShelf, manga.title, generateCoverSVG(manga));
+    if (isFav) {
+      AppState.userFavorites.delete(mangaId);
+      showToast(`Removed "${manga.title}" from favorites`);
+    } else {
+      AppState.userFavorites.add(mangaId);
+      showToast(`Saved "${manga.title}" to favorites ★`, "success");
+    }
+    await refreshLibraryCountBadge();
+    syncBnavBadge();
+
+    // Toggle button state in DOM
+    const btn = event.currentTarget || document.querySelector(`.card-fav-btn[data-id="${mangaId}"]`);
+    if (btn) {
+      btn.classList.toggle("active", !isFav);
+      const svg = btn.querySelector("svg");
+      if (svg) svg.setAttribute("fill", !isFav ? "currentColor" : "none");
+    }
+  } catch (err) {
+    console.error("Favorite toggle error:", err);
+  }
 }
 
 function updateCatalogResultsCount() {
@@ -1131,12 +1217,16 @@ function renderCatalog() {
   container.innerHTML = visible.map(m => {
     const cover = generateCoverSVG(m);
     const views = m.latestChapter ? m.latestChapter.views : "1.2M";
+    const isFav = AppState.userFavorites && AppState.userFavorites.has(m.id);
     return `
       <article class="manga-card" onclick="openMangaDetails('${m.id}')">
         <div class="manga-cover-wrap">
           <img class="manga-cover-img" src="${cover}" alt="${m.title}" loading="lazy"/>
           <span class="manga-format-badge catalog-format-badge">${m.type.toUpperCase()}</span>
           <span class="manga-score-badge catalog-score-badge">★ ${m.rating}</span>
+          <button class="card-fav-btn ${isFav ? 'active' : ''}" data-id="${m.id}" onclick="toggleCardFavorite(event, '${m.id}')" title="${isFav ? 'Remove from favorites' : 'Save to favorites'}" aria-label="Favorite">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
         <div class="manga-details">
           <div>
@@ -2847,10 +2937,18 @@ async function initContinueReadingBar() {
     const titleEl = document.getElementById("continueMangaTitle");
     const chEl = document.getElementById("continueChNum");
     const pgEl = document.getElementById("continuePageNum");
+    const thumbEl = document.getElementById("continueThumbImg");
+
     if (titleEl) titleEl.textContent = manga.title;
     if (chEl) chEl.textContent = last.chapterNumber || 1;
     if (pgEl) pgEl.textContent = last.currentPage || 1;
+    if (thumbEl) thumbEl.src = generateCoverSVG(manga);
+
     AppState._continueReadingData = last;
+
+    const banner = document.getElementById("continueReadingBanner");
+    if (banner) banner.style.display = "flex";
+
     const bar = document.getElementById("continueReadingBar");
     if (bar) bar.style.display = "flex";
   } catch (e) {
@@ -2866,6 +2964,8 @@ function resumeLastReading() {
 }
 
 function dismissContinueReading() {
+  const banner = document.getElementById("continueReadingBanner");
+  if (banner) banner.style.display = "none";
   const bar = document.getElementById("continueReadingBar");
   if (bar) bar.style.display = "none";
 }

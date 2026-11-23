@@ -157,6 +157,24 @@
       <!-- Rendered via JS: updateBreadcrumb() -->
     </nav>
 
+    <!-- Continue Reading Banner (WEBTOON / Crunchyroll Recent Strip) -->
+    <div id="continueReadingBanner" class="continue-reading-banner" style="display:none;" aria-label="Resume reading">
+      <div class="continue-left">
+        <img id="continueThumbImg" src="" alt="Cover" class="continue-thumb"/>
+        <div class="continue-meta">
+          <span class="continue-badge">CONTINUE READING</span>
+          <div class="continue-title-line">
+            <b id="continueMangaTitle">Manga Title</b>
+            <span class="continue-sub">Chapter <span id="continueChNum">1</span> • Page <span id="continuePageNum">1</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="continue-actions">
+        <button class="btn-primary-glow btn-resume-reading" onclick="resumeLastReading()">Resume ▶</button>
+        <button class="btn-dismiss-continue" onclick="dismissContinueReading()" aria-label="Dismiss">✕</button>
+      </div>
+    </div>
+
     <!-- ======================================================================
          SECTION 1: MANGA DIRECTORY & SEARCH (At Top Below Header)
          ====================================================================== -->
@@ -172,6 +190,24 @@
           </p>
         </div>
       </div>
+
+      <!-- WEBTOON Style Daily Release Ribbon -->
+      <nav id="dailyReleaseRibbon" class="daily-release-ribbon" aria-label="Daily Release Schedule">
+        <div class="daily-ribbon-scroll">
+          <button class="day-tab-btn active" data-day="All" onclick="selectDailySchedule('All')">ALL</button>
+          <button class="day-tab-btn" data-day="Today" onclick="selectDailySchedule('Today')" id="dayTabToday">
+            TODAY <span class="today-dot"></span>
+          </button>
+          <button class="day-tab-btn" data-day="Mon" onclick="selectDailySchedule('Mon')">MON</button>
+          <button class="day-tab-btn" data-day="Tue" onclick="selectDailySchedule('Tue')">TUE</button>
+          <button class="day-tab-btn" data-day="Wed" onclick="selectDailySchedule('Wed')">WED</button>
+          <button class="day-tab-btn" data-day="Thu" onclick="selectDailySchedule('Thu')">THU</button>
+          <button class="day-tab-btn" data-day="Fri" onclick="selectDailySchedule('Fri')">FRI</button>
+          <button class="day-tab-btn" data-day="Sat" onclick="selectDailySchedule('Sat')">SAT</button>
+          <button class="day-tab-btn" data-day="Sun" onclick="selectDailySchedule('Sun')">SUN</button>
+          <button class="day-tab-btn" data-day="Archive" onclick="selectDailySchedule('Archive')">COMPLETED</button>
+        </div>
+      </nav>
 
       <!-- Compact Filter Dashboard -->
       <div class="filter-dashboard compact-toolbar">
