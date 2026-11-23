@@ -1,98 +1,103 @@
-# ⚡ MangaVerse — Next-Gen Manga Platform
+# MangaVerse: Next-Gen Manga Platform
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-manga--reader--tau--six.vercel.app-c2410c?style=for-the-badge&logo=vercel&logoColor=white)](https://manga-reader-tau-six.vercel.app/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
-[![Status: Online](https://img.shields.io/badge/Status-Online_24%2F7-brightgreen.svg?style=for-the-badge)](https://manga-reader-tau-six.vercel.app/)
+A high-performance web platform and directory for reading Manga, Manhwa, and Manhua with real-time Tokyo simulpub synchronization, embedded PDF manuscript support, and client-side inverted-index search.
 
-> 🚀 **Live Production Deployment:** **[https://manga-reader-tau-six.vercel.app/](https://manga-reader-tau-six.vercel.app/)**
-> 
-> **MangaVerse is a high-performance, modern online manga reading platform featuring real-time Tokyo simulpub sync, full PDF & chapter upload support, 3-state tag algebra filtering, and zero-latency client-side search.**
+## Live Deployment
 
----
+Production website: **[https://manga-reader-tau-six.vercel.app](https://manga-reader-tau-six.vercel.app)**
 
-## 🌐 Live Production Website
-
-Users and contributors can access the live production build anytime here:
-
-👉 **[https://manga-reader-tau-six.vercel.app/](https://manga-reader-tau-six.vercel.app/)**
-
-- **Hosting**: Vercel Global Edge Network (Instant sub-50ms TTFB worldwide)
-- **Deployment**: Automatic CI/CD pipeline triggered on every Git commit
-- **Reader Support**: Manga (RTL), Manhwa (Webtoon continuous scroll), Manhua (Full-color), and Real PDF Manuscripts
+* Infrastructure: Vercel Global Edge Network
+* Deployment: Automated Git CI/CD on every push to `main`
+* Formats: Manga (Right-to-Left), Manhwa (Vertical Webtoon Scroll), Manhua (Full-Color Scroll), and PDF manuscripts up to 50MB
 
 ---
 
-## 🌟 Original Brand & Identity
+## Architecture and Performance
 
-- **Brand Name**: **MangaVerse** (`MANGA•VERSE`)
-- **Tagline**: *Infinite Worlds • Real-Time Tokyo Simulpub*
-- **Theme**: Clean SaaS terracotta palette (`#c2410c`, `#fafafa` dot-grid canvas, `#ffffff` card surfaces) with dark mode reader engine.
-- **Location**: Completely isolated in `E:\Manga\` (never merged with any other project).
+MangaVerse is engineered as a client-side edge application with sub-50ms Time-to-First-Byte (TTFB) and zero database latency:
 
----
-
-## 🚀 Built for Massive Scale (100 to 1,000,000+ Users)
-
-1. **100% Client-Side Edge Architecture**:
-   - Zero centralized database bottleneck.
-   - Fully cacheable on Edge CDNs (Vercel / Cloudflare) with sub-50ms Time-to-First-Byte (TTFB).
-2. **Off-Main-Thread Web Worker (`search-worker.js`)**:
-   - Full inverted-index tokenizer.
-   - Executes multi-token fuzzy search and 3-state tag algebra in `<5ms` without dropping a single animation frame.
-3. **IndexedDB High-Capacity Storage (`db.js`)**:
-   - Replaces LocalStorage 5MB limit with gigabytes of offline storage.
-   - 5 Object Stores: `reading_history`, `user_library`, `wallet_passes`, `offline_chapters`, `user_discussions`.
-4. **Service Worker Offline PWA Engine (`sw.js`)**:
-   - Pre-caches core application shell (`Cache-First`).
-   - Stale-While-Revalidate caching strategy for offline reading on planes or subways.
-5. **CSS Performance Optimizations**:
-   - `contain: content;` on all manga cards.
-   - `content-visibility: auto;` on off-screen sections.
-   - 60fps smooth scrolling.
+* **Off-Main-Thread Search Worker (`search-worker.js`)**: Executes multi-token fuzzy search and 3-state boolean tag algebra across the entire catalog in under 5ms using a dedicated Web Worker and inverted index.
+* **Persistent Storage (`db.js`)**: Replaces standard LocalStorage 5MB quotas with IndexedDB, provisioning 5 object stores: `reading_history`, `user_library`, `wallet_passes`, `offline_chapters`, and `user_discussions`.
+* **Offline-Ready Service Worker (`sw.js`)**: Progressive Web App (PWA) shell with a Stale-While-Revalidate caching strategy for uninterrupted reading without internet connectivity.
+* **CSS Performance Containment**: Uses CSS `contain: content` and `content-visibility: auto` to maintain smooth 60fps scrolling across extensive card grids.
 
 ---
 
-## 🧩 Unified Pillar Features
+## Core Capabilities
 
-### 1. 📡 Tokyo Synchronized Simulpub (MangaPlus Evolution)
-- **Live Tokyo JST Clock**: Second-by-second ticker synchronized with Shueisha Tokyo releases.
-- **7-Day Release Calendar**: Filter by Sunday through Saturday release drops.
-- **Simulpub Badges**: Real-time chapter drop tags, view counters, and community comment counters.
+### 1. Tokyo Synchronized Simulpub
+* Real-time JST live clock synchronized with Japan Standard Time for publisher drops.
+* 7-day schedule matrix organizing series drops from Sunday through Saturday.
+* Live metadata tracking for chapter drop dates, view metrics, and community reactions.
 
-### 2. 👑 Grand Quest & Promo Wallet (MangaPlaza Evolution)
-- **Interactive Daily Stamp Card**: Click to stamp reading quests and unlock VIP bonus passes.
-- **Digital Pass Wallet**: Claim 50% discount codes, free chapter passes, and exclusive digital bookmarks.
-- **Featured Spotlight & Staff Picks**: Handpicked villainess, royalty, and dark fantasy series.
+### 2. Directory and 3-State Tag Algebra
+* Interactive tag filtering engine:
+  * Click 1x: **Include (+)**
+  * Click 2x: **Exclude (-)**
+  * Click 3x: **Reset**
+* Demographic filters: Shonen, Seinen, Shojo, Josei.
+* Format filters: Manga, Manhwa, Manhua.
+* Multi-parameter sort metrics: Popularity, Community Rating, Latest Chapter Release, Alphabetical.
 
-### 3. 📚 Power Directory & 3-State Tag Algebra (Anime-Planet Evolution)
-- **3-State Tag Matrix**:
-  - Click 1x = **Include (+)** (accent orange)
-  - Click 2x = **Exclude (-)** (crimson)
-  - Click 3x = **Reset**
-- **Demographic Slicing**: Shōnen, Seinen, Shōjo, Josei.
-- **Format Slicing**: Japanese Manga, Korean Manhwa/Webtoons, Chinese Manhua.
-- **Multi-criteria Sorting**: Popularity, Rating (★), Latest Chapter Drops, Chapter Count, Alphabetical.
+### 3. Unified Reader and PDF Viewer
+* Responsive vertical continuous scroll for webtoons and horizontal pagination for traditional manga.
+* Native PDF viewer integration allowing creators and administrators to upload and view full PDF manuscripts directly inside the browser.
+* 4 viewing themes: OLED Black, Charcoal, Vintage Sepia, and Tokyo Paper White.
+* Integrated keyboard navigation (`Esc` to exit, `F` for fullscreen, arrow keys for page progression).
 
-### 4. 📖 Master Manga & PDF Reader Engine
-- **Vertical Webtoon Continuous Scroll** with reading progress tracker.
-- **Real Manga PDF Viewer**: Embedded zoomable viewport supporting up to 50MB PDF manuscripts.
-- **4 Reading Themes**: OLED Pure Black, Charcoal, Vintage Sepia, Tokyo Paper White.
-- **Live Chapter Discussions**: Community comments with user sentiment.
-- **Keyboard Shortcuts**: `Esc` (Exit), `F` (Fullscreen), arrow keys.
+### 4. Automated Catalog Ingestion
+* Standalone syndication script (`manga-bot.js`) that checks external publisher feeds and updates catalog data automatically.
+* Scheduled automation workflow configured to run via GitHub Actions or cloud cron jobs.
 
 ---
 
-## 🧪 Verification & Automated Testing
+## Project Structure
 
-To run the automated test suite verifying all 28 functions:
-
-```bash
-npm test
+```
+├── index.html              # Semantic HTML5 application shell and layout
+├── styles.css              # Design system tokens, responsive layouts, and reader UI
+├── additions.css          # Creator Studio and enhanced filter styles
+├── app.js                  # Main controller, reader engine, and studio workflows
+├── db.js                   # IndexedDB storage layer with 5 object stores
+├── search-worker.js        # Dedicated Web Worker with inverted-index search
+├── sw.js                   # Service Worker implementation for offline caching
+├── manga-bot.js            # Automated manga catalog syndication bot
+├── server.js               # Node.js development server
+├── vercel.json             # Vercel edge caching and security headers
+└── package.json            # Project manifest, dependencies, and test scripts
 ```
 
-All suites passing:
-- Core files verification (`index.html`, `styles.css`, `app.js`, `db.js`, `search-worker.js`, `sw.js`, `manifest.json`, `robots.txt`, `sitemap.xml`)
-- Inverted-index tokenizer in Web Worker
-- IndexedDB CRUD operations
-- SVG art and manga page generators
-- SEO tags, JSON-LD Schema.org graphs, and accessibility landmarks
+---
+
+## Local Development and Verification
+
+### Prerequisites
+* Node.js (version 18 or higher)
+
+### Setup and Local Server
+```bash
+# Clone the repository
+git clone https://github.com/avash81/MangaReader.git
+cd MangaReader
+
+# Start the local development server
+npm start
+```
+The application will be accessible locally at `http://localhost:7890`.
+
+### Running Verification Tests
+```bash
+# Execute unit and functional test suites
+npm test
+
+# Run individual verification checkpoints
+npm run validate
+```
+
+All 28 automated test assertions verify catalog schema integrity, vector graphics generation, tag filtering algebra, IndexedDB transactions, and accessibility compliance.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
