@@ -3158,3 +3158,68 @@ body {
   color: var(--text-muted);
   font-size: 0.86rem;
 }
+
+/* ==========================================================================
+   GLOBAL BREADCRUMB TRAIL
+   ========================================================================== */
+.global-breadcrumb {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 14px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.global-breadcrumb::-webkit-scrollbar {
+  display: none;
+}
+
+.breadcrumb-trail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.82rem;
+}
+
+.crumb-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.crumb-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--accent-terracotta);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.crumb-btn:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.crumb-sep-li {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-muted);
+  opacity: 0.6;
+  margin: 0 2px;
+}
+
+.crumb-item-current {
+  color: var(--text-secondary);
+  font-weight: 500;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

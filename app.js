@@ -736,6 +736,57 @@ const AppState = {
 // ==========================================================================
 // 4. INITIALIZATION & WORKER SETUP
 // ==========================================================================
+// ==========================================================================
+// GLOBAL BREADCRUMB NAVIGATION SYSTEM
+// ==========================================================================
+
+/**
+ * updateBreadcrumb(crumbs)
+ * crumbs = array of { label, action? }
+ *   - action: a JS string to eval onclick, or null for the last (current) crumb
+ * Example: [ { label:"Home" }, { label:"Directory", action:"showCatalogView()" }, { label:"Solo Leveling" } ]
+ */
+function updateBreadcrumb(crumbs) {
+  const nav = document.getElementById("globalBreadcrumb");
+  if (!nav) return;
+
+  if (!crumbs || crumbs.length === 0) {
+    nav.innerHTML = "";
+    nav.style.display = "none";
+    return;
+  }
+
+  nav.style.display = "flex";
+
+  // Build structured JSON-LD BreadcrumbList for SEO
+  const ldItems = crumbs.map((c, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": c.label
+  }));
+
+  nav.innerHTML = `
+    <ol class="breadcrumb-trail" aria-label="Breadcrumb navigation" itemscope itemtype="https://schema.org/BreadcrumbList">
+      ${crumbs.map((c, i) => {
+        const isLast = i === crumbs.length - 1;
+        const sep = i > 0 ? `<li class="crumb-sep-li" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></li>` : "";
+        if (isLast) {
+          return `${sep}<li class="crumb-item crumb-item-current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name" aria-current="page">${escapeHtml(c.label)}</span>
+            <meta itemprop="position" content="${i + 1}"/>
+          </li>`;
+        }
+        return `${sep}<li class="crumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <button class="crumb-btn" onclick="${c.action || ''}" itemprop="item">
+            <span itemprop="name">${escapeHtml(c.label)}</span>
+          </button>
+          <meta itemprop="position" content="${i + 1}"/>
+        </li>`;
+      }).join("")}
+    </ol>
+  `;
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   // 1. Initialize IndexedDB
   try {
@@ -774,6 +825,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   renderCatalog();
   updateCatalogResultsCount();
   setupEventListeners();
+
+  // Set initial breadcrumb: Home > Directory
+  updateBreadcrumb([
+    { label: "MangaVerse", action: "window.scrollTo({top:0,behavior:'smooth'})" },
+    { label: "Manga Directory" }
+  ]);
 
   // 4. Register PWA Service Worker
   if ("serviceWorker" in navigator) {
@@ -1290,12 +1347,32 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
 
   renderReaderViewport();
   MangaDB.saveProgress(manga.id, chapterNum, 1, AppState.activeReader.totalPages);
+
+  updateBreadcrumb([
+    { label: "MangaVerse", action: "showCatalogView()" },
+    { label: "Directory", action: "showCatalogView()" },
+    { label: manga.title, action: `openMangaDetails('${manga.id}')` },
+    { label: `Chapter ${chapterNum}` }
+  ]);
 }
 
 function closeReader() {
   AppState.activeReader.isOpen = false;
   const modal = document.getElementById("readerModal");
   if (modal) modal.classList.remove("open");
+
+  if (AppState.activeSeriesManga) {
+    updateBreadcrumb([
+      { label: "MangaVerse", action: "showCatalogView()" },
+      { label: "Manga Directory", action: "showCatalogView()" },
+      { label: AppState.activeSeriesManga.title }
+    ]);
+  } else {
+    updateBreadcrumb([
+      { label: "MangaVerse", action: "showCatalogView()" },
+      { label: "Manga Directory" }
+    ]);
+  }
 }
 
 async function downloadCurrentChapterOffline() {
@@ -1561,6 +1638,10 @@ function showCatalogView() {
   if (window.location.hash.startsWith("#/series/")) {
     history.pushState(null, "", window.location.pathname + window.location.search);
   }
+  updateBreadcrumb([
+    { label: "MangaVerse", action: "window.scrollTo({top:0,behavior:'smooth'})" },
+    { label: "Manga Directory" }
+  ]);
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -1573,6 +1654,12 @@ function toggleSeriesShelfMenu(event) {
 function renderSeriesPage(manga) {
   const serSec = document.getElementById("seriesSection");
   if (!serSec) return;
+
+  updateBreadcrumb([
+    { label: "MangaVerse", action: "showCatalogView()" },
+    { label: "Manga Directory", action: "showCatalogView()" },
+    { label: manga.title }
+  ]);
 
   const cover = generateCoverSVG(manga);
   const safeTitle = escapeHtml(manga.title);
