@@ -8,6 +8,45 @@
 // ==========================================================================
 const MANGA_DATABASE = [
   {
+    "id": "solo-necromancer",
+    "title": "The Cataclysmic Necromancer",
+    "altTitle": "死霊術士の神化録",
+    "type": "Manhwa",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Leveling",
+      "Dungeon"
+    ],
+    "rating": 4.95,
+    "totalChapters": 2,
+    "releaseDay": "Sun",
+    "latestChapter": {
+      "number": 2,
+      "title": "Chapter 2",
+      "views": "120K",
+      "dropTime": "Today (Auto-Synced)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverPath": null,
+    "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-02.pdf",
+    "chapters": [
+      {
+        "number": 1,
+        "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-01.pdf"
+      },
+      {
+        "number": 2,
+        "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-02.pdf"
+      }
+    ],
+    "author": "Han Jin-Woo",
+    "artist": "Independent Creator",
+    "synopsis": "When the sky shattered into crimson portals, only one necromancer retained memories of Earth's fall, ready to conquer the dungeon towers."
+  },
+  {
     "id": "bot-noble-villainess-tea",
     "title": "The Banished Noblewoman's Afternoon Tea Empire",
     "altTitle": "追放令嬢の紅茶喫茶録",
