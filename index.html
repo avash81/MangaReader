@@ -252,13 +252,14 @@
         <!-- Rendered via JavaScript -->
       </div>
 
-      <!-- Catalog Pagination & Load Next (Screen 5) -->
+      <!-- Catalog Pagination Controls -->
       <div class="catalog-load-section">
-        <button class="btn-load-more" id="btnLoadMore" onclick="loadMoreCatalogTitles()">
+        <button class="btn-load-more" id="btnLoadMore" onclick="loadMoreCatalogTitles()" style="display:none;">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
-          Load Next 5 Matching Titles
+          Load More
         </button>
-        <div id="catalogMatchNotice" class="catalog-match-notice"></div>
+        <div id="catalogMatchNotice" class="catalog-match-notice" style="display:none;"></div>
+        <div id="catalogPager"></div>
       </div>
     </section>
 

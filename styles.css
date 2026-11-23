@@ -2563,6 +2563,90 @@ body {
 }
 
 /* ==========================================================================
+   NUMBERED PAGE PAGINATION
+   ========================================================================== */
+#catalogPager {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 24px 0 8px;
+}
+
+.pager-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 6px;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 600;
+  background: var(--bg-surface-1);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.page-btn:hover:not(:disabled):not(.page-btn-active) {
+  background: var(--bg-surface-2);
+  color: var(--accent-terracotta);
+  border-color: var(--accent-terracotta);
+}
+
+.page-btn-active {
+  background: var(--accent-terracotta) !important;
+  color: #ffffff !important;
+  border-color: var(--accent-terracotta) !important;
+  cursor: default;
+}
+
+.page-btn:disabled {
+  opacity: 0.32;
+  cursor: not-allowed;
+}
+
+.page-nav-btn {
+  color: var(--text-muted);
+}
+
+.page-nav-btn:hover:not(:disabled) {
+  color: var(--accent-terracotta) !important;
+  border-color: var(--accent-terracotta) !important;
+}
+
+.page-ellipsis {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-width: 28px;
+  height: 36px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  padding-bottom: 4px;
+  user-select: none;
+}
+
+.pager-counter {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+/* ==========================================================================
    DEDICATED MANGA SERIES VIEW & CATEGORIZED CHAPTER DIRECTORY
    ========================================================================== */
 .series-view-section {

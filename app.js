@@ -757,6 +757,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     AppState.searchWorker.onmessage = (e) => {
       if (e.data.action === "FILTER_RESULTS") {
         AppState.filteredManga = e.data.results;
+        AppState.catalogPage = 1;
         renderCatalog();
         updateCatalogResultsCount();
       }
@@ -1030,6 +1031,7 @@ function executeFallbackSearch(payload) {
   }
 
   AppState.filteredManga = res;
+  AppState.catalogPage = 1;
   renderCatalog();
   updateCatalogResultsCount();
 }
@@ -1039,7 +1041,9 @@ function updateCatalogResultsCount() {
   if (el) el.textContent = AppState.filteredManga.length;
 }
 
-// Render Manga Catalog Grid
+// Render Manga Catalog Grid  — now with page-number pagination
+const CATALOG_PAGE_SIZE = 18;
+
 function renderCatalog() {
   const container = document.getElementById("catalogGrid");
   if (!container) return;
@@ -1054,15 +1058,18 @@ function renderCatalog() {
         <button class="btn-cyan-glow" style="margin-top:16px;" onclick="resetAllFilters()">Reset All Filters</button>
       </div>
     `;
-    const loadBtn = document.getElementById("btnLoadMore");
-    const notice = document.getElementById("catalogMatchNotice");
-    if (loadBtn) loadBtn.style.display = "none";
-    if (notice) notice.textContent = "";
+    renderCatalogPagination(0, 0);
     return;
   }
 
-  const limit = AppState.catalogDisplayLimit || 8;
-  const visible = AppState.filteredManga.slice(0, limit);
+  // Clamp current page within valid range
+  const totalPages = Math.ceil(total / CATALOG_PAGE_SIZE);
+  if (!AppState.catalogPage || AppState.catalogPage < 1) AppState.catalogPage = 1;
+  if (AppState.catalogPage > totalPages) AppState.catalogPage = totalPages;
+
+  const pageStart = (AppState.catalogPage - 1) * CATALOG_PAGE_SIZE;
+  const pageEnd   = Math.min(pageStart + CATALOG_PAGE_SIZE, total);
+  const visible   = AppState.filteredManga.slice(pageStart, pageEnd);
 
   container.innerHTML = visible.map(m => {
     const cover = generateCoverSVG(m);
@@ -1088,20 +1095,78 @@ function renderCatalog() {
     `;
   }).join("");
 
+  renderCatalogPagination(AppState.catalogPage, totalPages);
+}
+
+function renderCatalogPagination(currentPage, totalPages) {
+  // Hide old load-more controls — pagination replaces them
   const loadBtn = document.getElementById("btnLoadMore");
-  const notice = document.getElementById("catalogMatchNotice");
-  if (loadBtn) {
-    loadBtn.style.display = limit < total ? "inline-flex" : "none";
+  if (loadBtn) loadBtn.style.display = "none";
+
+  const pager = document.getElementById("catalogPager");
+  if (!pager) return;
+
+  if (totalPages <= 1) {
+    pager.innerHTML = "";
+    return;
   }
-  if (notice) {
-    const queryPart = AppState.activeSearchQuery ? ` for "${AppState.activeSearchQuery}"` : "";
-    notice.textContent = `Showing ${Math.min(limit, total)} of ${total} matching series${queryPart}`;
+
+  // Build page number list with leading/trailing ellipsis
+  function buildPageWindow(cur, total) {
+    const pages = [];
+    const delta = 2; // pages on each side of current
+    const rangeStart = Math.max(2, cur - delta);
+    const rangeEnd   = Math.min(total - 1, cur + delta);
+
+    pages.push(1);
+    if (rangeStart > 2) pages.push("…");
+    for (let p = rangeStart; p <= rangeEnd; p++) pages.push(p);
+    if (rangeEnd < total - 1) pages.push("…");
+    if (total > 1) pages.push(total);
+    return pages;
   }
+
+  const window = buildPageWindow(currentPage, totalPages);
+  const total = AppState.filteredManga.length;
+  const pageStart = (currentPage - 1) * CATALOG_PAGE_SIZE + 1;
+  const pageEnd   = Math.min(currentPage * CATALOG_PAGE_SIZE, total);
+
+  const pageItems = window.map(item => {
+    if (item === "…") {
+      return `<span class="page-ellipsis">···</span>`;
+    }
+    const active = item === currentPage ? " page-btn-active" : "";
+    return `<button class="page-btn${active}" onclick="goToCatalogPage(${item})" aria-label="Page ${item}" ${item === currentPage ? 'aria-current="page"' : ""}>${item}</button>`;
+  }).join("");
+
+  pager.innerHTML = `
+    <div class="pager-row">
+      <button class="page-btn page-nav-btn" onclick="goToCatalogPage(${currentPage - 1})" ${currentPage === 1 ? "disabled" : ""} title="Previous page">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      ${pageItems}
+      <button class="page-btn page-nav-btn" onclick="goToCatalogPage(${currentPage + 1})" ${currentPage === totalPages ? "disabled" : ""} title="Next page">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="pager-counter">Showing ${pageStart}–${pageEnd} of ${total} series</div>
+  `;
+}
+
+function goToCatalogPage(page) {
+  const total = AppState.filteredManga.length;
+  const totalPages = Math.ceil(total / CATALOG_PAGE_SIZE);
+  if (page < 1 || page > totalPages) return;
+  AppState.catalogPage = page;
+  renderCatalog();
+  // Scroll the catalog section back into view smoothly
+  const grid = document.getElementById("directorySection");
+  if (grid) grid.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function loadMoreCatalogTitles() {
-  AppState.catalogDisplayLimit = (AppState.catalogDisplayLimit || 8) + 5;
-  renderCatalog();
+  // Legacy alias — now unused but kept so old inline calls don't throw
+  goToCatalogPage((AppState.catalogPage || 1) + 1);
 }
 
 function handleDirSearch(val) {
