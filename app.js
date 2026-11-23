@@ -8,6 +8,76 @@
 // ==========================================================================
 const MANGA_DATABASE = [
   {
+    "id": "solo-necromancer",
+    "title": "The Cataclysmic Necromancer",
+    "altTitle": "死霊術士の神化録",
+    "type": "Manhwa",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Leveling",
+      "Dungeon"
+    ],
+    "rating": 4.95,
+    "totalChapters": 2,
+    "releaseDay": "Sun",
+    "latestChapter": {
+      "number": 2,
+      "title": "Chapter 2",
+      "views": "120K",
+      "dropTime": "Today (Auto-Synced)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverPath": null,
+    "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-02.pdf",
+    "chapters": [
+      {
+        "number": 1,
+        "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-01.pdf"
+      },
+      {
+        "number": 2,
+        "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-02.pdf"
+      }
+    ],
+    "author": "Han Jin-Woo",
+    "artist": "Independent Creator",
+    "synopsis": "When the sky shattered into crimson portals, only one necromancer retained memories of Earth's fall, ready to conquer the dungeon towers."
+  },
+  {
+    "id": "villainess-tea-empire",
+    "title": "The Banished Noblewoman's Afternoon Tea Empire",
+    "altTitle": "追放令嬢の紅茶喫茶録",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Slice of Life",
+      "Romance",
+      "Food/Cooking",
+      "Nobility",
+      "Reijo/Villainess"
+    ],
+    "rating": 4.89,
+    "totalChapters": 1,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 1,
+      "title": "Chapter 1",
+      "views": "120K",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverPath": null,
+    "pdfData": null,
+    "chapters": [],
+    "author": "Haruka Shirasaki",
+    "artist": "Independent Creator",
+    "synopsis": "After her royal engagement was unjustly dissolved, Eleanor moved to the border port town to establish the kingdom's first boutique tea salon."
+  },
+  {
     "id": "mv-32d76d19",
     "mangadexId": "32d76d19-8a05-4db0-9fc2-e0b0648fe9d0",
     "title": "Na Honjaman Level-Up",
@@ -1061,7 +1131,7 @@ async function openReader(mangaId, chapterNum = 1) {
   AppState.activeReader.manga = manga;
   AppState.activeReader.chapterNumber = chapterNum;
   AppState.activeReader.currentPage = 1;
-  AppState.activeReader.totalPages = 8;
+  AppState.activeReader.totalPages = (manga.customPages && manga.customPages.length > 0) ? manga.customPages.length : 8;
   AppState.activeReader._offlinePages = null;
 
   // Check if offline chapter is stored
