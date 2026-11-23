@@ -1,0 +1,153 @@
+[
+  {
+    "id": "mv-e896c48c",
+    "mangadexId": "e896c48c-3150-437d-ba57-d8567eb399ae",
+    "coverFile": "fa06e4e4-ef2a-477b-bfb6-a2a88793620b.jpg",
+    "title": "Chainsaw Man",
+    "altTitle": "チェンソーマン",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Demons",
+      "Dark Fantasy",
+      "Supernatural"
+    ],
+    "rating": 4.96,
+    "totalChapters": 175,
+    "releaseDay": "Tue",
+    "latestChapter": {
+      "number": 175,
+      "title": "Chapter 175",
+      "views": "14.2M",
+      "dropTime": "2 hours ago"
+    },
+    "isSimulpub": true,
+    "isFeatured": true,
+    "coverUrl": "mangas/covers/mv-e896c48c.jpg",
+    "author": "Fujimoto Tatsuki",
+    "artist": "Fujimoto Tatsuki",
+    "synopsis": "Denji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil-dog Pochita and becomes Chainsaw Man."
+  },
+  {
+    "id": "mv-59f47645",
+    "mangadexId": "59f47645-66a9-443e-8228-788313c3ae3c",
+    "coverFile": "c41d1081-cdb2-4c90-8028-61844823515b.jpg",
+    "title": "Tokyo Ghoul",
+    "altTitle": "東京喰種 トーキョーグール",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Horror",
+      "Supernatural",
+      "Psychological"
+    ],
+    "rating": 4.94,
+    "totalChapters": 143,
+    "releaseDay": "Thu",
+    "latestChapter": {
+      "number": 143,
+      "title": "Chapter 143",
+      "views": "11.8M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "mangas/covers/mv-59f47645.jpg",
+    "author": "Ishida Sui",
+    "artist": "Ishida Sui",
+    "synopsis": "Lurking within the shadows of Tokyo are frightening beings known as ghouls, who satisfy their hunger by feeding on human flesh. Kaneki Ken undergoes surgery that transforms him into a half-ghoul."
+  },
+  {
+    "id": "mv-6114f59f",
+    "mangadexId": "6114f59f-4047-496b-8605-c6264c76d49f",
+    "coverFile": "361838f3-cfa5-4e37-97ca-f33cfd782a0f.jpg",
+    "title": "Mushoku Tensei ~Isekai Ittara Honki Dasu~",
+    "altTitle": "無職転生 ～異世界行ったら本気だす～",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Isekai",
+      "Magic"
+    ],
+    "rating": 4.95,
+    "totalChapters": 102,
+    "releaseDay": "Fri",
+    "latestChapter": {
+      "number": 102,
+      "title": "Chapter 102",
+      "views": "9.4M",
+      "dropTime": "3 days ago"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "mangas/covers/mv-6114f59f.jpg",
+    "author": "Rifujin na Magonote",
+    "artist": "Fujikawa Yuka",
+    "synopsis": "A 34-year-old shut-in dies saving strangers and reincarnates in a world of swords and magic as baby Rudeus Greyrat. Keeping his memories, he resolves to live his new life to the absolute fullest."
+  },
+  {
+    "id": "mv-4ec3e6b3",
+    "mangadexId": "4ec3e6b3-18bf-4964-9c87-1f287d3398f4",
+    "coverFile": "580d19d3-bcf6-46c3-876e-d8d8ac3897a3.jpg",
+    "title": "Horimiya",
+    "altTitle": "ホリミヤ",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "School Life",
+      "Slice of Life"
+    ],
+    "rating": 4.92,
+    "totalChapters": 125,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 125,
+      "title": "Chapter 125",
+      "views": "8.6M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "mangas/covers/mv-4ec3e6b3.jpg",
+    "author": "HERO",
+    "artist": "Hagiwara Daisuke",
+    "synopsis": "Hori is a popular high school girl who secretly looks after her home and younger brother. Miyamura seems like an aloof otaku at school, but outside he has piercings and tattoos. The two bond over their secret lives."
+  },
+  {
+    "id": "mv-37f5cce0",
+    "mangadexId": "37f5cce0-8070-4ada-96e5-fa24b1bd4ff9",
+    "coverFile": "e21ca520-5054-4041-a07e-de8b7c683522.jpg",
+    "title": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
+    "altTitle": "かぐや様は告らせたい～天才たちの恋愛頭脳戦～",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "School Life",
+      "Psychological"
+    ],
+    "rating": 4.97,
+    "totalChapters": 281,
+    "releaseDay": "Mon",
+    "latestChapter": {
+      "number": 281,
+      "title": "Chapter 281",
+      "views": "13.1M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "mangas/covers/mv-37f5cce0.jpg",
+    "author": "Akasaka Aka",
+    "artist": "Akasaka Aka",
+    "synopsis": "Student council president Shirogane Miyuki and vice-president Shinomiya Kaguya appear to be the perfect couple. Pride gets in the way: whoever confesses first is the loser, initiating an all-out battle of psychological wits."
+  }
+]

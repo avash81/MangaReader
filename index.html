@@ -681,6 +681,11 @@
     <button class="close-bar-btn" onclick="dismissContinueReading()" aria-label="Dismiss resume prompt">✕</button>
   </aside>
 
+  <!-- Global Desktop Manga Hover Quick-Preview Popover -->
+  <div id="mangaHoverPopover" class="manga-hover-popover" style="display:none;" role="tooltip" aria-hidden="true" onmouseenter="keepHoverPopoverOpen()" onmouseleave="onHoverPopoverLeave()">
+    <!-- Injected dynamically via JS -->
+  </div>
+
   <!-- Toast Center -->
   <div id="toastCenter" aria-live="polite"></div>
 

@@ -8,94 +8,92 @@
 // ==========================================================================
 const MANGA_DATABASE = [
   {
-    "id": "mv-e7eabe96",
-    "mangadexId": "e7eabe96-aa17-476f-b431-2497d5e9d060",
-    "title": "Black Clover",
-    "altTitle": "ブラッククローバー",
+    "id": "mv-e896c48c",
+    "mangadexId": "e896c48c-3150-437d-ba57-d8567eb399ae",
+    "title": "Chainsaw Man",
+    "altTitle": "チェンソーマン",
     "type": "Manga",
     "demographic": "Shōnen",
     "genres": [
-      "Monsters",
       "Action",
       "Demons",
-      "Comedy",
-      "Adventure"
-    ],
-    "rating": 4.93,
-    "totalChapters": 392,
-    "releaseDay": "Archive",
-    "latestChapter": {
-      "number": 392,
-      "title": "Chapter 392",
-      "views": "7.8M",
-      "dropTime": "Archive Vault"
-    },
-    "isSimulpub": false,
-    "isFeatured": false,
-    "coverUrl": "mangas/covers/mv-e7eabe96.jpg",
-    "author": "Tabata Yuuki",
-    "artist": "Tabata Yuuki",
-    "synopsis": "Asta and Yuno were abandoned together at the same church and have been inseparable since. As children, they promised to compete to become the next Emperor Magus. As they grew up, Yuno became skilled at magic while Asta could not use it at all. When they turned 15, Yuno received a spectacular magical grimoire and Asta received none — until a person in distress came and an unexpected power was unleashed."
-  },
-  {
-    "id": "mv-789642f8",
-    "mangadexId": "789642f8-ca89-4e4e-8f7b-eee4d17ea08b",
-    "title": "Demon Slayer: Kimetsu no Yaiba",
-    "altTitle": "Kimetsu no Yaiba",
-    "type": "Manga",
-    "demographic": "Shōnen",
-    "genres": [
-      "Historical",
-      "Action",
-      "Demons",
-      "Comedy",
-      "Martial Arts"
-    ],
-    "rating": 4.95,
-    "totalChapters": 205,
-    "releaseDay": "Archive",
-    "latestChapter": {
-      "number": 205,
-      "title": "Final Chapter",
-      "views": "12.4M",
-      "dropTime": "Archive Vault"
-    },
-    "isSimulpub": false,
-    "isFeatured": true,
-    "coverUrl": "mangas/covers/mv-789642f8.png",
-    "author": "Gotouge Koyoharu",
-    "artist": "Gotouge Koyoharu",
-    "synopsis": "Since ancient times, rumors have abounded of man-eating demons lurking in the woods. Ever since the death of his father, Tanjirou has been the sole breadwinner for his family of seven. After returning home from selling charcoal, he discovers his entire family slaughtered — except for his sister Nezuko, who has been turned into a demon. Vowing to restore Nezuko to humanity, Tanjirou sets off on a journey of revenge and redemption."
-  },
-  {
-    "id": "mv-32d76d19",
-    "mangadexId": "32d76d19-8a05-4db0-9fc2-e0b0648fe9d0",
-    "title": "Na Honjaman Level-Up",
-    "altTitle": "Ore Dake Level Up na Ken",
-    "type": "Manhwa",
-    "demographic": "Shōnen",
-    "genres": [
-      "Award Winning",
-      "Monsters",
-      "Action",
-      "Adventure",
-      "Magic"
+      "Dark Fantasy",
+      "Supernatural"
     ],
     "rating": 4.96,
-    "totalChapters": 200,
-    "releaseDay": "Archive",
+    "totalChapters": 175,
+    "releaseDay": "Tue",
     "latestChapter": {
-      "number": 200,
-      "title": "Chapter 200",
-      "views": "5.8M",
+      "number": 175,
+      "title": "Chapter 175",
+      "views": "14.2M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": true,
+    "coverUrl": "mangas/covers/mv-e896c48c.jpg",
+    "author": "Fujimoto Tatsuki",
+    "artist": "Fujimoto Tatsuki",
+    "synopsis": "Denji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil-dog Pochita and becomes Chainsaw Man — a man with a chainsaw for a heart, hunting devils for Public Safety."
+  },
+  {
+    "id": "mv-59f47645",
+    "mangadexId": "59f47645-66a9-443e-8228-788313c3ae3c",
+    "title": "Tokyo Ghoul",
+    "altTitle": "東京喰種 トーキョーグール",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Horror",
+      "Supernatural",
+      "Psychological"
+    ],
+    "rating": 4.94,
+    "totalChapters": 143,
+    "releaseDay": "Thu",
+    "latestChapter": {
+      "number": 143,
+      "title": "Chapter 143",
+      "views": "11.8M",
       "dropTime": "Archive Vault"
     },
     "isSimulpub": false,
     "isFeatured": true,
-    "coverUrl": "mangas/covers/mv-32d76d19.jpg",
-    "author": "h-goon (현군)",
-    "artist": "REDICE Studio (레드아이스 스튜디오)",
-    "synopsis": "10 years ago, after “the Gate” that connected the real world with the monster world opened, some of the ordinary, everyday people received the power to hunt monsters within the Gate. They are known as “Hunters”. However, not all Hunters are powerful. My name is Sung Jin-Woo, a..."
+    "coverUrl": "mangas/covers/mv-59f47645.jpg",
+    "author": "Ishida Sui",
+    "artist": "Ishida Sui",
+    "synopsis": "Lurking within the shadows of Tokyo are frightening beings known as ghouls, who satisfy their hunger by feeding on human flesh. Kaneki Ken undergoes surgery that transforms him into a half-ghoul, thrusting him into a bloody clash between ghouls and human investigators."
+  },
+  {
+    "id": "mv-6114f59f",
+    "mangadexId": "6114f59f-4047-496b-8605-c6264c76d49f",
+    "title": "Mushoku Tensei ~Isekai Ittara Honki Dasu~",
+    "altTitle": "無職転生 ～異世界行ったら本気だす～",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Isekai",
+      "Magic"
+    ],
+    "rating": 4.95,
+    "totalChapters": 102,
+    "releaseDay": "Fri",
+    "latestChapter": {
+      "number": 102,
+      "title": "Chapter 102",
+      "views": "9.4M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "mangas/covers/mv-6114f59f.jpg",
+    "author": "Rifujin na Magonote",
+    "artist": "Fujikawa Yuka",
+    "synopsis": "A 34-year-old shut-in dies saving strangers and reincarnates in a world of swords and magic as baby Rudeus Greyrat. Keeping his memories, he resolves to live his new life to the absolute fullest and master powerful ancient magic."
   },
   {
     "id": "mv-77bee52c",
@@ -128,64 +126,62 @@ const MANGA_DATABASE = [
     "synopsis": "Just like how everyone adored heroes in their childhood, a certain young man adored those powers hidden in shadows. Ninjas, rogues, shadowy mentor types, that sort of deal.   After hiding his strength and living the mediocre life of a NPC by day while undergoing frenzied train..."
   },
   {
-    "id": "mv-e78a489b",
-    "mangadexId": "e78a489b-6632-4d61-b00b-5206f5b8b22b",
-    "title": "Tensei Shitara Slime datta Ken",
-    "altTitle": "Tensei Slime",
+    "id": "mv-4ec3e6b3",
+    "mangadexId": "4ec3e6b3-18bf-4964-9c87-1f287d3398f4",
+    "title": "Horimiya",
+    "altTitle": "ホリミヤ",
     "type": "Manga",
     "demographic": "Shōnen",
     "genres": [
-      "Reincarnation",
-      "Monsters",
-      "Action",
-      "Demons",
-      "Comedy"
+      "Comedy",
+      "Romance",
+      "School Life",
+      "Slice of Life"
     ],
-    "rating": 4.94,
-    "totalChapters": 96,
-    "releaseDay": "Tue",
+    "rating": 4.92,
+    "totalChapters": 125,
+    "releaseDay": "Archive",
     "latestChapter": {
-      "number": 96,
-      "title": "Chapter 96",
-      "views": "5.3M",
-      "dropTime": "Today (Tokyo Sync)"
+      "number": 125,
+      "title": "Chapter 125",
+      "views": "8.6M",
+      "dropTime": "Archive Vault"
     },
-    "isSimulpub": true,
-    "isFeatured": true,
-    "coverUrl": "mangas/covers/mv-e78a489b.jpg",
-    "author": "Fuse",
-    "artist": "Kawakami Taiki",
-    "synopsis": "The ordinary Mikami Satoru found himself dying after being stabbed by a slasher. It should have been the end of his meager 37 years, but he found himself deaf and blind after hearing a mysterious voice.   He had been reincarnated into a slime!      While complaining about beco..."
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "mangas/covers/mv-4ec3e6b3.jpg",
+    "author": "HERO",
+    "artist": "Hagiwara Daisuke",
+    "synopsis": "Hori is a popular high school girl who secretly looks after her home and younger brother. Miyamura seems like an aloof otaku at school, but outside he has piercings and tattoos. The two bond over their secret lives."
   },
   {
-    "id": "mv-b0b721ff",
-    "mangadexId": "b0b721ff-c388-4486-aa0f-c2b0bb321512",
-    "title": "Sousou no Frieren",
-    "altTitle": "葬送のフリーレン",
+    "id": "mv-37f5cce0",
+    "mangadexId": "37f5cce0-8070-4ada-96e5-fa24b1bd4ff9",
+    "title": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
+    "altTitle": "かぐや様は告らせたい～天才たちの恋愛頭脳戦～",
     "type": "Manga",
-    "demographic": "Shōnen",
+    "demographic": "Seinen",
     "genres": [
-      "Award Winning",
-      "Monsters",
-      "Demons",
-      "Adventure",
-      "Magic"
+      "Comedy",
+      "Romance",
+      "School Life",
+      "Psychological"
     ],
-    "rating": 4.93,
-    "totalChapters": 100,
-    "releaseDay": "Wed",
+    "rating": 4.97,
+    "totalChapters": 281,
+    "releaseDay": "Mon",
     "latestChapter": {
-      "number": 100,
-      "title": "Chapter 100",
-      "views": "5.0M",
-      "dropTime": "Today (Tokyo Sync)"
+      "number": 281,
+      "title": "Chapter 281",
+      "views": "13.1M",
+      "dropTime": "Archive Vault"
     },
-    "isSimulpub": true,
+    "isSimulpub": false,
     "isFeatured": false,
-    "coverUrl": "mangas/covers/mv-b0b721ff.jpg",
-    "author": "Yamada Kanehito",
-    "artist": "Abe Tsukasa",
-    "synopsis": "The adventure is over but life goes on for an elf mage just beginning to learn what living is all about. Elf mage Frieren and her courageous fellow adventurers have defeated the Demon King and brought peace to the land. With the great struggle over, they all go their separate ..."
+    "coverUrl": "mangas/covers/mv-37f5cce0.jpg",
+    "author": "Akasaka Aka",
+    "artist": "Akasaka Aka",
+    "synopsis": "Student council president Shirogane Miyuki and vice-president Shinomiya Kaguya appear to be the perfect couple. Pride gets in the way: whoever confesses first is the loser, initiating an all-out battle of psychological wits."
   },
   {
     "id": "mv-a96676e5",
@@ -1185,7 +1181,8 @@ function updateCatalogResultsCount() {
 }
 
 // Render Manga Catalog Grid  — now with page-number pagination
-const CATALOG_PAGE_SIZE = 18;
+const CATALOG_PAGE_SIZE = 12;
+const SERIES_CHAPTER_PAGE_SIZE = 16;
 
 function renderCatalog() {
   const container = document.getElementById("catalogGrid");
@@ -1219,7 +1216,7 @@ function renderCatalog() {
     const views = m.latestChapter ? m.latestChapter.views : "1.2M";
     const isFav = AppState.userFavorites && AppState.userFavorites.has(m.id);
     return `
-      <article class="manga-card" onclick="openMangaDetails('${m.id}')">
+      <article class="manga-card" onclick="openMangaDetails('${m.id}')" onmouseenter="onMangaCardHoverEnter(event, '${m.id}')" onmouseleave="onMangaCardHoverLeave(event)">
         <div class="manga-cover-wrap">
           <img class="manga-cover-img" src="${cover}" alt="${m.title}" loading="lazy"/>
           <span class="manga-format-badge catalog-format-badge">${m.type.toUpperCase()}</span>
@@ -1287,16 +1284,18 @@ function renderCatalogPagination(currentPage, totalPages) {
   }).join("");
 
   pager.innerHTML = `
-    <div class="pager-row">
-      <button class="page-btn page-nav-btn" onclick="goToCatalogPage(${currentPage - 1})" ${currentPage === 1 ? "disabled" : ""} title="Previous page">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      ${pageItems}
-      <button class="page-btn page-nav-btn" onclick="goToCatalogPage(${currentPage + 1})" ${currentPage === totalPages ? "disabled" : ""} title="Next page">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
+    <div class="pager-container">
+      <div class="pager-counter">Showing ${pageStart} to ${pageEnd} of ${total} entries</div>
+      <div class="pager-row">
+        <button class="page-btn page-nav-btn page-text-btn" onclick="goToCatalogPage(${currentPage - 1})" ${currentPage === 1 ? "disabled" : ""}>
+          Previous
+        </button>
+        ${pageItems}
+        <button class="page-btn page-nav-btn page-text-btn" onclick="goToCatalogPage(${currentPage + 1})" ${currentPage === totalPages ? "disabled" : ""}>
+          Next
+        </button>
+      </div>
     </div>
-    <div class="pager-counter">Showing ${pageStart}–${pageEnd} of ${total} series</div>
   `;
 }
 
@@ -1343,11 +1342,155 @@ function clearDirSearch() {
 }
 
 // ==========================================================================
+// 7B. DESKTOP MANGA HOVER QUICK-PREVIEW POPOVER
+// ==========================================================================
+let _popoverTimer = null;
+let _popoverCloseTimer = null;
+
+function onMangaCardHoverEnter(event, mangaId) {
+  if (window.matchMedia && window.matchMedia("(hover: none)").matches) return;
+
+  clearTimeout(_popoverCloseTimer);
+  clearTimeout(_popoverTimer);
+  const cardEl = event.currentTarget;
+
+  _popoverTimer = setTimeout(() => {
+    showMangaHoverPopover(cardEl, mangaId);
+  }, 220);
+}
+
+function onMangaCardHoverLeave(event) {
+  clearTimeout(_popoverTimer);
+  _popoverCloseTimer = setTimeout(() => {
+    hideMangaHoverPopover();
+  }, 160);
+}
+
+function keepHoverPopoverOpen() {
+  clearTimeout(_popoverCloseTimer);
+}
+
+function onHoverPopoverLeave() {
+  hideMangaHoverPopover();
+}
+
+function hideMangaHoverPopover() {
+  const popover = document.getElementById("mangaHoverPopover");
+  if (popover) {
+    popover.style.display = "none";
+    popover.innerHTML = "";
+  }
+}
+
+function showMangaHoverPopover(cardEl, mangaId) {
+  const manga = MANGA_DATABASE.find(m => m.id === mangaId);
+  const popover = document.getElementById("mangaHoverPopover");
+  if (!manga || !popover || !cardEl) return;
+
+  const safeTitle = escapeHtml(manga.title);
+  const safeSynopsis = escapeHtml(manga.synopsis || "No description available.");
+  const synopsisSnippet = safeSynopsis.length > 175 ? safeSynopsis.substring(0, 172) + "..." : safeSynopsis;
+  const tagsHtml = manga.genres.slice(0, 5).map(g => `<span class="popover-tag">${escapeHtml(g)}</span>`).join("");
+  const isOngoing = manga.releaseDay && manga.releaseDay !== "Archive";
+  const statusLabel = isOngoing ? `Ongoing • ${manga.releaseDay}` : "Completed Archive";
+
+  popover.innerHTML = `
+    <div class="popover-header">
+      <div class="popover-title-row">
+        <h4 class="popover-title" title="${safeTitle}">${safeTitle}</h4>
+        <span class="popover-score">★ ${manga.rating}</span>
+      </div>
+      <div class="popover-meta-row">
+        <span>📖 Ch. ${manga.totalChapters}</span>
+        <span>•</span>
+        <span>${manga.type} (${manga.demographic})</span>
+        <span>•</span>
+        <span class="popover-status">${statusLabel}</span>
+      </div>
+    </div>
+
+    <p class="popover-synopsis">${synopsisSnippet}</p>
+
+    <div class="popover-tags-row">
+      ${tagsHtml}
+    </div>
+
+    <div class="popover-actions-row">
+      <button class="popover-btn-read" onclick="event.stopPropagation(); hideMangaHoverPopover(); openReader('${manga.id}', 1)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Read Ch. 1
+      </button>
+      <button class="popover-btn-details" onclick="event.stopPropagation(); hideMangaHoverPopover(); openMangaDetails('${manga.id}')">
+        Details →
+      </button>
+    </div>
+  `;
+
+  // Measure card rect
+  const rect = cardEl.getBoundingClientRect();
+  const popoverWidth = 320;
+  popover.style.display = "block";
+  popover.style.visibility = "hidden";
+  const popoverHeight = popover.offsetHeight || 250;
+  popover.style.visibility = "visible";
+
+  // Calculate X: place to the right, or flip to left if near right viewport edge
+  let left = rect.right + 12;
+  if (left + popoverWidth > window.innerWidth - 12) {
+    left = rect.left - popoverWidth - 12;
+  }
+  if (left < 10) {
+    left = Math.max(10, (window.innerWidth - popoverWidth) / 2);
+  }
+
+  // Calculate Y: center vertically with card
+  let top = rect.top + (rect.height / 2) - (popoverHeight / 2);
+  if (top + popoverHeight > window.innerHeight - 10) {
+    top = window.innerHeight - popoverHeight - 10;
+  }
+  if (top < 10) {
+    top = 10;
+  }
+
+  popover.style.left = `${Math.round(left)}px`;
+  popover.style.top = `${Math.round(top)}px`;
+}
+
+// Hide popover on window scroll to prevent trailing
+window.addEventListener("scroll", () => {
+  hideMangaHoverPopover();
+}, { passive: true });
+
+// ==========================================================================
 // 8. ADVANCED 4-MODE FULLSCREEN READER ENGINE (MangaPlus Evolution)
 // ==========================================================================
+function getReaderPageSrc(manga, chapterNumber, pageNum, totalPages) {
+  if (AppState.activeReader._offlinePages && AppState.activeReader._offlinePages[pageNum - 1]) {
+    return AppState.activeReader._offlinePages[pageNum - 1];
+  }
+  if (manga && manga.customPages && manga.customPages[pageNum - 1]) {
+    return manga.customPages[pageNum - 1];
+  }
+  return generateMangaPageSVG(manga, chapterNumber, pageNum, totalPages);
+}
+
+function scrollReaderToTop() {
+  const vp = document.getElementById("readerViewport");
+  if (vp) vp.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
   const manga = MANGA_DATABASE.find(m => m.id === mangaId);
   if (!manga) return;
+
+  // If chapter is an external link (e.g. MangaPlus/Publisher direct link), open directly
+  if (AppState.activeSeriesChapters && AppState.activeSeriesManga && AppState.activeSeriesManga.id === mangaId) {
+    const chObj = AppState.activeSeriesChapters.find(c => String(c.number) === String(chapterNum));
+    if (chObj && chObj.externalUrl) {
+      window.open(chObj.externalUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
+  }
 
   // Clear previous live pages so stale images don't show for a new chapter
   manga.customPages = null;
@@ -1383,6 +1526,30 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
     resolvedChapterId = manga._chapterMap[String(chapterNum)];
   }
 
+  // If chapterMap is not yet loaded and this manga is from MangaDex, fetch it
+  if (!resolvedChapterId && manga.mangadexId) {
+    try {
+      if (!manga._chapterMap) {
+        const feedRes = await fetch(`https://api.mangadex.org/manga/${manga.mangadexId}/feed?translatedLanguage[]=en&limit=100&order[chapter]=asc`);
+        if (feedRes.ok) {
+          const feedJson = await feedRes.json();
+          manga._chapterMap = {};
+          (feedJson.data || []).forEach(c => {
+            const num = c.attributes.chapter;
+            if (num && !manga._chapterMap[num] && !c.attributes.externalUrl) {
+              manga._chapterMap[num] = c.id;
+            }
+          });
+        }
+      }
+      if (manga._chapterMap) {
+        resolvedChapterId = manga._chapterMap[String(chapterNum)];
+      }
+    } catch (err) {
+      console.warn("Could not resolve MangaDex chapter:", err);
+    }
+  }
+
   // Build chapter select from chapterMap keys if available, else use totalChapters
   const select = document.getElementById("readerChapterSelect");
   if (select) {
@@ -1414,9 +1581,10 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
         const atHome = await atHomeRes.json();
         const baseUrl = atHome.baseUrl;
         const hash = atHome.chapter.hash;
-        const pageFiles = atHome.chapter.dataSaver; // compressed, faster load
+        const pageFiles = atHome.chapter.dataSaver || atHome.chapter.data;
         if (pageFiles && pageFiles.length > 0) {
-          manga.customPages = pageFiles.map(p => `${baseUrl}/data-saver/${hash}/${p}`);
+          const subFolder = atHome.chapter.dataSaver ? "data-saver" : "data";
+          manga.customPages = pageFiles.map(p => `${baseUrl}/${subFolder}/${hash}/${p}`);
           AppState.activeReader.totalPages = manga.customPages.length;
         }
       }
@@ -1425,9 +1593,9 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
     }
   }
 
-  // If still no pages found, fall back to totalChapters count with SVG placeholders
+  // If still no pages found, fall back to default preview pages with SVG
   if (!manga.customPages && !AppState.activeReader._offlinePages && !manga.pdfData) {
-    AppState.activeReader.totalPages = manga.totalChapters || 8;
+    AppState.activeReader.totalPages = 8;
   }
 
   if (slider) {
@@ -1518,13 +1686,26 @@ function renderReaderViewport() {
     return;
   }
 
+  const quickNavHtml = `
+    <div class="reader-chapter-quicknav">
+      <button class="quicknav-btn" onclick="openReader('${manga.id}', ${chapterNumber - 1})" ${chapterNumber <= 1 ? "disabled" : ""}>
+        ← Previous
+      </button>
+      <span class="quicknav-chapter-title">${escapeHtml(manga.title)} • Chapter ${chapterNumber}</span>
+      <button class="quicknav-btn" onclick="openReader('${manga.id}', ${chapterNumber + 1})" ${chapterNumber >= manga.totalChapters ? "disabled" : ""}>
+        Next →
+      </button>
+    </div>
+  `;
+
   if (mode === "vertical") {
-    // Mode 1: Continuous Webtoon Scroll
+    // Mode 1: Continuous Webtoon Scroll (Seamless, Eleceed/Webtoons style)
     viewport.innerHTML = `
       <div class="reader-viewport-vertical">
+        ${quickNavHtml}
         ${Array.from({ length: totalPages }, (_, i) => {
           const pageNum = i + 1;
-          const pageSrc = generateMangaPageSVG(manga, chapterNumber, pageNum, totalPages);
+          const pageSrc = getReaderPageSrc(manga, chapterNumber, pageNum, totalPages);
           return `<img class="manga-page-img" src="${pageSrc}" alt="Page ${pageNum}" loading="lazy"/>`;
         }).join("")}
 
@@ -1540,21 +1721,31 @@ function renderReaderViewport() {
             </button>
           </div>
         </div>
+
+        <!-- Floating Scroll to Top button (Webtoons style) -->
+        <button id="readerScrollTopBtn" class="reader-scroll-top-btn" onclick="scrollReaderToTop()" title="Back to Top" aria-label="Back to Top">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+        </button>
       </div>
     `;
 
     viewport.onscroll = () => {
       const scrollPercent = viewport.scrollTop / (viewport.scrollHeight - viewport.clientHeight);
       if (fill) fill.style.width = `${Math.min(100, Math.round(scrollPercent * 100))}%`;
+      const topBtn = document.getElementById("readerScrollTopBtn");
+      if (topBtn) {
+        topBtn.classList.toggle("visible", viewport.scrollTop > 350);
+      }
     };
   } else if (mode === "double-spread") {
     // Mode 2: Double-Page Spread
     const page1 = currentPage;
     const page2 = Math.min(totalPages, currentPage + 1);
-    const src1 = generateMangaPageSVG(manga, chapterNumber, page1, totalPages);
-    const src2 = generateMangaPageSVG(manga, chapterNumber, page2, totalPages);
+    const src1 = getReaderPageSrc(manga, chapterNumber, page1, totalPages);
+    const src2 = getReaderPageSrc(manga, chapterNumber, page2, totalPages);
 
     viewport.innerHTML = `
+      ${quickNavHtml}
       <div class="tap-zone-left" onclick="prevReaderPage()" title="Previous Page"></div>
       <div class="tap-zone-right" onclick="nextReaderPage()" title="Next Page"></div>
       <div class="reader-viewport-spread">
@@ -1564,8 +1755,9 @@ function renderReaderViewport() {
     `;
   } else {
     // Mode 3: Single Page (RTL or LTR)
-    const src = generateMangaPageSVG(manga, chapterNumber, currentPage, totalPages);
+    const src = getReaderPageSrc(manga, chapterNumber, currentPage, totalPages);
     viewport.innerHTML = `
+      ${quickNavHtml}
       <div class="tap-zone-left" onclick="${mode === 'single-rtl' ? 'nextReaderPage()' : 'prevReaderPage()'}" title="Flip"></div>
       <div class="tap-zone-right" onclick="${mode === 'single-rtl' ? 'prevReaderPage()' : 'nextReaderPage()'}" title="Flip"></div>
       <div class="reader-viewport-single">
@@ -1881,6 +2073,9 @@ function renderSeriesPage(manga) {
           <span>Fetching official chapters from MangaDex...</span>
         </div>
       </div>
+
+      <!-- Chapter Pagination Controls -->
+      <div id="seriesChapterPagination" class="series-chapter-pagination"></div>
     </div>
   `;
 
@@ -2011,6 +2206,7 @@ async function _fetchAndRenderSeriesChapters(manga) {
 
 function onSelectSeriesVolume(volume) {
   AppState.activeSeriesVolume = volume;
+  AppState.activeSeriesChapterPage = 1;
   document.querySelectorAll(".vol-tab-btn").forEach(btn => {
     const isTarget = (volume === "all" && btn.textContent.startsWith("All")) || btn.textContent.startsWith(`Volume ${volume} `);
     btn.classList.toggle("active", isTarget);
@@ -2020,6 +2216,7 @@ function onSelectSeriesVolume(volume) {
 
 function toggleSeriesChapterSort() {
   AppState.activeSeriesSort = AppState.activeSeriesSort === "asc" ? "desc" : "asc";
+  AppState.activeSeriesChapterPage = 1;
   const label = document.getElementById("sortDirectionLabel");
   if (label) {
     label.textContent = AppState.activeSeriesSort === "asc" ? "Oldest (1 → N)" : "Latest (N → 1)";
@@ -2029,11 +2226,13 @@ function toggleSeriesChapterSort() {
 
 function onSeriesChapterSearch(query) {
   AppState.activeSeriesFilterQuery = (query || "").trim().toLowerCase();
+  AppState.activeSeriesChapterPage = 1;
   renderSeriesChapterGrid();
 }
 
 function renderSeriesChapterGrid() {
   const grid = document.getElementById("seriesChapterGrid");
+  const pager = document.getElementById("seriesChapterPagination");
   if (!grid || !AppState.activeSeriesChapters) return;
 
   const manga = AppState.activeSeriesManga;
@@ -2060,32 +2259,106 @@ function renderSeriesChapterGrid() {
     return AppState.activeSeriesSort === "asc" ? na - nb : nb - na;
   });
 
-  if (list.length === 0) {
+  const totalChapters = list.length;
+
+  if (totalChapters === 0) {
     grid.innerHTML = `<div class="empty-chapters-msg">No chapters matched your criteria.</div>`;
+    if (pager) pager.innerHTML = "";
     return;
   }
 
-  grid.innerHTML = list.map(ch => {
+  // 4. Pagination (matches user requested format: Showing X to Y of Z entries ... Previous [1] 2 Next)
+  const totalPages = Math.ceil(totalChapters / SERIES_CHAPTER_PAGE_SIZE);
+  if (!AppState.activeSeriesChapterPage || AppState.activeSeriesChapterPage < 1) {
+    AppState.activeSeriesChapterPage = 1;
+  }
+  if (AppState.activeSeriesChapterPage > totalPages) {
+    AppState.activeSeriesChapterPage = totalPages;
+  }
+
+  const curPage = AppState.activeSeriesChapterPage;
+  const startIdx = (curPage - 1) * SERIES_CHAPTER_PAGE_SIZE;
+  const endIdx = Math.min(startIdx + SERIES_CHAPTER_PAGE_SIZE, totalChapters);
+  const pagedList = list.slice(startIdx, endIdx);
+
+  grid.innerHTML = pagedList.map(ch => {
     const safeTitle = escapeHtml(ch.title || `Chapter ${ch.number}`);
     const pubDate = ch.publishAt
       ? new Date(ch.publishAt).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
       : "Official Release";
     const volLabel = ch.volume ? `Vol. ${ch.volume} • ` : "";
+    const isExternal = Boolean(ch.externalUrl);
+    const badgeText = isExternal ? "External ↗" : "Official";
+    const clickAction = isExternal
+      ? `window.open('${escapeHtml(ch.externalUrl)}', '_blank', 'noopener,noreferrer')`
+      : `openReader('${manga.id}', '${ch.number}', '${ch.id || ''}')`;
+    const readBtnHtml = isExternal
+      ? `<button class="chapter-card-read-btn" style="background:#27272a; border:1px solid #3f3f46; color:#a1a1aa;">Official ↗</button>`
+      : `<button class="chapter-card-read-btn">Read →</button>`;
 
     return `
-      <div class="chapter-card" onclick="openReader('${manga.id}', '${ch.number}', '${ch.id || ''}')">
+      <div class="chapter-card${isExternal ? " external-card" : ""}" onclick="${clickAction}">
         <div class="chapter-card-top">
           <span class="chapter-card-vol">${volLabel}Chapter ${ch.number}</span>
-          <span class="chapter-card-badge">Official</span>
+          <span class="chapter-card-badge${isExternal ? " external-badge" : ""}">${badgeText}</span>
         </div>
         <div class="chapter-card-title" title="${safeTitle}">${safeTitle}</div>
         <div class="chapter-card-footer">
           <span class="chapter-card-date">${pubDate}</span>
-          <button class="chapter-card-read-btn">Read →</button>
+          ${readBtnHtml}
         </div>
       </div>
     `;
   }).join("");
+
+  if (pager) {
+    if (totalPages <= 1) {
+      pager.innerHTML = `
+        <div class="pager-container">
+          <div class="pager-counter">Showing 1 to ${totalChapters} of ${totalChapters} entries</div>
+        </div>
+      `;
+      return;
+    }
+
+    const delta = 2;
+    const pages = [];
+    const rStart = Math.max(2, curPage - delta);
+    const rEnd = Math.min(totalPages - 1, curPage + delta);
+    pages.push(1);
+    if (rStart > 2) pages.push("…");
+    for (let p = rStart; p <= rEnd; p++) pages.push(p);
+    if (rEnd < totalPages - 1) pages.push("…");
+    pages.push(totalPages);
+
+    const pageButtons = pages.map(item => {
+      if (item === "…") return `<span class="page-ellipsis">···</span>`;
+      const isActive = item === curPage ? " page-btn-active" : "";
+      return `<button class="page-btn${isActive}" onclick="goToSeriesChapterPage(${item})" aria-label="Page ${item}">${item}</button>`;
+    }).join("");
+
+    pager.innerHTML = `
+      <div class="pager-container">
+        <div class="pager-counter">Showing ${startIdx + 1} to ${endIdx} of ${totalChapters} entries</div>
+        <div class="pager-row">
+          <button class="page-btn page-nav-btn page-text-btn" onclick="goToSeriesChapterPage(${curPage - 1})" ${curPage === 1 ? "disabled" : ""}>
+            Previous
+          </button>
+          ${pageButtons}
+          <button class="page-btn page-nav-btn page-text-btn" onclick="goToSeriesChapterPage(${curPage + 1})" ${curPage === totalPages ? "disabled" : ""}>
+            Next
+          </button>
+        </div>
+      </div>
+    `;
+  }
+}
+
+function goToSeriesChapterPage(pageNum) {
+  AppState.activeSeriesChapterPage = pageNum;
+  renderSeriesChapterGrid();
+  const el = document.getElementById("seriesChapterGrid");
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 // Support browser back/forward and deep-linking via URL hash
