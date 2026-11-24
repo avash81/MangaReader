@@ -5544,32 +5544,33 @@ function renderSeriesPage(manga) {
             </div>
           </div>
         </div>
-
-        ${(manga.trailerUrl) ? (() => {
-          // Accept full YouTube URL or bare video ID
-          const rawTrailer = manga.trailerUrl.trim();
-          const ytMatch = rawTrailer.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
-          const videoId = ytMatch ? ytMatch[1] : (rawTrailer.length === 11 ? rawTrailer : null);
-          if (!videoId) return '';
-          return `
-        <div class="series-trailer-block">
-          <div class="trailer-label">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-            Official Trailer
-          </div>
-          <div class="trailer-embed-wrap">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1"
-              title="${safeTitle} Trailer"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy"
-              class="trailer-iframe"
-            ></iframe>
-          </div>
-        </div>`;
-        })() : ''}
       </div>
+
+      ${(manga.trailerUrl) ? (() => {
+        // Accept full YouTube URL or bare video ID
+        const rawTrailer = manga.trailerUrl.trim();
+        const ytMatch = rawTrailer.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+        const videoId = ytMatch ? ytMatch[1] : (rawTrailer.length === 11 ? rawTrailer : null);
+        if (!videoId) return '';
+        return `
+      <!-- Compact Right-Side Official Trailer Widget -->
+      <div class="series-trailer-side">
+        <div class="trailer-label">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          Official Trailer
+        </div>
+        <div class="trailer-embed-wrap">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1"
+            title="${safeTitle} Trailer"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+            class="trailer-iframe"
+          ></iframe>
+        </div>
+      </div>`;
+      })() : ''}
     </div>
 
     <!-- Official Release Schedule Banner -->
