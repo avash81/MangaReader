@@ -121,7 +121,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30002",
     "anilistId": 30002,
-    "mangadexId": null,
+    "mangadexId": "801513ba-a712-498c-8f57-cae55b38cc92",
     "title": "Berserk",
     "altTitle": "ベルセルク",
     "type": "Manga",
@@ -153,7 +153,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-31706",
     "anilistId": 31706,
-    "mangadexId": null,
+    "mangadexId": "1044287a-73df-48d0-b0b2-5327f32dd651",
     "title": "JoJo's Bizarre Adventure: Part 7–Steel Ball Run",
     "altTitle": "ジョジョの奇妙な冒険 スティール・ボール・ラン",
     "type": "Manga",
@@ -185,7 +185,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30656",
     "anilistId": 30656,
-    "mangadexId": null,
+    "mangadexId": "d1a9fdeb-f713-407f-960c-8326b586e6fd",
     "title": "Vagabond",
     "altTitle": "バガボンド",
     "type": "Manga",
@@ -215,7 +215,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30013",
     "anilistId": 30013,
-    "mangadexId": null,
+    "mangadexId": "a1c7c817-4e59-43b7-9365-09675a149a6f",
     "title": "One Piece",
     "altTitle": "ONE PIECE",
     "type": "Manga",
@@ -246,7 +246,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-64053",
     "anilistId": 64053,
-    "mangadexId": null,
+    "mangadexId": "0d31587d-cec8-4bb6-89dd-cb0e4dde5b14",
     "title": "Umineko When They Cry Episode 8: Twilight of the Golden Witch",
     "altTitle": "うみねこのなく頃に散 - Episode 8: Twilight of the Golden Witch",
     "type": "Manga",
@@ -276,7 +276,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30001",
     "anilistId": 30001,
-    "mangadexId": null,
+    "mangadexId": "85a915de-40a0-4b19-b4a5-094cef989734",
     "title": "Monster",
     "altTitle": "MONSTER",
     "type": "Manga",
@@ -306,7 +306,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-140407",
     "anilistId": 140407,
-    "mangadexId": null,
+    "mangadexId": "d7f56ace-cd30-48b9-8b64-afeca0077fca",
     "title": "The Greatest Estate Developer",
     "altTitle": "역대급 영지 설계사",
     "type": "Manhwa",
@@ -336,7 +336,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30642",
     "anilistId": 30642,
-    "mangadexId": null,
+    "mangadexId": "5d1fc77e-706a-4fc5-bea8-486c9be0145d",
     "title": "Vinland Saga",
     "altTitle": "ヴィンランド・サガ",
     "type": "Manga",
@@ -366,7 +366,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30051",
     "anilistId": 30051,
-    "mangadexId": null,
+    "mangadexId": "319df2e2-e6a6-4e3a-a31c-68539c140a84",
     "title": "Slam Dunk",
     "altTitle": "SLAM DUNK",
     "type": "Manga",
@@ -395,7 +395,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-74489",
     "anilistId": 74489,
-    "mangadexId": null,
+    "mangadexId": "8896ec06-cca8-4ee8-872a-cc8a359c3bb8",
     "title": "Land of the Lustrous",
     "altTitle": "宝石の国",
     "type": "Manga",
@@ -426,7 +426,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30657",
     "anilistId": 30657,
-    "mangadexId": null,
+    "mangadexId": "366e544c-9474-4042-b767-d222fc51f001",
     "title": "Real",
     "altTitle": "リアル",
     "type": "Manga",
@@ -456,7 +456,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-119247",
     "anilistId": 119247,
-    "mangadexId": null,
+    "mangadexId": "a9dd451c-3c45-4d66-a818-4e1b78855838",
     "title": "Uma Musume: Cinderella Gray",
     "altTitle": "ウマ娘 シンデレラグレイ",
     "type": "Manga",
@@ -485,7 +485,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30025",
     "anilistId": 30025,
-    "mangadexId": null,
+    "mangadexId": "f9c9614d-0657-44c6-9c33-47fd58cd51b3",
     "title": "Fullmetal Alchemist",
     "altTitle": "鋼の錬金術師",
     "type": "Manga",
@@ -547,7 +547,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-46765",
     "anilistId": 46765,
-    "mangadexId": null,
+    "mangadexId": "e8d4a5e5-29fb-42b1-90e0-a9a3a91ecfa9",
     "title": "Kingdom",
     "altTitle": "キングダム",
     "type": "Manga",
@@ -576,7 +576,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-87395",
     "anilistId": 87395,
-    "mangadexId": null,
+    "mangadexId": "fffbfac3-b7ad-41ee-9581-b4d90ecec941",
     "title": "Grand Blue Dreaming",
     "altTitle": "ぐらんぶる",
     "type": "Manga",
@@ -607,7 +607,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30104",
     "anilistId": 30104,
-    "mangadexId": null,
+    "mangadexId": "58be6aa6-06cb-4ca5-bd20-f1392ce451fb",
     "title": "Yotsuba&!",
     "altTitle": "よつばと！",
     "type": "Manga",
@@ -635,7 +635,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-65243",
     "anilistId": 65243,
-    "mangadexId": null,
+    "mangadexId": "8f8b7cb0-7109-46e8-b12c-0448a6453dfa",
     "title": "Haikyu!!",
     "altTitle": "ハイキュー！！",
     "type": "Manga",
@@ -665,7 +665,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-187189",
     "anilistId": 187189,
-    "mangadexId": null,
+    "mangadexId": "8b8102da-c875-4dae-a79c-c62e817ff3f5",
     "title": "On the Way to Meet Mom",
     "altTitle": "엄마를 만나러 가는 길",
     "type": "Manhwa",
@@ -723,7 +723,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30028",
     "anilistId": 30028,
-    "mangadexId": null,
+    "mangadexId": "4f7ee454-7478-40d5-9eeb-b8ae8e72600d",
     "title": "Nana",
     "altTitle": "NANA",
     "type": "Manga",
@@ -754,7 +754,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30026",
     "anilistId": 30026,
-    "mangadexId": null,
+    "mangadexId": "936f0ba5-ca65-4de4-99b1-528c02a4454d",
     "title": "Hunter x Hunter",
     "altTitle": "HUNTER×HUNTER",
     "type": "Manga",
@@ -785,7 +785,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-75143",
     "anilistId": 75143,
-    "mangadexId": null,
+    "mangadexId": "df9be021-ff37-419e-ba6e-dda3e28eb763",
     "title": "Kono Oto Tomare!",
     "altTitle": "この音とまれ！",
     "type": "Manga",
@@ -815,7 +815,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-86082",
     "anilistId": 86082,
-    "mangadexId": null,
+    "mangadexId": "d90ea6cb-7bc3-4d80-8af0-28557e6c4e17",
     "title": "Delicious in Dungeon",
     "altTitle": "ダンジョン飯",
     "type": "Manga",
@@ -846,7 +846,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30003",
     "anilistId": 30003,
-    "mangadexId": null,
+    "mangadexId": "9650e956-0302-41a8-89a3-33dc6622a02c",
     "title": "20th Century Boys",
     "altTitle": "20世紀少年",
     "type": "Manga",
@@ -877,7 +877,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-34632",
     "anilistId": 34632,
-    "mangadexId": null,
+    "mangadexId": "4301d363-ee02-43f4-ae24-4cbf29a74830",
     "title": "Goodnight Punpun",
     "altTitle": "おやすみプンプン",
     "type": "Manga",
@@ -906,7 +906,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-118371",
     "anilistId": 118371,
-    "mangadexId": null,
+    "mangadexId": "4a433d6b-f51a-4c2f-a183-85419fe98efc",
     "title": "Medalist",
     "altTitle": "メダリスト",
     "type": "Manga",
@@ -967,7 +967,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30007",
     "anilistId": 30007,
-    "mangadexId": null,
+    "mangadexId": "f7888782-0727-49b0-95ec-a3530c70f83b",
     "title": "Hajime no Ippo: Fighting Spirit!",
     "altTitle": "はじめの一歩",
     "type": "Manga",
@@ -997,7 +997,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-31224",
     "anilistId": 31224,
-    "mangadexId": null,
+    "mangadexId": "0ca1627e-95dd-4118-892a-f144adf02256",
     "title": "March Comes in Like a Lion",
     "altTitle": "3月のライオン",
     "type": "Manga",
@@ -1055,7 +1055,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-86635",
     "anilistId": 86635,
-    "mangadexId": null,
+    "mangadexId": "37f5cce0-8070-4ada-96e5-fa24b1bd4ff9",
     "title": "Kaguya-sama: Love is War",
     "altTitle": "かぐや様は告らせたい～天才たちの恋愛頭脳戦～",
     "type": "Manga",
@@ -1086,7 +1086,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-37375",
     "anilistId": 37375,
-    "mangadexId": null,
+    "mangadexId": "bb8310e4-6050-4a43-984e-f7bbdfce23b1",
     "title": "The Climber",
     "altTitle": "孤高の人",
     "type": "Manga",
@@ -1117,7 +1117,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-51525",
     "anilistId": 51525,
-    "mangadexId": null,
+    "mangadexId": "3bb0279f-a01d-4aa4-93e4-305800f4b83e",
     "title": "Yona of the Dawn",
     "altTitle": "暁のヨナ",
     "type": "Manga",
@@ -1149,7 +1149,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-98263",
     "anilistId": 98263,
-    "mangadexId": null,
+    "mangadexId": "67e7453b-9ee5-4ae5-9316-215b03e4a71d",
     "title": "Witch Hat Atelier",
     "altTitle": "とんがり帽子のアトリエ",
     "type": "Manga",
@@ -1178,7 +1178,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-53900",
     "anilistId": 53900,
-    "mangadexId": null,
+    "mangadexId": "15e4d8b9-2a1e-4db0-82a9-ecd92411a0b8",
     "title": "Umineko When They Cry Episode 7: Requiem of the Golden Witch",
     "altTitle": "うみねこのなく頃に散 - Episode 7: Requiem of the Golden Witch",
     "type": "Manga",
@@ -1209,7 +1209,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-112275",
     "anilistId": 112275,
-    "mangadexId": null,
+    "mangadexId": "322f11ba-7a9d-4a57-83f5-924b8f6319d6",
     "title": "Heaven Official's Blessing",
     "altTitle": "天官赐福",
     "type": "Manhua",
@@ -1239,7 +1239,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-85135",
     "anilistId": 85135,
-    "mangadexId": null,
+    "mangadexId": "4bde51e5-e420-45a4-98e9-7405bf2d59ff",
     "title": "A Silent Voice",
     "altTitle": "聲の形",
     "type": "Manga",
@@ -1269,7 +1269,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-116170",
     "anilistId": 116170,
-    "mangadexId": null,
+    "mangadexId": "82996809-66ac-4c46-a967-2a63f124488b",
     "title": "Veil",
     "altTitle": "Veil",
     "type": "Manga",
@@ -1297,7 +1297,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-118586",
     "anilistId": 118586,
-    "mangadexId": null,
+    "mangadexId": "1d55e985-8379-41bc-aeca-acd069bcadd0",
     "title": "Frieren: Beyond Journey’s End",
     "altTitle": "葬送のフリーレン",
     "type": "Manga",
@@ -1327,7 +1327,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-107279",
     "anilistId": 107279,
-    "mangadexId": null,
+    "mangadexId": "5eb2c6fa-4dc4-4fba-974f-ae44bd8ce2ff",
     "title": "Aoashi",
     "altTitle": "アオアシ",
     "type": "Manga",
@@ -1355,7 +1355,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-39982",
     "anilistId": 39982,
-    "mangadexId": null,
+    "mangadexId": "a07320a4-afcd-413a-a451-d69a448d0c28",
     "title": "Usogui",
     "altTitle": "嘘喰い",
     "type": "Manga",
@@ -1384,7 +1384,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-117620",
     "anilistId": 117620,
-    "mangadexId": null,
+    "mangadexId": "6ecc62e4-25ad-4102-b0d8-580a8023d2fb",
     "title": "The Summer You Were There",
     "altTitle": "君と綴るうたかた",
     "type": "Manga",
@@ -1414,7 +1414,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-43245",
     "anilistId": 43245,
-    "mangadexId": null,
+    "mangadexId": "f4455be4-7dc2-4f06-86c7-26ac0072885b",
     "title": "Chihayafuru",
     "altTitle": "ちはやふる",
     "type": "Manga",
@@ -1444,7 +1444,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-89278",
     "anilistId": 89278,
-    "mangadexId": null,
+    "mangadexId": "bbc24cdd-1c8a-4394-ab86-7ce2296920c3",
     "title": "Tobaku Datenroku Kaiji: One Poker-hen",
     "altTitle": "賭博堕天録カイジ ワン・ポーカー編",
     "type": "Manga",
@@ -1473,7 +1473,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30044",
     "anilistId": 30044,
-    "mangadexId": null,
+    "mangadexId": "f65444dc-3694-4e31-a166-8afb2938ed55",
     "title": "Gin Tama",
     "altTitle": "銀魂",
     "type": "Manga",
@@ -1504,7 +1504,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30336",
     "anilistId": 30336,
-    "mangadexId": null,
+    "mangadexId": "02860cdf-1020-40f1-a23f-2025d80f6290",
     "title": "GTO: Great Teacher Onizuka",
     "altTitle": "GTO",
     "type": "Manga",
@@ -1534,7 +1534,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-140475",
     "anilistId": 140475,
-    "mangadexId": null,
+    "mangadexId": "418791c0-35cf-4f87-936b-acd9cddf0989",
     "title": "The Fragrant Flower Blooms With Dignity",
     "altTitle": "薫る花は凛と咲く",
     "type": "Manga",
@@ -1564,7 +1564,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30081",
     "anilistId": 30081,
-    "mangadexId": null,
+    "mangadexId": "93f7b86f-d777-4429-961d-68b59703e5a6",
     "title": "Aria",
     "altTitle": "ARIA",
     "type": "Manga",
@@ -1595,7 +1595,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-85412",
     "anilistId": 85412,
-    "mangadexId": null,
+    "mangadexId": "5b93fa0f-0640-49b8-974e-954b9959929b",
     "title": "Girls' Last Tour",
     "altTitle": "少女終末旅行",
     "type": "Manga",
@@ -1624,7 +1624,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-31133",
     "anilistId": 31133,
-    "mangadexId": null,
+    "mangadexId": "34f45c13-2b78-4900-8af2-d0bb551101f4",
     "title": "Dorohedoro",
     "altTitle": "ドロヘドロ",
     "type": "Manga",
@@ -1656,7 +1656,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-86559",
     "anilistId": 86559,
-    "mangadexId": null,
+    "mangadexId": "8847f905-550d-4fe6-bcda-ac2b896789c7",
     "title": "Golden Kamuy",
     "altTitle": "ゴールデンカムイ",
     "type": "Manga",
@@ -1687,7 +1687,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-119257",
     "anilistId": 119257,
-    "mangadexId": null,
+    "mangadexId": "46392cb3-a0f8-42e4-b2ac-b89637df56d9",
     "title": "Omniscient Reader",
     "altTitle": "전지적 독자 시점",
     "type": "Manhwa",
@@ -1717,7 +1717,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-136109",
     "anilistId": 136109,
-    "mangadexId": null,
+    "mangadexId": "c8a0426d-539b-4f6a-9537-fbccf4962529",
     "title": "The Moon on a Rainy Night",
     "altTitle": "雨夜の月",
     "type": "Manga",
@@ -1746,7 +1746,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-174875",
     "anilistId": 174875,
-    "mangadexId": null,
+    "mangadexId": "645ed5e1-9a81-4771-9088-8e8265c4bd42",
     "title": "Eternity for You",
     "altTitle": "君に贈る永遠",
     "type": "Manga",
@@ -1775,7 +1775,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30145",
     "anilistId": 30145,
-    "mangadexId": null,
+    "mangadexId": "6bb8cc05-ff11-4f6b-b875-f708444fbfed",
     "title": "BECK",
     "altTitle": "BECK",
     "type": "Manga",
@@ -1806,7 +1806,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-86569",
     "anilistId": 86569,
-    "mangadexId": null,
+    "mangadexId": "60879eb7-3845-4dff-b86d-5a612108053b",
     "title": "Ace of the Diamond Act II",
     "altTitle": "ダイヤのA act II",
     "type": "Manga",
@@ -1834,7 +1834,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-109285",
     "anilistId": 109285,
-    "mangadexId": null,
+    "mangadexId": "244c9d4f-e5fb-4590-9b96-4da191977b33",
     "title": "Skip and Loafer",
     "altTitle": "スキップとローファー",
     "type": "Manga",
@@ -1864,7 +1864,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-97553",
     "anilistId": 97553,
-    "mangadexId": null,
+    "mangadexId": "9e03b2ca-5191-44a6-88b6-c0cd49d06b51",
     "title": "Three Days of Happiness",
     "altTitle": "寿命を買い取ってもらった。一年につき、一万円で。",
     "type": "Manga",
@@ -1894,7 +1894,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-187944",
     "anilistId": 187944,
-    "mangadexId": null,
+    "mangadexId": "984df7d5-ae4c-43c6-aa65-737b9f37e5ef",
     "title": "My Bias Gets on the Last Train",
     "altTitle": "내 최애는 막차를 탄다",
     "type": "Manhwa",
@@ -1922,7 +1922,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-44483",
     "anilistId": 44483,
-    "mangadexId": null,
+    "mangadexId": "a437129d-18e9-48d7-9484-9fb9b9073ddd",
     "title": "Space Brothers",
     "altTitle": "宇宙兄弟",
     "type": "Manga",
@@ -1950,7 +1950,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-86218",
     "anilistId": 86218,
-    "mangadexId": null,
+    "mangadexId": "b5f2912d-3f27-4445-a594-5d523684fd3b",
     "title": "Bloom Into You",
     "altTitle": "やがて君になる",
     "type": "Manga",
@@ -1980,7 +1980,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-166742",
     "anilistId": 166742,
-    "mangadexId": null,
+    "mangadexId": "621cf340-6ef1-4b3b-bd0f-82b6837312fe",
     "title": "The Ramparts of Ice",
     "altTitle": "氷の城壁",
     "type": "Manga",
@@ -2011,7 +2011,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-168509",
     "anilistId": 168509,
-    "mangadexId": null,
+    "mangadexId": "90c9a074-7918-48da-8270-69a95b72f245",
     "title": "Our Sunny Days",
     "altTitle": "해 뜨는 집",
     "type": "Manhwa",
@@ -2039,7 +2039,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30004",
     "anilistId": 30004,
-    "mangadexId": null,
+    "mangadexId": "ff73234b-4387-448c-ab54-2879626b4442",
     "title": "Yokohama Kaidashi Kikou",
     "altTitle": "ヨコハマ買い出し紀行",
     "type": "Manga",
@@ -2067,7 +2067,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-41054",
     "anilistId": 41054,
-    "mangadexId": null,
+    "mangadexId": "e5357466-c8a2-4259-9b02-2580185bd2bb",
     "title": "Billy Bat",
     "altTitle": "ビリーバット",
     "type": "Manga",
@@ -2097,7 +2097,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-99022",
     "anilistId": 99022,
-    "mangadexId": null,
+    "mangadexId": "8c1d7d0c-e0b7-4170-941d-29f652c3c19d",
     "title": "The Apothecary Diaries",
     "altTitle": "薬屋のひとりごと",
     "type": "Manga",
@@ -2126,7 +2126,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-107237",
     "anilistId": 107237,
-    "mangadexId": null,
+    "mangadexId": "f8e294c0-7c11-4c66-bdd7-4e25df52bf69",
     "title": "Blue Period",
     "altTitle": "ブルーピリオド",
     "type": "Manga",
@@ -2155,7 +2155,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-119521",
     "anilistId": 119521,
-    "mangadexId": null,
+    "mangadexId": "9ed16bc9-f570-4e71-8dda-aebc098b683b",
     "title": "The Legend of the Northern Blade",
     "altTitle": "북검전기",
     "type": "Manhwa",
@@ -2185,7 +2185,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-168843",
     "anilistId": 168843,
-    "mangadexId": null,
+    "mangadexId": "2a6d6ea2-18a5-4a31-9777-f4bb5bd32726",
     "title": "Little Mushroom",
     "altTitle": "小蘑菇",
     "type": "Manhua",
@@ -2214,7 +2214,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-177706",
     "anilistId": 177706,
-    "mangadexId": null,
+    "mangadexId": "514f1a94-b09f-4331-8cf9-0f01d06d3b80",
     "title": "The Knight Only Lives Today",
     "altTitle": "오늘만 사는 기사",
     "type": "Manhwa",
@@ -2243,7 +2243,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-100805",
     "anilistId": 100805,
-    "mangadexId": null,
+    "mangadexId": "33d1ba42-be1f-4a99-9943-aa8da1a02bdf",
     "title": "Here U Are",
     "altTitle": "Here U Are",
     "type": "Manhua",
@@ -2272,7 +2272,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-114998",
     "anilistId": 114998,
-    "mangadexId": null,
+    "mangadexId": "3fba42cf-2ad6-4c30-a7ab-46cb8149208a",
     "title": "Bungo Stray Dogs Beast",
     "altTitle": "文豪ストレイドッグス　ＢＥＡＳＴ",
     "type": "Manga",
@@ -2303,7 +2303,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-146656",
     "anilistId": 146656,
-    "mangadexId": null,
+    "mangadexId": "46079bf7-4a08-40a0-aacf-462009de74ad",
     "title": "Reunion",
     "altTitle": "해후",
     "type": "Manhwa",
@@ -2331,7 +2331,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-31859",
     "anilistId": 31859,
-    "mangadexId": null,
+    "mangadexId": "2c3cd370-04bd-4994-87dc-e54a4d80c4ec",
     "title": "Natsume's Book of Friends",
     "altTitle": "夏目友人帳",
     "type": "Manga",
@@ -2359,7 +2359,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-85189",
     "anilistId": 85189,
-    "mangadexId": null,
+    "mangadexId": "6e2d91b9-81b4-448c-8ace-fb17d4a99d44",
     "title": "Mob Psycho 100",
     "altTitle": "モブサイコ100",
     "type": "Manga",
@@ -2390,7 +2390,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30651",
     "anilistId": 30651,
-    "mangadexId": null,
+    "mangadexId": "0c9e19cd-86cb-490c-93e9-955af41746ca",
     "title": "Nausicaä of the Valley of the Wind",
     "altTitle": "風の谷のナウシカ",
     "type": "Manga",
@@ -2421,7 +2421,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-121565",
     "anilistId": 121565,
-    "mangadexId": null,
+    "mangadexId": "67e56a7a-c7ea-4db8-84f0-db19c2034729",
     "title": "Seasons of Blossom",
     "altTitle": "청춘 블라썸",
     "type": "Manhwa",
@@ -2450,7 +2450,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30418",
     "anilistId": 30418,
-    "mangadexId": null,
+    "mangadexId": "ff73234b-4387-448c-ab54-2879626b4442",
     "title": "Mushishi",
     "altTitle": "蟲師",
     "type": "Manga",
@@ -2482,7 +2482,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30745",
     "anilistId": 30745,
-    "mangadexId": null,
+    "mangadexId": "e171c073-4415-499b-85bc-ea93825127ac",
     "title": "Pluto",
     "altTitle": "PLUTO",
     "type": "Manga",
@@ -2513,7 +2513,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30756",
     "anilistId": 30756,
-    "mangadexId": null,
+    "mangadexId": "9a502e35-1051-4e4c-b055-5ab211954fa4",
     "title": "Banana Fish",
     "altTitle": "BANANA FISH",
     "type": "Manga",
@@ -2545,7 +2545,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30904",
     "anilistId": 30904,
-    "mangadexId": null,
+    "mangadexId": "991e9f15-8368-4843-a78a-5605918f9c3e",
     "title": "Lone Wolf and Cub",
     "altTitle": "子連れ狼",
     "type": "Manga",
@@ -2573,7 +2573,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-35744",
     "anilistId": 35744,
-    "mangadexId": null,
+    "mangadexId": "e4003893-3162-44c5-b5dc-d7433dfb4e0c",
     "title": "Ping Pong",
     "altTitle": "ピンポン",
     "type": "Manga",
@@ -2602,7 +2602,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-41514",
     "anilistId": 41514,
-    "mangadexId": null,
+    "mangadexId": "cedc7401-8c70-4057-b14a-4ecbbcd73945",
     "title": "A Bride's Story",
     "altTitle": "乙嫁語り",
     "type": "Manga",
@@ -2632,7 +2632,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-45547",
     "anilistId": 45547,
-    "mangadexId": null,
+    "mangadexId": "88fe360b-68dc-4438-a506-12f6cdf46733",
     "title": "Kiichi VS",
     "altTitle": "キーチVS",
     "type": "Manga",
@@ -2660,7 +2660,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-55515",
     "anilistId": 55515,
-    "mangadexId": null,
+    "mangadexId": "ab8cbb82-d0ed-45a7-8ffe-4bfa6d43d79c",
     "title": "JoJo’s Bizarre Adventure: Part 8—JoJolion",
     "altTitle": "ジョジョの奇妙な冒険 ジョジョリオン",
     "type": "Manga",
@@ -2692,7 +2692,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-85849",
     "anilistId": 85849,
-    "mangadexId": null,
+    "mangadexId": "04ff2200-7e68-49fe-92e0-d353b3dff2d2",
     "title": "ReLIFE",
     "altTitle": "ReLIFE",
     "type": "Manga",
@@ -2724,7 +2724,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-100568",
     "anilistId": 100568,
-    "mangadexId": null,
+    "mangadexId": "f4b2c57f-e35a-4798-8d73-42e898dcd00f",
     "title": "The Horizon",
     "altTitle": "수평선",
     "type": "Manhwa",
@@ -2753,7 +2753,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-106929",
     "anilistId": 106929,
-    "mangadexId": null,
+    "mangadexId": "7e544761-7d3d-4fce-8137-719814d7d138",
     "title": "Eleceed",
     "altTitle": "일렉시드",
     "type": "Manhwa",
@@ -2782,7 +2782,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-132288",
     "anilistId": 132288,
-    "mangadexId": null,
+    "mangadexId": "87ebd557-8394-4f16-8afe-a8644e555ddc",
     "title": "Hirayasumi",
     "altTitle": "ひらやすみ",
     "type": "Manga",
@@ -2812,7 +2812,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30102",
     "anilistId": 30102,
-    "mangadexId": null,
+    "mangadexId": "895d0c24-9903-43bf-b18c-768d694a09e0",
     "title": "Fruits Basket",
     "altTitle": "フルーツバスケット",
     "type": "Manga",
@@ -2843,7 +2843,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-33031",
     "anilistId": 33031,
-    "mangadexId": null,
+    "mangadexId": "25aaabb1-9f74-4469-a8d6-1eac5924cc79",
     "title": "Pandora Hearts",
     "altTitle": "パンドラハーツ",
     "type": "Manga",
@@ -2874,7 +2874,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-86551",
     "anilistId": 86551,
-    "mangadexId": null,
+    "mangadexId": "fe1c6cb0-bfc5-4809-b261-1238876d97b6",
     "title": "Made in Abyss",
     "altTitle": "メイドインアビス",
     "type": "Manga",
@@ -2936,7 +2936,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-171068",
     "anilistId": 171068,
-    "mangadexId": null,
+    "mangadexId": "6bd5a776-b219-42b5-8ff4-3fe1f3e3c4a0",
     "title": "One-Room TA",
     "altTitle": "원룸 조교님",
     "type": "Manhwa",
@@ -2965,7 +2965,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-30698",
     "anilistId": 30698,
-    "mangadexId": null,
+    "mangadexId": "456ca0b6-5b4b-4515-84bc-04c804207bf5",
     "title": "Neon Genesis Evangelion",
     "altTitle": "新世紀エヴァンゲリオン",
     "type": "Manga",
@@ -3028,7 +3028,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-132144",
     "anilistId": 132144,
-    "mangadexId": null,
+    "mangadexId": "f0f62b75-5989-4f32-9b59-ab56abe35fc1",
     "title": "Return of the Blossoming Blade",
     "altTitle": "화산귀환",
     "type": "Manhwa",
@@ -3058,7 +3058,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-74347",
     "anilistId": 74347,
-    "mangadexId": null,
+    "mangadexId": "29c42e49-d6f5-4084-9cec-771f5660c90f",
     "title": "One-Punch Man",
     "altTitle": "ワンパンマン",
     "type": "Manga",
@@ -3089,7 +3089,7 @@ const MANGA_DATABASE = [
   {
     "id": "mv-al-85850",
     "anilistId": 85850,
-    "mangadexId": null,
+    "mangadexId": "dc90853b-a3e6-4d5b-8b47-1fa15aa15923",
     "title": "19 Tian",
     "altTitle": "19天",
     "type": "Manhua",
@@ -3651,7 +3651,8 @@ const MANGA_DATABASE = [
     "source": "kakao",
     "anilistId": 101517,
     "totalChapters": 179,
-    "trailerUrl": "PKmnXrDlhEQ"
+    "trailerUrl": "PKmnXrDlhEQ",
+    "mangadexId": "ade0306c-f4b6-4890-9edb-1ddf04df2039"
   },
   {
     "id": "attack-on-titan",
@@ -3684,7 +3685,8 @@ const MANGA_DATABASE = [
     "source": "kodansha",
     "anilistId": 53390,
     "totalChapters": 139,
-    "trailerUrl": "MGRm4IzK1SQ"
+    "trailerUrl": "MGRm4IzK1SQ",
+    "mangadexId": "b76d94b5-c787-46ff-9925-f4f729b1ed39"
   },
   {
     "id": "death-note",
@@ -3717,7 +3719,8 @@ const MANGA_DATABASE = [
     "source": "shueisha",
     "anilistId": 21519,
     "totalChapters": 108,
-    "trailerUrl": "NlJZ-YgAt-c"
+    "trailerUrl": "NlJZ-YgAt-c",
+    "mangadexId": "36bdbf91-5e57-4b81-a813-4c557091dbce"
   },
   {
     "id": "demon-slayer",
@@ -3749,7 +3752,8 @@ const MANGA_DATABASE = [
     "source": "shueisha",
     "anilistId": 87216,
     "totalChapters": 205,
-    "trailerUrl": "VQGCKyvzIM4"
+    "trailerUrl": "VQGCKyvzIM4",
+    "mangadexId": "789642f8-ca89-4e4e-8f7b-eee4d17ea08b"
   },
   {
     "id": "naruto",
@@ -3781,7 +3785,8 @@ const MANGA_DATABASE = [
     "source": "shueisha",
     "anilistId": 11061,
     "totalChapters": 700,
-    "trailerUrl": "4TXF9hm3V7Q"
+    "trailerUrl": "4TXF9hm3V7Q",
+    "mangadexId": "275c3ee8-bdeb-4070-a333-6add23a8415a"
   },
   {
     "id": "tower-of-god",
@@ -3813,7 +3818,8 @@ const MANGA_DATABASE = [
     "source": "webtoon",
     "anilistId": 76044,
     "totalChapters": 600,
-    "trailerUrl": "FhcbdEdvHr4"
+    "trailerUrl": "FhcbdEdvHr4",
+    "mangadexId": "57e1d491-1dc9-4854-83bf-7a9379566fb2"
   }
 ];
 
