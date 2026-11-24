@@ -147,7 +147,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30002-Cul4OeN7bYtn.jpg",
     "author": "Studio Gaga",
     "artist": "Studio Gaga",
-    "synopsis": "His name is Guts, the Black Swordsman, a feared warrior spoken of only in whispers. Bearer of a gigantic sword, an iron hand, and the scars of countless battles and tortures, his flesh is also indelibly marked with The Brand, an unholy symbol that draws the forces of darkness to him and..."
+    "synopsis": "His name is Guts, the Black Swordsman, a feared warrior spoken of only in whispers. Bearer of a gigantic sword, an iron hand, and the scars of countless battles and tortures, his flesh is also indelibly marked with The Brand, an unholy symbol that draws the forces of darkness to him and...",
+    "trailerUrl": "GFm7jH8HjSE"
   },
   {
     "id": "mv-al-31706",
@@ -207,7 +208,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30656-9mW113O7rDnA.png",
     "author": "Eiji Yoshikawa",
     "artist": "Takehiko Inoue",
-    "synopsis": "At seventeen years of age, Miyamoto Musashi--still known by his childhood name, Shinmen Takezo--was a wild young brute just setting out along the way of the sword.    In the aftermath of the epic Battle of Sekigahara, Takezo finds himself a fugitive survivor on the losing side of the wa..."
+    "synopsis": "At seventeen years of age, Miyamoto Musashi--still known by his childhood name, Shinmen Takezo--was a wild young brute just setting out along the way of the sword.    In the aftermath of the epic Battle of Sekigahara, Takezo finds himself a fugitive survivor on the losing side of the wa...",
+    "trailerUrl": "o7BrkSGJGEA"
   },
   {
     "id": "mv-al-30013",
@@ -237,7 +239,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30013-BeslEMqiPhlk.jpg",
     "author": "Eiichirou Oda",
     "artist": "Eiichirou Oda",
-    "synopsis": "As a child, Monkey D. Luffy was inspired to become a pirate by listening to the tales of the buccaneer \"Red-Haired\" Shanks. But his life changed when Luffy accidentally ate the Gum-Gum Devil Fruit and gained the power to stretch like rubber...at the cost of never being able to swim agai..."
+    "synopsis": "As a child, Monkey D. Luffy was inspired to become a pirate by listening to the tales of the buccaneer \"Red-Haired\" Shanks. But his life changed when Luffy accidentally ate the Gum-Gum Devil Fruit and gained the power to stretch like rubber...at the cost of never being able to swim agai...",
+    "trailerUrl": "S8_YwFLCh4U"
   },
   {
     "id": "mv-al-64053",
@@ -355,7 +358,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30642-0mjRDkf4THpo.jpg",
     "author": "Makoto Yukimura",
     "artist": "Makoto Yukimura",
-    "synopsis": "As a child, Thorfinn sat at the feet of the great Leif Ericson and thrilled to wild tales of a land far to the west. But his youthful fantasies were shattered by a mercenary raid. Raised by the Vikings who murdered his father, Thorfinn became a terrifying warrior, forever seeking to kil..."
+    "synopsis": "As a child, Thorfinn sat at the feet of the great Leif Ericson and thrilled to wild tales of a land far to the west. But his youthful fantasies were shattered by a mercenary raid. Raised by the Vikings who murdered his father, Thorfinn became a terrifying warrior, forever seeking to kil...",
+    "trailerUrl": "o6JNeqjJQKs"
   },
   {
     "id": "mv-al-30051",
@@ -503,7 +507,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30025-mpPVpCKFTowt.png",
     "author": "Hiromu Arakawa",
     "artist": "Hiromu Arakawa",
-    "synopsis": "Alchemy tore the Elric brothers’ bodies apart. Can their bond make them whole again?  In this world, alchemists are those who study and perform the art of alchemical transmutation—the science of manipulating and transforming matter. They are bounded by the Law of Equivalent Exchange: in..."
+    "synopsis": "Alchemy tore the Elric brothers’ bodies apart. Can their bond make them whole again?  In this world, alchemists are those who study and perform the art of alchemical transmutation—the science of manipulating and transforming matter. They are bounded by the Law of Equivalent Exchange: in...",
+    "trailerUrl": "WQiE9taZEAw"
   },
   {
     "id": "mv-al-31303",
@@ -704,7 +709,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/b135129-rbQyUsPfUZTj.jpg",
     "author": "Takehiko Inoue",
     "artist": "Takehiko Inoue",
-    "synopsis": "Telling the later life of Vagabond's Musashi Miyamoto, it was depicted through 140 hand-drawn drawings with ink and brush. It was released at the Ueno Royal Museum in Tokyo in May 2008, and since then it has been displayed at three other venues, Kumamoto City Museum, Suntory Museum in O..."
+    "synopsis": "Telling the later life of Vagabond's Musashi Miyamoto, it was depicted through 140 hand-drawn drawings with ink and brush. It was released at the Ueno Royal Museum in Tokyo in May 2008, and since then it has been displayed at three other venues, Kumamoto City Museum, Suntory Museum in O...",
+    "trailerUrl": "o7BrkSGJGEA"
   },
   {
     "id": "mv-al-30028",
@@ -764,7 +770,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30026-uCvXMudMzmwI.jpg",
     "author": "Yoshihiro Togashi",
     "artist": "Yoshihiro Togashi",
-    "synopsis": "Gon might be a country boy, but he has high aspirations. Despite his Aunt Mito's protests, Gon decides to follow in his father's footsteps and become a legendary Hunter. The Hunter hopefuls begin their journey by storm-tossed ship, where Gon meets Leorio and Kurapika, the only other app..."
+    "synopsis": "Gon might be a country boy, but he has high aspirations. Despite his Aunt Mito's protests, Gon decides to follow in his father's footsteps and become a legendary Hunter. The Hunter hopefuls begin their journey by storm-tossed ship, where Gon meets Leorio and Kurapika, the only other app...",
+    "trailerUrl": "D9ttIf_DROI"
   },
   {
     "id": "mv-al-75143",
@@ -1295,7 +1302,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118586-CXKgWikBFQgS.jpg",
     "author": "Kanehito Yamada",
     "artist": "Tsukasa Abe",
-    "synopsis": "The adventure is over but life goes on for an elf mage just beginning to learn what living is all about.    Elf mage Frieren and her courageous fellow adventurers have defeated the Demon King and brought peace to the land. With the great struggle over, they all go their separate ways to..."
+    "synopsis": "The adventure is over but life goes on for an elf mage just beginning to learn what living is all about.    Elf mage Frieren and her courageous fellow adventurers have defeated the Demon King and brought peace to the land. With the great struggle over, they all go their separate ways to...",
+    "trailerUrl": "Rp1g7FVBX2Y"
   },
   {
     "id": "mv-al-107279",
@@ -2110,7 +2118,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx107237-tyQXghsKmE0t.jpg",
     "author": "Tsubasa Yamaguchi",
     "artist": "Tsubasa Yamaguchi",
-    "synopsis": "The studious Yatora leaves a dry life of study and good manners behind for a new passion: painting. But untethering yourself from all your past expectations is dangerous as well as thrilling…    (Source: Kodansha USA)    Note: Nominated for Manga Taisho Awards in 2019, Kodansha Manga Aw..."
+    "synopsis": "The studious Yatora leaves a dry life of study and good manners behind for a new passion: painting. But untethering yourself from all your past expectations is dangerous as well as thrilling…    (Source: Kodansha USA)    Note: Nominated for Manga Taisho Awards in 2019, Kodansha Manga Aw...",
+    "trailerUrl": "DFSEivlCRTo"
   },
   {
     "id": "mv-al-119521",
@@ -2433,7 +2442,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30418-8unnG2Y01lXX.jpg",
     "author": "Yuki Urushibara",
     "artist": "Yuki Urushibara",
-    "synopsis": "Some live in the deep darkness behind your eyelids. Some eat silence. Some thoughtlessly kill. Some simply drive men mad. They are known as mushi—creatures that came into being shortly after life emerged from the primordial ooze. They still exist parallel to our own lives and can only b..."
+    "synopsis": "Some live in the deep darkness behind your eyelids. Some eat silence. Some thoughtlessly kill. Some simply drive men mad. They are known as mushi—creatures that came into being shortly after life emerged from the primordial ooze. They still exist parallel to our own lives and can only b...",
+    "trailerUrl": "q2VxLiVmD8A"
   },
   {
     "id": "mv-al-30745",
@@ -3090,7 +3100,8 @@ const MANGA_DATABASE = [
     "coverUrl": "mangas/covers/mv-e896c48c.jpg",
     "author": "Fujimoto Tatsuki",
     "artist": "Fujimoto Tatsuki",
-    "synopsis": "Denji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil-dog Pochita and becomes Chainsaw Man — a man with a chainsaw for a heart, hunting devils for Public Safety."
+    "synopsis": "Denji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil-dog Pochita and becomes Chainsaw Man — a man with a chainsaw for a heart, hunting devils for Public Safety.",
+    "trailerUrl": "q9GpIJKPMGk"
   },
   {
     "id": "mv-6114f59f",
@@ -3597,7 +3608,8 @@ const MANGA_DATABASE = [
     ],
     "source": "kakao",
     "anilistId": 101517,
-    "totalChapters": 179
+    "totalChapters": 179,
+    "trailerUrl": "PKmnXrDlhEQ"
   },
   {
     "id": "attack-on-titan",
@@ -3629,7 +3641,8 @@ const MANGA_DATABASE = [
     ],
     "source": "kodansha",
     "anilistId": 53390,
-    "totalChapters": 139
+    "totalChapters": 139,
+    "trailerUrl": "MGRm4IzK1SQ"
   },
   {
     "id": "death-note",
@@ -3661,7 +3674,8 @@ const MANGA_DATABASE = [
     ],
     "source": "shueisha",
     "anilistId": 21519,
-    "totalChapters": 108
+    "totalChapters": 108,
+    "trailerUrl": "NlJZ-YgAt-c"
   },
   {
     "id": "demon-slayer",
@@ -3692,7 +3706,8 @@ const MANGA_DATABASE = [
     ],
     "source": "shueisha",
     "anilistId": 87216,
-    "totalChapters": 205
+    "totalChapters": 205,
+    "trailerUrl": "VQGCKyvzIM4"
   },
   {
     "id": "naruto",
@@ -3723,7 +3738,8 @@ const MANGA_DATABASE = [
     ],
     "source": "shueisha",
     "anilistId": 11061,
-    "totalChapters": 700
+    "totalChapters": 700,
+    "trailerUrl": "4TXF9hm3V7Q"
   },
   {
     "id": "tower-of-god",
@@ -3754,7 +3770,8 @@ const MANGA_DATABASE = [
     ],
     "source": "webtoon",
     "anilistId": 76044,
-    "totalChapters": 600
+    "totalChapters": 600,
+    "trailerUrl": "FhcbdEdvHr4"
   }
 ];
 
@@ -4472,7 +4489,7 @@ function renderCatalog() {
     return `
       <article class="manga-card" onclick="openMangaDetails('${m.id}')" onmouseenter="onMangaCardHoverEnter(event, '${m.id}')" onmouseleave="onMangaCardHoverLeave(event)">
         <div class="manga-cover-wrap">
-          <img class="manga-cover-img" src="${cover}" alt="${m.title}" loading="lazy"/>
+          <img class="manga-cover-img" src="${cover}" alt="${m.title}" loading="lazy" onerror="this.onerror=null;this.src=generateCoverSVG({...MANGA_DATABASE.find(x=>x.id==='${m.id}')||{id:'${m.id}',title:'${m.title}',rating:0,totalChapters:0},coverUrl:null});"/>
           <span class="manga-format-badge catalog-format-badge">${m.type.toUpperCase()}</span>
           <span class="manga-score-badge catalog-score-badge">★ ${m.rating}</span>
           <button class="card-fav-btn ${isFav ? 'active' : ''}" data-id="${m.id}" onclick="toggleCardFavorite(event, '${m.id}')" title="${isFav ? 'Remove from favorites' : 'Save to favorites'}" aria-label="Favorite">
@@ -5527,6 +5544,31 @@ function renderSeriesPage(manga) {
             </div>
           </div>
         </div>
+
+        ${(manga.trailerUrl) ? (() => {
+          // Accept full YouTube URL or bare video ID
+          const rawTrailer = manga.trailerUrl.trim();
+          const ytMatch = rawTrailer.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+          const videoId = ytMatch ? ytMatch[1] : (rawTrailer.length === 11 ? rawTrailer : null);
+          if (!videoId) return '';
+          return `
+        <div class="series-trailer-block">
+          <div class="trailer-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            Official Trailer
+          </div>
+          <div class="trailer-embed-wrap">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1"
+              title="${safeTitle} Trailer"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              class="trailer-iframe"
+            ></iframe>
+          </div>
+        </div>`;
+        })() : ''}
       </div>
     </div>
 
