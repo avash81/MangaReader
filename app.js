@@ -3596,7 +3596,8 @@ const MANGA_DATABASE = [
       "Gates"
     ],
     "source": "kakao",
-    "anilistId": 101517
+    "anilistId": 101517,
+    "totalChapters": 179
   },
   {
     "id": "attack-on-titan",
@@ -3627,7 +3628,8 @@ const MANGA_DATABASE = [
       "Walls"
     ],
     "source": "kodansha",
-    "anilistId": 53390
+    "anilistId": 53390,
+    "totalChapters": 139
   },
   {
     "id": "death-note",
@@ -3658,7 +3660,8 @@ const MANGA_DATABASE = [
       "Detective"
     ],
     "source": "shueisha",
-    "anilistId": 21519
+    "anilistId": 21519,
+    "totalChapters": 108
   },
   {
     "id": "demon-slayer",
@@ -3688,7 +3691,8 @@ const MANGA_DATABASE = [
       "Historical"
     ],
     "source": "shueisha",
-    "anilistId": 87216
+    "anilistId": 87216,
+    "totalChapters": 205
   },
   {
     "id": "naruto",
@@ -3718,7 +3722,8 @@ const MANGA_DATABASE = [
       "Hokage"
     ],
     "source": "shueisha",
-    "anilistId": 11061
+    "anilistId": 11061,
+    "totalChapters": 700
   },
   {
     "id": "tower-of-god",
@@ -3748,7 +3753,8 @@ const MANGA_DATABASE = [
       "Competition"
     ],
     "source": "webtoon",
-    "anilistId": 76044
+    "anilistId": 76044,
+    "totalChapters": 600
   }
 ];
 
