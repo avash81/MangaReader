@@ -1484,6 +1484,10 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
   if (!manga) return;
 
   // If chapter is an external link (e.g. MangaPlus/Publisher direct link), open directly
+  if (manga._externalMap && manga._externalMap[String(chapterNum)]) {
+    window.open(manga._externalMap[String(chapterNum)], "_blank", "noopener,noreferrer");
+    return;
+  }
   if (AppState.activeSeriesChapters && AppState.activeSeriesManga && AppState.activeSeriesManga.id === mangaId) {
     const chObj = AppState.activeSeriesChapters.find(c => String(c.number) === String(chapterNum));
     if (chObj && chObj.externalUrl) {
@@ -1534,13 +1538,22 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
         if (feedRes.ok) {
           const feedJson = await feedRes.json();
           manga._chapterMap = {};
+          manga._externalMap = {};
           (feedJson.data || []).forEach(c => {
             const num = c.attributes.chapter;
-            if (num && !manga._chapterMap[num] && !c.attributes.externalUrl) {
-              manga._chapterMap[num] = c.id;
+            if (num) {
+              if (c.attributes.externalUrl) {
+                manga._externalMap[num] = c.attributes.externalUrl;
+              } else if (!manga._chapterMap[num]) {
+                manga._chapterMap[num] = c.id;
+              }
             }
           });
         }
+      }
+      if (manga._externalMap && manga._externalMap[String(chapterNum)]) {
+        window.open(manga._externalMap[String(chapterNum)], "_blank", "noopener,noreferrer");
+        return;
       }
       if (manga._chapterMap) {
         resolvedChapterId = manga._chapterMap[String(chapterNum)];
@@ -2110,7 +2123,9 @@ async function _fetchAndRenderSeriesChapters(manga) {
 
   let allChapters = [];
 
-  if (manga.mangadexId) {
+  if (manga._cachedChapters && manga._cachedChapters.length > 0) {
+    allChapters = manga._cachedChapters;
+  } else if (manga.mangadexId) {
     try {
       let offset = 0;
       const limit = 100;
@@ -2124,7 +2139,9 @@ async function _fetchAndRenderSeriesChapters(manga) {
         if (batch.length < limit || allChapters.length >= data.total) break;
         offset += limit;
         if (offset >= 500) break;
+        await new Promise(r => setTimeout(r, 150));
       }
+      manga._cachedChapters = allChapters;
     } catch (e) {
       console.warn("MangaDex feed error:", e);
     }
@@ -2138,12 +2155,17 @@ async function _fetchAndRenderSeriesChapters(manga) {
     // Keep 1 chapter entry per chapter number
     const seenNumbers = new Set();
     const chapterMap = {};
+    const externalMap = {};
 
     allChapters.forEach(ch => {
       const num = ch.attributes.chapter;
       if (num && !seenNumbers.has(num)) {
         seenNumbers.add(num);
-        chapterMap[num] = ch.id;
+        if (ch.attributes.externalUrl) {
+          externalMap[num] = ch.attributes.externalUrl;
+        } else {
+          chapterMap[num] = ch.id;
+        }
         normalizedChapters.push({
           id: ch.id,
           number: num,
@@ -2157,6 +2179,7 @@ async function _fetchAndRenderSeriesChapters(manga) {
       }
     });
     manga._chapterMap = chapterMap;
+    manga._externalMap = externalMap;
   }
 
   // If no chapters from MangaDex, generate structured official chapters from totalChapters

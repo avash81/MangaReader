@@ -3686,3 +3686,27 @@ body {
   width: 100%;
   margin-top: 14px;
 }
+
+@media (max-width: 640px) {
+  .pager-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .pager-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+  .reader-chapter-quicknav {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .quicknav-chapter-title {
+    width: 100%;
+    order: -1;
+    font-size: 0.8rem;
+  }
+}
