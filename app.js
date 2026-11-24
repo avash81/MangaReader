@@ -3750,7 +3750,6 @@ const MANGA_DATABASE = [
     "source": "webtoon",
     "anilistId": 76044
   }
-]
 ];
 
 // All 40+ Anime-Planet Style Filter Tags
