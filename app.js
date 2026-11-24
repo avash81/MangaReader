@@ -787,7 +787,47 @@ function updateBreadcrumb(crumbs) {
   `;
 }
 
+// ==========================================================================
+// 2B. LIVE BACKEND API SYNCHRONIZATION WITH STATIC SAFE FALLBACK
+// ==========================================================================
+const API_BASE_URL = window.MANGAVERSE_API_URL || "http://localhost:7890/backend/public/v1";
+
+async function fetchLiveMangaCatalog() {
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 2500);
+    const res = await fetch(`${API_BASE_URL}/manga?limit=100`, {
+      signal: controller.signal,
+      headers: { 'Accept': 'application/json' }
+    });
+    clearTimeout(timeoutId);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    if (data && data.success && Array.isArray(data.manga) && data.manga.length > 0) {
+      // Merge live manga into database while keeping existing rich properties
+      const liveIds = new Set(data.manga.map(m => m.id));
+      const merged = [...data.manga];
+      MANGA_DATABASE.forEach(m => {
+        if (!liveIds.has(m.id)) {
+          merged.push(m);
+        }
+      });
+      return merged;
+    }
+  } catch (err) {
+    // Graceful offline & development fallback: uses built-in MANGA_DATABASE
+  }
+  return MANGA_DATABASE;
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
+  // Check for live published manga updates
+  try {
+    const liveList = await fetchLiveMangaCatalog();
+    if (liveList && liveList.length > 0 && liveList !== MANGA_DATABASE) {
+      AppState.filteredManga = liveList;
+    }
+  } catch (e) {}
   // 1. Initialize IndexedDB
   try {
     await MangaDB.init();
