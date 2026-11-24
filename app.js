@@ -4451,8 +4451,8 @@ function updateCatalogResultsCount() {
   if (el) el.textContent = AppState.filteredManga.length;
 }
 
-// Render Manga Catalog Grid  — now with page-number pagination
-const CATALOG_PAGE_SIZE = 12;
+// Render Manga Catalog Grid  — now with page-number pagination (3 rows of 6 cards = 18 items)
+const CATALOG_PAGE_SIZE = 18;
 const SERIES_CHAPTER_PAGE_SIZE = 16;
 
 function renderCatalog() {
