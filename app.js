@@ -8,6 +8,117 @@
 // ==========================================================================
 const MANGA_DATABASE = [
   {
+    "id": "chrono-blade",
+    "title": "Chrono-Blade: Return of the Ash Knight",
+    "altTitle": "灰燼のクロノブレード",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Swordsmanship",
+      "Time Travel"
+    ],
+    "rating": 4.92,
+    "totalChapters": 1,
+    "releaseDay": "Wed",
+    "latestChapter": {
+      "number": 1,
+      "title": "Chapter 1",
+      "views": "120K",
+      "dropTime": "Today (Auto-Synced)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverPath": null,
+    "pdfData": "mangas/Manga/Shonen/Chrono-Blade/ch-01.pdf",
+    "chapters": [
+      {
+        "number": 1,
+        "pdfData": "mangas/Manga/Shonen/Chrono-Blade/ch-01.pdf"
+      }
+    ],
+    "author": "Kenji Tachibana",
+    "artist": "Independent Creator",
+    "synopsis": "Betrayed at the seal of the Demon King, swordmaster Aaron awakens 10 years in the past with his legendary blade intact and future calamities memorized."
+  },
+  {
+    "id": "solo-necromancer",
+    "title": "The Cataclysmic Necromancer",
+    "altTitle": "死霊術士の神化録",
+    "type": "Manhwa",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Leveling",
+      "Dungeon"
+    ],
+    "rating": 4.95,
+    "totalChapters": 2,
+    "releaseDay": "Sun",
+    "latestChapter": {
+      "number": 2,
+      "title": "Chapter 2",
+      "views": "120K",
+      "dropTime": "Today (Auto-Synced)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverPath": null,
+    "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-02.pdf",
+    "chapters": [
+      {
+        "number": 1,
+        "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-01.pdf"
+      },
+      {
+        "number": 2,
+        "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-02.pdf"
+      }
+    ],
+    "author": "Han Jin-Woo",
+    "artist": "Independent Creator",
+    "synopsis": "When the sky shattered into crimson portals, only one necromancer retained memories of Earth's fall, ready to conquer the dungeon towers."
+  },
+  {
+    "id": "villainess-tea-empire",
+    "title": "The Banished Noblewoman's Afternoon Tea Empire",
+    "altTitle": "追放令嬢の紅茶喫茶録",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Slice of Life",
+      "Romance",
+      "Food/Cooking",
+      "Nobility",
+      "Reijo/Villainess"
+    ],
+    "rating": 4.89,
+    "totalChapters": 1,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 1,
+      "title": "Chapter 1",
+      "views": "120K",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverPath": null,
+    "pdfData": "mangas/Manga/Shojo/Villainess-Tea-Empire/ch-01.pdf",
+    "chapters": [
+      {
+        "number": 1,
+        "pdfData": "mangas/Manga/Shojo/Villainess-Tea-Empire/ch-01.pdf"
+      }
+    ],
+    "author": "Haruka Shirasaki",
+    "artist": "Independent Creator",
+    "synopsis": "After her royal engagement was unjustly dissolved, Eleanor moved to the border port town to establish the kingdom's first boutique tea salon."
+  },
+  {
     "id": "mv-e896c48c",
     "mangadexId": "e896c48c-3150-437d-ba57-d8567eb399ae",
     "title": "Chainsaw Man",
@@ -1545,6 +1656,14 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
   AppState.activeReader.currentPage = 1;
   AppState.activeReader.totalPages = 8; // placeholder until real pages load
   AppState.activeReader._offlinePages = null;
+
+  // If series has chapters array with individual PDFs, resolve active chapter PDF
+  if (manga.chapters && Array.isArray(manga.chapters)) {
+    const activeChObj = manga.chapters.find(c => String(c.number) === String(chapterNum));
+    if (activeChObj && activeChObj.pdfData) {
+      manga.pdfData = activeChObj.pdfData;
+    }
+  }
 
   // Check if offline chapter is stored first
   try {
