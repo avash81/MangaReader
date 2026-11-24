@@ -999,10 +999,127 @@ main#mainContent {
 }
 
 /* Reader Color Themes */
-.reader-theme-oled { background: #000000 !important; }
-.reader-theme-charcoal { background: #12141a !important; }
-.reader-theme-sepia { background: #fbf0d9 !important; color: #2c251d !important; }
-.reader-theme-white { background: #ffffff !important; color: #111827 !important; }
+.reader-modal.reader-theme-charcoal,
+.reader-viewport-container.reader-theme-charcoal {
+  background: #141416 !important;
+  color: #f4f4f5 !important;
+}
+.reader-modal.reader-theme-charcoal .reader-top-bar,
+.reader-modal.reader-theme-charcoal .reader-bottom-strip {
+  background: rgba(20, 20, 22, 0.96) !important;
+  border-color: #27272a !important;
+  color: #e4e4e7 !important;
+}
+.reader-modal.reader-theme-charcoal .reader-manga-heading,
+.reader-modal.reader-theme-charcoal #readerMangaTitle {
+  color: #ffffff !important;
+}
+
+.reader-modal.reader-theme-white,
+.reader-viewport-container.reader-theme-white {
+  background: #f4f4f5 !important;
+  color: #18181b !important;
+}
+.reader-modal.reader-theme-white .reader-top-bar,
+.reader-modal.reader-theme-white .reader-bottom-strip {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-color: #e4e4e7 !important;
+  color: #18181b !important;
+}
+.reader-modal.reader-theme-white .reader-manga-heading,
+.reader-modal.reader-theme-white #readerMangaTitle,
+.reader-modal.reader-theme-white #readerPageNumLabel {
+  color: #18181b !important;
+}
+.reader-modal.reader-theme-white .reader-chapter-dropdown,
+.reader-modal.reader-theme-white .action-pill-btn {
+  color: #18181b !important;
+  background: #ffffff !important;
+  border-color: #d4d4d8 !important;
+}
+.reader-modal.reader-theme-white .modal-close-icon {
+  background: #e4e4e7 !important;
+  color: #18181b !important;
+}
+.reader-modal.reader-theme-white .reader-comments-section {
+  background: #ffffff !important;
+  border-color: #e4e4e7 !important;
+  color: #18181b !important;
+}
+.reader-modal.reader-theme-white .comments-section-title {
+  color: #18181b !important;
+}
+.reader-modal.reader-theme-white .comment-textarea,
+.reader-modal.reader-theme-white .reader-comment-card {
+  background: #f4f4f5 !important;
+  border-color: #e4e4e7 !important;
+  color: #18181b !important;
+}
+.reader-modal.reader-theme-white .comment-author-name {
+  color: #18181b !important;
+}
+.reader-modal.reader-theme-white .comment-text {
+  color: #27272a !important;
+}
+
+.reader-modal.reader-theme-sepia,
+.reader-viewport-container.reader-theme-sepia {
+  background: #fbf0d9 !important;
+  color: #2c251d !important;
+}
+.reader-modal.reader-theme-sepia .reader-top-bar,
+.reader-modal.reader-theme-sepia .reader-bottom-strip {
+  background: rgba(251, 240, 217, 0.98) !important;
+  border-color: #e6d5b8 !important;
+  color: #2c251d !important;
+}
+.reader-modal.reader-theme-sepia .reader-manga-heading,
+.reader-modal.reader-theme-sepia #readerMangaTitle,
+.reader-modal.reader-theme-sepia #readerPageNumLabel {
+  color: #2c251d !important;
+}
+.reader-modal.reader-theme-sepia .reader-chapter-dropdown,
+.reader-modal.reader-theme-sepia .action-pill-btn {
+  color: #2c251d !important;
+  background: #f5e6c8 !important;
+  border-color: #dfcdab !important;
+}
+.reader-modal.reader-theme-sepia .modal-close-icon {
+  background: #ebd8b5 !important;
+  color: #2c251d !important;
+}
+.reader-modal.reader-theme-sepia .reader-comments-section {
+  background: #f5e6c8 !important;
+  border-color: #dfcdab !important;
+  color: #2c251d !important;
+}
+.reader-modal.reader-theme-sepia .comments-section-title {
+  color: #2c251d !important;
+}
+.reader-modal.reader-theme-sepia .comment-textarea,
+.reader-modal.reader-theme-sepia .reader-comment-card {
+  background: #fbf0d9 !important;
+  border-color: #dfcdab !important;
+  color: #2c251d !important;
+}
+.reader-modal.reader-theme-sepia .comment-author-name {
+  color: #2c251d !important;
+}
+.reader-modal.reader-theme-sepia .comment-text {
+  color: #3f362c !important;
+}
+
+.reader-modal.reader-theme-oled,
+.reader-viewport-container.reader-theme-oled {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+.reader-modal.reader-theme-oled .reader-top-bar,
+.reader-modal.reader-theme-oled .reader-bottom-strip {
+  background: rgba(10, 10, 10, 0.96) !important;
+  border-color: #222222 !important;
+  color: #ffffff !important;
+}
 
 /* 1. Continuous Webtoon Scroll */
 .reader-viewport-vertical {
@@ -1103,12 +1220,13 @@ main#mainContent {
   right: 0;
   bottom: 52px;
   width: 380px;
-  background: #11141c;
-  border-left: 1px solid #283144;
+  background: #18181b;
+  border-left: 1px solid #27272a;
   display: none;
   flex-direction: column;
   z-index: 200;
   box-shadow: -8px 0 32px rgba(0, 0, 0, 0.7);
+  color: #f4f4f5;
 }
 
 .discussions-drawer.open {
@@ -1117,11 +1235,12 @@ main#mainContent {
 
 .discussions-head {
   padding: 16px;
-  border-bottom: 1px solid #283144;
+  border-bottom: 1px solid #27272a;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-weight: 800;
+  color: #ffffff;
 }
 
 .discussions-body {
@@ -1134,10 +1253,10 @@ main#mainContent {
 }
 
 .discussion-msg {
-  background: #181d2a;
+  background: #202024;
   border-radius: var(--radius-sm);
   padding: 12px;
-  border: 1px solid #242c3d;
+  border: 1px solid #27272a;
 }
 
 .discussion-author-row {
@@ -1150,15 +1269,17 @@ main#mainContent {
 .discussion-author {
   font-weight: 700;
   font-size: 0.82rem;
-  color: var(--accent-cyan);
+  color: #fb923c;
 }
 
 .upvote-btn {
-  background: transparent;
-  border: none;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  padding: 3px 8px;
   color: var(--text-secondary);
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 600;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1166,12 +1287,13 @@ main#mainContent {
 }
 
 .upvote-btn:hover {
-  color: var(--accent-crimson);
+  color: #fb923c;
+  border-color: #fb923c;
 }
 
 .discussion-text {
   font-size: 0.85rem;
-  color: #e2e8f0;
+  color: #e4e4e7;
   line-height: 1.4;
 }
 
@@ -1189,7 +1311,7 @@ main#mainContent {
 
 .discussions-input-wrap {
   padding: 14px;
-  border-top: 1px solid #283144;
+  border-top: 1px solid #27272a;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -1197,12 +1319,215 @@ main#mainContent {
 
 .comment-input-field {
   width: 100%;
-  background: #181d2a;
-  border: 1px solid #283144;
+  background: #202024;
+  border: 1px solid #27272a;
   border-radius: var(--radius-sm);
   padding: 8px 12px;
   color: #fff;
   font-size: 0.85rem;
+  box-sizing: border-box;
+}
+
+/* Chapter Discussion Section (Webtoons / MangaPlus style at bottom of chapter) */
+.reader-comments-section {
+  width: 100%;
+  max-width: 820px;
+  margin: 32px auto 60px;
+  padding: 24px 28px;
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: #f4f4f5;
+}
+
+.comments-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #27272a;
+}
+
+.comments-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.comments-guidelines-hint {
+  font-size: 0.75rem;
+  color: #a1a1aa;
+}
+
+.comment-input-box {
+  margin-bottom: 24px;
+}
+
+.comment-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: #202024;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  color: #f4f4f5;
+  font-family: inherit;
+  font-size: 0.88rem;
+  resize: vertical;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.comment-textarea:focus {
+  border-color: #c2410c;
+}
+
+.comment-input-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.comment-spoiler-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #a1a1aa;
+  cursor: pointer;
+  user-select: none;
+}
+
+.comment-spoiler-label input[type="checkbox"] {
+  accent-color: #c2410c;
+  cursor: pointer;
+}
+
+.comment-post-btn {
+  padding: 7px 18px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: #c2410c;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.comment-post-btn:hover {
+  background: #9a3412;
+}
+
+.chapter-comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reader-comment-card {
+  padding: 14px 16px;
+  background: #202024;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  transition: border-color 0.15s;
+}
+
+.reader-comment-card:hover {
+  border-color: #3f3f46;
+}
+
+.comment-author-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.comment-author-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comment-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #c2410c;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.comment-author-name {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #f4f4f5;
+}
+
+.comment-time {
+  font-size: 0.74rem;
+  color: #a1a1aa;
+  margin-left: 6px;
+}
+
+.comment-upvote-pill {
+  padding: 3px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #27272a;
+  color: #a1a1aa;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.comment-upvote-pill:hover {
+  color: #fb923c;
+  border-color: #fb923c;
+  background: rgba(194, 65, 12, 0.1);
+}
+
+.comment-text {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #d4d4d8;
+  word-break: break-word;
+}
+
+.comment-text.spoiler-hidden {
+  filter: blur(5px);
+  user-select: none;
+  cursor: pointer;
+}
+
+.spoiler-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: #ef4444;
+  color: #fff;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.spoiler-hint {
+  font-size: 0.75rem;
+  color: #ef4444;
+  margin-top: 4px;
+  font-style: italic;
 }
 
 /* ==========================================================================

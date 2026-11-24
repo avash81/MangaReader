@@ -726,7 +726,7 @@ const AppState = {
     currentPage: 1,
     totalPages: 8,
     mode: "vertical", // vertical, single-rtl, single-ltr, double-spread
-    theme: "oled"     // oled, charcoal, sepia, white
+    theme: "charcoal" // charcoal (default clean slate), white, sepia, oled
   },
 
   // Web Worker instance
@@ -1519,7 +1519,11 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
   } catch (e) {}
 
   const modal = document.getElementById("readerModal");
-  if (modal) modal.classList.add("open");
+  if (modal) {
+    modal.className = `reader-modal open reader-theme-${AppState.activeReader.theme || "charcoal"}`;
+  }
+  const themeSelect = document.getElementById("readerThemeSelect");
+  if (themeSelect) themeSelect.value = AppState.activeReader.theme || "charcoal";
 
   document.getElementById("readerMangaTitle").textContent = manga.title;
 
@@ -1743,7 +1747,7 @@ function renderReaderViewport() {
         <div class="reader-climax-card">
           <span class="climax-badge">CHAPTER CLIMAX</span>
           <h3 class="climax-title">TO BE CONTINUED</h3>
-          <p class="climax-desc">Chapter ${nextCh || Math.min(manga.totalChapters, Number(chapterNumber) + 1)}: Next episode drops in 3 days. Unlock early with MangaVerse Pass.</p>
+          <p class="climax-desc">Chapter ${nextCh || Math.min(manga.totalChapters, Number(chapterNumber) + 1)}: Official simulpub releases weekly on MangaVerse.</p>
           <div class="climax-actions">
             <button class="climax-next-btn" ${nextAttr}>Next Chapter →</button>
             <button class="climax-fav-btn" onclick="setMangaShelf('${manga.id}', 'favorites')" title="Favorite" aria-label="Favorite">
@@ -1751,6 +1755,32 @@ function renderReaderViewport() {
             </button>
           </div>
         </div>
+
+        <!-- Chapter Discussion Section (Webtoons / MangaPlus style) -->
+        <section id="chapterDiscussionSection" class="reader-comments-section">
+          <div class="comments-section-header">
+            <div class="comments-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <span>Chapter Discussion (<span id="chapterCommentCount">2</span>)</span>
+            </div>
+            <span class="comments-guidelines-hint">Keep it respectful • Tag spoilers</span>
+          </div>
+
+          <!-- Comment Input Box -->
+          <div class="comment-input-box">
+            <textarea id="chapterCommentInput" class="comment-textarea" placeholder="Share your thoughts or theories on Chapter ${chapterNumber}..." rows="3" maxlength="800"></textarea>
+            <div class="comment-input-footer">
+              <label class="comment-spoiler-label">
+                <input type="checkbox" id="chapterSpoilerCheck"/>
+                <span>Mark as spoiler</span>
+              </label>
+              <button class="btn-primary-glow comment-post-btn" onclick="postInlineChapterComment()">Post Comment</button>
+            </div>
+          </div>
+
+          <!-- Comments List -->
+          <div id="chapterCommentsList" class="chapter-comments-list"></div>
+        </section>
 
         <!-- Floating Scroll to Top button (Webtoons style) -->
         <button id="readerScrollTopBtn" class="reader-scroll-top-btn" onclick="scrollReaderToTop()" title="Back to Top" aria-label="Back to Top">
@@ -1767,6 +1797,7 @@ function renderReaderViewport() {
         topBtn.classList.toggle("visible", viewport.scrollTop > 350);
       }
     };
+    loadAndRenderChapterComments();
   } else if (mode === "double-spread") {
     // Mode 2: Double-Page Spread
     const page1 = currentPage;
@@ -1826,12 +1857,169 @@ function jumpToPage(val) {
 
 function setReaderTheme(theme) {
   AppState.activeReader.theme = theme;
+  const modal = document.getElementById("readerModal");
+  if (modal) {
+    modal.className = `reader-modal open reader-theme-${theme}`;
+  }
+  const select = document.getElementById("readerThemeSelect");
+  if (select && select.value !== theme) select.value = theme;
   renderReaderViewport();
 }
 
 function toggleDiscussionsDrawer() {
   const drawer = document.getElementById("discussionsDrawer");
-  if (drawer) drawer.classList.toggle("open");
+  const inlineSec = document.getElementById("chapterDiscussionSection");
+  if (AppState.activeReader.mode === "vertical" && inlineSec) {
+    inlineSec.scrollIntoView({ behavior: "smooth" });
+  } else if (drawer) {
+    drawer.classList.toggle("open");
+  }
+}
+
+function getChapterCommentsKey(mangaId, chapterNum) {
+  return `mv_comments_${mangaId}_ch${chapterNum}`;
+}
+
+function loadAndRenderChapterComments() {
+  const listEl = document.getElementById("chapterCommentsList");
+  const countEl = document.getElementById("chapterCommentCount");
+  const { manga, chapterNumber } = AppState.activeReader;
+  if (!listEl || !manga) return;
+
+  const storageKey = getChapterCommentsKey(manga.id, chapterNumber);
+  let comments = [];
+  try {
+    const saved = localStorage.getItem(storageKey);
+    if (saved) comments = JSON.parse(saved);
+  } catch (e) {}
+
+  if (comments.length === 0) {
+    comments = [
+      {
+        id: "c-seed-1",
+        author: "Ren_Tokyo99",
+        text: `The artwork and pacing in Chapter ${chapterNumber} is top tier! Really enjoy how this story develops.`,
+        isSpoiler: false,
+        upvotes: 142,
+        timeAgo: "2h ago"
+      },
+      {
+        id: "c-seed-2",
+        author: "OtomeReader",
+        text: `Keep an eye on the background panels on the final page! Such subtle foreshadowing.`,
+        isSpoiler: true,
+        upvotes: 89,
+        timeAgo: "5h ago"
+      }
+    ];
+  }
+
+  if (countEl) countEl.textContent = comments.length;
+
+  listEl.innerHTML = comments.map(c => {
+    const safeAuthor = escapeHtml(c.author);
+    const safeText = escapeHtml(c.text);
+    const spoilerClass = c.isSpoiler ? " spoiler-hidden" : "";
+    const spoilerBadge = c.isSpoiler ? `<span class="spoiler-tag">Spoiler • Click to reveal</span>` : "";
+    return `
+      <div class="reader-comment-card">
+        <div class="comment-author-bar">
+          <div class="comment-author-info">
+            <span class="comment-avatar">${safeAuthor.charAt(0).toUpperCase()}</span>
+            <span class="comment-author-name">${safeAuthor}</span>
+            <span class="comment-time">${c.timeAgo || "Just now"}</span>
+          </div>
+          <button class="comment-upvote-pill" onclick="upvoteInlineComment('${c.id}')" title="Upvote">
+            ▲ <span>${c.upvotes || 0}</span>
+          </button>
+        </div>
+        ${spoilerBadge}
+        <div class="comment-content${spoilerClass}" onclick="this.classList.toggle('spoiler-hidden')">
+          ${safeText}
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+function postInlineChapterComment() {
+  const input = document.getElementById("chapterCommentInput");
+  const spoilerCheck = document.getElementById("chapterSpoilerCheck");
+  const { manga, chapterNumber } = AppState.activeReader;
+  if (!input || !manga) return;
+
+  const text = (input.value || "").trim();
+  if (!text) {
+    showToast("Please enter a comment before posting.", "warn");
+    return;
+  }
+
+  const storageKey = getChapterCommentsKey(manga.id, chapterNumber);
+  let comments = [];
+  try {
+    const saved = localStorage.getItem(storageKey);
+    if (saved) comments = JSON.parse(saved);
+  } catch (e) {}
+
+  if (comments.length === 0) {
+    comments = [
+      {
+        id: "c-seed-1",
+        author: "Ren_Tokyo99",
+        text: `The artwork and pacing in Chapter ${chapterNumber} is top tier! Really enjoy how this story develops.`,
+        isSpoiler: false,
+        upvotes: 142,
+        timeAgo: "2h ago"
+      },
+      {
+        id: "c-seed-2",
+        author: "OtomeReader",
+        text: `Keep an eye on the background panels on the final page! Such subtle foreshadowing.`,
+        isSpoiler: true,
+        upvotes: 89,
+        timeAgo: "5h ago"
+      }
+    ];
+  }
+
+  const newComment = {
+    id: "c-" + Date.now(),
+    author: "MangaVerseReader",
+    text: text,
+    isSpoiler: spoilerCheck ? spoilerCheck.checked : false,
+    upvotes: 1,
+    timeAgo: "Just now"
+  };
+
+  comments.unshift(newComment);
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(comments));
+  } catch (e) {}
+
+  input.value = "";
+  if (spoilerCheck) spoilerCheck.checked = false;
+  showToast("Comment posted!");
+  loadAndRenderChapterComments();
+}
+
+function upvoteInlineComment(commentId) {
+  const { manga, chapterNumber } = AppState.activeReader;
+  if (!manga) return;
+  const storageKey = getChapterCommentsKey(manga.id, chapterNumber);
+  let comments = [];
+  try {
+    const saved = localStorage.getItem(storageKey);
+    if (saved) comments = JSON.parse(saved);
+  } catch (e) {}
+
+  const target = comments.find(c => c.id === commentId);
+  if (target) {
+    target.upvotes = (target.upvotes || 0) + 1;
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(comments));
+    } catch (e) {}
+    loadAndRenderChapterComments();
+  }
 }
 
 function escapeHtml(str) {
@@ -2456,8 +2644,7 @@ async function setMangaShelf(mangaId, shelf) {
 // ==========================================================================
 async function openLibraryModal() {
   const modal = document.getElementById("libraryModal");
-  const body = document.getElementById("libraryModalBody");
-  if (!modal || !body) return;
+  if (!modal) return;
 
   try {
     const lib = await MangaDB.getLibrary();
@@ -2468,7 +2655,7 @@ async function openLibraryModal() {
     if (totalEl) totalEl.textContent = lib.length;
     if (readEl) readEl.textContent = history.length;
 
-    renderLibraryShelves(lib, "all");
+    await renderLibraryShelves(lib, "all");
     modal.classList.add("open");
   } catch (err) {
     console.error("Library modal error:", err);
@@ -2488,17 +2675,42 @@ function filterLibraryTab(shelf) {
   MangaDB.getLibrary().then(lib => renderLibraryShelves(lib, shelf)).catch(() => {});
 }
 
-function renderLibraryShelves(lib, filter) {
+async function renderLibraryShelves(lib, filter) {
   const container = document.getElementById("libraryItemsContainer");
   if (!container) return;
 
-  let items = filter === "all" ? lib : lib.filter(x => x.shelf === filter);
+  let items = filter === "all" ? [...lib] : lib.filter(x => x.shelf === filter);
+
+  // If "all" or "reading" and user has history, merge history entries so library is never empty for readers
+  if (filter === "all" || filter === "reading") {
+    try {
+      const history = await MangaDB.getAllHistory();
+      const existingIds = new Set(items.map(x => x.mangaId));
+      history.forEach(h => {
+        if (!existingIds.has(h.mangaId)) {
+          const m = MANGA_DATABASE.find(x => x.id === h.mangaId);
+          if (m) {
+            existingIds.add(h.mangaId);
+            items.push({
+              mangaId: m.id,
+              title: m.title,
+              cover: generateCoverSVG(m),
+              shelf: `Chapter ${h.chapterNumber || 1} • Progress ${Math.round(((h.pageNumber || 1) / (h.totalPages || 8)) * 100)}%`,
+              isHistory: true,
+              lastChapter: h.chapterNumber || 1
+            });
+          }
+        }
+      });
+    } catch (e) {}
+  }
 
   if (items.length === 0) {
     container.innerHTML = `
       <div style="text-align:center; padding:36px; color:var(--text-muted);">
-        <div>No manga saved in this shelf yet.</div>
-        <p style="font-size:0.8rem; margin-top:4px;">Browse the directory and click "Add to Shelf".</p>
+        <div style="font-size:1.05rem; font-weight:700; color:var(--text-primary); margin-bottom:6px;">Your Library is empty</div>
+        <p style="font-size:0.85rem; margin-top:4px;">Browse the directory and click the heart icon on any manga to bookmark it here.</p>
+        <button class="btn-primary-glow" style="margin-top:14px; padding:7px 16px; font-size:0.82rem;" onclick="closeLibraryModal(); showCatalogView();">Browse Manga Directory</button>
       </div>
     `;
     return;
@@ -2508,16 +2720,17 @@ function renderLibraryShelves(lib, filter) {
     const safeTitle = escapeHtml(item.title);
     const safeShelf = escapeHtml((item.shelf || "").replace(/_/g, " "));
     const safeMangaId = escapeHtml(item.mangaId);
+    const readCh = item.lastChapter || 1;
     return `
       <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg-surface-2); padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); margin-bottom:8px;">
         <div style="display:flex; align-items:center; gap:12px;">
-          <img src="${item.cover}" alt="${safeTitle}" style="width:36px; height:50px; object-fit:cover; border-radius:4px;"/>
+          <img src="${item.cover}" alt="${safeTitle}" style="width:38px; height:52px; object-fit:cover; border-radius:4px;"/>
           <div>
-            <div style="font-weight:700; font-size:0.9rem;">${safeTitle}</div>
-            <div style="font-size:0.75rem; color:var(--accent-cyan); text-transform:uppercase;">${safeShelf}</div>
+            <div style="font-weight:700; font-size:0.9rem; color:var(--text-primary);">${safeTitle}</div>
+            <div style="font-size:0.75rem; color:var(--accent-terracotta); font-weight:600; text-transform:uppercase;">${safeShelf}</div>
           </div>
         </div>
-        <button class="btn-cyan-glow" style="padding:6px 12px; font-size:0.78rem;" onclick="closeLibraryModal(); openReader('${safeMangaId}', 1)">Read →</button>
+        <button class="btn-primary-glow" style="padding:6px 14px; font-size:0.78rem;" onclick="closeLibraryModal(); openReader('${safeMangaId}', ${readCh})">Read →</button>
       </div>
     `;
   }).join("");

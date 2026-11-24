@@ -117,23 +117,13 @@
         <div id="searchAutocompleteDropdown" class="search-autocomplete-dropdown"></div>
       </div>
 
-      <!-- Action Items & Wallet -->
+      <!-- Action Items & Library -->
       <div class="header-actions">
-        <!-- Publish New Manga (Creator Studio) -->
-        <button class="btn-primary-glow hide-mobile" style="padding:7px 14px; font-size:0.82rem;" onclick="openCreatorStudio()" title="Publish a New Manga or Webtoon">
-          Publish
-        </button>
-
         <!-- Tokyo Sync Clock Pill -->
         <div class="tokyo-live-pill hide-mobile" title="Japan Standard Time (JST)">
           <span class="pulse-dot"></span>
           <span id="tokyoLiveClock">JST 00:00:00</span>
         </div>
-
-        <!-- Wallet Passes Button -->
-        <button class="action-pill-btn" onclick="openWalletModal()" title="Promo Passes">
-          <span id="walletBadgeCount">0 Passes</span>
-        </button>
 
         <!-- Library Tracker Button -->
         <button class="action-pill-btn" onclick="openLibraryModal()" title="Reading Library">
@@ -338,21 +328,16 @@
       <!-- Right Action Controls -->
       <div style="display:flex; align-items:center; gap:10px;">
         <!-- Theme Selector -->
-        <select class="reader-chapter-dropdown" onchange="setReaderTheme(this.value)">
-          <option value="oled">Theme: Black</option>
-          <option value="charcoal">Theme: Charcoal</option>
-          <option value="sepia">Theme: Sepia</option>
-          <option value="white">Theme: White</option>
+        <select class="reader-chapter-dropdown" onchange="setReaderTheme(this.value)" id="readerThemeSelect">
+          <option value="charcoal" selected>Theme: Soft Dark</option>
+          <option value="white">Theme: Clean Paper</option>
+          <option value="sepia">Theme: Warm Sepia</option>
+          <option value="oled">Theme: Deep Black</option>
         </select>
 
-        <!-- Discussions Drawer Button -->
+        <!-- Discussions Button -->
         <button class="action-pill-btn" onclick="toggleDiscussionsDrawer()" title="Chapter Comments">
           Comments
-        </button>
-
-        <!-- Save Chapter Offline -->
-        <button class="action-pill-btn" onclick="downloadCurrentChapterOffline()" title="Save Chapter for Offline Reading">
-          Save Offline
         </button>
 
         <!-- Exit Reader Button -->
@@ -711,10 +696,6 @@
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
       <span>Library</span>
       <span id="bnavLibBadge" class="bnav-badge" style="display:none;">0</span>
-    </button>
-    <button class="bottom-nav-item" onclick="openCreatorStudio(); switchBottomNav('publish')" id="bnav-publish">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      <span>Publish</span>
     </button>
   </nav>
 
