@@ -179,7 +179,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31706-lRncu9VbcBB7.png",
     "author": "Hirohiko Araki",
     "artist": "Hirohiko Araki",
-    "synopsis": "Riders from around the world gather in the Wild West for the race of the century! Johnny Joestar, a former jockey paralyzed from the waist down, comes to spectate, and momentarily regains the ability to walk while watching a duel fought by Gyro Zeppeli. Desperate to learn more about thi..."
+    "synopsis": "Riders from around the world gather in the Wild West for the race of the century! Johnny Joestar, a former jockey paralyzed from the waist down, comes to spectate, and momentarily regains the ability to walk while watching a duel fought by Gyro Zeppeli. Desperate to learn more about thi...",
+    "trailerUrl": "yMl1fZZ7p2U"
   },
   {
     "id": "mv-al-30656",
@@ -329,7 +330,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx140407-fJQr0fmqq1IO.png",
     "author": "Baek-Gyeong Mun",
     "artist": "Hyeon-Su Kim",
-    "synopsis": "When civil engineering student Su-Ho Kim falls asleep reading a fantasy novel, he wakes up as a character in the book! Su-Ho is now in the body of Lloyd Frontera, a lazy noble who loves to drink, and whose family is in a mountain of debt. Using his engineering knowledge, Su-Ho designs i..."
+    "synopsis": "When civil engineering student Su-Ho Kim falls asleep reading a fantasy novel, he wakes up as a character in the book! Su-Ho is now in the body of Lloyd Frontera, a lazy noble who loves to drink, and whose family is in a mountain of debt. Using his engineering knowledge, Su-Ho designs i...",
+    "trailerUrl": "ODhmGJ42c_w"
   },
   {
     "id": "mv-al-30642",
@@ -448,7 +450,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30657-AzyyUOWMJ6fd.png",
     "author": "Takehiko Inoue",
     "artist": "Takehiko Inoue",
-    "synopsis": "A motorcycle accident, bone cancer, a speeding truck crashing into a boy on a stolen bicycle--tragic life-changing events turn the worlds of three young men upside down. These three very different personalities have only one thing in common--their passion for basketball.    (Source: VIZ..."
+    "synopsis": "A motorcycle accident, bone cancer, a speeding truck crashing into a boy on a stolen bicycle--tragic life-changing events turn the worlds of three young men upside down. These three very different personalities have only one thing in common--their passion for basketball.    (Source: VIZ...",
+    "trailerUrl": "_D_iow5i2bk"
   },
   {
     "id": "mv-al-119247",
@@ -476,7 +479,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx119247-8ylxneez5fa8.jpg",
     "author": "Taiyou Kuzumi",
     "artist": "Taiyou Kuzumi",
-    "synopsis": "Uma Musume Cinderella Gray is a spin-off title of the Uma Musume project by Cygames. It follows Oguri Cap through her time at Kasamatsu Training Center Academy and on her journey of becoming a legendary horse girl.    Note: Includes the one-shot \"Uma Musume: Cinderella Gray Gaiden - The..."
+    "synopsis": "Uma Musume Cinderella Gray is a spin-off title of the Uma Musume project by Cygames. It follows Oguri Cap through her time at Kasamatsu Training Center Academy and on her journey of becoming a legendary horse girl.    Note: Includes the one-shot \"Uma Musume: Cinderella Gray Gaiden - The...",
+    "trailerUrl": "nkG2-RH582o"
   },
   {
     "id": "mv-al-30025",
@@ -537,7 +541,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31303-l21HJn9AXl7w.jpg",
     "author": "Tetsuya Chiba",
     "artist": "Tetsuya Chiba",
-    "synopsis": "A young drifter named Joe Yabuki wanders through the slums of Tokyo, but when the local ruffians try to give him a hard time he teaches them a rough lesson with his fists. The spectacle sparks a gleam in the eye of an old drunk who happens to be watching—Danpei Tange, a failed boxer and..."
+    "synopsis": "A young drifter named Joe Yabuki wanders through the slums of Tokyo, but when the local ruffians try to give him a hard time he teaches them a rough lesson with his fists. The spectacle sparks a gleam in the eye of an old drunk who happens to be watching—Danpei Tange, a failed boxer and...",
+    "trailerUrl": "BIXHPgNtAZg"
   },
   {
     "id": "mv-al-46765",
@@ -565,7 +570,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx46765-KPXir4sRqJBW.png",
     "author": "Yasuhisa Hara",
     "artist": "Yasuhisa Hara",
-    "synopsis": "Xin is a war orphan in a poor village in the kingdom of Qin. He has big dreams of becoming a great general, and when his best friend’s life is cut short by political machinations, Xin sets off to find a deposed ruler and help restore his place on the throne, while working his way up thr..."
+    "synopsis": "Xin is a war orphan in a poor village in the kingdom of Qin. He has big dreams of becoming a great general, and when his best friend’s life is cut short by political machinations, Xin sets off to find a deposed ruler and help restore his place on the throne, while working his way up thr...",
+    "trailerUrl": "ZmDorgdAG4g"
   },
   {
     "id": "mv-al-87395",
@@ -595,7 +601,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx87395-axsA49kSZp72.jpg",
     "author": "Kenji Inoue",
     "artist": "Kimitake Yoshioka",
-    "synopsis": "After moving out on his own to a seaside town, Iori Kitahara makes a college debut he never anticipated. A new chapter of his life unfolds, full of diving with beautiful girls and shenanigans with a gaggle of lovable bastards! Idiot-expert Kenji Inoue and au naturel authority Kimitake Y..."
+    "synopsis": "After moving out on his own to a seaside town, Iori Kitahara makes a college debut he never anticipated. A new chapter of his life unfolds, full of diving with beautiful girls and shenanigans with a gaggle of lovable bastards! Idiot-expert Kenji Inoue and au naturel authority Kimitake Y...",
+    "trailerUrl": "kOcjINpcY5s"
   },
   {
     "id": "mv-al-30104",
@@ -652,7 +659,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx65243-mR4MnJFmfaOF.png",
     "author": "Haruichi Furudate",
     "artist": "Haruichi Furudate",
-    "synopsis": "Shouyou Hinata is out to prove that in volleyball you don’t need to be tall to fly!    After losing his first and last volleyball match against Tobio Kageyama, “the King of the Court,” Shouyou Hinata swears to become his rival after graduating middle school. But what happens when the gu..."
+    "synopsis": "Shouyou Hinata is out to prove that in volleyball you don’t need to be tall to fly!    After losing his first and last volleyball match against Tobio Kageyama, “the King of the Court,” Shouyou Hinata swears to become his rival after graduating middle school. But what happens when the gu...",
+    "trailerUrl": "OmRfbjwOtbI"
   },
   {
     "id": "mv-al-187189",
@@ -740,7 +748,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30028-VJqBC1ar6AxE.png",
     "author": "Ai Yazawa",
     "artist": "Sabrina Heep",
-    "synopsis": "Nana Komatsu is a young woman who's endured an unending string of boyfriend problems. Moving to Tokyo, she's hoping to take control of her life and put all those messy misadventures behind her. She's looking for love and she's hoping to find it in the big city.   Nana Osaki, on the othe..."
+    "synopsis": "Nana Komatsu is a young woman who's endured an unending string of boyfriend problems. Moving to Tokyo, she's hoping to take control of her life and put all those messy misadventures behind her. She's looking for love and she's hoping to find it in the big city.   Nana Osaki, on the othe...",
+    "trailerUrl": "z6Ox5-IjAFA"
   },
   {
     "id": "mv-al-30026",
@@ -800,7 +809,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx75143-qPFON51fyZpt.png",
     "author": "Amyuu Sakura",
     "artist": "Amyuu Sakura",
-    "synopsis": "Since the graduation of the senior members of the club, Takezou ends up being the sole member of the \"Koto\" (traditional Japanese string instrument) club. Now that the new school year has begun, Takezou will have to seek out new members into the club, or the club will become terminated...."
+    "synopsis": "Since the graduation of the senior members of the club, Takezou ends up being the sole member of the \"Koto\" (traditional Japanese string instrument) club. Now that the new school year has begun, Takezou will have to seek out new members into the club, or the club will become terminated....",
+    "trailerUrl": "13w5m6wTJ-g"
   },
   {
     "id": "mv-al-86082",
@@ -830,7 +840,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86082-MXizJxzbijdd.jpg",
     "author": "Ryouko Kui",
     "artist": "Ryouko Kui",
-    "synopsis": "When young adventurer Laios and his company are attacked and soundly thrashed by a dragon deep in a dungeon, the party loses all its money and provisions...and a member! They're eager to go back and save her, but there is just one problem: If they set out with no food or coin to speak o..."
+    "synopsis": "When young adventurer Laios and his company are attacked and soundly thrashed by a dragon deep in a dungeon, the party loses all its money and provisions...and a member! They're eager to go back and save her, but there is just one problem: If they set out with no food or coin to speak o...",
+    "trailerUrl": "mLfJ7B20A2Q"
   },
   {
     "id": "mv-al-30003",
@@ -919,7 +930,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118371-3xk9VUbWnnRR.jpg",
     "author": "Ikada Tsuruma",
     "artist": "Ikada Tsuruma",
-    "synopsis": "Inori is a little girl who dreams of becoming a figure skater. Yet, the obstacles to this dream feel insurmountable: Inori’s already “too old” (she’s 11); she’s always had trouble at school; and, worst of all, her older sister’s skating dreams ended in failure, so her mother is dead set..."
+    "synopsis": "Inori is a little girl who dreams of becoming a figure skater. Yet, the obstacles to this dream feel insurmountable: Inori’s already “too old” (she’s 11); she’s always had trouble at school; and, worst of all, her older sister’s skating dreams ended in failure, so her mother is dead set...",
+    "trailerUrl": "8EZA-1Y9J44"
   },
   {
     "id": "mv-al-126986",
@@ -949,7 +961,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx126986-hIK16AdoJhNo.jpg",
     "author": "Wanan",
     "artist": "Wanan",
-    "synopsis": "Hae-Jun Go, who ran from home, and Eun-Yeong Baek, the problem child who lives in a tent. These two, who met under terrible circumstances, are forced to live together in an abandoned dormitory. This is a story of difficult growth between two people who hate both the dorm and each other...."
+    "synopsis": "Hae-Jun Go, who ran from home, and Eun-Yeong Baek, the problem child who lives in a tent. These two, who met under terrible circumstances, are forced to live together in an abandoned dormitory. This is a story of difficult growth between two people who hate both the dorm and each other....",
+    "trailerUrl": "fj-fho49sfE"
   },
   {
     "id": "mv-al-30007",
@@ -1007,7 +1020,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31224-dxugU08jahRT.jpg",
     "author": "Chica Umino",
     "artist": "Chica Umino",
-    "synopsis": "Rei Kiriyama is a child prodigy. Rei Kiriyama is also an orphan who lives alone in an empty apartment. Rei Kiriyama is a teen working in an adult's world. Life is complicated for Rei. He's an up-and-coming shogi player on the verge of turning pro, but he has no homelife, or much of a li..."
+    "synopsis": "Rei Kiriyama is a child prodigy. Rei Kiriyama is also an orphan who lives alone in an empty apartment. Rei Kiriyama is a teen working in an adult's world. Life is complicated for Rei. He's an up-and-coming shogi player on the verge of turning pro, but he has no homelife, or much of a li...",
+    "trailerUrl": "9jVl6PuiVS8"
   },
   {
     "id": "mv-al-106331",
@@ -1035,7 +1049,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx106331-2AfUs43WcoCA.jpg",
     "author": "Tomoko Yamashita",
     "artist": "Éric Montésinos",
-    "synopsis": "Reclusive novelist Makio Koudai has built a life entirely on her own terms—she's sharp-tongued, set in her ways, and far more at ease with the people she invents than the family she keeps at a distance.    But everything changes when her older sister dies unexpectedly, leaving behind a ..."
+    "synopsis": "Reclusive novelist Makio Koudai has built a life entirely on her own terms—she's sharp-tongued, set in her ways, and far more at ease with the people she invents than the family she keeps at a distance.    But everything changes when her older sister dies unexpectedly, leaving behind a ...",
+    "trailerUrl": "0Wk7AyGSAwE"
   },
   {
     "id": "mv-al-86635",
@@ -1065,7 +1080,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86635-EdaLQmsn86Fy.png",
     "author": "Aka Akasaka",
     "artist": "Aka Akasaka",
-    "synopsis": "As leaders of their prestigious academy’s student council, Kaguya and Miyuki are the elite of the elite! But it’s lonely at the top… Luckily for them, they’ve fallen in love! There’s just one problem—they both have too much pride to admit it. And so begins the daily scheming to get the ..."
+    "synopsis": "As leaders of their prestigious academy’s student council, Kaguya and Miyuki are the elite of the elite! But it’s lonely at the top… Luckily for them, they’ve fallen in love! There’s just one problem—they both have too much pride to admit it. And so begins the daily scheming to get the ...",
+    "trailerUrl": "IRBB7wU0wm0"
   },
   {
     "id": "mv-al-37375",
@@ -1095,7 +1111,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx37375-wkgev4kXhamw.png",
     "author": "Jirou Nitta",
     "artist": "Shinichi Sakamoto",
-    "synopsis": "Transfer student Buntaro Mori starts his first day at his new school already on the administration’s radar. He’s withdrawn and sullen, and the teachers are just waiting for him to explode. When his annoying classmate Miyamoto promises to leave him alone forever if he climbs to the top o..."
+    "synopsis": "Transfer student Buntaro Mori starts his first day at his new school already on the administration’s radar. He’s withdrawn and sullen, and the teachers are just waiting for him to explode. When his annoying classmate Miyamoto promises to leave him alone forever if he climbs to the top o...",
+    "trailerUrl": "gu97AQtbZk0"
   },
   {
     "id": "mv-al-51525",
@@ -1126,7 +1143,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx51525-wZ1AjkbXrKns.png",
     "author": "Mizuho Kusanagi",
     "artist": "Lys Blakeslee",
-    "synopsis": "A red-haired princess loses her family and her kingdom—now she must rise and fight for her throne!    Princess Yona lives an ideal life as the only princess of her kingdom. Doted on by her father, the king, and protected by her faithful guard Hak, she cherishes the time spent with the m..."
+    "synopsis": "A red-haired princess loses her family and her kingdom—now she must rise and fight for her throne!    Princess Yona lives an ideal life as the only princess of her kingdom. Doted on by her father, the king, and protected by her faithful guard Hak, she cherishes the time spent with the m...",
+    "trailerUrl": "_qaJpECrEYI"
   },
   {
     "id": "mv-al-98263",
@@ -1245,7 +1263,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx85135-11OOnyaqV71k.png",
     "author": "Yoshitoki Ooima",
     "artist": "Yoshitoki Ooima",
-    "synopsis": "Based on a one-shot that won the 80th Weekly Shounen Magazine Newbie Best Mangaka Award.   Shouya is a bully. When Shouko, a girl who can't hear, enters his elementary school class, she becomes their favorite target, and Shouya and his friends goad each other into devising new tortures ..."
+    "synopsis": "Based on a one-shot that won the 80th Weekly Shounen Magazine Newbie Best Mangaka Award.   Shouya is a bully. When Shouko, a girl who can't hear, enters his elementary school class, she becomes their favorite target, and Shouya and his friends goad each other into devising new tortures ...",
+    "trailerUrl": "mS_om5EK8YI"
   },
   {
     "id": "mv-al-116170",
@@ -1330,7 +1349,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx107279-R2vxyPQRqV0X.jpg",
     "author": "Yuugo Kobayashi",
     "artist": "Yuugo Kobayashi",
-    "synopsis": "Ashito Aoi, a third year middle school student from Ehime, meets Fukuda Tatsuya, a J Youth League coach. Even though he's still rough around the edges, Ashito has such amazing potential that he gets invited by coach Fukuda to participate in his team's try-outs in Tokyo. The story of a b..."
+    "synopsis": "Ashito Aoi, a third year middle school student from Ehime, meets Fukuda Tatsuya, a J Youth League coach. Even though he's still rough around the edges, Ashito has such amazing potential that he gets invited by coach Fukuda to participate in his team's try-outs in Tokyo. The story of a b...",
+    "trailerUrl": "Y1oSlcXzy20"
   },
   {
     "id": "mv-al-39982",
@@ -1388,7 +1408,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx117620-cyvy8nO9GLm8.jpg",
     "author": "Yuama",
     "artist": "Yuama",
-    "synopsis": "Shizuku is a shy girl who hardly talks to other people. Instead, she loses herself in creative writing, crafting a novel that she never plans to show anyone. But when Kaori–Shizuku’s cute, popular classmate–gets her hands on Shizuku’s manuscript, everything changes. Kaori is a huge fan,..."
+    "synopsis": "Shizuku is a shy girl who hardly talks to other people. Instead, she loses herself in creative writing, crafting a novel that she never plans to show anyone. But when Kaori–Shizuku’s cute, popular classmate–gets her hands on Shizuku’s manuscript, everything changes. Kaori is a huge fan,...",
+    "trailerUrl": "RXzwDXCr9LE"
   },
   {
     "id": "mv-al-43245",
@@ -1417,7 +1438,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx43245-Ied8R99LH3u6.jpg",
     "author": "Yuki Suetsugu",
     "artist": "Yuki Suetsugu",
-    "synopsis": "Chihaya is a girl in the sixth grade, still not old enough to even know the meaning of the word zeal. But one day, she meets Arata, a transfer student from rural Fukui prefecture. Though docile and quiet, he has an unexpected skill: his ability to play competitive karuta, a traditional ..."
+    "synopsis": "Chihaya is a girl in the sixth grade, still not old enough to even know the meaning of the word zeal. But one day, she meets Arata, a transfer student from rural Fukui prefecture. Though docile and quiet, he has an unexpected skill: his ability to play competitive karuta, a traditional ...",
+    "trailerUrl": "QjEPiK2D5eI"
   },
   {
     "id": "mv-al-89278",
@@ -1476,7 +1498,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30044-vPmoz3vTPvZs.jpg",
     "author": "Hideaki Sorachi",
     "artist": "Hideaki Sorachi",
-    "synopsis": "The samurai didn't stand a chance. First, the aliens invaded Japan. Next, they took all the jobs. And then they confiscated everyone's swords. So what does a hotheaded former samurai like Sakata \"Gin\" Gintoki do to make ends meet? Take any odd job that comes his way, even if it means lo..."
+    "synopsis": "The samurai didn't stand a chance. First, the aliens invaded Japan. Next, they took all the jobs. And then they confiscated everyone's swords. So what does a hotheaded former samurai like Sakata \"Gin\" Gintoki do to make ends meet? Take any odd job that comes his way, even if it means lo...",
+    "trailerUrl": "Z7bw5wBafu8"
   },
   {
     "id": "mv-al-30336",
@@ -1535,7 +1558,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx140475-QEGtrmdvbpOv.jpg",
     "author": "Saka Mikami",
     "artist": "Saka Mikami",
-    "synopsis": "This story takes place in a particular town with two infamous schools in constant dispute: Chidori High, a boys' school predominantly attended by low-class students with damning grades, and its neighbor Kikyo Girls' High, with most of its female students coming from wealthy and prestigi..."
+    "synopsis": "This story takes place in a particular town with two infamous schools in constant dispute: Chidori High, a boys' school predominantly attended by low-class students with damning grades, and its neighbor Kikyo Girls' High, with most of its female students coming from wealthy and prestigi...",
+    "trailerUrl": "rYHdW6aIl7I"
   },
   {
     "id": "mv-al-30081",
@@ -1626,7 +1650,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31133-Jx6map3Oidz1.png",
     "author": "Q Hayashida",
     "artist": "Q Hayashida",
-    "synopsis": "In a city so dismal it's known only as \"the Hole,\" a clan of Sorcerers have been plucking people off the streets to use as guinea pigs for atrocious \"experiments\" in the black arts. In a dark alley, Nikaido found Caiman, a man with a reptile head and a bad case of amnesia. To undo the s..."
+    "synopsis": "In a city so dismal it's known only as \"the Hole,\" a clan of Sorcerers have been plucking people off the streets to use as guinea pigs for atrocious \"experiments\" in the black arts. In a dark alley, Nikaido found Caiman, a man with a reptile head and a bad case of amnesia. To undo the s...",
+    "trailerUrl": "8yrNYhhZKqQ"
   },
   {
     "id": "mv-al-86559",
@@ -1656,7 +1681,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86559-Y4xDmoz4ud43.jpg",
     "author": "Satoru Noda",
     "artist": "Satoru Noda",
-    "synopsis": "In the early twentieth century, Russo-Japanese War veteran Saichi “Immortal” Sugimoto scratches out a meager existence during the postwar gold rush in the wilderness of Hokkaido. When he stumbles across a map to a fortune in hidden Ainu gold, he sets off on a treacherous quest to find i..."
+    "synopsis": "In the early twentieth century, Russo-Japanese War veteran Saichi “Immortal” Sugimoto scratches out a meager existence during the postwar gold rush in the wilderness of Hokkaido. When he stumbles across a map to a fortune in hidden Ainu gold, he sets off on a treacherous quest to find i...",
+    "trailerUrl": "SpLbiNEy2ww"
   },
   {
     "id": "mv-al-119257",
@@ -1685,7 +1711,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx119257-Pi21aq3ey9GG.jpg",
     "author": "Geomnem",
     "artist": "Sleepy-C",
-    "synopsis": "Back then, Dok-Ja had no idea. He had no idea his favorite web novel 'Three Ways to Survive the Apocalypse' was going to come to life, and that he would become the only person to know how the world was going to end. He also had no idea he would end up becoming the protagonist of this no..."
+    "synopsis": "Back then, Dok-Ja had no idea. He had no idea his favorite web novel 'Three Ways to Survive the Apocalypse' was going to come to life, and that he would become the only person to know how the world was going to end. He also had no idea he would end up becoming the protagonist of this no...",
+    "trailerUrl": "8OHzcTtoLo4"
   },
   {
     "id": "mv-al-136109",
@@ -1831,7 +1858,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx109285-HmBZpzsO2zxd.jpg",
     "author": "Misaki Takamatsu",
     "artist": "Misaki Takamatsu",
-    "synopsis": "Excellent student Iwakura Mitsumi has always dreamt about leaving her small town, going to a prestigious university, and making positive change in the world. But she’s so focused on reaching her goals that she’s not prepared for the very different (and overwhelming) city life that await..."
+    "synopsis": "Excellent student Iwakura Mitsumi has always dreamt about leaving her small town, going to a prestigious university, and making positive change in the world. But she’s so focused on reaching her goals that she’s not prepared for the very different (and overwhelming) city life that await...",
+    "trailerUrl": "Tzs6zBB4E-Q"
   },
   {
     "id": "mv-al-97553",
@@ -1946,7 +1974,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86218-sIl9tnqHZQyh.jpg",
     "author": "Nio Nakatani",
     "artist": "Nio Nakatani",
-    "synopsis": "Yuu has always loved shoujo manga and awaits the day she gets a love confession that sends her heart aflutter with bubbles and hearts, and yet when a junior high classmate confesses his feelings to her…she feels nothing. Disappointed and confused, Yuu enters high school still unsure how..."
+    "synopsis": "Yuu has always loved shoujo manga and awaits the day she gets a love confession that sends her heart aflutter with bubbles and hearts, and yet when a junior high classmate confesses his feelings to her…she feels nothing. Disappointed and confused, Yuu enters high school still unsure how...",
+    "trailerUrl": "lfdnNJk0hHo"
   },
   {
     "id": "mv-al-166742",
@@ -1976,7 +2005,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx166742-io6yR2XeJiEh.jpg",
     "author": "Koucha Agasawa",
     "artist": "Koucha Agasawa",
-    "synopsis": "Koyuki Hikawa isn't great with people and always puts up a wall between others. She had been spending her high school days alone, but one day meets the overly friendly Minato Amamiya. The loner, Koyuki, the popular girl, Miki, the guy with no personal space, Minato, and the laid back me..."
+    "synopsis": "Koyuki Hikawa isn't great with people and always puts up a wall between others. She had been spending her high school days alone, but one day meets the overly friendly Minato Amamiya. The loner, Koyuki, the popular girl, Miki, the guy with no personal space, Minato, and the laid back me...",
+    "trailerUrl": "0Ta_vFkaxRU"
   },
   {
     "id": "mv-al-168509",
@@ -2090,7 +2120,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx99022-Hh2WdyNgR8HM.jpg",
     "author": "Itsuki Nanao",
     "artist": "Erika Ikeda",
-    "synopsis": "Maomao, a young woman trained in the art of herbal medicine, is forced to work as a lowly servant in the inner palace. Though she yearns for life outside its perfumed halls, she isn’t long for a life of drudgery! Using her wits to break a “curse” afflicting the imperial heirs, Maomao at..."
+    "synopsis": "Maomao, a young woman trained in the art of herbal medicine, is forced to work as a lowly servant in the inner palace. Though she yearns for life outside its perfumed halls, she isn’t long for a life of drudgery! Using her wits to break a “curse” afflicting the imperial heirs, Maomao at...",
+    "trailerUrl": "kdjQ_dkXr4s"
   },
   {
     "id": "mv-al-107237",
@@ -2148,7 +2179,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx119521-qYqxFvn0NnXo.png",
     "author": "Hae-Min",
     "artist": "Hae-Min",
-    "synopsis": "For decades, the brave warriors of the Northern Heavenly Sect fought to keep the world safe from the evil Silent Night. But when the fourth generation leader is accused of colluding with the enemy, he is forced to disband the sect and commit suicide to protect his son, Moo-Won. With no ..."
+    "synopsis": "For decades, the brave warriors of the Northern Heavenly Sect fought to keep the world safe from the evil Silent Night. But when the fourth generation leader is accused of colluding with the enemy, he is forced to disband the sect and commit suicide to protect his son, Moo-Won. With no ...",
+    "trailerUrl": "A1DyXT9AZt8"
   },
   {
     "id": "mv-al-168843",
@@ -2205,7 +2237,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx177706-3r8dnAr8Prjq.jpg",
     "author": "Ga Nara",
     "artist": "An Lee",
-    "synopsis": "Is dying repeatedly a blessing? Enkrid's life-long dream of becoming a knight looked to be forever out of reach, until one day he died... and woke up at the beginning of that same day! Now that he has unlimited chances to train and engage in mortal combat, just how far can he go?  (Sour..."
+    "synopsis": "Is dying repeatedly a blessing? Enkrid's life-long dream of becoming a knight looked to be forever out of reach, until one day he died... and woke up at the beginning of that same day! Now that he has unlimited chances to train and engage in mortal combat, just how far can he go?  (Sour...",
+    "trailerUrl": "sO1v04_KfOo"
   },
   {
     "id": "mv-al-100805",
@@ -2264,7 +2297,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx114998-JTCzDczl8eBD.jpg",
     "author": "Shiwasu Hoshikawa",
     "artist": "Shiwasu Hoshikawa",
-    "synopsis": "In a parallel universe of Bungo Stray Dogs, Ryuunosuke Akutagawa’s desperate mission to save his younger sister leads to him being recruited by the armed detective agency!     (Source: Yen Press)"
+    "synopsis": "In a parallel universe of Bungo Stray Dogs, Ryuunosuke Akutagawa’s desperate mission to save his younger sister leads to him being recruited by the armed detective agency!     (Source: Yen Press)",
+    "trailerUrl": "XsG1X2xDVpg"
   },
   {
     "id": "mv-al-146656",
@@ -2505,7 +2539,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30756-rlxjQWBAizHX.jpg",
     "author": "Akimi Yoshida",
     "artist": "Akimi Yoshida",
-    "synopsis": "Nature made Ash Lynx beautiful; nurture made him a cold ruthless killer. A runaway brought up as the adopted heir and sex toy of \"Papa\" Dino Golzine, Ash, now at the rebellious age of seventeen, forsakes the kingdom held out by the devil who raised him. But the hideous secret that drove..."
+    "synopsis": "Nature made Ash Lynx beautiful; nurture made him a cold ruthless killer. A runaway brought up as the adopted heir and sex toy of \"Papa\" Dino Golzine, Ash, now at the rebellious age of seventeen, forsakes the kingdom held out by the devil who raised him. But the hideous secret that drove...",
+    "trailerUrl": "Rm54hW42O10"
   },
   {
     "id": "mv-al-30904",
@@ -2591,7 +2626,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx41514-IHeXFwqmWivk.jpg",
     "author": "Kaoru Mori",
     "artist": "Kaoru Mori",
-    "synopsis": "A Bride&rsquo;s Story tells the tale of a beautiful young bride in nineteenth-century Asia. At the age of twenty, Amir is sent to a neighboring town to be wed. But her surprise at learning her new husband, Karluk, is eight years younger than her is quickly replaced by a deep affection f..."
+    "synopsis": "A Bride&rsquo;s Story tells the tale of a beautiful young bride in nineteenth-century Asia. At the age of twenty, Amir is sent to a neighboring town to be wed. But her surprise at learning her new husband, Karluk, is eight years younger than her is quickly replaced by a deep affection f...",
+    "trailerUrl": "-yO7Ybp91WA"
   },
   {
     "id": "mv-al-45547",
@@ -2650,7 +2686,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx55515-HhCsfAsd7VK1.png",
     "author": "Hirohiko Araki",
     "artist": "Hirohiko Araki",
-    "synopsis": "This part will take place in Morioh-Cho (the same town in Part 4: Diamond is Unbreakable), but in the alternative universe in which Steel Ball Run takes place.    Following the Great East Japan earthquake, Morioh has been stricken by vast earthen protrusions known by the locals as Wall ..."
+    "synopsis": "This part will take place in Morioh-Cho (the same town in Part 4: Diamond is Unbreakable), but in the alternative universe in which Steel Ball Run takes place.    Following the Great East Japan earthquake, Morioh has been stricken by vast earthen protrusions known by the locals as Wall ...",
+    "trailerUrl": "hkW8l5A3nh4"
   },
   {
     "id": "mv-al-85849",
@@ -2681,7 +2718,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx85849-TYAa7nhwSvbx.jpg",
     "author": "Sou Yayoi",
     "artist": "Sou Yayoi",
-    "synopsis": "When the responsibilities of being an adult and the ugly side of corporate bullying betrays one's childhood dreams, many would wish to return to their innocent childhood to relive their life and make the right decisions. Dumbfounded by the offer presented to him, 27-year-old Arata Kaiza..."
+    "synopsis": "When the responsibilities of being an adult and the ugly side of corporate bullying betrays one's childhood dreams, many would wish to return to their innocent childhood to relive their life and make the right decisions. Dumbfounded by the offer presented to him, 27-year-old Arata Kaiza...",
+    "trailerUrl": "3eFySl9W3ec"
   },
   {
     "id": "mv-al-100568",
@@ -2768,7 +2806,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx132288-YnkpDO1wNHNM.png",
     "author": "Keigo Shinzo",
     "artist": "Keigo Shinzo",
-    "synopsis": "With a carefree outlook on life, Hiroto knows better than anyone that slowing down is sometimes the best way to move forward.    At 29 years old, carefree Hiroto Ikuta doesn’t have a girlfriend, a full-time job, or a plan for the future—and he couldn’t be happier. Hiroto’s breezy attitu..."
+    "synopsis": "With a carefree outlook on life, Hiroto knows better than anyone that slowing down is sometimes the best way to move forward.    At 29 years old, carefree Hiroto Ikuta doesn’t have a girlfriend, a full-time job, or a plan for the future—and he couldn’t be happier. Hiroto’s breezy attitu...",
+    "trailerUrl": "BtRhVT3XH70"
   },
   {
     "id": "mv-al-30102",
@@ -2983,7 +3022,8 @@ const MANGA_DATABASE = [
     "coverUrl": "mangas/covers/mv-59f47645.jpg",
     "author": "Ishida Sui",
     "artist": "Ishida Sui",
-    "synopsis": "Shy Ken Kaneki is thrilled to go on a date with the beautiful Rize. But it turns out that she’s only interested in his body—eating it, that is. When a morally questionable rescue transforms him into the first half-human half-Ghoul hybrid, Ken is drawn into the dark and violent world of ..."
+    "synopsis": "Shy Ken Kaneki is thrilled to go on a date with the beautiful Rize. But it turns out that she’s only interested in his body—eating it, that is. When a morally questionable rescue transforms him into the first half-human half-Ghoul hybrid, Ken is drawn into the dark and violent world of ...",
+    "trailerUrl": "61_N5Wz_oMg"
   },
   {
     "id": "mv-al-132144",
@@ -3012,7 +3052,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx132144-i5B4VnG9sRgh.png",
     "author": "Biga",
     "artist": "LICO",
-    "synopsis": "When Cheong-Myeong of the Mount Hua Sect awakens a hundred years in the future, his last memories are of a bloody battle against the Leader of the Demonic Cult, the evil Cheon-Ma. The battle almost saw the end of the Ten Great Sects of ancient China, when Cheong-Myeong ended the hard-fo..."
+    "synopsis": "When Cheong-Myeong of the Mount Hua Sect awakens a hundred years in the future, his last memories are of a bloody battle against the Leader of the Demonic Cult, the evil Cheon-Ma. The battle almost saw the end of the Ten Great Sects of ancient China, when Cheong-Myeong ended the hard-fo...",
+    "trailerUrl": "ZHTcZsg975A"
   },
   {
     "id": "mv-al-74347",
@@ -3042,7 +3083,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx74347-sZpmNJ5xLwRK.jpg",
     "author": "ONE",
     "artist": "Yuusuke Murata",
-    "synopsis": "In this new action-comedy, everything about a young man named Saitama screams \"AVERAGE,&rdquo; from his lifeless expression, to his bald head, to his unimpressive physique. However, this average-looking fellow doesn't have your average problem... He's actually a superhero that's looking..."
+    "synopsis": "In this new action-comedy, everything about a young man named Saitama screams \"AVERAGE,&rdquo; from his lifeless expression, to his bald head, to his unimpressive physique. However, this average-looking fellow doesn't have your average problem... He's actually a superhero that's looking...",
+    "trailerUrl": "-Z0pey2j5To"
   },
   {
     "id": "mv-al-85850",

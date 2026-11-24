@@ -145,6 +145,7 @@ async function fetchJikanTrailer(title) {
     await sleep(600); // ~100 req/min AniList rate limit
   }
 
+  return; // Skip Jikan for now
   // 4. Jikan fallback pass (for entries that still have no trailer)
   const stillMissing = db.filter(m => !m.trailerUrl);
   const jikanTargets = stillMissing.filter(m => !withoutAnilistId.includes(m) || true);
