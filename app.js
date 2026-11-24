@@ -119,6 +119,2951 @@ const MANGA_DATABASE = [
     "synopsis": "After her royal engagement was unjustly dissolved, Eleanor moved to the border port town to establish the kingdom's first boutique tea salon."
   },
   {
+    "id": "mv-al-30002",
+    "anilistId": 30002,
+    "mangadexId": null,
+    "title": "Berserk",
+    "altTitle": "ベルセルク",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Horror"
+    ],
+    "rating": 4.6,
+    "totalChapters": 376,
+    "releaseDay": "Sun",
+    "latestChapter": {
+      "number": 376,
+      "title": "Chapter 376",
+      "views": "4.1M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": true,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30002-Cul4OeN7bYtn.jpg",
+    "author": "Studio Gaga",
+    "artist": "Studio Gaga",
+    "synopsis": "His name is Guts, the Black Swordsman, a feared warrior spoken of only in whispers. Bearer of a gigantic sword, an iron hand, and the scars of countless battles and tortures, his flesh is also indelibly marked with The Brand, an unholy symbol that draws the forces of darkness to him and..."
+  },
+  {
+    "id": "mv-al-31706",
+    "anilistId": 31706,
+    "mangadexId": null,
+    "title": "JoJo's Bizarre Adventure: Part 7–Steel Ball Run",
+    "altTitle": "ジョジョの奇妙な冒険 スティール・ボール・ラン",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Mystery",
+      "Supernatural"
+    ],
+    "rating": 4.6,
+    "totalChapters": 95,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 95,
+      "title": "Chapter 95",
+      "views": "3.5M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": true,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31706-lRncu9VbcBB7.png",
+    "author": "Hirohiko Araki",
+    "artist": "Hirohiko Araki",
+    "synopsis": "Riders from around the world gather in the Wild West for the race of the century! Johnny Joestar, a former jockey paralyzed from the waist down, comes to spectate, and momentarily regains the ability to walk while watching a duel fought by Gyro Zeppeli. Desperate to learn more about thi..."
+  },
+  {
+    "id": "mv-al-30656",
+    "anilistId": 30656,
+    "mangadexId": null,
+    "title": "Vagabond",
+    "altTitle": "バガボンド",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "rating": 4.55,
+    "totalChapters": 327,
+    "releaseDay": "Tue",
+    "latestChapter": {
+      "number": 327,
+      "title": "Chapter 327",
+      "views": "3.6M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": true,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30656-9mW113O7rDnA.png",
+    "author": "Eiji Yoshikawa",
+    "artist": "Takehiko Inoue",
+    "synopsis": "At seventeen years of age, Miyamoto Musashi--still known by his childhood name, Shinmen Takezo--was a wild young brute just setting out along the way of the sword.    In the aftermath of the epic Battle of Sekigahara, Takezo finds himself a fugitive survivor on the losing side of the wa..."
+  },
+  {
+    "id": "mv-al-30013",
+    "anilistId": 30013,
+    "mangadexId": null,
+    "title": "One Piece",
+    "altTitle": "ONE PIECE",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "rating": 4.55,
+    "totalChapters": 1130,
+    "releaseDay": "Wed",
+    "latestChapter": {
+      "number": 1130,
+      "title": "Chapter 1130",
+      "views": "3.9M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": true,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30013-BeslEMqiPhlk.jpg",
+    "author": "Eiichirou Oda",
+    "artist": "Eiichirou Oda",
+    "synopsis": "As a child, Monkey D. Luffy was inspired to become a pirate by listening to the tales of the buccaneer \"Red-Haired\" Shanks. But his life changed when Luffy accidentally ate the Gum-Gum Devil Fruit and gained the power to stretch like rubber...at the cost of never being able to swim agai..."
+  },
+  {
+    "id": "mv-al-64053",
+    "anilistId": 64053,
+    "mangadexId": null,
+    "title": "Umineko When They Cry Episode 8: Twilight of the Golden Witch",
+    "altTitle": "うみねこのなく頃に散 - Episode 8: Twilight of the Golden Witch",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Mystery",
+      "Supernatural"
+    ],
+    "rating": 4.5,
+    "totalChapters": 42,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 42,
+      "title": "Chapter 42",
+      "views": "8.8M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": true,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx64053-tHJHWLRrWbeA.png",
+    "author": "Ryukishi07",
+    "artist": "Kei Natsumi",
+    "synopsis": "It's time once again for the annual family gathering on Rokkenjima! Ange Ushiromiya is just getting over a cold, but that won't dampen her excitement at seeing her cousins again! Granddad couldn't be more thrilled to see his beloved grandchildren and throws a special Halloween party whe..."
+  },
+  {
+    "id": "mv-al-30001",
+    "anilistId": 30001,
+    "mangadexId": null,
+    "title": "Monster",
+    "altTitle": "MONSTER",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Thriller"
+    ],
+    "rating": 4.5,
+    "totalChapters": 162,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 162,
+      "title": "Chapter 162",
+      "views": "4.5M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": true,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30001-Knby7l1jevE7.jpg",
+    "author": "Naoki Urasawa",
+    "artist": "Naoki Urasawa",
+    "synopsis": "Everyone faces uncertainty at some point in their lives. Even a brilliant surgeon like Kenzo Tenma is no exception. But there’s no way he could have known that his decision to stop chasing professional success and instead concentrate on his oath to save peoples’ lives would result in th..."
+  },
+  {
+    "id": "mv-al-140407",
+    "anilistId": 140407,
+    "mangadexId": null,
+    "title": "The Greatest Estate Developer",
+    "altTitle": "역대급 영지 설계사",
+    "type": "Manhwa",
+    "demographic": "Shōnen",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "rating": 4.5,
+    "totalChapters": 165,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 165,
+      "title": "Chapter 165",
+      "views": "2.6M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": true,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx140407-fJQr0fmqq1IO.png",
+    "author": "Baek-Gyeong Mun",
+    "artist": "Hyeon-Su Kim",
+    "synopsis": "When civil engineering student Su-Ho Kim falls asleep reading a fantasy novel, he wakes up as a character in the book! Su-Ho is now in the body of Lloyd Frontera, a lazy noble who loves to drink, and whose family is in a mountain of debt. Using his engineering knowledge, Su-Ho designs i..."
+  },
+  {
+    "id": "mv-al-30642",
+    "anilistId": 30642,
+    "mangadexId": null,
+    "title": "Vinland Saga",
+    "altTitle": "ヴィンランド・サガ",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "rating": 4.5,
+    "totalChapters": 216,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 216,
+      "title": "Chapter 216",
+      "views": "7.1M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": true,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30642-0mjRDkf4THpo.jpg",
+    "author": "Makoto Yukimura",
+    "artist": "Makoto Yukimura",
+    "synopsis": "As a child, Thorfinn sat at the feet of the great Leif Ericson and thrilled to wild tales of a land far to the west. But his youthful fantasies were shattered by a mercenary raid. Raised by the Vikings who murdered his father, Thorfinn became a terrifying warrior, forever seeking to kil..."
+  },
+  {
+    "id": "mv-al-30051",
+    "anilistId": 30051,
+    "mangadexId": null,
+    "title": "Slam Dunk",
+    "altTitle": "SLAM DUNK",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Sports"
+    ],
+    "rating": 4.5,
+    "totalChapters": 276,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 276,
+      "title": "Chapter 276",
+      "views": "3.5M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": true,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30051-5KJyPlO7z5F4.png",
+    "author": "Takehiko Inoue",
+    "artist": "Takehiko Inoue",
+    "synopsis": "Hanamichi Sakuragi's got no game with girls--none at all! It doesn't help that he's known for throwing down at a moment's notice and always coming out on top. A hopeless bruiser, he's been rejected by 50 girls in a row! All that changes when he meets the girl of his dreams, Haruko, and ..."
+  },
+  {
+    "id": "mv-al-74489",
+    "anilistId": 74489,
+    "mangadexId": null,
+    "title": "Land of the Lustrous",
+    "altTitle": "宝石の国",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Drama",
+      "Fantasy",
+      "Mystery",
+      "Psychological"
+    ],
+    "rating": 4.45,
+    "totalChapters": 108,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 108,
+      "title": "Chapter 108",
+      "views": "3.6M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": true,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx74489-5HtDCFfut8Be.jpg",
+    "author": "Haruko Ichikawa",
+    "artist": "Haruko Ichikawa",
+    "synopsis": "In a world inhabited by crystalline lifeforms called The Lustrous, every unique gem must fight for their way of life against the threat of lunarians who would turn them into decorations. Phosphophyllite, the most fragile and brittle of gems, longs to join the battle. When Phos is instea..."
+  },
+  {
+    "id": "mv-al-30657",
+    "anilistId": 30657,
+    "mangadexId": null,
+    "title": "Real",
+    "altTitle": "リアル",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Sports"
+    ],
+    "rating": 4.45,
+    "totalChapters": 96,
+    "releaseDay": "Wed",
+    "latestChapter": {
+      "number": 96,
+      "title": "Chapter 96",
+      "views": "4.6M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": true,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30657-AzyyUOWMJ6fd.png",
+    "author": "Takehiko Inoue",
+    "artist": "Takehiko Inoue",
+    "synopsis": "A motorcycle accident, bone cancer, a speeding truck crashing into a boy on a stolen bicycle--tragic life-changing events turn the worlds of three young men upside down. These three very different personalities have only one thing in common--their passion for basketball.    (Source: VIZ..."
+  },
+  {
+    "id": "mv-al-119247",
+    "anilistId": 119247,
+    "mangadexId": null,
+    "title": "Uma Musume: Cinderella Gray",
+    "altTitle": "ウマ娘 シンデレラグレイ",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Sports"
+    ],
+    "rating": 4.45,
+    "totalChapters": 211,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 211,
+      "title": "Chapter 211",
+      "views": "7.1M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": true,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx119247-8ylxneez5fa8.jpg",
+    "author": "Taiyou Kuzumi",
+    "artist": "Taiyou Kuzumi",
+    "synopsis": "Uma Musume Cinderella Gray is a spin-off title of the Uma Musume project by Cygames. It follows Oguri Cap through her time at Kasamatsu Training Center Academy and on her journey of becoming a legendary horse girl.    Note: Includes the one-shot \"Uma Musume: Cinderella Gray Gaiden - The..."
+  },
+  {
+    "id": "mv-al-30025",
+    "anilistId": 30025,
+    "mangadexId": null,
+    "title": "Fullmetal Alchemist",
+    "altTitle": "鋼の錬金術師",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Fantasy"
+    ],
+    "rating": 4.45,
+    "totalChapters": 108,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 108,
+      "title": "Chapter 108",
+      "views": "8.8M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30025-mpPVpCKFTowt.png",
+    "author": "Hiromu Arakawa",
+    "artist": "Hiromu Arakawa",
+    "synopsis": "Alchemy tore the Elric brothers’ bodies apart. Can their bond make them whole again?  In this world, alchemists are those who study and perform the art of alchemical transmutation—the science of manipulating and transforming matter. They are bounded by the Law of Equivalent Exchange: in..."
+  },
+  {
+    "id": "mv-al-31303",
+    "anilistId": 31303,
+    "mangadexId": null,
+    "title": "Ashita no Joe: Fighting for Tomorrow",
+    "altTitle": "あしたのジョー",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Slice of Life",
+      "Sports"
+    ],
+    "rating": 4.45,
+    "totalChapters": 171,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 171,
+      "title": "Chapter 171",
+      "views": "5.2M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31303-l21HJn9AXl7w.jpg",
+    "author": "Tetsuya Chiba",
+    "artist": "Tetsuya Chiba",
+    "synopsis": "A young drifter named Joe Yabuki wanders through the slums of Tokyo, but when the local ruffians try to give him a hard time he teaches them a rough lesson with his fists. The spectacle sparks a gleam in the eye of an old drunk who happens to be watching—Danpei Tange, a failed boxer and..."
+  },
+  {
+    "id": "mv-al-46765",
+    "anilistId": 46765,
+    "mangadexId": null,
+    "title": "Kingdom",
+    "altTitle": "キングダム",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "rating": 4.45,
+    "totalChapters": 815,
+    "releaseDay": "Sun",
+    "latestChapter": {
+      "number": 815,
+      "title": "Chapter 815",
+      "views": "3.5M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx46765-KPXir4sRqJBW.png",
+    "author": "Yasuhisa Hara",
+    "artist": "Yasuhisa Hara",
+    "synopsis": "Xin is a war orphan in a poor village in the kingdom of Qin. He has big dreams of becoming a great general, and when his best friend’s life is cut short by political machinations, Xin sets off to find a deposed ruler and help restore his place on the throne, while working his way up thr..."
+  },
+  {
+    "id": "mv-al-87395",
+    "anilistId": 87395,
+    "mangadexId": null,
+    "title": "Grand Blue Dreaming",
+    "altTitle": "ぐらんぶる",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Slice of Life",
+      "Sports"
+    ],
+    "rating": 4.45,
+    "totalChapters": 98,
+    "releaseDay": "Mon",
+    "latestChapter": {
+      "number": 98,
+      "title": "Chapter 98",
+      "views": "3.9M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx87395-axsA49kSZp72.jpg",
+    "author": "Kenji Inoue",
+    "artist": "Kimitake Yoshioka",
+    "synopsis": "After moving out on his own to a seaside town, Iori Kitahara makes a college debut he never anticipated. A new chapter of his life unfolds, full of diving with beautiful girls and shenanigans with a gaggle of lovable bastards! Idiot-expert Kenji Inoue and au naturel authority Kimitake Y..."
+  },
+  {
+    "id": "mv-al-30104",
+    "anilistId": 30104,
+    "mangadexId": null,
+    "title": "Yotsuba&!",
+    "altTitle": "よつばと！",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Comedy",
+      "Slice of Life"
+    ],
+    "rating": 4.45,
+    "totalChapters": 67,
+    "releaseDay": "Tue",
+    "latestChapter": {
+      "number": 67,
+      "title": "Chapter 67",
+      "views": "6.7M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30104-sUVzNlTWZ5cu.jpg",
+    "author": "Kiyohiko Azuma",
+    "artist": "Kiyohiko Azuma",
+    "synopsis": "Hello! This is Koiwai Yotsuba, Yotsuba Koiwai...um, YOTSUBA! Yotsuba moved with Daddy to a new house from our old house waaaaaaay over there! And moving's fun 'cos people wave! (Ohhhh!!) And Yotsuba met these nice people next door and made friends to play with (one of 'em acted like one..."
+  },
+  {
+    "id": "mv-al-65243",
+    "anilistId": 65243,
+    "mangadexId": null,
+    "title": "Haikyu!!",
+    "altTitle": "ハイキュー！！",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Sports"
+    ],
+    "rating": 4.4,
+    "totalChapters": 404,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 404,
+      "title": "Chapter 404",
+      "views": "5.6M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx65243-mR4MnJFmfaOF.png",
+    "author": "Haruichi Furudate",
+    "artist": "Haruichi Furudate",
+    "synopsis": "Shouyou Hinata is out to prove that in volleyball you don’t need to be tall to fly!    After losing his first and last volleyball match against Tobio Kageyama, “the King of the Court,” Shouyou Hinata swears to become his rival after graduating middle school. But what happens when the gu..."
+  },
+  {
+    "id": "mv-al-187189",
+    "anilistId": 187189,
+    "mangadexId": null,
+    "title": "On the Way to Meet Mom",
+    "altTitle": "엄마를 만나러 가는 길",
+    "type": "Manhwa",
+    "demographic": "Shōnen",
+    "genres": [
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": 4.4,
+    "totalChapters": 53,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 53,
+      "title": "Chapter 53",
+      "views": "3.6M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx187189-B5zA4zPh3UJA.jpg",
+    "author": "Gomyang",
+    "artist": "Gomyang",
+    "synopsis": "One day, after being discovered in an abandoned house by a rescue team, Mori suddenly finds himself in a children's protection center. Here, he begins to learn a new way of life – one that includes grand care packages sent by a mysterious patron. But when his closest friend is reunited ..."
+  },
+  {
+    "id": "mv-al-135129",
+    "anilistId": 135129,
+    "mangadexId": null,
+    "title": "Vagabond: Saigo no Manga-ten",
+    "altTitle": "バガボンド 最後のマンガ展",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Drama",
+      "Psychological"
+    ],
+    "rating": 4.4,
+    "totalChapters": 2,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 2,
+      "title": "Chapter 2",
+      "views": "6.3M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/b135129-rbQyUsPfUZTj.jpg",
+    "author": "Takehiko Inoue",
+    "artist": "Takehiko Inoue",
+    "synopsis": "Telling the later life of Vagabond's Musashi Miyamoto, it was depicted through 140 hand-drawn drawings with ink and brush. It was released at the Ueno Royal Museum in Tokyo in May 2008, and since then it has been displayed at three other venues, Kumamoto City Museum, Suntory Museum in O..."
+  },
+  {
+    "id": "mv-al-30028",
+    "anilistId": 30028,
+    "mangadexId": null,
+    "title": "Nana",
+    "altTitle": "NANA",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Drama",
+      "Music",
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.4,
+    "totalChapters": 72,
+    "releaseDay": "Sat",
+    "latestChapter": {
+      "number": 72,
+      "title": "Chapter 72",
+      "views": "6.0M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30028-VJqBC1ar6AxE.png",
+    "author": "Ai Yazawa",
+    "artist": "Sabrina Heep",
+    "synopsis": "Nana Komatsu is a young woman who's endured an unending string of boyfriend problems. Moving to Tokyo, she's hoping to take control of her life and put all those messy misadventures behind her. She's looking for love and she's hoping to find it in the big city.   Nana Osaki, on the othe..."
+  },
+  {
+    "id": "mv-al-30026",
+    "anilistId": 30026,
+    "mangadexId": null,
+    "title": "Hunter x Hunter",
+    "altTitle": "HUNTER×HUNTER",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "rating": 4.4,
+    "totalChapters": 405,
+    "releaseDay": "Sun",
+    "latestChapter": {
+      "number": 405,
+      "title": "Chapter 405",
+      "views": "8.3M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30026-uCvXMudMzmwI.jpg",
+    "author": "Yoshihiro Togashi",
+    "artist": "Yoshihiro Togashi",
+    "synopsis": "Gon might be a country boy, but he has high aspirations. Despite his Aunt Mito's protests, Gon decides to follow in his father's footsteps and become a legendary Hunter. The Hunter hopefuls begin their journey by storm-tossed ship, where Gon meets Leorio and Kurapika, the only other app..."
+  },
+  {
+    "id": "mv-al-75143",
+    "anilistId": 75143,
+    "mangadexId": null,
+    "title": "Kono Oto Tomare!",
+    "altTitle": "この音とまれ！",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Music",
+      "Romance"
+    ],
+    "rating": 4.4,
+    "totalChapters": 158,
+    "releaseDay": "Mon",
+    "latestChapter": {
+      "number": 158,
+      "title": "Chapter 158",
+      "views": "5.7M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx75143-qPFON51fyZpt.png",
+    "author": "Amyuu Sakura",
+    "artist": "Amyuu Sakura",
+    "synopsis": "Since the graduation of the senior members of the club, Takezou ends up being the sole member of the \"Koto\" (traditional Japanese string instrument) club. Now that the new school year has begun, Takezou will have to seek out new members into the club, or the club will become terminated...."
+  },
+  {
+    "id": "mv-al-86082",
+    "anilistId": 86082,
+    "mangadexId": null,
+    "title": "Delicious in Dungeon",
+    "altTitle": "ダンジョン飯",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Fantasy"
+    ],
+    "rating": 4.4,
+    "totalChapters": 111,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 111,
+      "title": "Chapter 111",
+      "views": "5.5M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86082-MXizJxzbijdd.jpg",
+    "author": "Ryouko Kui",
+    "artist": "Ryouko Kui",
+    "synopsis": "When young adventurer Laios and his company are attacked and soundly thrashed by a dragon deep in a dungeon, the party loses all its money and provisions...and a member! They're eager to go back and save her, but there is just one problem: If they set out with no food or coin to speak o..."
+  },
+  {
+    "id": "mv-al-30003",
+    "anilistId": 30003,
+    "mangadexId": null,
+    "title": "20th Century Boys",
+    "altTitle": "20世紀少年",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "rating": 4.4,
+    "totalChapters": 249,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 249,
+      "title": "Chapter 249",
+      "views": "4.2M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30003-E84fwIh22LAQ.jpg",
+    "author": "Naoki Urasawa",
+    "artist": "Naoki Urasawa",
+    "synopsis": "Humanity, having faced extinction at the end of the 20th century, would not have entered the new millennium if it weren't for them. In 1969, during their youth, they created a symbol. In 1997, as the coming disaster slowly starts to unfold, that symbol returns. This is the story of a gr..."
+  },
+  {
+    "id": "mv-al-34632",
+    "anilistId": 34632,
+    "mangadexId": null,
+    "title": "Goodnight Punpun",
+    "altTitle": "おやすみプンプン",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Slice of Life"
+    ],
+    "rating": 4.4,
+    "totalChapters": 147,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 147,
+      "title": "Chapter 147",
+      "views": "1.4M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx34632-5xMDkx3pXsEh.png",
+    "author": "Inio Asano",
+    "artist": "Inio Asano",
+    "synopsis": "Meet Punpun Punyama. He’s an average kid in an average town.  He wants to win a Nobel Prize and save the world.  He wants the girl he has a crush on to like him back.  He wants to find some porn.  That’s what he wants, but what does he get…?    (Source: VIZ Media)"
+  },
+  {
+    "id": "mv-al-118371",
+    "anilistId": 118371,
+    "mangadexId": null,
+    "title": "Medalist",
+    "altTitle": "メダリスト",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Sports"
+    ],
+    "rating": 4.4,
+    "totalChapters": 57,
+    "releaseDay": "Fri",
+    "latestChapter": {
+      "number": 57,
+      "title": "Chapter 57",
+      "views": "6.1M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118371-3xk9VUbWnnRR.jpg",
+    "author": "Ikada Tsuruma",
+    "artist": "Ikada Tsuruma",
+    "synopsis": "Inori is a little girl who dreams of becoming a figure skater. Yet, the obstacles to this dream feel insurmountable: Inori’s already “too old” (she’s 11); she’s always had trouble at school; and, worst of all, her older sister’s skating dreams ended in failure, so her mother is dead set..."
+  },
+  {
+    "id": "mv-al-126986",
+    "anilistId": 126986,
+    "mangadexId": null,
+    "title": "Jibi Eopseo",
+    "altTitle": "집이 없어",
+    "type": "Manhwa",
+    "demographic": "Shōnen",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Slice of Life",
+      "Supernatural"
+    ],
+    "rating": 4.4,
+    "totalChapters": 269,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 269,
+      "title": "Chapter 269",
+      "views": "8.1M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx126986-hIK16AdoJhNo.jpg",
+    "author": "Wanan",
+    "artist": "Wanan",
+    "synopsis": "Hae-Jun Go, who ran from home, and Eun-Yeong Baek, the problem child who lives in a tent. These two, who met under terrible circumstances, are forced to live together in an abandoned dormitory. This is a story of difficult growth between two people who hate both the dorm and each other...."
+  },
+  {
+    "id": "mv-al-30007",
+    "anilistId": 30007,
+    "mangadexId": null,
+    "title": "Hajime no Ippo: Fighting Spirit!",
+    "altTitle": "はじめの一歩",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Sports"
+    ],
+    "rating": 4.35,
+    "totalChapters": 29,
+    "releaseDay": "Sun",
+    "latestChapter": {
+      "number": 29,
+      "title": "Chapter 29",
+      "views": "1.3M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx30007-jVUNk721L0Uz.jpg",
+    "author": "George Morikawa",
+    "artist": "George Morikawa",
+    "synopsis": "Makunouchi Ippo has been bullied his entire life. Constantly running errands and being beaten up by his classmates, Ippo has always dreamed of changing himself, but never has the passion to act upon it. One day, in the midst of yet another bullying, Ippo is saved by Takamura Mamoru, who..."
+  },
+  {
+    "id": "mv-al-31224",
+    "anilistId": 31224,
+    "mangadexId": null,
+    "title": "March Comes in Like a Lion",
+    "altTitle": "3月のライオン",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Slice of Life"
+    ],
+    "rating": 4.35,
+    "totalChapters": 31,
+    "releaseDay": "Mon",
+    "latestChapter": {
+      "number": 31,
+      "title": "Chapter 31",
+      "views": "2.3M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31224-dxugU08jahRT.jpg",
+    "author": "Chica Umino",
+    "artist": "Chica Umino",
+    "synopsis": "Rei Kiriyama is a child prodigy. Rei Kiriyama is also an orphan who lives alone in an empty apartment. Rei Kiriyama is a teen working in an adult's world. Life is complicated for Rei. He's an up-and-coming shogi player on the verge of turning pro, but he has no homelife, or much of a li..."
+  },
+  {
+    "id": "mv-al-106331",
+    "anilistId": 106331,
+    "mangadexId": null,
+    "title": "Ikoku Nikki: Diary of a Strange Land",
+    "altTitle": "違国日記",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Slice of Life"
+    ],
+    "rating": 4.35,
+    "totalChapters": 59,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 59,
+      "title": "Chapter 59",
+      "views": "5.9M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx106331-2AfUs43WcoCA.jpg",
+    "author": "Tomoko Yamashita",
+    "artist": "Éric Montésinos",
+    "synopsis": "Reclusive novelist Makio Koudai has built a life entirely on her own terms—she's sharp-tongued, set in her ways, and far more at ease with the people she invents than the family she keeps at a distance.    But everything changes when her older sister dies unexpectedly, leaving behind a ..."
+  },
+  {
+    "id": "mv-al-86635",
+    "anilistId": 86635,
+    "mangadexId": null,
+    "title": "Kaguya-sama: Love is War",
+    "altTitle": "かぐや様は告らせたい～天才たちの恋愛頭脳戦～",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Comedy",
+      "Psychological",
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.35,
+    "totalChapters": 281,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 281,
+      "title": "Chapter 281",
+      "views": "5.0M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86635-EdaLQmsn86Fy.png",
+    "author": "Aka Akasaka",
+    "artist": "Aka Akasaka",
+    "synopsis": "As leaders of their prestigious academy’s student council, Kaguya and Miyuki are the elite of the elite! But it’s lonely at the top… Luckily for them, they’ve fallen in love! There’s just one problem—they both have too much pride to admit it. And so begins the daily scheming to get the ..."
+  },
+  {
+    "id": "mv-al-37375",
+    "anilistId": 37375,
+    "mangadexId": null,
+    "title": "The Climber",
+    "altTitle": "孤高の人",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Psychological",
+      "Sports"
+    ],
+    "rating": 4.35,
+    "totalChapters": 170,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 170,
+      "title": "Chapter 170",
+      "views": "3.7M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx37375-wkgev4kXhamw.png",
+    "author": "Jirou Nitta",
+    "artist": "Shinichi Sakamoto",
+    "synopsis": "Transfer student Buntaro Mori starts his first day at his new school already on the administration’s radar. He’s withdrawn and sullen, and the teachers are just waiting for him to explode. When his annoying classmate Miyamoto promises to leave him alone forever if he climbs to the top o..."
+  },
+  {
+    "id": "mv-al-51525",
+    "anilistId": 51525,
+    "mangadexId": null,
+    "title": "Yona of the Dawn",
+    "altTitle": "暁のヨナ",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Romance"
+    ],
+    "rating": 4.35,
+    "totalChapters": 295,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 295,
+      "title": "Chapter 295",
+      "views": "2.9M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx51525-wZ1AjkbXrKns.png",
+    "author": "Mizuho Kusanagi",
+    "artist": "Lys Blakeslee",
+    "synopsis": "A red-haired princess loses her family and her kingdom—now she must rise and fight for her throne!    Princess Yona lives an ideal life as the only princess of her kingdom. Doted on by her father, the king, and protected by her faithful guard Hak, she cherishes the time spent with the m..."
+  },
+  {
+    "id": "mv-al-98263",
+    "anilistId": 98263,
+    "mangadexId": null,
+    "title": "Witch Hat Atelier",
+    "altTitle": "とんがり帽子のアトリエ",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "rating": 4.35,
+    "totalChapters": 25,
+    "releaseDay": "Sat",
+    "latestChapter": {
+      "number": 25,
+      "title": "Chapter 25",
+      "views": "7.6M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx98263-kIeaTXrAbGkj.jpg",
+    "author": "Kamome Shirahama",
+    "artist": "Kamome Shirahama",
+    "synopsis": "In a world where everyone takes wonders like magic spells and dragons for granted, Coco is a girl with a simple dream: she wants to be a witch. But everybody knows magicians are born, not made, and Coco was not born with a gift for magic. Resigned to her un-magical life, Coco is about t..."
+  },
+  {
+    "id": "mv-al-53900",
+    "anilistId": 53900,
+    "mangadexId": null,
+    "title": "Umineko When They Cry Episode 7: Requiem of the Golden Witch",
+    "altTitle": "うみねこのなく頃に散 - Episode 7: Requiem of the Golden Witch",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Supernatural",
+      "Thriller"
+    ],
+    "rating": 4.35,
+    "totalChapters": 48,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 48,
+      "title": "Chapter 48",
+      "views": "6.7M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx53900-aDalkx2qmugI.png",
+    "author": "Ryukishi07",
+    "artist": "Eita Mizuno",
+    "synopsis": "The time for logical debate and magical feints has come to an end; the revelation of the truth about Beatrice the Golden Witch is at hand. To facilitate this, game master Bernkastel has chosen Will Wright the Mage-Hunter to step onto her board and answer a single question: Who killed Be..."
+  },
+  {
+    "id": "mv-al-112275",
+    "anilistId": 112275,
+    "mangadexId": null,
+    "title": "Heaven Official's Blessing",
+    "altTitle": "天官赐福",
+    "type": "Manhua",
+    "demographic": "Shōnen",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Romance"
+    ],
+    "rating": 4.35,
+    "totalChapters": 50,
+    "releaseDay": "Mon",
+    "latestChapter": {
+      "number": 50,
+      "title": "Chapter 50",
+      "views": "6.6M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx112275-fh0u5cH2qB5b.jpg",
+    "author": "Mo Xiang Tong Xiu",
+    "artist": "Bai Meng She",
+    "synopsis": "800 years ago, Xie Lian was a pure-blooded and noble Crown Prince, a well-regarded child of Heaven with unlimited potential. But who knew that, after he ascended and became a god with tens of thousands of worshippers, his fate would take such a sharp downhill turn? He was demoted again ..."
+  },
+  {
+    "id": "mv-al-85135",
+    "anilistId": 85135,
+    "mangadexId": null,
+    "title": "A Silent Voice",
+    "altTitle": "聲の形",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.35,
+    "totalChapters": 64,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 64,
+      "title": "Chapter 64",
+      "views": "4.1M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx85135-11OOnyaqV71k.png",
+    "author": "Yoshitoki Ooima",
+    "artist": "Yoshitoki Ooima",
+    "synopsis": "Based on a one-shot that won the 80th Weekly Shounen Magazine Newbie Best Mangaka Award.   Shouya is a bully. When Shouko, a girl who can't hear, enters his elementary school class, she becomes their favorite target, and Shouya and his friends goad each other into devising new tortures ..."
+  },
+  {
+    "id": "mv-al-116170",
+    "anilistId": 116170,
+    "mangadexId": null,
+    "title": "Veil",
+    "altTitle": "Veil",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.35,
+    "totalChapters": 82,
+    "releaseDay": "Wed",
+    "latestChapter": {
+      "number": 82,
+      "title": "Chapter 82",
+      "views": "8.4M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx116170-Q9f5Wk6cod5E.jpg",
+    "author": "Ikumi Fukuda",
+    "artist": "Ikumi Fukuda",
+    "synopsis": "A chance encounter. A handsome soldier. A beautiful woman. A tentative love affair smolders on the snowy cobblestone streets, out of sight of those that might keep them apart.    Veil is a beautifully illustrated full-color romance manga, told in stylish short vignettes, beautiful illus..."
+  },
+  {
+    "id": "mv-al-118586",
+    "anilistId": 118586,
+    "mangadexId": null,
+    "title": "Frieren: Beyond Journey’s End",
+    "altTitle": "葬送のフリーレン",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "rating": 4.35,
+    "totalChapters": 66,
+    "releaseDay": "Thu",
+    "latestChapter": {
+      "number": 66,
+      "title": "Chapter 66",
+      "views": "2.2M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118586-CXKgWikBFQgS.jpg",
+    "author": "Kanehito Yamada",
+    "artist": "Tsukasa Abe",
+    "synopsis": "The adventure is over but life goes on for an elf mage just beginning to learn what living is all about.    Elf mage Frieren and her courageous fellow adventurers have defeated the Demon King and brought peace to the land. With the great struggle over, they all go their separate ways to..."
+  },
+  {
+    "id": "mv-al-107279",
+    "anilistId": 107279,
+    "mangadexId": null,
+    "title": "Aoashi",
+    "altTitle": "アオアシ",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Sports"
+    ],
+    "rating": 4.35,
+    "totalChapters": 410,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 410,
+      "title": "Chapter 410",
+      "views": "1.4M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx107279-R2vxyPQRqV0X.jpg",
+    "author": "Yuugo Kobayashi",
+    "artist": "Yuugo Kobayashi",
+    "synopsis": "Ashito Aoi, a third year middle school student from Ehime, meets Fukuda Tatsuya, a J Youth League coach. Even though he's still rough around the edges, Ashito has such amazing potential that he gets invited by coach Fukuda to participate in his team's try-outs in Tokyo. The story of a b..."
+  },
+  {
+    "id": "mv-al-39982",
+    "anilistId": 39982,
+    "mangadexId": null,
+    "title": "Usogui",
+    "altTitle": "嘘喰い",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Psychological",
+      "Thriller"
+    ],
+    "rating": 4.35,
+    "totalChapters": 539,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 539,
+      "title": "Chapter 539",
+      "views": "6.4M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx39982-68LS2Z9075Kw.jpg",
+    "author": "Toshio Sako",
+    "artist": "Toshio Sako",
+    "synopsis": "Driven by his desire for quick money, young Kaji gets involved with a loan shark and soon finds himself hounded by debt collectors. One day, a mysterious man named Baku Madarame appears before him. Calling himself a gambler, Baku boldly declares that he’ll help Kaji repay his debt—and d..."
+  },
+  {
+    "id": "mv-al-117620",
+    "anilistId": 117620,
+    "mangadexId": null,
+    "title": "The Summer You Were There",
+    "altTitle": "君と綴るうたかた",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Romance"
+    ],
+    "rating": 4.35,
+    "totalChapters": 32,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 32,
+      "title": "Chapter 32",
+      "views": "7.2M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx117620-cyvy8nO9GLm8.jpg",
+    "author": "Yuama",
+    "artist": "Yuama",
+    "synopsis": "Shizuku is a shy girl who hardly talks to other people. Instead, she loses herself in creative writing, crafting a novel that she never plans to show anyone. But when Kaori–Shizuku’s cute, popular classmate–gets her hands on Shizuku’s manuscript, everything changes. Kaori is a huge fan,..."
+  },
+  {
+    "id": "mv-al-43245",
+    "anilistId": 43245,
+    "mangadexId": null,
+    "title": "Chihayafuru",
+    "altTitle": "ちはやふる",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Sports"
+    ],
+    "rating": 4.35,
+    "totalChapters": 247,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 247,
+      "title": "Chapter 247",
+      "views": "8.2M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx43245-Ied8R99LH3u6.jpg",
+    "author": "Yuki Suetsugu",
+    "artist": "Yuki Suetsugu",
+    "synopsis": "Chihaya is a girl in the sixth grade, still not old enough to even know the meaning of the word zeal. But one day, she meets Arata, a transfer student from rural Fukui prefecture. Though docile and quiet, he has an unexpected skill: his ability to play competitive karuta, a traditional ..."
+  },
+  {
+    "id": "mv-al-89278",
+    "anilistId": 89278,
+    "mangadexId": null,
+    "title": "Tobaku Datenroku Kaiji: One Poker-hen",
+    "altTitle": "賭博堕天録カイジ ワン・ポーカー編",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Thriller"
+    ],
+    "rating": 4.35,
+    "totalChapters": 155,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 155,
+      "title": "Chapter 155",
+      "views": "8.2M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx89278-2nemnSgiesJa.jpg",
+    "author": "Nobuyuki Fukumoto",
+    "artist": "Nobuyuki Fukumoto",
+    "synopsis": "Kaiji and Kazuya face off against each other in a high-stakes game of \"One Poker,\" a modified version of standard poker. Kazuya sets forth a gamble of 2,000,000,000 yen! How will Kaiji survive?!    Chapter count for this arc is 101-254 in the original tankoubon."
+  },
+  {
+    "id": "mv-al-30044",
+    "anilistId": 30044,
+    "mangadexId": null,
+    "title": "Gin Tama",
+    "altTitle": "銀魂",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "rating": 4.3,
+    "totalChapters": 709,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 709,
+      "title": "Chapter 709",
+      "views": "5.0M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30044-vPmoz3vTPvZs.jpg",
+    "author": "Hideaki Sorachi",
+    "artist": "Hideaki Sorachi",
+    "synopsis": "The samurai didn't stand a chance. First, the aliens invaded Japan. Next, they took all the jobs. And then they confiscated everyone's swords. So what does a hotheaded former samurai like Sakata \"Gin\" Gintoki do to make ends meet? Take any odd job that comes his way, even if it means lo..."
+  },
+  {
+    "id": "mv-al-30336",
+    "anilistId": 30336,
+    "mangadexId": null,
+    "title": "GTO: Great Teacher Onizuka",
+    "altTitle": "GTO",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Ecchi"
+    ],
+    "rating": 4.3,
+    "totalChapters": 208,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 208,
+      "title": "Chapter 208",
+      "views": "5.4M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30336-KWTPMwsNTeSa.png",
+    "author": "Tooru Fujisawa",
+    "artist": "Tooru Fujisawa",
+    "synopsis": "Former juvenile delinquent Onizuka finds himself thrust into to role of high school teacher, facing students who behave just as he used to and an administration that doesn't trust him. Using the brash an unorthodox methods he picked up in his youth, Onizuka manages to reach through to h..."
+  },
+  {
+    "id": "mv-al-140475",
+    "anilistId": 140475,
+    "mangadexId": null,
+    "title": "The Fragrant Flower Blooms With Dignity",
+    "altTitle": "薫る花は凛と咲く",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "rating": 4.3,
+    "totalChapters": 29,
+    "releaseDay": "Fri",
+    "latestChapter": {
+      "number": 29,
+      "title": "Chapter 29",
+      "views": "1.6M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx140475-QEGtrmdvbpOv.jpg",
+    "author": "Saka Mikami",
+    "artist": "Saka Mikami",
+    "synopsis": "This story takes place in a particular town with two infamous schools in constant dispute: Chidori High, a boys' school predominantly attended by low-class students with damning grades, and its neighbor Kikyo Girls' High, with most of its female students coming from wealthy and prestigi..."
+  },
+  {
+    "id": "mv-al-30081",
+    "anilistId": 30081,
+    "mangadexId": null,
+    "title": "Aria",
+    "altTitle": "ARIA",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "rating": 4.3,
+    "totalChapters": 67,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 67,
+      "title": "Chapter 67",
+      "views": "6.7M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30081-oCRaPkTGq4vP.jpg",
+    "author": "Kozue Amano",
+    "artist": "Kozue Amano",
+    "synopsis": "On the planet Aqua, a world once known as Mars, Akari Mizunashi has just made her home in the town of Neo-Venezia, a futuristic imitation of the ancient city of Venice. In pursuit of her dream to become an Undine — a gondolier who leads high-end tours around the city — Akari joins as a ..."
+  },
+  {
+    "id": "mv-al-85412",
+    "anilistId": 85412,
+    "mangadexId": null,
+    "title": "Girls' Last Tour",
+    "altTitle": "少女終末旅行",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Adventure",
+      "Sci-Fi",
+      "Slice of Life"
+    ],
+    "rating": 4.3,
+    "totalChapters": 47,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 47,
+      "title": "Chapter 47",
+      "views": "2.6M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx85412-wzZ2QFwbZJED.jpg",
+    "author": "Tsukumizu",
+    "artist": "Tsukumizu",
+    "synopsis": "Civilization is dead, but Chito and Yuuri are still alive. So they hop aboard their beloved Kettenkrad motorbike and aimlessly wander the ruins of the world they once knew. Day after hopeless day, they look for their next meal and fuel for their ride. But as long as the two are together..."
+  },
+  {
+    "id": "mv-al-31133",
+    "anilistId": 31133,
+    "mangadexId": null,
+    "title": "Dorohedoro",
+    "altTitle": "ドロヘドロ",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Fantasy",
+      "Horror"
+    ],
+    "rating": 4.3,
+    "totalChapters": 191,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 191,
+      "title": "Chapter 191",
+      "views": "6.3M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31133-Jx6map3Oidz1.png",
+    "author": "Q Hayashida",
+    "artist": "Q Hayashida",
+    "synopsis": "In a city so dismal it's known only as \"the Hole,\" a clan of Sorcerers have been plucking people off the streets to use as guinea pigs for atrocious \"experiments\" in the black arts. In a dark alley, Nikaido found Caiman, a man with a reptile head and a bad case of amnesia. To undo the s..."
+  },
+  {
+    "id": "mv-al-86559",
+    "anilistId": 86559,
+    "mangadexId": null,
+    "title": "Golden Kamuy",
+    "altTitle": "ゴールデンカムイ",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 4.3,
+    "totalChapters": 314,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 314,
+      "title": "Chapter 314",
+      "views": "1.5M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86559-Y4xDmoz4ud43.jpg",
+    "author": "Satoru Noda",
+    "artist": "Satoru Noda",
+    "synopsis": "In the early twentieth century, Russo-Japanese War veteran Saichi “Immortal” Sugimoto scratches out a meager existence during the postwar gold rush in the wilderness of Hokkaido. When he stumbles across a map to a fortune in hidden Ainu gold, he sets off on a treacherous quest to find i..."
+  },
+  {
+    "id": "mv-al-119257",
+    "anilistId": 119257,
+    "mangadexId": null,
+    "title": "Omniscient Reader",
+    "altTitle": "전지적 독자 시점",
+    "type": "Manhwa",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": 4.3,
+    "totalChapters": 230,
+    "releaseDay": "Wed",
+    "latestChapter": {
+      "number": 230,
+      "title": "Chapter 230",
+      "views": "3.6M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx119257-Pi21aq3ey9GG.jpg",
+    "author": "Geomnem",
+    "artist": "Sleepy-C",
+    "synopsis": "Back then, Dok-Ja had no idea. He had no idea his favorite web novel 'Three Ways to Survive the Apocalypse' was going to come to life, and that he would become the only person to know how the world was going to end. He also had no idea he would end up becoming the protagonist of this no..."
+  },
+  {
+    "id": "mv-al-136109",
+    "anilistId": 136109,
+    "mangadexId": null,
+    "title": "The Moon on a Rainy Night",
+    "altTitle": "雨夜の月",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.3,
+    "totalChapters": 32,
+    "releaseDay": "Thu",
+    "latestChapter": {
+      "number": 32,
+      "title": "Chapter 32",
+      "views": "1.1M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx136109-h4mux2toQJkD.jpg",
+    "author": "Kuzushiro",
+    "artist": "Kuzushiro",
+    "synopsis": "One day, while rushing to a piano lesson, a girl named Saki collides with someone on the street. As Saki collects herself, the stranger picks up the sheet music Saki dropped, hands it to Saki together with a band-aid, and continues on her way—all without saying a word. Saki is left wond..."
+  },
+  {
+    "id": "mv-al-174875",
+    "anilistId": 174875,
+    "mangadexId": null,
+    "title": "Eternity for You",
+    "altTitle": "君に贈る永遠",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Romance"
+    ],
+    "rating": 4.3,
+    "totalChapters": 1,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 1,
+      "title": "Chapter 1",
+      "views": "6.2M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx174875-4dU2x0Rmtwqa.jpg",
+    "author": "Yuama",
+    "artist": "Yuama",
+    "synopsis": "Note: Originally released as a booklet bundled with the limited edition release of Kimi to Tsuzuru Utakata Volume 6."
+  },
+  {
+    "id": "mv-al-30145",
+    "anilistId": 30145,
+    "mangadexId": null,
+    "title": "BECK",
+    "altTitle": "BECK",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Music",
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.3,
+    "totalChapters": 103,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 103,
+      "title": "Chapter 103",
+      "views": "7.7M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30145-ipNuwNgD5AJS.png",
+    "author": "Harold Sakuishi",
+    "artist": "Harold Sakuishi",
+    "synopsis": "For the first 14 years of his life, Yukio Tanaka has been one heck of a boring guy. He has no hobbies, a weak taste in music, and only a small vestige of a personality. He yearns for an exciting life, but his shy, and somewhat neurotic personality make him his own worst enemy. Little do..."
+  },
+  {
+    "id": "mv-al-86569",
+    "anilistId": 86569,
+    "mangadexId": null,
+    "title": "Ace of the Diamond Act II",
+    "altTitle": "ダイヤのA act II",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Slice of Life",
+      "Sports"
+    ],
+    "rating": 4.3,
+    "totalChapters": 308,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 308,
+      "title": "Chapter 308",
+      "views": "8.4M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86569-KC2nXAGtv0Cx.jpg",
+    "author": "Yuuji Terajima",
+    "artist": "Yuuji Terajima",
+    "synopsis": "I want to pitch to that mitt, just one more time…    When Eijun Sawamura was just fifteen, he met someone who changed the course of his life forever—the catcher Kazuya Miyuki. Now, he's said goodbye to family and friends to travel to Seido High, where he can test his baseball skills alo..."
+  },
+  {
+    "id": "mv-al-109285",
+    "anilistId": 109285,
+    "mangadexId": null,
+    "title": "Skip and Loafer",
+    "altTitle": "スキップとローファー",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.3,
+    "totalChapters": 45,
+    "releaseDay": "Mon",
+    "latestChapter": {
+      "number": 45,
+      "title": "Chapter 45",
+      "views": "7.4M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx109285-HmBZpzsO2zxd.jpg",
+    "author": "Misaki Takamatsu",
+    "artist": "Misaki Takamatsu",
+    "synopsis": "Excellent student Iwakura Mitsumi has always dreamt about leaving her small town, going to a prestigious university, and making positive change in the world. But she’s so focused on reaching her goals that she’s not prepared for the very different (and overwhelming) city life that await..."
+  },
+  {
+    "id": "mv-al-97553",
+    "anilistId": 97553,
+    "mangadexId": null,
+    "title": "Three Days of Happiness",
+    "altTitle": "寿命を買い取ってもらった。一年につき、一万円で。",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Romance",
+      "Supernatural"
+    ],
+    "rating": 4.3,
+    "totalChapters": 18,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 18,
+      "title": "Chapter 18",
+      "views": "8.0M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx97553-vqJj5DFS8v2p.jpg",
+    "author": "Sugaru Miaki",
+    "artist": "Shouichi Taguchi",
+    "synopsis": "Kusunoki used to believe he was destined for great things. But now, approaching the age of twenty, he’s a completely mediocre college student with no motivation, no dreams, and no money. After learning he can sell his remaining years, he chooses to divest himself of all but his last thr..."
+  },
+  {
+    "id": "mv-al-187944",
+    "anilistId": 187944,
+    "mangadexId": null,
+    "title": "My Bias Gets on the Last Train",
+    "altTitle": "내 최애는 막차를 탄다",
+    "type": "Manhwa",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "rating": 4.3,
+    "totalChapters": 21,
+    "releaseDay": "Wed",
+    "latestChapter": {
+      "number": 21,
+      "title": "Chapter 21",
+      "views": "4.6M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx187944-gzNbL7zeY7Ma.jpg",
+    "author": "JIXKSEE",
+    "artist": "JIXKSEE",
+    "synopsis": "Every night, Yeo-Un takes the last train home—same route, same time, same routine. But one thing keeps catching his eye: a girl with a guitar and a presence that lingers in his mind. When a shared love for the indie band Long Afternoon sparks a conversation, their late-night encounters ..."
+  },
+  {
+    "id": "mv-al-44483",
+    "anilistId": 44483,
+    "mangadexId": null,
+    "title": "Space Brothers",
+    "altTitle": "宇宙兄弟",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Sci-Fi",
+      "Slice of Life"
+    ],
+    "rating": 4.3,
+    "totalChapters": 432,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 432,
+      "title": "Chapter 432",
+      "views": "4.9M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx44483-j8urUUmaCOaD.jpg",
+    "author": "Chuuya Koyama",
+    "artist": "Chuuya Koyama",
+    "synopsis": "Two brothers looked to the starry skies as children and made a promise ... Now, in the year 2025, the younger brother, Hibito, is carrying his out. He is an astronaut who has been selected as a crew member for mankind’s first long-term base on the moon. Meanwhile, the older brother, Mut..."
+  },
+  {
+    "id": "mv-al-86218",
+    "anilistId": 86218,
+    "mangadexId": null,
+    "title": "Bloom Into You",
+    "altTitle": "やがて君になる",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.3,
+    "totalChapters": 53,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 53,
+      "title": "Chapter 53",
+      "views": "1.2M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86218-sIl9tnqHZQyh.jpg",
+    "author": "Nio Nakatani",
+    "artist": "Nio Nakatani",
+    "synopsis": "Yuu has always loved shoujo manga and awaits the day she gets a love confession that sends her heart aflutter with bubbles and hearts, and yet when a junior high classmate confesses his feelings to her…she feels nothing. Disappointed and confused, Yuu enters high school still unsure how..."
+  },
+  {
+    "id": "mv-al-166742",
+    "anilistId": 166742,
+    "mangadexId": null,
+    "title": "The Ramparts of Ice",
+    "altTitle": "氷の城壁",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.3,
+    "totalChapters": 117,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 117,
+      "title": "Chapter 117",
+      "views": "6.6M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx166742-io6yR2XeJiEh.jpg",
+    "author": "Koucha Agasawa",
+    "artist": "Koucha Agasawa",
+    "synopsis": "Koyuki Hikawa isn't great with people and always puts up a wall between others. She had been spending her high school days alone, but one day meets the overly friendly Minato Amamiya. The loner, Koyuki, the popular girl, Miki, the guy with no personal space, Minato, and the laid back me..."
+  },
+  {
+    "id": "mv-al-168509",
+    "anilistId": 168509,
+    "mangadexId": null,
+    "title": "Our Sunny Days",
+    "altTitle": "해 뜨는 집",
+    "type": "Manhwa",
+    "demographic": "Shōjo",
+    "genres": [
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.3,
+    "totalChapters": 68,
+    "releaseDay": "Sun",
+    "latestChapter": {
+      "number": 68,
+      "title": "Chapter 68",
+      "views": "6.8M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx168509-POhQHRIJ8qPV.jpg",
+    "author": "Seok-Chan Jeong",
+    "artist": "Seok-Chan Jeong",
+    "synopsis": "Sung Ho’s not the kind you’d typically expect to settle down in the countryside. He’s in his late 20s, ex-military, and…a single father with a year-old baby his ex-girlfriend pawned off on him. Jobless and without any prospects but a house, Sung Ho hopes the peaceful Nuldongmae village ..."
+  },
+  {
+    "id": "mv-al-30004",
+    "anilistId": 30004,
+    "mangadexId": null,
+    "title": "Yokohama Kaidashi Kikou",
+    "altTitle": "ヨコハマ買い出し紀行",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Sci-Fi",
+      "Slice of Life"
+    ],
+    "rating": 4.3,
+    "totalChapters": 144,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 144,
+      "title": "Chapter 144",
+      "views": "5.6M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/b30004-k0YUnO94IB4x.jpg",
+    "author": "Hitoshi Ashinano",
+    "artist": "Hitoshi Ashinano",
+    "synopsis": "Set hundreds of years in the future after an environmental catastrophe, Yokohama Kaidashi Kikou (also known as Yokohama Shopping Log) centers on the simple life of Alpha, an android who runs a small coffee shop in coastal Japan. Alpha stands witness to chronicle the end of humanity’s da..."
+  },
+  {
+    "id": "mv-al-41054",
+    "anilistId": 41054,
+    "mangadexId": null,
+    "title": "Billy Bat",
+    "altTitle": "ビリーバット",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Supernatural",
+      "Thriller"
+    ],
+    "rating": 4.3,
+    "totalChapters": 165,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 165,
+      "title": "Chapter 165",
+      "views": "8.1M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx41054-zXqZzpwjJCCR.png",
+    "author": "Takashi Nagasaki",
+    "artist": "Naoki Urasawa",
+    "synopsis": "It’s 1949 Los Angeles, and Kevin Yamagata, a Japanese American comic book author, is drawing his bestselling character, Billy Bat: a quick-witted detective who is, unsurprisingly, a cartoon bat. Everything is going well for Kevin until he discovers an unfortunate truth: He may have unin..."
+  },
+  {
+    "id": "mv-al-99022",
+    "anilistId": 99022,
+    "mangadexId": null,
+    "title": "The Apothecary Diaries",
+    "altTitle": "薬屋のひとりごと",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Mystery"
+    ],
+    "rating": 4.3,
+    "totalChapters": 75,
+    "releaseDay": "Wed",
+    "latestChapter": {
+      "number": 75,
+      "title": "Chapter 75",
+      "views": "2.4M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx99022-Hh2WdyNgR8HM.jpg",
+    "author": "Itsuki Nanao",
+    "artist": "Erika Ikeda",
+    "synopsis": "Maomao, a young woman trained in the art of herbal medicine, is forced to work as a lowly servant in the inner palace. Though she yearns for life outside its perfumed halls, she isn’t long for a life of drudgery! Using her wits to break a “curse” afflicting the imperial heirs, Maomao at..."
+  },
+  {
+    "id": "mv-al-107237",
+    "anilistId": 107237,
+    "mangadexId": null,
+    "title": "Blue Period",
+    "altTitle": "ブルーピリオド",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Slice of Life"
+    ],
+    "rating": 4.3,
+    "totalChapters": 97,
+    "releaseDay": "Thu",
+    "latestChapter": {
+      "number": 97,
+      "title": "Chapter 97",
+      "views": "1.1M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx107237-tyQXghsKmE0t.jpg",
+    "author": "Tsubasa Yamaguchi",
+    "artist": "Tsubasa Yamaguchi",
+    "synopsis": "The studious Yatora leaves a dry life of study and good manners behind for a new passion: painting. But untethering yourself from all your past expectations is dangerous as well as thrilling…    (Source: Kodansha USA)    Note: Nominated for Manga Taisho Awards in 2019, Kodansha Manga Aw..."
+  },
+  {
+    "id": "mv-al-119521",
+    "anilistId": 119521,
+    "mangadexId": null,
+    "title": "The Legend of the Northern Blade",
+    "altTitle": "북검전기",
+    "type": "Manhwa",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": 4.3,
+    "totalChapters": 202,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 202,
+      "title": "Chapter 202",
+      "views": "7.0M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx119521-qYqxFvn0NnXo.png",
+    "author": "Hae-Min",
+    "artist": "Hae-Min",
+    "synopsis": "For decades, the brave warriors of the Northern Heavenly Sect fought to keep the world safe from the evil Silent Night. But when the fourth generation leader is accused of colluding with the enemy, he is forced to disband the sect and commit suicide to protect his son, Moo-Won. With no ..."
+  },
+  {
+    "id": "mv-al-168843",
+    "anilistId": 168843,
+    "mangadexId": null,
+    "title": "Little Mushroom",
+    "altTitle": "小蘑菇",
+    "type": "Manhua",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Sci-Fi"
+    ],
+    "rating": 4.25,
+    "totalChapters": 75,
+    "releaseDay": "Sat",
+    "latestChapter": {
+      "number": 75,
+      "title": "Chapter 75",
+      "views": "7.0M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/b168843-k8r2I9zLc9ks.jpg",
+    "author": "Yi'er Jin",
+    "artist": "Maomao Tou",
+    "synopsis": "Decades have passed since the Earth's magnetic poles disappeared, changing the balance forever. As the last remnants of humanity huddle in their bases, the remaining lifeforms have mutated into so-called xenogens and taken over the outside world.   In the midst of this war for life or d..."
+  },
+  {
+    "id": "mv-al-177706",
+    "anilistId": 177706,
+    "mangadexId": null,
+    "title": "The Knight Only Lives Today",
+    "altTitle": "오늘만 사는 기사",
+    "type": "Manhwa",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Fantasy"
+    ],
+    "rating": 4.25,
+    "totalChapters": 77,
+    "releaseDay": "Sun",
+    "latestChapter": {
+      "number": 77,
+      "title": "Chapter 77",
+      "views": "1.9M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx177706-3r8dnAr8Prjq.jpg",
+    "author": "Ga Nara",
+    "artist": "An Lee",
+    "synopsis": "Is dying repeatedly a blessing? Enkrid's life-long dream of becoming a knight looked to be forever out of reach, until one day he died... and woke up at the beginning of that same day! Now that he has unlimited chances to train and engage in mortal combat, just how far can he go?  (Sour..."
+  },
+  {
+    "id": "mv-al-100805",
+    "anilistId": 100805,
+    "mangadexId": null,
+    "title": "Here U Are",
+    "altTitle": "Here U Are",
+    "type": "Manhua",
+    "demographic": "Shōjo",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.25,
+    "totalChapters": 157,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 157,
+      "title": "Chapter 157",
+      "views": "1.8M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx100805-3DCHMdZ5blWl.jpg",
+    "author": "DJUN",
+    "artist": "DJUN",
+    "synopsis": "Sophomore Yu Yang is a real treasure. He has a cheerful, easy-going, and emphatic personality. Seniors look up to him, and he knows how to stand up for himself. Freshman Li Huan is moody and taciturn, haughty and, at times, outright rude. How will these two manage to get along, and wher..."
+  },
+  {
+    "id": "mv-al-114998",
+    "anilistId": 114998,
+    "mangadexId": null,
+    "title": "Bungo Stray Dogs Beast",
+    "altTitle": "文豪ストレイドッグス　ＢＥＡＳＴ",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Drama",
+      "Mystery",
+      "Supernatural"
+    ],
+    "rating": 4.25,
+    "totalChapters": 22,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 22,
+      "title": "Chapter 22",
+      "views": "8.9M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx114998-JTCzDczl8eBD.jpg",
+    "author": "Shiwasu Hoshikawa",
+    "artist": "Shiwasu Hoshikawa",
+    "synopsis": "In a parallel universe of Bungo Stray Dogs, Ryuunosuke Akutagawa’s desperate mission to save his younger sister leads to him being recruited by the armed detective agency!     (Source: Yen Press)"
+  },
+  {
+    "id": "mv-al-146656",
+    "anilistId": 146656,
+    "mangadexId": null,
+    "title": "Reunion",
+    "altTitle": "해후",
+    "type": "Manhwa",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "rating": 4.25,
+    "totalChapters": 80,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 80,
+      "title": "Chapter 80",
+      "views": "6.1M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx146656-WgvC1WhL1cEd.jpg",
+    "author": "Coin Lee",
+    "artist": "Deulsoom",
+    "synopsis": "“Do you know me?” A simple question was enough to change the trajectory of Lee Ha-kyung’s life. Seven years ago, Ha-kyung was struggling to support his family when he was approached by a man with an offer: assume the identity of Han Jiyoung, a girl from his past, for the summer and dece..."
+  },
+  {
+    "id": "mv-al-31859",
+    "anilistId": 31859,
+    "mangadexId": null,
+    "title": "Natsume's Book of Friends",
+    "altTitle": "夏目友人帳",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Supernatural"
+    ],
+    "rating": 4.25,
+    "totalChapters": 53,
+    "releaseDay": "Thu",
+    "latestChapter": {
+      "number": 53,
+      "title": "Chapter 53",
+      "views": "1.3M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31859-mITgIaJFBzl4.png",
+    "author": "Yuki Midorikawa",
+    "artist": "Yuki Midorikawa",
+    "synopsis": "When Reiko was Takashi's age, she bound the names of demons and spirits in her Book of Friends, enslaving them to her capricious whim. Now Takashi is the owner of the book, and the creatures will do anything to get their names back.    (Source: VIZ Media)"
+  },
+  {
+    "id": "mv-al-85189",
+    "anilistId": 85189,
+    "mangadexId": null,
+    "title": "Mob Psycho 100",
+    "altTitle": "モブサイコ100",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Psychological",
+      "Slice of Life"
+    ],
+    "rating": 4.25,
+    "totalChapters": 201,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 201,
+      "title": "Chapter 201",
+      "views": "3.6M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx85189-06aXUBq5jwce.jpg",
+    "author": "ONE",
+    "artist": "ONE",
+    "synopsis": "Do you or someone you know need an exorcist who works cheap? Reigen's your guy! What's his secret to busting ghosts while keeping prices low? Well, first, he's a fraud, and second, he pays the guy who's got the real psychic power—his student assistant Shigeo—less than minimum wage. Shig..."
+  },
+  {
+    "id": "mv-al-30651",
+    "anilistId": 30651,
+    "mangadexId": null,
+    "title": "Nausicaä of the Valley of the Wind",
+    "altTitle": "風の谷のナウシカ",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "rating": 4.25,
+    "totalChapters": 59,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 59,
+      "title": "Chapter 59",
+      "views": "8.3M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30651-xLufeLnDPqpn.jpg",
+    "author": "Hayao Miyazaki",
+    "artist": "Hayao Miyazaki",
+    "synopsis": "Humanity, in its hubris, has precipitated a devastating environmental disaster. Flourishing industrial civilizations have been swallowed up by the Sea of Corruption, an enormous forest of fungi releases a miasma of poisonous spores into the air. Nausicaa, a compassionate young princess,..."
+  },
+  {
+    "id": "mv-al-121565",
+    "anilistId": 121565,
+    "mangadexId": null,
+    "title": "Seasons of Blossom",
+    "altTitle": "청춘 블라썸",
+    "type": "Manhwa",
+    "demographic": "Shōnen",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "rating": 4.25,
+    "totalChapters": 130,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 130,
+      "title": "Chapter 130",
+      "views": "4.8M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx121565-JaDVhpjegXvw.jpg",
+    "author": "HONGDUCK",
+    "artist": "NEMONE",
+    "synopsis": "Oh, to be young and in love. Oh, to be wild and carefree. The springtime of life is intense, tumultuous, and at times, oh so confusing. Spring, summer, fall and winter -- love blossoms in all seasons.    (Source: WEBTOON)"
+  },
+  {
+    "id": "mv-al-30418",
+    "anilistId": 30418,
+    "mangadexId": null,
+    "title": "Mushishi",
+    "altTitle": "蟲師",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Mystery",
+      "Slice of Life",
+      "Supernatural"
+    ],
+    "rating": 4.25,
+    "totalChapters": 50,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 50,
+      "title": "Chapter 50",
+      "views": "6.7M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30418-8unnG2Y01lXX.jpg",
+    "author": "Yuki Urushibara",
+    "artist": "Yuki Urushibara",
+    "synopsis": "Some live in the deep darkness behind your eyelids. Some eat silence. Some thoughtlessly kill. Some simply drive men mad. They are known as mushi—creatures that came into being shortly after life emerged from the primordial ooze. They still exist parallel to our own lives and can only b..."
+  },
+  {
+    "id": "mv-al-30745",
+    "anilistId": 30745,
+    "mangadexId": null,
+    "title": "Pluto",
+    "altTitle": "PLUTO",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Mecha",
+      "Mystery",
+      "Psychological",
+      "Sci-Fi"
+    ],
+    "rating": 4.25,
+    "totalChapters": 65,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 65,
+      "title": "Chapter 65",
+      "views": "4.8M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30745-kueBpwriQkvZ.jpg",
+    "author": "Makoto Tezuka",
+    "artist": "Naoki Urasawa",
+    "synopsis": "In an ideal world where man and robots coexist, someone or something has destroyed the powerful Swiss robot Mont Blanc. Elsewhere a key figure in a robot rights group is murdered. The two incidents appear to be unrelated...except for one very conspicuous clue - the bodies of both victim..."
+  },
+  {
+    "id": "mv-al-30756",
+    "anilistId": 30756,
+    "mangadexId": null,
+    "title": "Banana Fish",
+    "altTitle": "BANANA FISH",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Psychological",
+      "Thriller"
+    ],
+    "rating": 4.25,
+    "totalChapters": 110,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 110,
+      "title": "Chapter 110",
+      "views": "2.1M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30756-rlxjQWBAizHX.jpg",
+    "author": "Akimi Yoshida",
+    "artist": "Akimi Yoshida",
+    "synopsis": "Nature made Ash Lynx beautiful; nurture made him a cold ruthless killer. A runaway brought up as the adopted heir and sex toy of \"Papa\" Dino Golzine, Ash, now at the rebellious age of seventeen, forsakes the kingdom held out by the devil who raised him. But the hideous secret that drove..."
+  },
+  {
+    "id": "mv-al-30904",
+    "anilistId": 30904,
+    "mangadexId": null,
+    "title": "Lone Wolf and Cub",
+    "altTitle": "子連れ狼",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "rating": 4.25,
+    "totalChapters": 142,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 142,
+      "title": "Chapter 142",
+      "views": "7.2M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30904-KRN1WE3ZU3vl.jpg",
+    "author": "Kazuo Koike",
+    "artist": "Goseki Kojima",
+    "synopsis": "An epic samurai adventure of staggering proportions—over 7000 pages—Lone Wolf and Cub (Kozure Okami in Japan) is acknowledged worldwide for the brilliant writing of series creator Kazuo Koike and the groundbreaking cinematic visuals of the late Goseki Kojima, creating unforgettable imag..."
+  },
+  {
+    "id": "mv-al-35744",
+    "anilistId": 35744,
+    "mangadexId": null,
+    "title": "Ping Pong",
+    "altTitle": "ピンポン",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Sports"
+    ],
+    "rating": 4.25,
+    "totalChapters": 55,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 55,
+      "title": "Chapter 55",
+      "views": "2.3M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx35744-JB0ACECS2Ts2.png",
+    "author": "Taiyou Matsumoto",
+    "artist": "Deron Bennett",
+    "synopsis": "Makoto “Smile” Tsukimoto and his friend Yutaka “Peco” Hoshino have been playing table tennis since they were kids, but as they enter high school, they find that the game has changed. Seeing potential in them that they themselves don’t fully realize, the coach recruits them for the schoo..."
+  },
+  {
+    "id": "mv-al-41514",
+    "anilistId": 41514,
+    "mangadexId": null,
+    "title": "A Bride's Story",
+    "altTitle": "乙嫁語り",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.25,
+    "totalChapters": 48,
+    "releaseDay": "Sat",
+    "latestChapter": {
+      "number": 48,
+      "title": "Chapter 48",
+      "views": "2.1M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx41514-IHeXFwqmWivk.jpg",
+    "author": "Kaoru Mori",
+    "artist": "Kaoru Mori",
+    "synopsis": "A Bride&rsquo;s Story tells the tale of a beautiful young bride in nineteenth-century Asia. At the age of twenty, Amir is sent to a neighboring town to be wed. But her surprise at learning her new husband, Karluk, is eight years younger than her is quickly replaced by a deep affection f..."
+  },
+  {
+    "id": "mv-al-45547",
+    "anilistId": 45547,
+    "mangadexId": null,
+    "title": "Kiichi VS",
+    "altTitle": "キーチVS",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Drama",
+      "Psychological"
+    ],
+    "rating": 4.25,
+    "totalChapters": 111,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 111,
+      "title": "Chapter 111",
+      "views": "1.8M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx45547-sAOWG4CYBq6g.jpg",
+    "author": "Hideki Arai",
+    "artist": "Hideki Arai",
+    "synopsis": "Ever more uncompromising in the face of injustice, Kiichi has become a star. Known around the world for shaking the Japanese establishment, he doesn't intend to stop there. Now at the head of a big company, between school of thought and mafia, whose members number in the thousands, he w..."
+  },
+  {
+    "id": "mv-al-55515",
+    "anilistId": 55515,
+    "mangadexId": null,
+    "title": "JoJo’s Bizarre Adventure: Part 8—JoJolion",
+    "altTitle": "ジョジョの奇妙な冒険 ジョジョリオン",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Mystery",
+      "Supernatural"
+    ],
+    "rating": 4.25,
+    "totalChapters": 110,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 110,
+      "title": "Chapter 110",
+      "views": "6.4M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx55515-HhCsfAsd7VK1.png",
+    "author": "Hirohiko Araki",
+    "artist": "Hirohiko Araki",
+    "synopsis": "This part will take place in Morioh-Cho (the same town in Part 4: Diamond is Unbreakable), but in the alternative universe in which Steel Ball Run takes place.    Following the Great East Japan earthquake, Morioh has been stricken by vast earthen protrusions known by the locals as Wall ..."
+  },
+  {
+    "id": "mv-al-85849",
+    "anilistId": 85849,
+    "mangadexId": null,
+    "title": "ReLIFE",
+    "altTitle": "ReLIFE",
+    "type": "Manga",
+    "demographic": "Shōjo",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Psychological",
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.25,
+    "totalChapters": 238,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 238,
+      "title": "Chapter 238",
+      "views": "3.5M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx85849-TYAa7nhwSvbx.jpg",
+    "author": "Sou Yayoi",
+    "artist": "Sou Yayoi",
+    "synopsis": "When the responsibilities of being an adult and the ugly side of corporate bullying betrays one's childhood dreams, many would wish to return to their innocent childhood to relive their life and make the right decisions. Dumbfounded by the offer presented to him, 27-year-old Arata Kaiza..."
+  },
+  {
+    "id": "mv-al-100568",
+    "anilistId": 100568,
+    "mangadexId": null,
+    "title": "The Horizon",
+    "altTitle": "수평선",
+    "type": "Manhwa",
+    "demographic": "Seinen",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Psychological"
+    ],
+    "rating": 4.25,
+    "totalChapters": 21,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 21,
+      "title": "Chapter 21",
+      "views": "6.9M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx100568-4BC0PsdwU4bL.png",
+    "author": "Ji-Hun Jeong",
+    "artist": "Ji-Hun Jeong",
+    "synopsis": "A world where everything has been lost. A boy and a girl alone together. A spark of hope kindled between them. All they can do is move forward. But against broken adults and devastating despair, how long will they be able to keep going...?    (Source: Yen Press)"
+  },
+  {
+    "id": "mv-al-106929",
+    "anilistId": 106929,
+    "mangadexId": null,
+    "title": "Eleceed",
+    "altTitle": "일렉시드",
+    "type": "Manhwa",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Supernatural"
+    ],
+    "rating": 4.25,
+    "totalChapters": 24,
+    "releaseDay": "Thu",
+    "latestChapter": {
+      "number": 24,
+      "title": "Chapter 24",
+      "views": "5.4M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx106929-flAUvHZDUz5v.jpg",
+    "author": "Jae-Ho Son",
+    "artist": "Hye-Jin Kim",
+    "synopsis": "Ji-U is a kind-hearted young man who harnesses the lightning quick reflexes of a cat to secretly make the world a better place – one saved little child or foster pet at a time. Kayden is a secret agent on the run, who finds himself stuck in the body of a…um…decidedly fat old fluffy cat...."
+  },
+  {
+    "id": "mv-al-132288",
+    "anilistId": 132288,
+    "mangadexId": null,
+    "title": "Hirayasumi",
+    "altTitle": "ひらやすみ",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Slice of Life"
+    ],
+    "rating": 4.25,
+    "totalChapters": 105,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 105,
+      "title": "Chapter 105",
+      "views": "5.7M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx132288-YnkpDO1wNHNM.png",
+    "author": "Keigo Shinzo",
+    "artist": "Keigo Shinzo",
+    "synopsis": "With a carefree outlook on life, Hiroto knows better than anyone that slowing down is sometimes the best way to move forward.    At 29 years old, carefree Hiroto Ikuta doesn’t have a girlfriend, a full-time job, or a plan for the future—and he couldn’t be happier. Hiroto’s breezy attitu..."
+  },
+  {
+    "id": "mv-al-30102",
+    "anilistId": 30102,
+    "mangadexId": null,
+    "title": "Fruits Basket",
+    "altTitle": "フルーツバスケット",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Psychological",
+      "Romance",
+      "Supernatural"
+    ],
+    "rating": 4.25,
+    "totalChapters": 137,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 137,
+      "title": "Chapter 137",
+      "views": "2.2M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30102-MJuQ0e0k2CgU.png",
+    "author": "Natsuki Takaya",
+    "artist": "Natsuki Takaya",
+    "synopsis": "After a family tragedy turns her life upside down, plucky high schooler Tohru Honda takes matters into her own hands and moves out...into a tent! Unfortunately for her, she pitches her new home on private land belonging to the mysterious Sohma clan, and it isn't long before the owners d..."
+  },
+  {
+    "id": "mv-al-33031",
+    "anilistId": 33031,
+    "mangadexId": null,
+    "title": "Pandora Hearts",
+    "altTitle": "パンドラハーツ",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Mystery"
+    ],
+    "rating": 4.25,
+    "totalChapters": 107,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 107,
+      "title": "Chapter 107",
+      "views": "5.8M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx33031-LzNWgqS69qAj.jpg",
+    "author": "Jun Mochizuki",
+    "artist": "Jun Mochizuki",
+    "synopsis": "The air of celebration surrounding fifteen-year-old Oz Vessalius&rsquo;s coming-of-age ceremony quickly turns to horror when he is condemned for a sin about which he knows nothing. He is thrown into an eternal, inescapable prison known as the Abyss from which there is no escape. There, ..."
+  },
+  {
+    "id": "mv-al-86551",
+    "anilistId": 86551,
+    "mangadexId": null,
+    "title": "Made in Abyss",
+    "altTitle": "メイドインアビス",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "rating": 4.25,
+    "totalChapters": 96,
+    "releaseDay": "Mon",
+    "latestChapter": {
+      "number": 96,
+      "title": "Chapter 96",
+      "views": "2.2M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86551-0EzmsMZiPSu9.jpg",
+    "author": "Akihito Tsukushi",
+    "artist": "Akihito Tsukushi",
+    "synopsis": "In an age when the corners of the world have been scoured for their secrets, only one place remains unexplored–a massive cave system known as the Abyss. Those who traverse its endless pits and labyrinth-like tunnels are known as Cave Raiders. A young orphan named Riko dreams of followin..."
+  },
+  {
+    "id": "mv-al-101563",
+    "anilistId": 101563,
+    "mangadexId": null,
+    "title": "Grandmaster of Demonic Cultivation: Mo Dao Zu Shi",
+    "altTitle": "魔道祖师",
+    "type": "Manhua",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Mystery"
+    ],
+    "rating": 4.25,
+    "totalChapters": 259,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 259,
+      "title": "Chapter 259",
+      "views": "2.5M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx101563-nTBq5IEYYWbX.png",
+    "author": "Luo Di Cheng Qiu",
+    "artist": "Luo Di Cheng Qiu",
+    "synopsis": "Feared and hated for his sinister abilities, Wei Wuxian–the grandmaster of demonic cultivation–was driven to his death when the most powerful clans united to destroy him.    Thirteen years later, Wei Wuxian is reborn. Summoned by a young man who sacrificed his soul in a forbidden ritual..."
+  },
+  {
+    "id": "mv-al-171068",
+    "anilistId": 171068,
+    "mangadexId": null,
+    "title": "One-Room TA",
+    "altTitle": "원룸 조교님",
+    "type": "Manhwa",
+    "demographic": "Shōjo",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.25,
+    "totalChapters": 42,
+    "releaseDay": "Wed",
+    "latestChapter": {
+      "number": 42,
+      "title": "Chapter 42",
+      "views": "8.3M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx171068-6ZG2cmpg2uBH.png",
+    "author": "Jibung",
+    "artist": "Jibung",
+    "synopsis": "When college student U-Yun meets the quiet and introverted TA Jin-Hyeong, he immediately asks him out, saying he wants to get to know him more. After just three days of dating, Jin-Hyeong moves in with him, and that’s when he starts showing a completely different wild side. All of his B..."
+  },
+  {
+    "id": "mv-al-30698",
+    "anilistId": 30698,
+    "mangadexId": null,
+    "title": "Neon Genesis Evangelion",
+    "altTitle": "新世紀エヴァンゲリオン",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Drama",
+      "Mecha",
+      "Mystery",
+      "Psychological"
+    ],
+    "rating": 4.25,
+    "totalChapters": 97,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 97,
+      "title": "Chapter 97",
+      "views": "2.5M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30698-0niTa3yn2rNK.png",
+    "author": "Hideaki Anno",
+    "artist": "Yoshiyuki Sadamoto",
+    "synopsis": "In 2015, the \"Angels\" have returned, and Shinji Ikari, a fourteen year-old child of the new Earth, is forced by his father Gendo--commander of the secret organization NERV--to pilot the monstrous biomechanical weapon called \"Evangelion\" to match the Angels' fearsome power...    (Source:..."
+  },
+  {
+    "id": "mv-59f47645",
+    "anilistId": 63327,
+    "mangadexId": "59f47645-66a9-443e-8228-788313c3ae3c",
+    "title": "Tokyo Ghoul",
+    "altTitle": "東京喰種 トーキョーグール",
+    "type": "Manga",
+    "demographic": "Seinen",
+    "genres": [
+      "Action",
+      "Horror",
+      "Mystery",
+      "Psychological",
+      "Supernatural"
+    ],
+    "rating": 4.25,
+    "totalChapters": 144,
+    "releaseDay": "Archive",
+    "latestChapter": {
+      "number": 144,
+      "title": "Chapter 144",
+      "views": "5.7M",
+      "dropTime": "Archive Vault"
+    },
+    "isSimulpub": false,
+    "isFeatured": false,
+    "coverUrl": "mangas/covers/mv-59f47645.jpg",
+    "author": "Ishida Sui",
+    "artist": "Ishida Sui",
+    "synopsis": "Shy Ken Kaneki is thrilled to go on a date with the beautiful Rize. But it turns out that she’s only interested in his body—eating it, that is. When a morally questionable rescue transforms him into the first half-human half-Ghoul hybrid, Ken is drawn into the dark and violent world of ..."
+  },
+  {
+    "id": "mv-al-132144",
+    "anilistId": 132144,
+    "mangadexId": null,
+    "title": "Return of the Blossoming Blade",
+    "altTitle": "화산귀환",
+    "type": "Manhwa",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": 4.25,
+    "totalChapters": 90,
+    "releaseDay": "Sat",
+    "latestChapter": {
+      "number": 90,
+      "title": "Chapter 90",
+      "views": "4.7M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx132144-i5B4VnG9sRgh.png",
+    "author": "Biga",
+    "artist": "LICO",
+    "synopsis": "When Cheong-Myeong of the Mount Hua Sect awakens a hundred years in the future, his last memories are of a bloody battle against the Leader of the Demonic Cult, the evil Cheon-Ma. The battle almost saw the end of the Ten Great Sects of ancient China, when Cheong-Myeong ended the hard-fo..."
+  },
+  {
+    "id": "mv-al-74347",
+    "anilistId": 74347,
+    "mangadexId": null,
+    "title": "One-Punch Man",
+    "altTitle": "ワンパンマン",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Sci-Fi",
+      "Supernatural"
+    ],
+    "rating": 4.2,
+    "totalChapters": 82,
+    "releaseDay": "Sun",
+    "latestChapter": {
+      "number": 82,
+      "title": "Chapter 82",
+      "views": "8.5M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx74347-sZpmNJ5xLwRK.jpg",
+    "author": "ONE",
+    "artist": "Yuusuke Murata",
+    "synopsis": "In this new action-comedy, everything about a young man named Saitama screams \"AVERAGE,&rdquo; from his lifeless expression, to his bald head, to his unimpressive physique. However, this average-looking fellow doesn't have your average problem... He's actually a superhero that's looking..."
+  },
+  {
+    "id": "mv-al-85850",
+    "anilistId": 85850,
+    "mangadexId": null,
+    "title": "19 Tian",
+    "altTitle": "19天",
+    "type": "Manhua",
+    "demographic": "Shōjo",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Slice of Life"
+    ],
+    "rating": 4.2,
+    "totalChapters": 90,
+    "releaseDay": "Mon",
+    "latestChapter": {
+      "number": 90,
+      "title": "Chapter 90",
+      "views": "5.1M",
+      "dropTime": "Today (Tokyo Sync)"
+    },
+    "isSimulpub": true,
+    "isFeatured": false,
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/b85850-C9jxTZSRutBw.png",
+    "author": "Old Xian",
+    "artist": "Old Xian",
+    "synopsis": "A group photo in kindergarten is the start of a lifetime friendship between Jian Yi and Zhan Zhengxi. They grew up together, and met good friends like He Tian and Mo Guanshan on campus.   \"19 Days\" not only shows the relaxed and happy school days of the four, but is also a story in whic..."
+  },
+  {
     "id": "mv-e896c48c",
     "mangadexId": "e896c48c-3150-437d-ba57-d8567eb399ae",
     "title": "Chainsaw Man",
@@ -146,35 +3091,6 @@ const MANGA_DATABASE = [
     "author": "Fujimoto Tatsuki",
     "artist": "Fujimoto Tatsuki",
     "synopsis": "Denji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil-dog Pochita and becomes Chainsaw Man — a man with a chainsaw for a heart, hunting devils for Public Safety."
-  },
-  {
-    "id": "mv-59f47645",
-    "mangadexId": "59f47645-66a9-443e-8228-788313c3ae3c",
-    "title": "Tokyo Ghoul",
-    "altTitle": "東京喰種 トーキョーグール",
-    "type": "Manga",
-    "demographic": "Seinen",
-    "genres": [
-      "Action",
-      "Horror",
-      "Supernatural",
-      "Psychological"
-    ],
-    "rating": 4.94,
-    "totalChapters": 143,
-    "releaseDay": "Thu",
-    "latestChapter": {
-      "number": 143,
-      "title": "Chapter 143",
-      "views": "11.8M",
-      "dropTime": "Archive Vault"
-    },
-    "isSimulpub": false,
-    "isFeatured": true,
-    "coverUrl": "mangas/covers/mv-59f47645.jpg",
-    "author": "Ishida Sui",
-    "artist": "Ishida Sui",
-    "synopsis": "Lurking within the shadows of Tokyo are frightening beings known as ghouls, who satisfy their hunger by feeding on human flesh. Kaneki Ken undergoes surgery that transforms him into a half-ghoul, thrusting him into a bloody clash between ghouls and human investigators."
   },
   {
     "id": "mv-6114f59f",
@@ -652,7 +3568,189 @@ const MANGA_DATABASE = [
     "author": "Yuewen Manhua (阅文漫画)",
     "artist": "Painting Culture (之画文化)",
     "synopsis": "Jiang He, a girl from the Tang Dynasty, traveled through a thousand years and appeared in front of Xu Qing. Fate brought together this love that spanned a thousand years. Everything the girl was familiar with has become history. Relatives, friends, and enemies have all been le..."
+  },
+  {
+    "id": "solo-leveling",
+    "title": "Solo Leveling",
+    "author": "Chugong (Story), Dubu (Art)",
+    "description": "A weak hunter named Sung Jinwoo discovers a mysterious system that allows only him to level up, transforming from the weakest hunter to the most powerful being in existence.",
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx101517-uxyhFofRUmCF.jpg",
+    "chapters": 179,
+    "volumes": 14,
+    "status": "Completed",
+    "type": "Manhwa",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": 4.6,
+    "year": 2018,
+    "releaseDay": "Wednesday",
+    "tags": [
+      "Game Elements",
+      "Hunter",
+      "Leveling System",
+      "Overpowered MC",
+      "Gates"
+    ],
+    "source": "kakao",
+    "anilistId": 101517
+  },
+  {
+    "id": "attack-on-titan",
+    "title": "Attack on Titan",
+    "author": "Hajime Isayama",
+    "description": "In a world where humanity lives within enormous walled cities to protect themselves from Titans—giant humanoid creatures—Eren Yeager vows to exterminate the Titans after his hometown is destroyed.",
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx53390-1RsuABC34P9Q.jpg",
+    "chapters": 139,
+    "volumes": 34,
+    "status": "Completed",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Drama",
+      "Fantasy",
+      "Mystery"
+    ],
+    "rating": 4.7,
+    "year": 2009,
+    "releaseDay": "Thursday",
+    "tags": [
+      "Military",
+      "Post-Apocalyptic",
+      "Survival",
+      "Dark",
+      "Titans",
+      "Walls"
+    ],
+    "source": "kodansha",
+    "anilistId": 53390
+  },
+  {
+    "id": "death-note",
+    "title": "Death Note",
+    "author": "Tsugumi Ohba (Story), Takeshi Obata (Art)",
+    "description": "A high school student discovers a supernatural notebook that grants its user the ability to kill anyone whose name and face they know. He decides to use it to cleanse the world of criminals.",
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx21519-4J8bYlNLBGJu.jpg",
+    "chapters": 108,
+    "volumes": 12,
+    "status": "Completed",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Mystery",
+      "Psychological",
+      "Supernatural",
+      "Thriller"
+    ],
+    "rating": 4.6,
+    "year": 2003,
+    "releaseDay": "Friday",
+    "tags": [
+      "Shinigami",
+      "Death",
+      "Genius MC",
+      "Cat-and-Mouse",
+      "Serial Killer",
+      "Detective"
+    ],
+    "source": "shueisha",
+    "anilistId": 21519
+  },
+  {
+    "id": "demon-slayer",
+    "title": "Demon Slayer: Kimetsu no Yaiba",
+    "author": "Koyoharu Gotouge",
+    "description": "Tanjiro Kamado sets out to become a demon slayer after his family is slaughtered and his sister Nezuko is turned into a demon, aiming to find a cure and avenge his family.",
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx87216-RMGtd7uS29nb.jpg",
+    "chapters": 205,
+    "volumes": 23,
+    "status": "Completed",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Supernatural"
+    ],
+    "rating": 4.5,
+    "year": 2016,
+    "releaseDay": "Saturday",
+    "tags": [
+      "Demons",
+      "Swords",
+      "Breathing Techniques",
+      "Siblings",
+      "Revenge",
+      "Historical"
+    ],
+    "source": "shueisha",
+    "anilistId": 87216
+  },
+  {
+    "id": "naruto",
+    "title": "Naruto",
+    "author": "Masashi Kishimoto",
+    "description": "Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village. The story follows his journey to become a great ninja.",
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx11061-ONEbSUDkMVqL.jpg",
+    "chapters": 700,
+    "volumes": 72,
+    "status": "Completed",
+    "type": "Manga",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": 4.5,
+    "year": 1999,
+    "releaseDay": "Monday",
+    "tags": [
+      "Ninja",
+      "Coming of Age",
+      "Friendship",
+      "Rivalry",
+      "Nine-Tails",
+      "Hokage"
+    ],
+    "source": "shueisha",
+    "anilistId": 11061
+  },
+  {
+    "id": "tower-of-god",
+    "title": "Tower of God",
+    "author": "SIU (Slave In Utero)",
+    "description": "Twenty-Fifth Bam has lived all his life in a cave beneath a mysterious Tower. When his only friend Rachel enters the Tower, Bam follows her and must ascend its floors to find her.",
+    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx76044-BCWsVlCH6SNVL.jpg",
+    "chapters": 600,
+    "volumes": null,
+    "status": "Releasing",
+    "type": "Manhwa",
+    "demographic": "Shōnen",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Mystery"
+    ],
+    "rating": 4.5,
+    "year": 2010,
+    "releaseDay": "Sunday",
+    "tags": [
+      "Tower",
+      "Betrayal",
+      "Power System",
+      "Hidden Powers",
+      "Competition"
+    ],
+    "source": "webtoon",
+    "anilistId": 76044
   }
+]
 ];
 
 // All 40+ Anime-Planet Style Filter Tags

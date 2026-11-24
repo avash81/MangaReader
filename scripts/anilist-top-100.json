@@ -1,0 +1,4935 @@
+[
+  {
+    "id": 30002,
+    "title": {
+      "romaji": "Berserk",
+      "english": "Berserk",
+      "native": "ベルセルク"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Horror",
+      "Psychological"
+    ],
+    "averageScore": 92,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30002-Cul4OeN7bYtn.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30002-Cul4OeN7bYtn.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art (vols 1-41)",
+          "node": {
+            "name": {
+              "full": "Kentarou Miura"
+            }
+          }
+        },
+        {
+          "role": "Supervisor (vols 41- )",
+          "node": {
+            "name": {
+              "full": "Kouji Mori"
+            }
+          }
+        },
+        {
+          "role": "Story & Art (vols 41- )",
+          "node": {
+            "name": {
+              "full": "Studio Gaga"
+            }
+          }
+        }
+      ]
+    },
+    "description": "His name is Guts, the Black Swordsman, a feared warrior spoken of only in whispers. Bearer of a gigantic sword, an iron hand, and the scars of countless battles and tortures, his flesh is also indelibly marked with The Brand, an unholy symbol that draws the forces of darkness to him and dooms him as their sacrifice. But Guts won't take his fate lying down; he'll cut a crimson swath of carnage through the ranks of the damned—and anyone else foolish enough to oppose him! Accompanied by Puck the Elf, more an annoyance than a companion, Guts relentlessly follows a dark, bloodstained path that leads only to death...or vengeance.<br>\n<br>\n(Source: Dark Horse)<br>\n<br>\n<i>Notes:<br>\n- Volumes 1-5 contain the 16 prequel chapters 0A - 0P.<br>\n- <a href=\"https://anilist.co/manga/95821/\">Chapter 83</a> was omitted from Volume 13 due to the author’s request.<br>\n- Volume 14 includes “<a href=\"https://anilist.co/manga/36408/\">Berserk: The Prototype</a>”.<br>\n- Due to the author's passing, starting from Chapter 365, the manga is illustrated by Studio Gaga (Miura's assistants) and supervised by Kouji Mori (a close friend of Miura's).</i>"
+  },
+  {
+    "id": 31706,
+    "title": {
+      "romaji": "JoJo no Kimyou na Bouken: Steel Ball Run",
+      "english": "JoJo's Bizarre Adventure: Part 7–Steel Ball Run",
+      "native": "ジョジョの奇妙な冒険 スティール・ボール・ラン"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Mystery",
+      "Supernatural"
+    ],
+    "averageScore": 92,
+    "chapters": 95,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31706-lRncu9VbcBB7.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx31706-lRncu9VbcBB7.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Yasuki Tanaka"
+            }
+          }
+        },
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Hirohiko Araki"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Hiroshi Shiibashi"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Riders from around the world gather in the Wild West for the race of the century! Johnny Joestar, a former jockey paralyzed from the waist down, comes to spectate, and momentarily regains the ability to walk while watching a duel fought by Gyro Zeppeli. Desperate to learn more about this power, Johnny joins the race alongside Gyro and embarks on the most epic and bizarre race to ever cross the American frontier!<br><br>\n(Source: VIZ Media)"
+  },
+  {
+    "id": 30656,
+    "title": {
+      "romaji": "Vagabond",
+      "english": "Vagabond",
+      "native": "バガボンド"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "averageScore": 91,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30656-9mW113O7rDnA.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30656-9mW113O7rDnA.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Takehiko Inoue"
+            }
+          }
+        },
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Eiji Yoshikawa"
+            }
+          }
+        },
+        {
+          "role": "Assistant (Background)",
+          "node": {
+            "name": {
+              "full": "Yasuhisa Hara"
+            }
+          }
+        }
+      ]
+    },
+    "description": "At seventeen years of age, Miyamoto Musashi--still known by his childhood name, Shinmen Takezo--was a wild young brute just setting out along the way of the sword.\n<br><br>\nIn the aftermath of the epic Battle of Sekigahara, Takezo finds himself a fugitive survivor on the losing side of the war. Takezo's vicious nature has made him an outcast even in his own village, and he is hunted down like an animal. At this crucial crossroads in Takezo's life, an eccentric monk and a childhood friend are the only ones who can help him find his way.<br><br>(Source: VIZ Media)"
+  },
+  {
+    "id": 30013,
+    "title": {
+      "romaji": "ONE PIECE",
+      "english": "One Piece",
+      "native": "ONE PIECE"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "averageScore": 91,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30013-BeslEMqiPhlk.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30013-BeslEMqiPhlk.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Eiichirou Oda"
+            }
+          }
+        },
+        {
+          "role": "Assistant (former)",
+          "node": {
+            "name": {
+              "full": "Tatsuma Eijiri"
+            }
+          }
+        },
+        {
+          "role": "Assistant (Former)",
+          "node": {
+            "name": {
+              "full": "Shinya Suzuki"
+            }
+          }
+        }
+      ]
+    },
+    "description": "As a child, Monkey D. Luffy was inspired to become a pirate by listening to the tales of the buccaneer \"Red-Haired\" Shanks. But his life changed when Luffy accidentally ate the Gum-Gum Devil Fruit and gained the power to stretch like rubber...at the cost of never being able to swim again! Years later, still vowing to become the king of the pirates, Luffy sets out on his adventure...one guy alone in a rowboat, in search of the legendary \"One Piece,\" said to be the greatest treasure in the world...\n<br><br>\n(Source: VIZ Media)"
+  },
+  {
+    "id": 113869,
+    "title": {
+      "romaji": "Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen Dai 5-bu - Megami no Keshin",
+      "english": "Ascendance of a Bookworm: Part 5",
+      "native": "本好きの下剋上～司書になるためには手段を選んでいられません～第五部「女神の化身」"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Fantasy",
+      "Slice of Life"
+    ],
+    "averageScore": 91,
+    "chapters": 256,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx113869-S4RyCDWsc0n9.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx113869-S4RyCDWsc0n9.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "You Shiina"
+            }
+          }
+        },
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Miya Kazuki"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Quof"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Part 5 of <i>Honzuki no Gekokujou</i>.<br>\n<br>\nEhrenfest’s first winter without Ferdinand is colder and more oppressive than usual. A surprise betrayal within the former Veronica faction makes the purge even more urgent, and the few who know about Georgine’s destructive goals compare her to the Goddess of Chaos. Meanwhile, Rozemyne throws herself into her third year at the Royal Academy, trying to stave off the loneliness eating away at her. She pushes to win over the students of the former Veronica faction, hoping to save their lives, and meets a new archnoble librarian sent from the Sovereignty. Rozemyne also attends her first class of the archduke candidate course—though her personal ambitions mean she is taking the scholar course as well. In the midst of this balancing act, she finds that her environment has changed drastically once again!<br>\n<br>\n(Source: J-Novel Club)<br>\n<br>\n<i>Note: Final part, this entry covers 217 chapters of the webnovel (chapter 461 - 677).</i>"
+  },
+  {
+    "id": 64053,
+    "title": {
+      "romaji": "Umineko no Naku Koro ni Chiru Episode 8: Twilight of the Golden Witch",
+      "english": "Umineko When They Cry Episode 8: Twilight of the Golden Witch",
+      "native": "うみねこのなく頃に散 - Episode 8: Twilight of the Golden Witch"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Mystery",
+      "Supernatural"
+    ],
+    "averageScore": 90,
+    "chapters": 42,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx64053-tHJHWLRrWbeA.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx64053-tHJHWLRrWbeA.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Art",
+          "node": {
+            "name": {
+              "full": "Kei Natsumi"
+            }
+          }
+        },
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Ryukishi07"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Stephen Paul"
+            }
+          }
+        }
+      ]
+    },
+    "description": "It's time once again for the annual family gathering on Rokkenjima! Ange Ushiromiya is just getting over a cold, but that won't dampen her excitement at seeing her cousins again! Granddad couldn't be more thrilled to see his beloved grandchildren and throws a special Halloween party where everyone gets lots of treats! By lunchtime on the first day, the aunts and uncles are chatting up a storm, and the cousins are eagerly planning the afternoon's fun. It's the very picture of a happy family-one that in no way resembles the bickering, bitter Ushiromiya clan! What is going on?!<br><br>\n(Source: Yen Press)<br><br><i>Note: Includes 4 extra chapters.</i>"
+  },
+  {
+    "id": 30001,
+    "title": {
+      "romaji": "MONSTER",
+      "english": "Monster",
+      "native": "MONSTER"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Thriller"
+    ],
+    "averageScore": 90,
+    "chapters": 162,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30001-Knby7l1jevE7.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30001-Knby7l1jevE7.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Naoki Urasawa"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Yasushi Hoshino"
+            }
+          }
+        },
+        {
+          "role": "Supervisor",
+          "node": {
+            "name": {
+              "full": "Takashi Nagasaki"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Everyone faces uncertainty at some point in their lives. Even a brilliant surgeon like Kenzo Tenma is no exception. But there’s no way he could have known that his decision to stop chasing professional success and instead concentrate on his oath to save peoples’ lives would result in the birth of an abomination. The questions of good and evil now take on a terrifyingly real dimension.\n<br><br>\nYears later, in Germany during the tumultuous post-reunification period, middle-aged childless couples are being killed one after another. The serial killer’s identity is known. The reasons why he kills are not. Dr. Tenma sets out on a journey to find the killer’s twin sister, who may hold some clues to solving the enigma of the “Monster.”\n<br><br>\n(Source: VIZ Media)"
+  },
+  {
+    "id": 143726,
+    "title": {
+      "romaji": "Koimonogatari",
+      "english": "Koimonogatari: Love Tale",
+      "native": "恋物語"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Psychological",
+      "Supernatural"
+    ],
+    "averageScore": 90,
+    "chapters": 39,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx143726-oM6XdI2Ghb8b.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx143726-oM6XdI2Ghb8b.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "NISIOISIN"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "VOFAN"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Daniel Joseph"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Circling back to a middle school girl’s apotheosis, if we can call it that, in OTORIMONOGATARI, and the mortal threat it poses to the hero and his girl, this “Season Two” finale is narrated, for the first time in the series, by a grown-up—but if the word conjures a sense of reliability, of stability and certainty to you, dear reader, then the lesson to take home from this is to trust no one.\n<br><br>\nBecause the teller of the tale, who has been summoned by the heroine to defuse the situation, despite having been her nemesis since the very outset of the series, is—in the absence of the equally shady adult, Oshino, who at least was an expert—none other than his college frenemy, the fake ghostbuster who doesn’t believe in ghosts, the shameless swindler Deishu Kaiki.\n<br><br>\nAnd it is indeed a con that he agrees to perpetrate, uncharacteristically pro bono, on a wrathful god—a mythic undertaking if true, which it may be, when a liar among liars holds that his story, like any other, is all a lie. But maybe not, when a man who claims to be wise in the ways of the world sounds just as self-conscious as his adolescent counterparts or a Russian anti-hero.\n<br><br>\n(Source: Kodansha USA)"
+  },
+  {
+    "id": 140407,
+    "title": {
+      "romaji": "Yeokdaegeum Yeongji Seolgyesa",
+      "english": "The Greatest Estate Developer",
+      "native": "역대급 영지 설계사"
+    },
+    "countryOfOrigin": "KR",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "averageScore": 90,
+    "chapters": 222,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx140407-fJQr0fmqq1IO.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx140407-fJQr0fmqq1IO.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Hyeon-Min Lee"
+            }
+          }
+        },
+        {
+          "role": "Original Story",
+          "node": {
+            "name": {
+              "full": "Baek-Gyeong Mun"
+            }
+          }
+        },
+        {
+          "role": "Art",
+          "node": {
+            "name": {
+              "full": "Hyeon-Su Kim"
+            }
+          }
+        }
+      ]
+    },
+    "description": "When civil engineering student Su-Ho Kim falls asleep reading a fantasy novel, he wakes up as a character in the book! Su-Ho is now in the body of Lloyd Frontera, a lazy noble who loves to drink, and whose family is in a mountain of debt. Using his engineering knowledge, Su-Ho designs inventions to avert the terrible future that lies in wait for him. With the help of a giant hamster, a knight, and the world’s magic, can Su-Ho dig his new family out of debt and build a better future?\n<br><br>(Source: WEBTOON, edited)<br><br>\n<i>Note: Includes 12 extra chapters.</i>"
+  },
+  {
+    "id": 30642,
+    "title": {
+      "romaji": "Vinland Saga",
+      "english": "Vinland Saga",
+      "native": "ヴィンランド・サガ"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "averageScore": 90,
+    "chapters": 224,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30642-0mjRDkf4THpo.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30642-0mjRDkf4THpo.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Makoto Yukimura"
+            }
+          }
+        },
+        {
+          "role": "Lettering (English)",
+          "node": {
+            "name": {
+              "full": "Scott Brown"
+            }
+          }
+        },
+        {
+          "role": "Translator (Spanish)",
+          "node": {
+            "name": {
+              "full": "Marc Bernabé"
+            }
+          }
+        }
+      ]
+    },
+    "description": "As a child, Thorfinn sat at the feet of the great Leif Ericson and thrilled to wild tales of a land far to the west. But his youthful fantasies were shattered by a mercenary raid. Raised by the Vikings who murdered his father, Thorfinn became a terrifying warrior, forever seeking to kill the band's leader, Askeladd, and avenge his father. Sustaining Thorfinn through his ordeal are his pride in his family and his dreams of a fertile westward land, a land without war or slavery … the land Leif called Vinland.\n<br><br>\n(Source: Kodansha USA)\n<br><br>\n<i>Notes:<br>\n- Includes the one-shot \"Sayonara ga Chikai no de\" (For Our Farewell Is Near)<br>\n- Includes the one-shot \"Assassin's Creed: Valhalla x Vinland Saga\"<br>\n- Includes two extra chapters.<br>\n- Won the Grand Prize at the Japan Media Arts Festival in 2009.<br>\n- Winner of the 36th Kodansha Manga Award in the General category in 2012.</i>"
+  },
+  {
+    "id": 30051,
+    "title": {
+      "romaji": "SLAM DUNK",
+      "english": "Slam Dunk",
+      "native": "SLAM DUNK"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Sports"
+    ],
+    "averageScore": 90,
+    "chapters": 276,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30051-5KJyPlO7z5F4.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30051-5KJyPlO7z5F4.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Takehiko Inoue"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Katsumi Tatsuzawa"
+            }
+          }
+        },
+        {
+          "role": "Translator (Portuguese)",
+          "node": {
+            "name": {
+              "full": "Drik Sada"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Hanamichi Sakuragi's got no game with girls--none at all! It doesn't help that he's known for throwing down at a moment's notice and always coming out on top. A hopeless bruiser, he's been rejected by 50 girls in a row! All that changes when he meets the girl of his dreams, Haruko, and she's actually not afraid of him! When she introduces him to the game of basketball, his life is changed forever...\n<br><br>\n(Source: VIZ Media)"
+  },
+  {
+    "id": 110992,
+    "title": {
+      "romaji": "Fata Morgana no Yakata: Anata no Genten ni Itaru Monogatari",
+      "english": null,
+      "native": "ファタモルガーナの館 ―The house in Fata morgana― あなたの原典に至る物語"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Supernatural"
+    ],
+    "averageScore": 90,
+    "chapters": 21,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx110992-ROmqSnw0QDTK.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx110992-ROmqSnw0QDTK.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Keika Hanada"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Moyataro"
+            }
+          }
+        }
+      ]
+    },
+    "description": "You awaken in a decrepit old mansion.<br>\n<br>\nA woman with eyes of jade stands before You, informing You that You are the Master of the house, and she Your Maid. However, You have no memories, no concept of self—or, indeed, any certainty that You are even alive.<br>\n<br>\nThe Maid invites You to join her on a journey through the mansion's lifeless halls, to behold the numerous tragedies that have befallen its residents. She suggests that among them, perhaps You will find some trace of Yourself.<br>\n<br>\nBeyond the first door lies the year 1603.<br>\nIt is an era of unparalleled beauty, where art and theatre flourish. Roses bloom abundantly in the garden where the inseparable Rhodes siblings play, and though they appear to be free of worry and strife... not everyone is content to see them happy.<br>\n<br>\nBeyond the second door lies the year 1707.<br>\nIn this era, the mansion lies in ruins, and a beast dwells within. He claims to yearn for a life of serenity, but it is not long before he yields to his innate savagery and a massacre ensues.<br>\n<br>\nBeyond the third door lies the year 1869.<br>\nIn this technologically advanced era, people are always on the move. The mansion's master is an ambitious businessman who has invested in the rail industry. However, his obsession with wealth and power leads him to neglect and mistreat his wife.<br>\n<br>\nBeyond the fourth door lies the year 1099.<br>\nThe Maid tells You that this is the final tale. In this era, You see a young man who claims to be cursed and a girl with white hair, called Giselle, who has been branded a witch and marked for death.<br>\n<br>\nHaving borne witness to these four tragedies, each set in a different time and place, You are now free to choose whether You wish to end Your story here... or press on.<br>\n<br>\nBut there are those who would say, \"You were able to bear them because they weren't your tragedies.\""
+  },
+  {
+    "id": 143747,
+    "title": {
+      "romaji": "Owarimonogatari",
+      "english": "Owarimonogatari: End Tale",
+      "native": "終物語"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Romance",
+      "Supernatural"
+    ],
+    "averageScore": 90,
+    "chapters": 117,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx143747-dxRIq37Odflm.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx143747-dxRIq37Odflm.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "NISIOISIN"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "VOFAN"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Ko Ransom"
+            }
+          }
+        }
+      ]
+    },
+    "description": "<b>Volume 1:</b><br>\nBefore we witness the series’ climactic showdown in the third volume of the End Tale—each part of which forms its own cohesive whole—narrator Araragi wrestles with a crucial bit of history that had turned him into the loner we met at the very beginning, who opined that friendships only lowered his intensity as a human.\n<br>\nWhat initiates his pilgrim’s progress of a reckoning is his first encounter, at school, with the mysterious freshman Ogi Oshino, self-described niece of the equally enigmatic aberration expert Mèmè, and the book’s opening chapter is a harrowing standalone novella of a who-dunit involving a locked room of sorts.\n<br>\nOur increasingly well-adjusted hero kept on beingdecent at one thing even when he was just hanging on, but this forte, an unlikely aptitude for math, of all things, becomes the focus of a cheating scandal and a web of recollections that forces him to come to terms with, what do you know, his capacity to connect to people.\n<br><br>\n<b>Volume 2:</b><br>\nWhen an old flame who gave up on life and chose to go up in flames—because he wanted to leave you but couldn’t—comes crawling back after four hundred years, you might not appreciate it, especially if you’re in a new relationship. But nothing’s ever simple between people, and that’s even truer between monsters.\n<br>\nFor the first time in months, our heroic loser Araragi is human, parted by previous events from the ex-legendary vampire bound to his shadow. Before he, the second-ever thrall of the former Kissshot, can resume his partnership with the donut-loving waif that she’s turned into, she must make a choice—about that first-ever. \n<br>\nBefore the End Tale can end, some loose ends must be tied, and in this volume, the fixer Gaen calls in her favor, requesting an introduction to her niece; the errand of the amulet that Araragi ran with Kanbaru comes into crisp focus; and the time-traveling and -spanning Dandy and Demon Tales see their devastating resolution.\n<br><br>\n<b>Volume 3:</b><br>\nNo good deed goes unpunished, they say, and so does friendship and lowering your intensity as a human, they don’t say—alas, for all his literally painful hustle and inveterate need to save others, our brave fool of a hero ends up in hell, a conception of the inferno in its full Buddhist glory, and muses (lol) if there’s a return ticket.\n<br>\nTold in three chapters, the final part of End Tale concludes the story proper and resolves the series’ panoply of ongoing mysteries: the dues of a do-gooder for relying on a power not his own, the identity of a shady transfer student, the outcome of a class president’s questing abroad, and even the true name of a park.\n<br>\nAraragi, indeed, is the one who knows, but along the way he meets old faces, really every last one of them, who aid him on his journey for understanding, and perhaps for salvation, and you for one might not be surprised if he had another rendezvous with an erstwhile “cloistered princess” before it—guess what it is—sees an end.\n<br><br>\n(Source: Kodansha USA)"
+  },
+  {
+    "id": 74489,
+    "title": {
+      "romaji": "Houseki no Kuni",
+      "english": "Land of the Lustrous",
+      "native": "宝石の国"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Drama",
+      "Fantasy",
+      "Mystery",
+      "Psychological",
+      "Sci-Fi"
+    ],
+    "averageScore": 89,
+    "chapters": 120,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx74489-5HtDCFfut8Be.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx74489-5HtDCFfut8Be.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Haruko Ichikawa"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Alethea Nibley"
+            }
+          }
+        },
+        {
+          "role": "Lettering (English)",
+          "node": {
+            "name": {
+              "full": "Evan Hayden"
+            }
+          }
+        }
+      ]
+    },
+    "description": "In a world inhabited by crystalline lifeforms called The Lustrous, every unique gem must fight for their way of life against the threat of lunarians who would turn them into decorations. Phosphophyllite, the most fragile and brittle of gems, longs to join the battle. When Phos is instead assigned to complete a natural history of their world, it sounds like a dull and pointless task. But this new job brings Phos into contact with Cinnabar, a gem forced to live in isolation. Can Phos’s seemingly mundane assignment lead both Phos and Cinnabar to the fulfillment they desire?\n<br><br>\n(Source: Kodansha USA)\n<br><br>\n<i>Notes:<br>\n- Includes 12 extra chapters.<br>\n- Nominated for the 8th Manga Taisho in 2015.<br>"
+  },
+  {
+    "id": 110802,
+    "title": {
+      "romaji": "Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen Dai 4-bu - Kizoku-in no Jishou Tosho Iin",
+      "english": "Ascendance of a Bookworm: Part 4",
+      "native": "本好きの下剋上~司書になるためには手段を選んでいられません~第四部「貴族院の自称図書委員」"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Fantasy",
+      "Slice of Life"
+    ],
+    "averageScore": 89,
+    "chapters": 209,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx110802-fWMPC3swaE7w.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx110802-fWMPC3swaE7w.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "You Shiina"
+            }
+          }
+        },
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Miya Kazuki"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Quof"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Part 4 of <i>Honzuki no Gekokujou</i>.\n<br><br>\nRozemyne awakens from her two-year sleep to a world that isn’t as she remembers it. The strange sensation fills her with unease, but she has no time to rest—she is soon to be enrolled in the Royal Academy as an archduke candidate, where she will be taught how to control her mana, make magic tools, and perform the magic needed to rule as an archduke. She begins dormitory life with colorful teachers and students from other duchies, aiming to be the best big sister possible... but there is little chance things will go according to plan when there is a massive library on the premises. She charges there at once, the other archduke candidates and even the royal family disappearing from her mind entirely. She truly will do anything for books! Now begins a new chapter of this biblio-fantasy, with a school as its setting!\n<br><br>\n(Source: J-Novel Club)\n<br><br>\n<i>Note: This entry covers 183 chapters of the webnovel (chapter 278 - 460).</i>"
+  },
+  {
+    "id": 30657,
+    "title": {
+      "romaji": "Real",
+      "english": "Real",
+      "native": "リアル"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Sports"
+    ],
+    "averageScore": 89,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30657-AzyyUOWMJ6fd.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30657-AzyyUOWMJ6fd.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Takehiko Inoue"
+            }
+          }
+        },
+        {
+          "role": "Assistant (Former)",
+          "node": {
+            "name": {
+              "full": "Yuuichi Itakura"
+            }
+          }
+        },
+        {
+          "role": "Assistant (Former)",
+          "node": {
+            "name": {
+              "full": "Yasuhisa Hara"
+            }
+          }
+        }
+      ]
+    },
+    "description": "A motorcycle accident, bone cancer, a speeding truck crashing into a boy on a stolen bicycle--tragic life-changing events turn the worlds of three young men upside down. These three very different personalities have only one thing in common--their passion for basketball.\n<br><br>\n(Source: VIZ Media)\n<br><br>\n<i>Note: Won an Excellence Prize for manga at the 2001 Japan Media Arts Festival.</i>"
+  },
+  {
+    "id": 119247,
+    "title": {
+      "romaji": "Uma Musume: Cinderella Gray",
+      "english": null,
+      "native": "ウマ娘 シンデレラグレイ"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Sports"
+    ],
+    "averageScore": 89,
+    "chapters": 211,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx119247-8ylxneez5fa8.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx119247-8ylxneez5fa8.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Character Design",
+          "node": {
+            "name": {
+              "full": "Yousuke Kabashima"
+            }
+          }
+        },
+        {
+          "role": "Original Creator",
+          "node": {
+            "name": {
+              "full": "Pierre Sugiura"
+            }
+          }
+        },
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Taiyou Kuzumi"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Uma Musume Cinderella Gray is a spin-off title of the Uma Musume project by Cygames. It follows Oguri Cap through her time at Kasamatsu Training Center Academy and on her journey of becoming a legendary horse girl.\n<br><br>\n<i>Note: Includes the one-shot \"Uma Musume: Cinderella Gray Gaiden - The mermaid left behind\".</i>"
+  },
+  {
+    "id": 146749,
+    "title": {
+      "romaji": "Umineko no Naku Koro ni Chiru Episode 8: Twilight of the Golden Witch",
+      "english": null,
+      "native": "うみねこのなく頃に散 - Episode 8: Twilight of the Golden Witch"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Mystery",
+      "Supernatural"
+    ],
+    "averageScore": 89,
+    "chapters": null,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx146749-zU7U3cYFuCV6.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx146749-zU7U3cYFuCV6.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Ryukishi07"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Tomohi"
+            }
+          }
+        }
+      ]
+    },
+    "description": "The final episode focuses on Ange, who in her quest to discover the truth behind the events of the Rokkenjima Mass Murders is given the chance to go to Rokkenjima as a six-year old by Battler. The central conflict revolves around the struggle between Battler and Bernkastel to convince Ange of their own perspective towards how she ought to approach the truth and her quest for it.\n"
+  },
+  {
+    "id": 30025,
+    "title": {
+      "romaji": "Hagane no Renkinjutsushi",
+      "english": "Fullmetal Alchemist",
+      "native": "鋼の錬金術師"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Fantasy"
+    ],
+    "averageScore": 89,
+    "chapters": 116,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30025-mpPVpCKFTowt.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30025-mpPVpCKFTowt.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Hiromu Arakawa"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Kyu Aiya"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Hikaru Miyoshi"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Alchemy tore the Elric brothers’ bodies apart. Can their bond make them whole again?<br>\nIn this world, alchemists are those who study and perform the art of alchemical transmutation—the science of manipulating and transforming matter. They are bounded by the Law of Equivalent Exchange: in order to gain something, one must sacrifice something of equal value.<br>\nIn an alchemical ritual gone wrong, Edward Elric lost his arm and his leg, and his brother Alphonse became nothing but a soul in a suit of armor. Equipped with mechanical “auto-mail” limbs, Edward becomes a state alchemist, seeking the one thing that can restore his and his brother’s bodies...the legendary Philosopher’s Stone.\n<br><br>\n(Source: VIZ Media)\n<br><br>\n<i>Note: Includes eight extra chapters.</i>"
+  },
+  {
+    "id": 31303,
+    "title": {
+      "romaji": "Ashita no Joe",
+      "english": "Ashita no Joe: Fighting for Tomorrow",
+      "native": "あしたのジョー"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Slice of Life",
+      "Sports"
+    ],
+    "averageScore": 89,
+    "chapters": 171,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31303-l21HJn9AXl7w.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx31303-l21HJn9AXl7w.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Ikki Kajiwara"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Sanbanchi Kawa"
+            }
+          }
+        },
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Tetsuya Chiba"
+            }
+          }
+        }
+      ]
+    },
+    "description": "A young drifter named Joe Yabuki wanders through the slums of Tokyo, but when the local ruffians try to give him a hard time he teaches them a rough lesson with his fists. The spectacle sparks a gleam in the eye of an old drunk who happens to be watching—Danpei Tange, a failed boxer and former coach who sees something special in the boy. He pleads with Joe to train with him off, but the cocky young fighter brushes him. Later, though, when Joe is arrested and put in a juvenile detention facility, he realizes that he’s going to need to hone his raw fighting skills if he wants to survive. Thus is born a partnership that might just take Joe all the way to the top…\n<br><br>\n(Source: Kodansha USA)"
+  },
+  {
+    "id": 46765,
+    "title": {
+      "romaji": "Kingdom",
+      "english": "Kingdom",
+      "native": "キングダム"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "averageScore": 89,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx46765-KPXir4sRqJBW.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx46765-KPXir4sRqJBW.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Yasuhisa Hara"
+            }
+          }
+        },
+        {
+          "role": "Assistant (Former)",
+          "node": {
+            "name": {
+              "full": "Sui Ishida"
+            }
+          }
+        },
+        {
+          "role": "Assistant (Former)",
+          "node": {
+            "name": {
+              "full": "Toshimitsu Matsubara"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Xin is a war orphan in a poor village in the kingdom of Qin. He has big dreams of becoming a great general, and when his best friend’s life is cut short by political machinations, Xin sets off to find a deposed ruler and help restore his place on the throne, while working his way up through the ranks of the Qin kingdom’s army to do what no one has ever done before—unify China.\n<br><br>\n(Source: VIZ Media)"
+  },
+  {
+    "id": 87395,
+    "title": {
+      "romaji": "Grand Blue",
+      "english": "Grand Blue Dreaming",
+      "native": "ぐらんぶる"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Slice of Life",
+      "Sports"
+    ],
+    "averageScore": 89,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx87395-axsA49kSZp72.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx87395-axsA49kSZp72.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Kenji Inoue"
+            }
+          }
+        },
+        {
+          "role": "Art",
+          "node": {
+            "name": {
+              "full": "Kimitake Yoshioka"
+            }
+          }
+        },
+        {
+          "role": "Lettering (English)",
+          "node": {
+            "name": {
+              "full": "Jan Ivan Concepcion"
+            }
+          }
+        }
+      ]
+    },
+    "description": "After moving out on his own to a seaside town, Iori Kitahara makes a college debut he never anticipated. A new chapter of his life unfolds, full of diving with beautiful girls and shenanigans with a gaggle of lovable bastards! Idiot-expert Kenji Inoue and au naturel authority Kimitake Yoshioka bring you a glorious college tale filled with booze-fueled antics!<br><br>\n(Source: Kodansha USA)"
+  },
+  {
+    "id": 143701,
+    "title": {
+      "romaji": "Kizumonogatari",
+      "english": "Kizumonogatari: Wound Tale",
+      "native": "傷物語"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Mystery",
+      "Romance",
+      "Supernatural"
+    ],
+    "averageScore": 89,
+    "chapters": 18,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx143701-JltoJEa9GLAS.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx143701-JltoJEa9GLAS.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "NISIOISIN"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "VOFAN"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Ko Ransom"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Around midnight, under a lonely street lamp in a provincial town in Japan, lies a white woman, a blonde, alone, robbed of all four limbs, yet undead. Indeed, a rumour’s been circulating among the local girls that a vampire has come to their backwater, of all places. Koyomi Araragi, who prefers to avoid having friends because they’d lower his “intensity as a human,” is naturally sceptical. Yet it is to him that the bloodsucking demon, a concept “dated twice over,” beckons on the first day of spring break as he makes his way home with a fresh loot of morally compromising periodicals.\n<br><br>\n(Source: Kodansha USA)"
+  },
+  {
+    "id": 30104,
+    "title": {
+      "romaji": "Yotsuba to!",
+      "english": "Yotsuba&!",
+      "native": "よつばと！"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Slice of Life"
+    ],
+    "averageScore": 89,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30104-sUVzNlTWZ5cu.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30104-sUVzNlTWZ5cu.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Kiyohiko Azuma"
+            }
+          }
+        },
+        {
+          "role": "Translator (English: vols 2, 3, 10-)",
+          "node": {
+            "name": {
+              "full": "Stephen Paul"
+            }
+          }
+        },
+        {
+          "role": "Translator (English: vols 1, 4-9)",
+          "node": {
+            "name": {
+              "full": "Amy Forsyth"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Hello! This is Koiwai Yotsuba, Yotsuba Koiwai...um, YOTSUBA! Yotsuba moved with Daddy to a new house from our old house waaaaaaay over there! And moving's fun 'cos people wave! (Ohhhh!!) And Yotsuba met these nice people next door and made friends to play with (one of 'em acted like one of those bad strangers Daddy told Yotsuba not to go with, but it was okay in the end). I hope we get to play a lot. And eat ice cream! And-and-and...oh yeah! You should come play with Yotsuba too!<br><br>\n(Source: Yen Press)\n<br><br>\n<i>Notes:<br>\n- Includes an interlude.<br>\n- Won the Excellence Award for Manga at the Japan Media Arts Festival in 2006 and the Grand Prize of the 20th Osamu Tezuka Cultural Prize in 2016.<br>\n- Was nominated for the Manga Taishō award in 2008 and for the 12th and 20th Osamu Tezuka Cultural Prize in 2008 and 2016.<br>\n- Was nominated for the Eisner Award in the \"Best Publication for Kids\" category.</i>"
+  },
+  {
+    "id": 53751,
+    "title": {
+      "romaji": "Nekomonogatari: Shiro",
+      "english": "Nekomonogatari: Cat Tale (White)",
+      "native": "猫物語（白）"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Mystery",
+      "Psychological",
+      "Romance",
+      "Supernatural"
+    ],
+    "averageScore": 89,
+    "chapters": 40,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx53751-1PHRYYsVP2cE.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx53751-1PHRYYsVP2cE.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "NISIOISIN"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "VOFAN"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Ko Ransom"
+            }
+          }
+        }
+      ]
+    },
+    "description": "A tale of heroine Tsubasa Hanekawa from her own perspective, in her own voice—if that can hold true for a damaged soul who, depending on who you’re asking, suffers from a split personality or a supernatural aberration. The bone-chilling brokenness of her household, where father and mother and daughter keep three separate sets of cookware in the same kitchen and only ever prepare their own meals, and the profound darkness nurtured in the genius schoolgirl’s heart, come to life, if that is the word, through her self-vivisection.\n<br><br>\n(Source: Kodansha USA)"
+  },
+  {
+    "id": 65243,
+    "title": {
+      "romaji": "Haikyuu!!",
+      "english": "Haikyu!!",
+      "native": "ハイキュー！！"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Sports"
+    ],
+    "averageScore": 88,
+    "chapters": 404,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx65243-mR4MnJFmfaOF.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx65243-mR4MnJFmfaOF.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Haruichi Furudate"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Kouhei Uchida"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Ken Ogino"
+            }
+          }
+        }
+      ]
+    },
+    "description": "<b>Shouyou Hinata is out to prove that in volleyball you don’t need to be tall to fly!</b>\n<br><br>\nAfter losing his first and last volleyball match against Tobio Kageyama, “the King of the Court,” Shouyou Hinata swears to become his rival after graduating middle school. But what happens when the guy he wants to defeat ends up being his teammate?!\n<br><br>\n(Source: VIZ Media)\n<br><br>\n<i>Notes: <br>\n- Winner of the 61st Shogakukan Manga Award in the Shounen Category in 2017.<br>\n- Includes two extra chapters.</i>"
+  },
+  {
+    "id": 85737,
+    "title": {
+      "romaji": "Re:Zero kara Hajimeru Isekai Seikatsu",
+      "english": "Re:ZERO -Starting Life in Another World-",
+      "native": "Re:ゼロから始める異世界生活"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Mystery",
+      "Psychological",
+      "Romance",
+      "Thriller"
+    ],
+    "averageScore": 88,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx85737-WkWOr5EgwPyo.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx85737-WkWOr5EgwPyo.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story ",
+          "node": {
+            "name": {
+              "full": "Tappei Nagatsuki"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Shinichirou Ootsuka"
+            }
+          }
+        },
+        {
+          "role": "Translator (English: vol 1)",
+          "node": {
+            "name": {
+              "full": "ZephyrRz"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Subaru Natsuki was just trying to get to the convenience store but wound up summoned to another world. He encounters the usual things--life-threatening situations, silver haired beauties, cat fairies--you know, normal stuff. All that would be bad enough, but he's also gained the most inconvenient magical ability of all--time travel, but he's got to die to use it. How do you repay someone who saved your life when all you can do is die?<br>\n<br>\n(Source: Yen Press)"
+  },
+  {
+    "id": 98610,
+    "title": {
+      "romaji": "86: Eighty Six",
+      "english": "86―EIGHTY-SIX",
+      "native": "86―エイティシックス―"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Drama",
+      "Mecha",
+      "Romance",
+      "Sci-Fi"
+    ],
+    "averageScore": 88,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx98610-TIf7R1gkU0vc.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx98610-TIf7R1gkU0vc.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Shirabi"
+            }
+          }
+        },
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Asato Asato"
+            }
+          }
+        },
+        {
+          "role": "Translator (French)",
+          "node": {
+            "name": {
+              "full": "Yukio Reuter"
+            }
+          }
+        }
+      ]
+    },
+    "description": "A War Without Casualties:\n<br><br>\nThe Republic of San Magnolia has long been under attack from the neighboring Giadian Empire's army of unmanned drones known as the Legion. After years of painstaking research, the Republic finally developed autonomous drones of their own, turning the one-sided struggle into a war without casualties-or at least, that's what the government claims.<br><br>\nIn truth, there is no such thing as a bloodless war. Beyond the fortified walls protecting the eighty-five Republic territories lies the \"nonexistent\" Eighty-Sixth Sector. The young men and women of this forsaken land are branded the Eighty-Six and, stripped of their humanity, pilot the \"unmanned\" weapons into battle...\n<br><br>\n(Source: Yen Press)"
+  },
+  {
+    "id": 187189,
+    "title": {
+      "romaji": "Eommareul Mannareo Ganeun Gil",
+      "english": "On the Way to Meet Mom",
+      "native": "엄마를 만나러 가는 길"
+    },
+    "countryOfOrigin": "KR",
+    "genres": [
+      "Adventure",
+      "Fantasy"
+    ],
+    "averageScore": 88,
+    "chapters": 53,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx187189-B5zA4zPh3UJA.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx187189-B5zA4zPh3UJA.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Gomyang"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "AHN2EE"
+            }
+          }
+        }
+      ]
+    },
+    "description": "One day, after being discovered in an abandoned house by a rescue team, Mori suddenly finds himself in a children's protection center. Here, he begins to learn a new way of life – one that includes grand care packages sent by a mysterious patron. But when his closest friend is reunited with her mother and leaves the center, Mori learns for the first time the existence of a mother for every child, and decides to embark on a journey to find his own. But what sort of obstacles wait along the way?<br><br>(Source: WEBTOON)<br><br><i>Note: Includes 22 extra chapters.</i>"
+  },
+  {
+    "id": 135129,
+    "title": {
+      "romaji": "Vagabond: Saigo no Manga-ten",
+      "english": null,
+      "native": "バガボンド 最後のマンガ展"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Drama",
+      "Psychological"
+    ],
+    "averageScore": 88,
+    "chapters": 2,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/b135129-rbQyUsPfUZTj.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/b135129-rbQyUsPfUZTj.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Takehiko Inoue"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Telling the later life of Vagabond's Musashi Miyamoto, it was depicted through 140 hand-drawn drawings with ink and brush. It was released at the Ueno Royal Museum in Tokyo in May 2008, and since then it has been displayed at three other venues, Kumamoto City Museum, Suntory Museum in Osaka, and Sendai Mediatheque, with new paintings and productions.\n<br><br>\n<i>Note: The comic was compiled in two books: \"Inoueno: Mikazuki-hen\" (いのうえの 三日月篇) and \"Inoueno: Mangetsu-hen\" (いのうえの 満月篇).</i>"
+  },
+  {
+    "id": 98361,
+    "title": {
+      "romaji": "Mikkakan no Koufuku",
+      "english": "Three Days of Happiness",
+      "native": "三日間の幸福"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Romance",
+      "Slice of Life",
+      "Supernatural"
+    ],
+    "averageScore": 88,
+    "chapters": 15,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx98361-Zn6ICdUCq7pf.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx98361-Zn6ICdUCq7pf.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Sugaru Miaki"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "E9L"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Stephen Paul"
+            }
+          }
+        }
+      ]
+    },
+    "description": "HOW MUCH IS LIFE TRULY WORTH?<br>\nKusunoki used to believe he was destined for great things. Ostracized as a child, he held on to a belief that a good life was waiting for him in the years ahead. Now approaching the age of twenty, he's a completely mediocre college student with no motivation, no dreams, and no money. After learning he can sell his remaining years-and just how little they're worth-he chooses to divest himself of all but his last three months. Has Kusunoki truly destroyed his last chance to find happiness...or has he somehow found it?<br>\n<br>(Source: Yen Press)\n"
+  },
+  {
+    "id": 143841,
+    "title": {
+      "romaji": "Hitokui Magical: Satsuriku Kijutsu no Niounomiya Kyoudai",
+      "english": null,
+      "native": "ヒトクイマジカル　殺戮奇術の匂宮兄妹"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Thriller"
+    ],
+    "averageScore": 88,
+    "chapters": 12,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx143841-OLEw4QhUhSx9.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx143841-OLEw4QhUhSx9.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "NISIOISIN"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Take"
+            }
+          }
+        }
+      ]
+    },
+    "description": "The No. 1 Killing Name, \"Niounomiya\", has finally arrived!\n<br><br>\n\".....Specifically, what are you researching, Assistant Professor\nKigamine?\"<br>\n\"——Researching not dying.\"\n<br>\nInvited to monitor the bizarre research on Kuchiha Madoka—a girl who lives eternal—Ii, the Nonsense User, visits the ruins of a clinic in northern Kyoto with antique apartment dwellers Ichihime Yukariki and Kasuga Kasugai.\n<br>\nHowever, what awaits them there is a terrible \"fate\" itself!\n<br>\nThe Niounomiya siblings, the number one killers in the world, make their debut in this exciting new coming-of-age story.\n<br><br>\n(Source: Kodansha, translated)<br><br>\n<i>Note: Includes two extra chapters.</i>"
+  },
+  {
+    "id": 30028,
+    "title": {
+      "romaji": "NANA",
+      "english": "Nana",
+      "native": "NANA"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Music",
+      "Romance",
+      "Slice of Life"
+    ],
+    "averageScore": 88,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30028-VJqBC1ar6AxE.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30028-VJqBC1ar6AxE.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Ai Yazawa"
+            }
+          }
+        },
+        {
+          "role": "Translator (English: vols 4-21)",
+          "node": {
+            "name": {
+              "full": "Tomo Kimura"
+            }
+          }
+        },
+        {
+          "role": "Touch-up Art & Lettering (English)",
+          "node": {
+            "name": {
+              "full": "Sabrina Heep"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Nana Komatsu is a young woman who's endured an unending string of boyfriend problems. Moving to Tokyo, she's hoping to take control of her life and put all those messy misadventures behind her. She's looking for love and she's hoping to find it in the big city.<br><br>\nNana Osaki, on the other hand, is cool, confident and focused. She swaggers into town and proceeds to kick down the doors to Tokyo's underground punk scene. She's got a dream and won't give up until she becomes Japan's No. 1 rock'n'roll superstar.<br><br>\nThis is the story of two 20-year-old women who share the same name. Even though they come from completely different backgrounds, they somehow meet and become best friends. The world of Nana is a world exploding with sex, music, fashion, gossip and all-night parties.<br><br>\n(Source: VIZ Media)\n<br><br>\n<i>Note: Winner of the 48th Shogakukan Manga Award in the Shoujo Category in 2002.</i>"
+  },
+  {
+    "id": 143838,
+    "title": {
+      "romaji": "Kubishime Romanticist: Ningen Shikkaku - Zerozaki Hitoshiki",
+      "english": "Strangulation: Kubishime Romanticist",
+      "native": "クビシメロマンチスト　人間失格・零崎人識"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Mystery",
+      "Psychological"
+    ],
+    "averageScore": 88,
+    "chapters": 9,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx143838-YRBXKwL0wrnd.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx143838-YRBXKwL0wrnd.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "NISIOISIN"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Take"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Now that he’s a cool college student, our anti-hero Iichan thinks his crime-solving days are behind him. Cynical, sarcastic and minimally engaged in his studies, Iichan is much more interested in his own feelings of disaffection and isolation. But despite his resolve to remain aloof, he’s pulled into the narrative when he encounters and bonds with a serial killer named Hitoshi Zerozaki – a homicidal maniac with the soul of an artist whose talent is on display at the grisly scenes of his crimes.\n<br><br>\n(Source: Kodansha USA)"
+  },
+  {
+    "id": 30026,
+    "title": {
+      "romaji": "HUNTER×HUNTER",
+      "english": "Hunter x Hunter",
+      "native": "HUNTER×HUNTER"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "averageScore": 88,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30026-uCvXMudMzmwI.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30026-uCvXMudMzmwI.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Yoshihiro Togashi"
+            }
+          }
+        },
+        {
+          "role": "Assistant (Screentone: Vol 1)",
+          "node": {
+            "name": {
+              "full": "Naoko Takeuchi"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Katsunori Matsui"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Gon might be a country boy, but he has high aspirations. Despite his Aunt Mito's protests, Gon decides to follow in his father's footsteps and become a legendary Hunter. The Hunter hopefuls begin their journey by storm-tossed ship, where Gon meets Leorio and Kurapika, the only other applicants who aren't devastated by bouts of seasickness.\n<br><br>\nHaving survived the terrors of the high seas, Gon and his companions now have to prove their worth in a variety of tests in order to find the elusive Exam Hall. And once they get there, will they ever leave alive...?<br><br>\n(Source: VIZ Media)"
+  },
+  {
+    "id": 75143,
+    "title": {
+      "romaji": "Kono Oto Tomare!",
+      "english": null,
+      "native": "この音とまれ！"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Music",
+      "Romance"
+    ],
+    "averageScore": 88,
+    "chapters": 158,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx75143-qPFON51fyZpt.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx75143-qPFON51fyZpt.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Amyuu Sakura"
+            }
+          }
+        },
+        {
+          "role": "Translator (French)",
+          "node": {
+            "name": {
+              "full": "Aline Kukor"
+            }
+          }
+        },
+        {
+          "role": "Lettering (French)",
+          "node": {
+            "name": {
+              "full": "Tom Bertrand"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Since the graduation of the senior members of the club, Takezou ends up being the sole member of the \"Koto\" (traditional Japanese string instrument) club. Now that the new school year has begun, Takezou will have to seek out new members into the club, or the club will become terminated. Out of nowhere, a new member barges into the near-abandoned club room, demanding to join the club. How will Takezou be able to keep his club alive and deal with this rascal of a new member?"
+  },
+  {
+    "id": 92936,
+    "title": {
+      "romaji": "Umineko no Naku Koro ni Chiru Episode 5: End of the Golden Witch",
+      "english": null,
+      "native": "うみねこのなく頃に 散 - Episode 5: End of the Golden Witch"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Horror",
+      "Mystery"
+    ],
+    "averageScore": 88,
+    "chapters": null,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx92936-Nhy7avArnylj.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx92936-Nhy7avArnylj.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Ryukishi07"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Tomohi"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Lambdadelta takes over as Game Master following Beatrice's defeat at the end of the previous arc while Bernkastel takes primary control of the human side in the game. Battler meanwhile tries to understand the truth behind Beato's games and comes into conflict with Erika Furudo, a detective character created by Bern who approaches the island murders from a \"mystery\" perspective, in contrast to Battler's \"anti-fantasy\" stance. The chapter also has a focus on Natsuhi, who receives threatening phone calls from a \"Man from 19 Years Ago\". \n"
+  },
+  {
+    "id": 146747,
+    "title": {
+      "romaji": "Umineko no Naku Koro ni Chiru Episode 7: Requiem of the Golden Witch",
+      "english": null,
+      "native": "うみねこのなく頃に散 - Episode 7: Requiem of the Golden Witch"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Supernatural",
+      "Thriller"
+    ],
+    "averageScore": 88,
+    "chapters": null,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx146747-nx7R6SqfoZLi.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx146747-nx7R6SqfoZLi.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Ryukishi07"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Tomohi"
+            }
+          }
+        }
+      ]
+    },
+    "description": "This episode presents an alternate reality where Battler does not come to Rokkenjima, the Golden Witch does not exist, and a mysterious child named Lion is now the designated successor to the Ushiromiya family. The detective Willard H. Wright is tasked by Bernkastel to investigate this strange world and uncover the truth behind Beatrice. The chapter delves into the past experiences of several characters, including Kinzo and the person who would become Beatrice."
+  },
+  {
+    "id": 86082,
+    "title": {
+      "romaji": "Dungeon Meshi",
+      "english": "Delicious in Dungeon",
+      "native": "ダンジョン飯"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Fantasy"
+    ],
+    "averageScore": 88,
+    "chapters": 111,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86082-MXizJxzbijdd.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx86082-MXizJxzbijdd.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Ryouko Kui"
+            }
+          }
+        },
+        {
+          "role": "Translator (Spanish)",
+          "node": {
+            "name": {
+              "full": "Marc Bernabé"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Taylor Engel"
+            }
+          }
+        }
+      ]
+    },
+    "description": "When young adventurer Laios and his company are attacked and soundly thrashed by a dragon deep in a dungeon, the party loses all its money and provisions...and a member! They're eager to go back and save her, but there is just one problem: If they set out with no food or coin to speak of, they're sure to starve on the way! But Laios comes up with a brilliant idea: \"Let's eat the monsters!\" Slimes, basilisks, and even dragons...none are safe from the appetites of these dungeon-crawling gourmands!\n<br><br>\n(Source: Yen Press)\n<br><br>\n<i>Notes:<br>\n- Nominated in the 9th, 10th, 11th, and 12th Manga Taishou Award in 2016-2019.<br>\n- Ranked first in the 2016 Kono Manga ga Sugoi! (Male Readers Division).<br>\n- Includes 14 extra chapters.</i>"
+  },
+  {
+    "id": 99026,
+    "title": {
+      "romaji": "Kusuriya no Hitorigoto",
+      "english": "The Apothecary Diaries",
+      "native": "薬屋のひとりごと"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Mystery"
+    ],
+    "averageScore": 88,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx99026-5Eg650WAd9Rj.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx99026-5Eg650WAd9Rj.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Natsu Hyuuga"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Touko Shino"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Kevin Steinbach"
+            }
+          }
+        }
+      ]
+    },
+    "description": "In the East is a land ruled by an emperor, whose consorts and serving women live in a sprawling complex known as the hougong, the rear palace. Maomao, an unassuming girl raised in an unassuming town by her apothecary father, never imagined the rear palace would have anything to do with her—until she was kidnapped and sold into service there.<br>\nThough she looks ordinary, Maomao has a quick wit, a sharp mind, and an extensive knowledge of medicine. That's her secret, until she encounters a resident of the palace at least as perceptive as she is: the head eunuch, Jinshi. He sees through Maomao's façade and makes her a lady-in-waiting to none other than the Emperor's favorite consort... so she can taste the lady's food for poison!\n<br><br>\n(Source: J-Novel Club)"
+  },
+  {
+    "id": 30003,
+    "title": {
+      "romaji": "20 Seiki Shounen",
+      "english": "20th Century Boys",
+      "native": "20世紀少年"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "averageScore": 88,
+    "chapters": 249,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30003-E84fwIh22LAQ.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30003-E84fwIh22LAQ.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Naoki Urasawa"
+            }
+          }
+        },
+        {
+          "role": "Translator (Spanish)",
+          "node": {
+            "name": {
+              "full": "Marc Bernabé"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Akemi Wegmüller"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Humanity, having faced extinction at the end of the 20th century, would not have entered the new millennium if it weren't for them. In 1969, during their youth, they created a symbol. In 1997, as the coming disaster slowly starts to unfold, that symbol returns. This is the story of a group of boys who try to save the world.<br><br>\nFor Kenji, a simple convenience store manager who once dreamed of becoming a rock 'n' roll musician, a host of memories from his past come rushing back when one of his childhood friends mysteriously commits suicide. Could this new death be related to the rise of a bizarre new cult that's been implicated in several other murders and disappearances? Determined to dig deeper, Kenji reunites with some of his old buddies in the hope of learning the truth behind it all.\n<br><br>\n(Source: VIZ Media)"
+  },
+  {
+    "id": 34632,
+    "title": {
+      "romaji": "Oyasumi Punpun",
+      "english": "Goodnight Punpun",
+      "native": "おやすみプンプン"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Slice of Life"
+    ],
+    "averageScore": 88,
+    "chapters": 147,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx34632-5xMDkx3pXsEh.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx34632-5xMDkx3pXsEh.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Inio Asano"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Hiro Kashiwaba"
+            }
+          }
+        },
+        {
+          "role": "Translator (Spanish)",
+          "node": {
+            "name": {
+              "full": "Marc Bernabé"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Meet Punpun Punyama. He’s an average kid in an average town.<br>\nHe wants to win a Nobel Prize and save the world.<br>\nHe wants the girl he has a crush on to like him back.<br>\nHe wants to find some porn.<br>\nThat’s what he wants, but what does he get…?\n<br><br>\n(Source: VIZ Media)"
+  },
+  {
+    "id": 118371,
+    "title": {
+      "romaji": "Medalist",
+      "english": "Medalist",
+      "native": "メダリスト"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Sports"
+    ],
+    "averageScore": 88,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118371-3xk9VUbWnnRR.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx118371-3xk9VUbWnnRR.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Ikada Tsuruma"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Nori Arashiyama"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Hiro Nagimatsu"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Inori is a little girl who dreams of becoming a figure skater. Yet, the obstacles to this dream feel insurmountable: Inori’s already “too old” (she’s 11); she’s always had trouble at school; and, worst of all, her older sister’s skating dreams ended in failure, so her mother is dead set against putting her other daughter through a similar experience. Still, the rink is the only place Inori can be herself, and she’s out on the ice when a fateful meeting takes place. Tsukasa, a frustrated coach on the edge of giving up competitive skating himself, will join Inori to form an unstoppable duo powered by hard work, transcendent joy, and an unshakeable belief that they can prove everyone wrong. \n<br><br>\n(Source: Kodansha USA)\n<br><br>\n<i>Notes:<br>\n- Winner of the 8th Next Manga Award in the Print Manga Category in 2022.<br>\n- Winner of the 68th Shogakukan Manga Award in the General Category in 2022.</i>"
+  },
+  {
+    "id": 44893,
+    "title": {
+      "romaji": "Bakemonogatari",
+      "english": "Bakemonogatari: Monster Tale",
+      "native": "化物語"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Mystery",
+      "Romance",
+      "Supernatural"
+    ],
+    "averageScore": 88,
+    "chapters": 41,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx44893-aV0XRP0OfWf7.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx44893-aV0XRP0OfWf7.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "NISIOISIN"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "VOFAN"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Ko Ransom"
+            }
+          }
+        }
+      ]
+    },
+    "description": "The first part of the Monogatari Series.\n<br><br>\nThere’s a girl at their school who is always ill. She routinely arrives late, leaves early, or doesn’t show up at all, and skips gym as a matter of course. She’s pretty, and the boys take to whispering that she’s a cloistered princess. As the self-described worst loser in her class soon finds out, they just don’t know what a monster she is. So begins a tale of mysterious maladies that are supernatural in origin yet deeply revealing of the human psyche, a set of case files as given to unexpected feeling as it is to irreverent humour.\n<br><br>\n(Source: Kodansha USA)\n<br><br>\n<i>Note: The English release and the JP ebook edition have Bakemonogatari split across three volumes, instead of the original two volumes.</i>"
+  },
+  {
+    "id": 126986,
+    "title": {
+      "romaji": "Jibi Eopseo",
+      "english": null,
+      "native": "집이 없어"
+    },
+    "countryOfOrigin": "KR",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Slice of Life",
+      "Supernatural"
+    ],
+    "averageScore": 88,
+    "chapters": 269,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx126986-hIK16AdoJhNo.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx126986-hIK16AdoJhNo.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Wanan"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Hae-Jun Go, who ran from home, and Eun-Yeong Baek, the problem child who lives in a tent. These two, who met under terrible circumstances, are forced to live together in an abandoned dormitory. This is a story of difficult growth between two people who hate both the dorm and each other.\n<br><br>\n(Source: Naver, translated)"
+  },
+  {
+    "id": 30007,
+    "title": {
+      "romaji": "Hajime no Ippo",
+      "english": "Hajime no Ippo: Fighting Spirit!",
+      "native": "はじめの一歩"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Sports"
+    ],
+    "averageScore": 87,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx30007-jVUNk721L0Uz.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx30007-jVUNk721L0Uz.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Kentarou Miura"
+            }
+          }
+        },
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "George Morikawa"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Yuuji Ninomiya"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Makunouchi Ippo has been bullied his entire life. Constantly running errands and being beaten up by his classmates, Ippo has always dreamed of changing himself, but never has the passion to act upon it. One day, in the midst of yet another bullying, Ippo is saved by Takamura Mamoru, who happens to be a boxer. Ippo faints from his injuries and is brought to Takamura boxing gym to recover. As he regains consciousness, he is awed and amazed at his new surroundings in the gym, though lacks confidence to attempt anything. Takamura places a photo of Ippo&rsquo;s classmate on a punching bag and forces him to punch it. It is only then that Ippo feels something stir inside him and eventually asks Takamura to train him in boxing. Thinking that Ippo does not have what it takes, Takamura gives him a task deemed impossible and gives him a one week time limit. With a sudden desire to get stronger, for himself and his hard working mother, Ippo trains relentlessly to accomplish the task within the time limit. Thus Ippo&rsquo;s journey to the top of the boxing world begins.<br><br>\n(Source: MAL Rewrite)"
+  },
+  {
+    "id": 31224,
+    "title": {
+      "romaji": "3-gatsu no Lion",
+      "english": "March Comes in Like a Lion",
+      "native": "3月のライオン"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Slice of Life"
+    ],
+    "averageScore": 87,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31224-dxugU08jahRT.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx31224-dxugU08jahRT.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Chica Umino"
+            }
+          }
+        },
+        {
+          "role": "Editing",
+          "node": {
+            "name": {
+              "full": "Ryou Tomoda"
+            }
+          }
+        },
+        {
+          "role": "Translator (Brazilian Portuguese)",
+          "node": {
+            "name": {
+              "full": "Caio Suzuki"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Rei Kiriyama is a child prodigy. Rei Kiriyama is also an orphan who lives alone in an empty apartment. Rei Kiriyama is a teen working in an adult's world. Life is complicated for Rei. He's an up-and-coming shogi player on the verge of turning pro, but he has no homelife, or much of a life period, outside his board game, but thankfully with the help of some life-long friends he has an opportunity start all over again.\n<br><br>\n(Source: DENPA)\n<br><br>\n<i>Notes:<br>\n- Winner of the Grand Prize at the 4th Manga Taishou Award in 2011.<br>\n- Winner of the 35th Kodansha Manga Award in 2011.<br>\n- Winner of the Grand Prize at the Tezuka Osamu Cultural Prize in 2014.<br>\n- Winner of the Grand Prize at the Japan Media Arts Festival in 2021.</i>"
+  },
+  {
+    "id": 106331,
+    "title": {
+      "romaji": "Ikoku Nikki",
+      "english": "Ikoku Nikki: Diary of a Strange Land",
+      "native": "違国日記"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Slice of Life"
+    ],
+    "averageScore": 87,
+    "chapters": 59,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx106331-2AfUs43WcoCA.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx106331-2AfUs43WcoCA.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Tomoko Yamashita"
+            }
+          }
+        },
+        {
+          "role": "Translator (French)",
+          "node": {
+            "name": {
+              "full": "Pascale Simon"
+            }
+          }
+        },
+        {
+          "role": "Touch-up Art (French)",
+          "node": {
+            "name": {
+              "full": "Éric Montésinos"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Reclusive novelist Makio Koudai has built a life entirely on her own terms—she's sharp-tongued, set in her ways, and far more at ease with the people she invents than the family she keeps at a distance.\n<br><br>\nBut everything changes when her older sister dies unexpectedly, leaving behind a now-orphaned daughter, fifteen-year-old Asa. Every door in the family quietly closes but one… Makio's. There starts the unsure journey of a prickly aunt and a grieving niece, figuring each other out one awkward day at a time.\n<br><br>\nCan two people who never expected to need each other make room for a life neither of them planned?\n<br><br>\n(Source: Inklore)\n<br><br>\n<i>Note: Includes five extra chapters.</i>"
+  },
+  {
+    "id": 110801,
+    "title": {
+      "romaji": "Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen Dai 3-bu - Ryoushu no Youjo",
+      "english": "Ascendance of a Bookworm: Part 3",
+      "native": "本好きの下剋上~司書になるためには手段を選んでいられません~第三部「領主の養女」"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Fantasy",
+      "Slice of Life"
+    ],
+    "averageScore": 87,
+    "chapters": 117,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx110801-P0va1ehMlNcL.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx110801-P0va1ehMlNcL.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "You Shiina"
+            }
+          }
+        },
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Miya Kazuki"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Quof"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Part 3 of <i>Honzuki no Gekokujou</i>.\n<br><br>\nFollowing a disastrous encounter with a noble, Myne finally resolves to say goodbye to her family and friends in the lower city, changing her name to “Rozemyne” and beginning her new life as the adopted daughter of Ehrenfest’s archduke. However, her days as an archnoble in noble society are brutal, as she is put through rigorous etiquette and magic training on top of her duties as High Bishop and forewoman. It all proves too much for a weak little seven-year-old girl... Or it would have, had the High Priest not offered her the keys to the temple’s book room as a reward. If she could get her hands on those, she’d be able to read all sorts of precious books! Her name may have changed, but Rozemyne’s passion for books remains the same as she charges into a whole new world! The detailed setting expands as the printing industry grows in size. Here begins Part 3 of this biblio-fantasy for book lovers everywhere!\n<br><br>\n(Source: J-Novel Club)\n<br><br>\n<i>Note: This entry covers 105 chapters of the webnovel (chapter 173 - 277).</i>"
+  },
+  {
+    "id": 86635,
+    "title": {
+      "romaji": "Kaguya-sama wa Kokurasetai: Tensaitachi no Renai Zunousen",
+      "english": "Kaguya-sama: Love is War",
+      "native": "かぐや様は告らせたい～天才たちの恋愛頭脳戦～"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Psychological",
+      "Romance",
+      "Slice of Life"
+    ],
+    "averageScore": 87,
+    "chapters": 281,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86635-EdaLQmsn86Fy.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx86635-EdaLQmsn86Fy.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Aka Akasaka"
+            }
+          }
+        },
+        {
+          "role": "Translator (English: vols 6-)",
+          "node": {
+            "name": {
+              "full": "Tomo Kimura"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Emi Louie-Nishikawa"
+            }
+          }
+        }
+      ]
+    },
+    "description": "As leaders of their prestigious academy’s student council, Kaguya and Miyuki are the elite of the elite! But it’s lonely at the top… Luckily for them, they’ve fallen in love! There’s just one problem—they both have too much pride to admit it. And so begins the daily scheming to get the object of their affection to confess their romantic feelings first… Love is a war you win by losing.\n<br><br>\n(Source: VIZ Media)\n<br><br>\n<i>Notes: <br>\n- The first 10 chapters were published in Monthly Miracle Jump. It switched to Weekly Young Jump starting with Ch. 11, with the chapter count being reset. This entry still includes the first 10 chapters from Miracle Jump.<br>\n- Winner of the 65th Shogakukan Manga Award for \"Best General Manga\" category in 2019.</i>"
+  },
+  {
+    "id": 159977,
+    "title": {
+      "romaji": "Shuuniichido Classmate wo Kau Hanashi: Futari no Jikan, Iiwake no Gosen Yen",
+      "english": "Buying a Classmate Once a Week",
+      "native": "週に一度クラスメイトを買う話 ～ふたりの時間、言い訳の五千円～"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Ecchi",
+      "Psychological",
+      "Romance"
+    ],
+    "averageScore": 87,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx159977-Qo5yuSlsQ4ey.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx159977-Qo5yuSlsQ4ey.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "U35"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Jennifer Ward"
+            }
+          }
+        },
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Usa Haneda"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Once a week, high schooler Shiori Miyagi pays her classmate Hazuki Sendai five thousand yen for the right to make the girl follow her orders for the afternoon. Their sessions start with normal activities like snacking and chatting…until a mood strikes Miyagi, and she gives Sendai commands that veer into risky territory. No matter the order, Sendai follows, even if it means licking Miyagi’s feet. Yet after half a year of engaging in this secret dynamic, neither girl calls the other a friend. So what does that make them? And with their last year of high school looming, is their relationship doomed to crumble?\n<br><br>\n(Source: Yen Press)"
+  },
+  {
+    "id": 37375,
+    "title": {
+      "romaji": "Kokou no Hito",
+      "english": "The Climber",
+      "native": "孤高の人"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Psychological",
+      "Sports"
+    ],
+    "averageScore": 87,
+    "chapters": 170,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx37375-wkgev4kXhamw.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx37375-wkgev4kXhamw.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Shinichi Sakamoto"
+            }
+          }
+        },
+        {
+          "role": "Story (vols 3, 4)",
+          "node": {
+            "name": {
+              "full": "Hiroshi Takano"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Shinya Komi"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Transfer student Buntaro Mori starts his first day at his new school already on the administration’s radar. He’s withdrawn and sullen, and the teachers are just waiting for him to explode. When his annoying classmate Miyamoto promises to leave him alone forever if he climbs to the top of the school, Mori eagerly takes up the challenge and shocks everyone when he makes it all the way to the roof. Flushed with the victory of his first successful climb, Mori can’t resist the lure of the local peak, despite warnings from more experienced climbers about the risks of climbing alone. But Mori doesn’t care. A little danger is nothing in the face of his new obsession.\n<BR><BR>\n(Source: VIZ Media)\n"
+  },
+  {
+    "id": 51525,
+    "title": {
+      "romaji": "Akatsuki no Yona",
+      "english": "Yona of the Dawn",
+      "native": "暁のヨナ"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Romance"
+    ],
+    "averageScore": 87,
+    "chapters": 295,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx51525-wZ1AjkbXrKns.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx51525-wZ1AjkbXrKns.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Mizuho Kusanagi"
+            }
+          }
+        },
+        {
+          "role": "Touch-up Art & Lettering (English)",
+          "node": {
+            "name": {
+              "full": "Lys Blakeslee"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "JN Productions"
+            }
+          }
+        }
+      ]
+    },
+    "description": "A red-haired princess loses her family and her kingdom—now she must rise and fight for her throne!\n<br><br>\nPrincess Yona lives an ideal life as the only princess of her kingdom. Doted on by her father, the king, and protected by her faithful guard Hak, she cherishes the time spent with the man she loves, Su-won. But everything changes on her 16th birthday when tragedy strikes her family!\n<br><br>\nYona reels from the shock of witnessing a loved one's murder and having to fight for her life. With Hak's help, she flees the palace and struggles to survive while evading her enemy's forces. But where will this displaced princess go when all the paths before her are uncertain?\n<br><br>\n(Source: VIZ Media)\n<br><br>\n<i>Note: Includes 19 extra chapters.</i>"
+  },
+  {
+    "id": 98263,
+    "title": {
+      "romaji": "Tongari Boushi no Atelier",
+      "english": "Witch Hat Atelier",
+      "native": "とんがり帽子のアトリエ"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "averageScore": 87,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx98263-kIeaTXrAbGkj.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx98263-kIeaTXrAbGkj.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Kamome Shirahama"
+            }
+          }
+        },
+        {
+          "role": "Translator (French)",
+          "node": {
+            "name": {
+              "full": "Fédoua Lamodière"
+            }
+          }
+        },
+        {
+          "role": "Lettering (English)",
+          "node": {
+            "name": {
+              "full": "Lys Blakeslee"
+            }
+          }
+        }
+      ]
+    },
+    "description": "In a world where everyone takes wonders like magic spells and dragons for granted, Coco is a girl with a simple dream: she wants to be a witch. But everybody knows magicians are born, not made, and Coco was not born with a gift for magic. Resigned to her un-magical life, Coco is about to give up on her dream to become a witch … until the day she meets Qifrey, a mysterious, traveling magician. After secretly seeing Qifrey perform magic in a way she’s never seen before, Coco soon learns what everybody “knows” might not be the truth, and discovers that her magical dream may not be as far away as it may seem...\n<br><br>\n(Source: Kodansha USA)\n<br>\n<br>\n<i>Notes:<br>\n- Nominated for the 11th Manga Taishou Award in 2018.<br>\n- Won the Daruma d'Or at Japan Expo in 2019.<br>\n- Won Best U.S. Edition of International Material - Asia at the Eisner Awards in 2020.<br>\n- Won the Best Manga Award at the Harvey Awards in 2020.</i>"
+  },
+  {
+    "id": 53900,
+    "title": {
+      "romaji": "Umineko no Naku Koro ni Chiru Episode 7: Requiem of the Golden Witch",
+      "english": "Umineko When They Cry Episode 7: Requiem of the Golden Witch",
+      "native": "うみねこのなく頃に散 - Episode 7: Requiem of the Golden Witch"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Supernatural",
+      "Thriller"
+    ],
+    "averageScore": 87,
+    "chapters": 48,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx53900-aDalkx2qmugI.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx53900-aDalkx2qmugI.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Art",
+          "node": {
+            "name": {
+              "full": "Eita Mizuno"
+            }
+          }
+        },
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Ryukishi07"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Stephen Paul"
+            }
+          }
+        }
+      ]
+    },
+    "description": "The time for logical debate and magical feints has come to an end; the revelation of the truth about Beatrice the Golden Witch is at hand. To facilitate this, game master Bernkastel has chosen Will Wright the Mage-Hunter to step onto her board and answer a single question: Who killed Beatrice? Joining him in the game is Lion Ushiromiya, Krauss's firstborn and heir, whose role is a mystery in its own right. Will's line of questioning draws together the stray strands from all the previous games, twisting them into a thread of truth, revisiting Kinzou's first encounter with the young Beatrice and working through the legends that have since sprung up around her...<br><br>(Source: Yen Press)"
+  },
+  {
+    "id": 112275,
+    "title": {
+      "romaji": "Tian Guan Ci Fu",
+      "english": "Heaven Official's Blessing",
+      "native": "天官赐福"
+    },
+    "countryOfOrigin": "CN",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Romance"
+    ],
+    "averageScore": 87,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx112275-fh0u5cH2qB5b.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx112275-fh0u5cH2qB5b.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Mo Xiang Tong Xiu"
+            }
+          }
+        },
+        {
+          "role": "Art",
+          "node": {
+            "name": {
+              "full": "STARember"
+            }
+          }
+        },
+        {
+          "role": "Art",
+          "node": {
+            "name": {
+              "full": "Bai Meng She"
+            }
+          }
+        }
+      ]
+    },
+    "description": "800 years ago, Xie Lian was a pure-blooded and noble Crown Prince, a well-regarded child of Heaven with unlimited potential. But who knew that, after he ascended and became a god with tens of thousands of worshippers, his fate would take such a sharp downhill turn? He was demoted again and again, and fell to rock bottom. 800 years later, Xie Lian ascended again, but this time, without worshippers or and without incense. One day, after returning from collecting scraps, he took a mysterious young man home. And this young man was the Ghost King that made others pale in fear whenever discussed—Hua Cheng.\n<br><br>\n(Source: Bilibili Comics)\n"
+  },
+  {
+    "id": 85135,
+    "title": {
+      "romaji": "Koe no Katachi",
+      "english": "A Silent Voice",
+      "native": "聲の形"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Slice of Life"
+    ],
+    "averageScore": 87,
+    "chapters": 64,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx85135-11OOnyaqV71k.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx85135-11OOnyaqV71k.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Yoshitoki Ooima"
+            }
+          }
+        },
+        {
+          "role": "Editing (English)",
+          "node": {
+            "name": {
+              "full": "Ben Applegate"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Steven LeCroy"
+            }
+          }
+        }
+      ]
+    },
+    "description": "<i>Based on a one-shot that won the 80th Weekly Shounen Magazine Newbie Best Mangaka Award.</i><br><br>\nShouya is a bully. When Shouko, a girl who can't hear, enters his elementary school class, she becomes their favorite target, and Shouya and his friends goad each other into devising new tortures for her. But the children's cruelty goes too far. Shouko is forced to leave the school, and Shouya ends up shouldering all the blame. Six years later, the two meet again. Can Shouya make up for his past mistakes, or is it too late?<br><br>\n(Source: Kodansha USA)<br><br>\n<i>Note: Includes two extra chapters.</i>"
+  },
+  {
+    "id": 116170,
+    "title": {
+      "romaji": "Veil",
+      "english": "Veil",
+      "native": "Veil"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Romance",
+      "Slice of Life"
+    ],
+    "averageScore": 87,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx116170-Q9f5Wk6cod5E.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx116170-Q9f5Wk6cod5E.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Ikumi Fukuda"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Jocelyne Allen"
+            }
+          }
+        },
+        {
+          "role": "Translator (German)",
+          "node": {
+            "name": {
+              "full": "Miyuki Tsuji"
+            }
+          }
+        }
+      ]
+    },
+    "description": "A chance encounter. A handsome soldier. A beautiful woman. A tentative love affair smolders on the snowy cobblestone streets, out of sight of those that might keep them apart.\n<br><br>\n<i>Veil</i> is a beautifully illustrated full-color romance manga, told in stylish short vignettes, beautiful illustrations, and secret moments.\n<br><br>\n(Source: Udon Entertainment, edited)"
+  },
+  {
+    "id": 143763,
+    "title": {
+      "romaji": "Nademonogatari",
+      "english": null,
+      "native": "撫物語"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Mystery",
+      "Supernatural"
+    ],
+    "averageScore": 87,
+    "chapters": 31,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx143763-irFbWNzeLCGA.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx143763-irFbWNzeLCGA.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "NISIOISIN"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "VOFAN"
+            }
+          }
+        }
+      ]
+    },
+    "description": "The girl who was once a god, Nadeko Sengoku. She, who followed her dreams and was forced into reality, is successful in creating alter egos by borrowing the power of the little girl shikigami, Yotsugi Ononoki.\n<br>\nHowever, the four \"Nadekos\" run away, scattering……?\n<br>\nThe Oddities! Oddities! Oddities! of these modern days.\n<br>\nYouth is being unable to control even oneself.\n<br><br>\n(Source: Kodansha, translated)"
+  },
+  {
+    "id": 118586,
+    "title": {
+      "romaji": "Sousou no Frieren",
+      "english": "Frieren: Beyond Journey’s End",
+      "native": "葬送のフリーレン"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "averageScore": 87,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118586-CXKgWikBFQgS.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx118586-CXKgWikBFQgS.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Kanehito Yamada"
+            }
+          }
+        },
+        {
+          "role": "Art",
+          "node": {
+            "name": {
+              "full": "Tsukasa Abe"
+            }
+          }
+        },
+        {
+          "role": "Translator (French)",
+          "node": {
+            "name": {
+              "full": "Géraldine Oudin"
+            }
+          }
+        }
+      ]
+    },
+    "description": "The adventure is over but life goes on for an elf mage just beginning to learn what living is all about.\n<br><br>\nElf mage Frieren and her courageous fellow adventurers have defeated the Demon King and brought peace to the land. With the great struggle over, they all go their separate ways to live a quiet life. But as an elf, Frieren, nearly immortal, will long outlive the rest of her former party. How will she come to terms with the mortality of her friends? How can she find fulfillment in her own life, and can she learn to understand what life means to the humans around her? Frieren begins a new journey to find the answer.<br><br>\n(Source: VIZ Media)\n<br><br>\n<i>Notes:<br>\n- Winner of the Grand Prize at the 14th Manga Taisho Awards.<br>\n- Nominated for the 25th Annual Tezuka Osamu Cultural Prize.<br>\n- Placed 3rd at the 7th Annual Next Manga Award.</i>"
+  },
+  {
+    "id": 39115,
+    "title": {
+      "romaji": "Ookami to Koushinryou",
+      "english": "Spice & Wolf",
+      "native": "狼と香辛料"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Romance",
+      "Supernatural"
+    ],
+    "averageScore": 87,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx39115-2uLgBuM30i1b.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx39115-2uLgBuM30i1b.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Isuna Hasekura"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Juu Ayakura"
+            }
+          }
+        },
+        {
+          "role": "Translator (English: vols 1-14)",
+          "node": {
+            "name": {
+              "full": "Paul Starr"
+            }
+          }
+        }
+      ]
+    },
+    "description": "The life of a traveling merchant is a lonely one, a fact with which Kraft Lawrence is well acquainted. Wandering from town to town with just his horse, cart, and whatever wares have come his way, the peddler has pretty well settled into his routine&mdash;that is, until the night Lawrence finds a wolf goddess asleep in his cart. Taking the form of a fetching girl with wolf ears and a tail, Holo has wearied of tending to harvests in the countryside and strikes up a bargain with the merchant to lend him the cunning of &ldquo;Holo the Wisewolf&rdquo; to increase his profits in exchange for taking her along on his travels. What kind of businessman could turn down such an offer? Lawrence soon learns, though, that having an ancient goddess as a traveling companion can be a bit of a mixed blessing. Will this wolf girl turn out to be too wild to tame?<br><br>\n(Source: Yen Press)"
+  },
+  {
+    "id": 107279,
+    "title": {
+      "romaji": "Aoashi",
+      "english": "Aoashi",
+      "native": "アオアシ"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Sports"
+    ],
+    "averageScore": 87,
+    "chapters": 410,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx107279-R2vxyPQRqV0X.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx107279-R2vxyPQRqV0X.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Naohiko Ueno"
+            }
+          }
+        },
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Yuugo Kobayashi"
+            }
+          }
+        },
+        {
+          "role": "Translator (French)",
+          "node": {
+            "name": {
+              "full": "Anaïs Koechlin"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Ashito Aoi, a third year middle school student from Ehime, meets Fukuda Tatsuya, a J Youth League coach. Even though he's still rough around the edges, Ashito has such amazing potential that he gets invited by coach Fukuda to participate in his team's try-outs in Tokyo. The story of a boy who will revolutionize Japanese football begins to unfold.<br><br>\n<i>Notes: <br>\n- Nominated for the 2017 Manga Taishou Award.<br>\n- Winner of the 65th Shogakukan Manga Award for \"Best General Manga\" category in 2019.</i>"
+  },
+  {
+    "id": 110800,
+    "title": {
+      "romaji": "Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen Dai 2-bu - Shinden no Miko Minarai",
+      "english": "Ascendance of a Bookworm: Part 2",
+      "native": "本好きの下剋上~司書になるためには手段を選んでいられません~ 第二部「神殿の巫女見習い」"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Fantasy",
+      "Slice of Life"
+    ],
+    "averageScore": 87,
+    "chapters": 105,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx110800-buaDMQpwzfds.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx110800-buaDMQpwzfds.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "You Shiina"
+            }
+          }
+        },
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Miya Kazuki"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Quof"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Part 2 of <i>Honzuki no Gekokujou</i>.\n<br><br>\nWith her baptism ceremony complete, Myne begins work in the temple as an apprentice shrine maiden. Awaiting within is what she always wanted: a room full of books! But her new life isn't quite the dream she was hoping for; she's surrounded by nobles who scorn her commoner origins, and even her own servants are causing her trouble. On top of that, she has to constantly battle the weakness of her own body. But with her love for books burning in her heart, she gives her all to her new apprentice duties. Thus begins part two of this bibliofantasy!\n<br><br>\n(Source: J-Novel Club)\n<br><br>\n<i>Note: This entry covers 95 chapters of the webnovel (chapter 078 - 172).</i>"
+  },
+  {
+    "id": 39982,
+    "title": {
+      "romaji": "Usogui",
+      "english": "Usogui",
+      "native": "嘘喰い"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Psychological",
+      "Thriller"
+    ],
+    "averageScore": 87,
+    "chapters": 539,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx39982-68LS2Z9075Kw.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx39982-68LS2Z9075Kw.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Toshio Sako"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Driven by his desire for quick money, young Kaji gets involved with a loan shark and soon finds himself hounded by debt collectors. One day, a mysterious man named Baku Madarame appears before him. Calling himself a gambler, Baku boldly declares that he’ll help Kaji repay his debt—and descends into the world of underground casinos…\n<br><br>\n(Source: MANGA MILLION)"
+  },
+  {
+    "id": 54875,
+    "title": {
+      "romaji": "Shinyaku Toaru Majutsu no Index",
+      "english": "A Certain Magical Index NT",
+      "native": "新約とある魔術の禁書目録"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "averageScore": 87,
+    "chapters": 183,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx54875-X5s1ShPXq8Ah.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx54875-X5s1ShPXq8Ah.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Kazuma Kamachi"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Kiyotaka Haimura"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Alice Prowse"
+            }
+          }
+        }
+      ]
+    },
+    "description": "World War III is over. Touma disappears. Accelerator spends his days with Last Order and Misaka Worst. Shiage uses the secrets he gained in Russia as a bargaining chip.\n<br><br>\nBut this peace doesn't last long as the Freshmen arrive...\n<br><br>\n(Source: Yen Press)\n<br><br>\n<i>Note: Includes 21 prologues, 22 epilogues, and 2 extras.</i>"
+  },
+  {
+    "id": 117620,
+    "title": {
+      "romaji": "Kimi to Tsuzuru Utakata",
+      "english": "The Summer You Were There",
+      "native": "君と綴るうたかた"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Romance"
+    ],
+    "averageScore": 87,
+    "chapters": 32,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx117620-cyvy8nO9GLm8.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx117620-cyvy8nO9GLm8.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Yuama"
+            }
+          }
+        },
+        {
+          "role": "Lettering (English)",
+          "node": {
+            "name": {
+              "full": "Elena Pizarro Lanzas"
+            }
+          }
+        },
+        {
+          "role": "Translator (German)",
+          "node": {
+            "name": {
+              "full": "Verena Maser"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Shizuku is a shy girl who hardly talks to other people. Instead, she loses herself in creative writing, crafting a novel that she never plans to show anyone. But when Kaori–Shizuku’s cute, popular classmate–gets her hands on Shizuku’s manuscript, everything changes. Kaori is a huge fan, and suggests that Shizuku can get inspiration for her writing if the two of them start dating! Can these very different young ladies create their own love story together?\n<br><br>\n(Source: Seven Seas Entertainment)"
+  },
+  {
+    "id": 43245,
+    "title": {
+      "romaji": "Chihayafuru",
+      "english": "Chihayafuru",
+      "native": "ちはやふる"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Sports"
+    ],
+    "averageScore": 87,
+    "chapters": 248,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx43245-Ied8R99LH3u6.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx43245-Ied8R99LH3u6.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Yuki Suetsugu"
+            }
+          }
+        },
+        {
+          "role": "Translator (French)",
+          "node": {
+            "name": {
+              "full": "Fédoua Lamodière"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Ko Ransom"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Chihaya is a girl in the sixth grade, still not old enough to even know the meaning of the word zeal. But one day, she meets Arata, a transfer student from rural Fukui prefecture. Though docile and quiet, he has an unexpected skill: his ability to play competitive karuta, a traditional Japanese card game.\n<br><br>\nChihaya is struck by his obsession with the game, along with his ability to pick out the right card and swipe it away before any of his opponents. However, Arata is transfixed by her as well, all because of her unbelievable natural talent for the game. Don't miss this story of adolescent lives and emotions playing out in the most dramatic of ways!\n<br><br>\n(Source: Kodansha USA)\n<br><br>\n<i>Notes:<br>\n- It won the 2nd Manga Taisho Award and the 35th annual Kodansha Manga Award for Best Shoujo.<br>\n- It was nominated for the 20th Tezuka Osamu Cultural Prize in 2016.</i>"
+  },
+  {
+    "id": 89278,
+    "title": {
+      "romaji": "Tobaku Datenroku Kaiji: One Poker-hen",
+      "english": null,
+      "native": "賭博堕天録カイジ ワン・ポーカー編"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Thriller"
+    ],
+    "averageScore": 87,
+    "chapters": 155,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx89278-2nemnSgiesJa.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx89278-2nemnSgiesJa.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Nobuyuki Fukumoto"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Kaiji and Kazuya face off against each other in a high-stakes game of \"One Poker,\" a modified version of standard poker. Kazuya sets forth a gamble of 2,000,000,000 yen! How will Kaiji survive?! <br><br>\n<i>Chapter count for this arc is 101-254 in the original tankoubon.</i>"
+  },
+  {
+    "id": 145163,
+    "title": {
+      "romaji": "Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai",
+      "english": "Rascal Does Not Dream of a Dreaming Girl",
+      "native": "青春ブタ野郎はゆめみる少女の夢を見ない"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Psychological",
+      "Romance",
+      "Supernatural"
+    ],
+    "averageScore": 87,
+    "chapters": 5,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx145163-84gshcr9NREV.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx145163-84gshcr9NREV.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Hajime Kamoshida"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Keiji Mizoguchi"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Andrew Cunningham"
+            }
+          }
+        }
+      ]
+    },
+    "description": "<i>Book 6 of the Seishun Buta Yarou series.</i>\n<br><br>\nSUPERSTRING (OF FATE) THEORY!\n<br><br>\n​Sakuta is doomed. His  girlfriend, Mai, has just discovered that while she was away, he’s been living under one roof with his first love, the now-college-aged Shouko. While the three of them try to navigate this complicated love triangle, the mystery surrounding Shouko only deepens when the younger version of herself checks into the hospital. What will become of this middle schooler whose only dream is to grow up? Why did Sakuta’s old flame come barging into his life again after all this time? And exactly how does Sakuta fit in?\n<br><br>\n(Source: Yen Press)"
+  },
+  {
+    "id": 130080,
+    "title": {
+      "romaji": "Bungou Stray Dogs: STORM BRINGER",
+      "english": "Bungo Stray Dogs: Storm Bringer",
+      "native": "文豪ストレイドッグス STORM BRINGER"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Drama",
+      "Mystery",
+      "Supernatural"
+    ],
+    "averageScore": 87,
+    "chapters": 6,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx130080-CNB42H8VTalT.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx130080-CNB42H8VTalT.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Kafka Asagiri"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Harukawa35"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Matthew Rutsohn"
+            }
+          }
+        }
+      ]
+    },
+    "description": "It’s been roughly one year since Chuuya Nakahara joined the Port Mafia, and he’s determined to become an executive before fellow mafioso Osamu Dazai. However, a man by the name of Paul Verlaine—the king of assassins who claims to be Chuuya’s older brother—suddenly appears, vowing to murder everyone he cares about! Now Chuuya must team up with Adam, an AI investigator from Europe, to stop this madman before another storm engulfs Yokohama. Along the way, many truths will be revealed…including the answer to Chuuya’s most pressing question: Is he himself even human?\n<br><br>\n(Source: Yen Press)"
+  },
+  {
+    "id": 143722,
+    "title": {
+      "romaji": "Otorimonogatari",
+      "english": "Otorimonogatari: Decoy Tale",
+      "native": "囮物語"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Supernatural"
+    ],
+    "averageScore": 87,
+    "chapters": 24,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx143722-yR4AjSj6MITF.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx143722-yR4AjSj6MITF.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "NISIOISIN"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "VOFAN"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Ko Ransom"
+            }
+          }
+        }
+      ]
+    },
+    "description": "A certain middle school girl has a fondness for hats, which serve as a line of defence against eye contact along with the overlong bangs she’s worn ever since she was little. Speaking in fits and starts when she doesn’t fall completely silent, her go-to line is “I’m sorry,” and she’s given to referring to herself in third person. Nadeko Sengoku is pretty, and not just cute.\n<br><br>\n(Source: Kodansha USA)"
+  },
+  {
+    "id": 30044,
+    "title": {
+      "romaji": "Gintama",
+      "english": "Gin Tama",
+      "native": "銀魂"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "averageScore": 86,
+    "chapters": 709,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30044-vPmoz3vTPvZs.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30044-vPmoz3vTPvZs.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Hideaki Sorachi"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Kenta Shinohara"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Youichi Amano"
+            }
+          }
+        }
+      ]
+    },
+    "description": "The samurai didn't stand a chance. First, the aliens invaded Japan. Next, they took all the jobs. And then they confiscated everyone's swords. So what does a hotheaded former samurai like Sakata \"Gin\" Gintoki do to make ends meet? Take any odd job that comes his way, even if it means losing his dignity.\n<br><br>\n(Source: VIZ Media)\n<br><br>\n<b>Included Bonus Chapters:</b><br>\nVolume 1: <i>Dandelion (One-shot).</i><br>\nVolume 2: <i>Shirokuro (One-shot).</i><br>\nVolume 24: <i>13 (One-shot).</i><br>\nVolume 38: <i>Bankara-san Ga Tooru (One-shot).</i><br>\nVolume 41: <i>Special Lesson.</i>"
+  },
+  {
+    "id": 30336,
+    "title": {
+      "romaji": "GTO",
+      "english": "GTO: Great Teacher Onizuka",
+      "native": "GTO"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Ecchi"
+    ],
+    "averageScore": 86,
+    "chapters": 208,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30336-KWTPMwsNTeSa.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30336-KWTPMwsNTeSa.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Editor",
+          "node": {
+            "name": {
+              "full": "Shin Kibayashi"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Rando Ayamine"
+            }
+          }
+        },
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Tooru Fujisawa"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Former juvenile delinquent Onizuka finds himself thrust into to role of high school teacher, facing students who behave just as he used to and an administration that doesn't trust him. Using the brash an unorthodox methods he picked up in his youth, Onizuka manages to reach through to his kids and help them with their problems.\n<br><br>\n(Source: TOKYOPOP)\n<br><br>\n<b>Notes:</b><br>\n<i>- Won the 22nd Kodansha Manga Award for Best Shounen Manga.<br>\n<i>- The chapter count includes the 7 chapters extra <b>GTO: Great Toroko Oppai♡</b> </i>(Tomoko's Big Adventures)<i> published in volumes 11 and 12, and one extra published in volume 25.</i>"
+  },
+  {
+    "id": 99559,
+    "title": {
+      "romaji": "Nogi Wakaba wa Yuusha de Aru",
+      "english": null,
+      "native": "乃木若葉は勇者である"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Mahou Shoujo",
+      "Psychological"
+    ],
+    "averageScore": 86,
+    "chapters": 22,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx99559-8uAOkOwpbe6I.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx99559-8uAOkOwpbe6I.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Original Plan",
+          "node": {
+            "name": {
+              "full": "Takahiro"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "BUNBUN"
+            }
+          }
+        },
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Aoi Akashiro"
+            }
+          }
+        }
+      ]
+    },
+    "description": "The story of Nogi Wakaba wa Yuusha de Aru takes place 300 years in the past, in 2018, the first days of the Divine Era. The six main characters form the first ever Hero Team: Nogi Wakaba, Nogi Sonoko's ancestor; Uesato Hinata, Takashima Yuuna, Koori Chikage, Doi Tamako and Iyojima Anzu.<br><br>\n\n<b>Includes:</b><br>\n<b>Chapter 0:</b> Ni-satsu-me no Yuusha Gyoki (The Second Hero Diary)<br>\n<b>Volume 1 extra chapter:</b> Shiratori Utano wa Yuusha de Aru (Shiratori Utano is a Hero)<br>\n<b>Volume 2 extra chapter:</b> Takusareta Baton (The Passed Baton)\n"
+  },
+  {
+    "id": 140475,
+    "title": {
+      "romaji": "Kaoru Hana wa Rin to Saku",
+      "english": "The Fragrant Flower Blooms With Dignity",
+      "native": "薫る花は凛と咲く"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "averageScore": 86,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx140475-QEGtrmdvbpOv.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx140475-QEGtrmdvbpOv.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Saka Mikami"
+            }
+          }
+        },
+        {
+          "role": "Editing (Portuguese)",
+          "node": {
+            "name": {
+              "full": "Gabriel Farias"
+            }
+          }
+        },
+        {
+          "role": "Translator (French)",
+          "node": {
+            "name": {
+              "full": "Manon Debienne"
+            }
+          }
+        }
+      ]
+    },
+    "description": "This story takes place in a particular town with two infamous schools in constant dispute: Chidori High, a boys' school predominantly attended by low-class students with damning grades, and its neighbor Kikyo Girls' High, with most of its female students coming from wealthy and prestigious families. One day, high school second-year Rintaro Tsumugi, a fierce-looking but gentle-minded student at Chidori, is helping at his family's patisserie when he encounters a female customer by the name of Kaoruko Waguri. Rintaro enjoys his time with Kaoruko, as she doesn't judge him for his appearance, but this blissful peace is quickly disturbed when Rintaro makes the discovery that Kaoruko is actually a student at Kikyo. This revelation marks the beginning of the two's strenuous tale, as they fight against the limitations placed upon them by their schools and surroundings in an attempt to find their own path!\n<br><br>\n(Source: K Manga)"
+  },
+  {
+    "id": 145164,
+    "title": {
+      "romaji": "Seishun Buta Yarou wa Hatsukoi Shoujo no Yume wo Minai",
+      "english": "Rascal Does Not Dream of His First Love",
+      "native": "青春ブタ野郎はハツコイ少女の夢を見ない"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Psychological",
+      "Romance",
+      "Supernatural"
+    ],
+    "averageScore": 86,
+    "chapters": 4,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx145164-3xAszEx3vGGq.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx145164-3xAszEx3vGGq.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Hajime Kamoshida"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Keiji Mizoguchi"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Andrew Cunningham"
+            }
+          }
+        }
+      ]
+    },
+    "description": "<i>Book 7 of the Seishun Buta Yarou series.</i>\n<br><br>\n UNDOING WHAT CAN’T BE UNDONE.\n<br><br>\nSakuta had been ready to give up his life, but nothing could have prepared him to keep living like this. Now he must find a way to carry on even when it feels like tomorrow will never come. And even if it does, why should he care when the love of his life is already gone? Of course, he can always count on Shouko to show him the way forward in his darkest hour, just like she did all those years ago. As he gathers the strength and courage Mai gave him, Sakuta readies himself to do whatever it takes to rewrite the past. \n<br><br>\n(Source: Yen Press)"
+  },
+  {
+    "id": 165881,
+    "title": {
+      "romaji": "Ikusamonogatari",
+      "english": null,
+      "native": "戦物語"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Romance",
+      "Supernatural"
+    ],
+    "averageScore": 86,
+    "chapters": 25,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx165881-h5qqzimW214N.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx165881-h5qqzimW214N.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "NISIOISIN"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "VOFAN"
+            }
+          }
+        }
+      ]
+    },
+    "description": "The latest issue of Nisio Isin's Youth Ghost Story Monogatari series! Koyomi Araragi and Hitagi Senjougahara are finally married. Shinobu Oshino and Suruga Kanbaru accompany the couple on their eccentric honeymoon, and the itinerary includes an investigation into a strange phenomenon. Koyomi has a plan related to Hitagi and Shinobu?\n<br>\nThese are the modern-day oddities! Oddities! Oddities!\n<br><br>\n(Source: Kodansha, translated)"
+  },
+  {
+    "id": 30081,
+    "title": {
+      "romaji": "ARIA",
+      "english": "Aria",
+      "native": "ARIA"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Fantasy",
+      "Sci-Fi",
+      "Slice of Life"
+    ],
+    "averageScore": 86,
+    "chapters": 67,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30081-oCRaPkTGq4vP.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30081-oCRaPkTGq4vP.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Kozue Amano"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Elina Ishikawa"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Sayaka Gojou"
+            }
+          }
+        }
+      ]
+    },
+    "description": "On the planet Aqua, a world once known as Mars, Akari Mizunashi has just made her home in the town of Neo-Venezia, a futuristic imitation of the ancient city of Venice. In pursuit of her dream to become an Undine — a gondolier who leads high-end tours around the city — Akari joins as a trainee with the Aria Company, one of the three most prestigious water-guide companies in Neo-Venezia. There, she explores the beauty of the city and the world along with other trainees from Aria and rival companies, working hard for her dreams and making new friends along the way.\n<br><br>\n(Source: TOKYOPOP)\n<br><br>\n<I>Note: Includes seven extra chapters.</i>"
+  },
+  {
+    "id": 85412,
+    "title": {
+      "romaji": "Shoujo Shuumatsu Ryokou",
+      "english": "Girls' Last Tour",
+      "native": "少女終末旅行"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Adventure",
+      "Sci-Fi",
+      "Slice of Life"
+    ],
+    "averageScore": 86,
+    "chapters": 47,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx85412-wzZ2QFwbZJED.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx85412-wzZ2QFwbZJED.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Tsukumizu"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Amanda Haley"
+            }
+          }
+        },
+        {
+          "role": "Lettering (English: vols 1, 3, 5)",
+          "node": {
+            "name": {
+              "full": "Abigail Blackman"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Civilization is dead, but Chito and Yuuri are still alive. So they hop aboard their beloved Kettenkrad motorbike and aimlessly wander the ruins of the world they once knew. Day after hopeless day, they look for their next meal and fuel for their ride. But as long as the two are together, even an existence as bleak as theirs has a ray or two of sunshine in it, whether they're sucking down their fill of soup or hunting for machine parts to tinker with. For two girls in a world full of nothing, the experiences and feelings the two share give them something to live for…<br>\n<br>\n(Source: Yen Press)\n<br><br>\n<i>Note: Winner of the Best Comic Award at the Seiun Awards in 2019.</i>"
+  },
+  {
+    "id": 31133,
+    "title": {
+      "romaji": "Dorohedoro",
+      "english": "Dorohedoro",
+      "native": "ドロヘドロ"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Fantasy",
+      "Horror",
+      "Mystery"
+    ],
+    "averageScore": 86,
+    "chapters": 191,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31133-Jx6map3Oidz1.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx31133-Jx6map3Oidz1.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Q Hayashida"
+            }
+          }
+        },
+        {
+          "role": "Translator (French)",
+          "node": {
+            "name": {
+              "full": "Sylvain Chollet"
+            }
+          }
+        },
+        {
+          "role": "Lettering (French)",
+          "node": {
+            "name": {
+              "full": "Anne Demars"
+            }
+          }
+        }
+      ]
+    },
+    "description": "In a city so dismal it's known only as \"the Hole,\" a clan of Sorcerers have been plucking people off the streets to use as guinea pigs for atrocious \"experiments\" in the black arts. In a dark alley, Nikaido found Caiman, a man with a reptile head and a bad case of amnesia. To undo the spell, they're hunting and killing the Sorcerers in the Hole, hoping that eventually they'll kill the right one. But when En, the head Sorcerer, gets word of a lizard-man slaughtering his people, he sends a crew of \"cleaners\" into the Hole, igniting a war between two worlds.\n<br><br>\n(Source: VIZ Media)\n<br><br>\n<i>Note: Includes 23 side stories titled \"Extra Evil\" and the side story \"The Lizard Head and the Magic Whistle.\"</i>"
+  },
+  {
+    "id": 86559,
+    "title": {
+      "romaji": "Golden Kamuy",
+      "english": "Golden Kamuy",
+      "native": "ゴールデンカムイ"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Drama"
+    ],
+    "averageScore": 86,
+    "chapters": 314,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86559-Y4xDmoz4ud43.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx86559-Y4xDmoz4ud43.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Satoru Noda"
+            }
+          }
+        },
+        {
+          "role": "Editor",
+          "node": {
+            "name": {
+              "full": "Hakkou Ookuma"
+            }
+          }
+        },
+        {
+          "role": "Translator (English: vol 8-)",
+          "node": {
+            "name": {
+              "full": "John Werry"
+            }
+          }
+        }
+      ]
+    },
+    "description": "In the early twentieth century, Russo-Japanese War veteran Saichi “Immortal” Sugimoto scratches out a meager existence during the postwar gold rush in the wilderness of Hokkaido. When he stumbles across a map to a fortune in hidden Ainu gold, he sets off on a treacherous quest to find it. But Sugimoto is not the only interested party, and everyone who knows about the gold will kill to possess it! Faced with the harsh conditions of the northern wilderness, ruthless criminals and rogue Japanese soldiers, Sugimoto will need all his skills and luck—and the help of an Ainu girl named Asirpa—to survive.\n<br><br>\n(Source: VIZ Media)\n<br><br>\n<i>Note: Won the 9th Manga Taisho Award in 2016 and the 22nd Tezuka Osamu Cultural Prize in 2018. Nominated for the 20th and 21st Tezuka Osamu Cultural Prize and the 40th Kodansha Manga Awards in 2016.</i>"
+  },
+  {
+    "id": 119257,
+    "title": {
+      "romaji": "Jeonjijeok Dokja Sijeom",
+      "english": "Omniscient Reader",
+      "native": "전지적 독자 시점"
+    },
+    "countryOfOrigin": "KR",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "averageScore": 86,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx119257-Pi21aq3ey9GG.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx119257-Pi21aq3ey9GG.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Original Story",
+          "node": {
+            "name": {
+              "full": "Singsyong"
+            }
+          }
+        },
+        {
+          "role": "Art",
+          "node": {
+            "name": {
+              "full": "Sleepy-C"
+            }
+          }
+        },
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "UMI"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Back then, Dok-Ja had no idea. He had no idea his favorite web novel 'Three Ways to Survive the Apocalypse' was going to come to life, and that he would become the only person to know how the world was going to end. He also had no idea he would end up becoming the protagonist of this novel-turned-reality. Now, Dok-Ja will go on a journey to change the course of the story and save humankind once and for all.\n<br><br>\n(Source: WEBTOON, edited)"
+  },
+  {
+    "id": 136109,
+    "title": {
+      "romaji": "Amayo no Tsuki",
+      "english": "The Moon on a Rainy Night",
+      "native": "雨夜の月"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Slice of Life"
+    ],
+    "averageScore": 86,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx136109-h4mux2toQJkD.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx136109-h4mux2toQJkD.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Kuzushiro"
+            }
+          }
+        },
+        {
+          "role": "Translator (French)",
+          "node": {
+            "name": {
+              "full": "Angélique Mariet"
+            }
+          }
+        },
+        {
+          "role": "Translator (Chinese)",
+          "node": {
+            "name": {
+              "full": "KOSUKEN"
+            }
+          }
+        }
+      ]
+    },
+    "description": "One day, while rushing to a piano lesson, a girl named Saki collides with someone on the street. As Saki collects herself, the stranger picks up the sheet music Saki dropped, hands it to Saki together with a band-aid, and continues on her way—all without saying a word. Saki is left wondering about the identity of the tall, lovely stranger, only to discover the next day that she is one of her classmates at her new high school. The girl’s name is Kanon, and though she is hearing impaired, she refuses any kind of support or “special treatment” from her teachers or classmates. Over the course of the year, Saki slowly grows closer to Kanon and begins to chip away at her cold exterior.\n<br><br>\n(Source: Kodansha USA)"
+  },
+  {
+    "id": 85470,
+    "title": {
+      "romaji": "Mushoku Tensei: Isekai Ittara Honki Dasu",
+      "english": "Mushoku Tensei: Jobless Reincarnation",
+      "native": "無職転生 ～異世界行ったら本気だす～"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Ecchi",
+      "Fantasy"
+    ],
+    "averageScore": 86,
+    "chapters": 334,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx85470-jt6BF9tDWB2X.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/nx85470-jt6BF9tDWB2X.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story ",
+          "node": {
+            "name": {
+              "full": "Rifujin na Magonote"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Sirotaka"
+            }
+          }
+        },
+        {
+          "role": "Translator (English: vols 2, 4, 6-8, 10, 12, 14, 16, 18, 19, 23)",
+          "node": {
+            "name": {
+              "full": "Alyssa Orton-Niioka"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Kicked out by his family and wandering the streets, an unemployed 34-year-old shut-in thinks he’s hit rock-bottom—just as he’s hit and killed by a speeding truck! Awakening to find himself reborn as an infant in a world of swords and sorcery, but with the memories of his first life intact, Rudeus Greyrat is determined not to repeat his past mistakes. He’s going to make the most of this reincarnation as he sets off on the adventure of a second lifetime!\n<br><br>\n(Source: Seven Seas Entertainment)"
+  },
+  {
+    "id": 105388,
+    "title": {
+      "romaji": "Yagate Kimi ni Naru Saeki Sayaka ni Tsuite",
+      "english": "Bloom Into You: Regarding Saeki Sayaka",
+      "native": "やがて君になる 佐伯沙弥香について"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "averageScore": 86,
+    "chapters": 9,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx105388-uFrx5ADXp5EN.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx105388-uFrx5ADXp5EN.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Hitoma Iruma"
+            }
+          }
+        },
+        {
+          "role": "Original Creator",
+          "node": {
+            "name": {
+              "full": "Nio Nakatani"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Nio Nakatani"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Saeki Sayaka has always been an old soul–serious and reserved, preferring to focus on her studies rather than make friends. Until, that is, a romantic confession from another girl in middle school turns her carefully ordered world upside down. Though none of her classes have prepared her for this, Saeki must now come to terms with her sexuality in this gentle, coming-of-age novel about grappling with first love, growing up, and relating to other people.<br><br>\n\n(Source: Seven Seas Entertainment)"
+  },
+  {
+    "id": 143842,
+    "title": {
+      "romaji": "Nekosogi Radical",
+      "english": null,
+      "native": "ネコソギラジカル"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Drama",
+      "Psychological",
+      "Supernatural"
+    ],
+    "averageScore": 86,
+    "chapters": 24,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx143842-j1plve2LLvPu.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx143842-j1plve2LLvPu.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "NISIOISIN"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Take"
+            }
+          }
+        }
+      ]
+    },
+    "description": "It may be true that where there is a beginning, there is an end, but it is too shortsighted to think that because there is an end, there must have been a beginning. In fact, the opposite is true. Most events have already ended even before they began, and they are closed even if they are not opened. I, a sincere and honest person who dares not speak truth as truth, dares not speak fact as fact, and knows the virtue of silence better than anyone else, will ascend a certain staircase in September. The Thirteenth Staircase. It was Kino-Raichi, Noise, Emoto Sonoki, Mio-tsukushi Takami, and Mio-tsukushi Misora. However, what awaits me at the top of the stairs is so ridiculous and so nostalgic… in this sixth installment of the \"Zaregoto\" series!\n<br><br>\n(Source: Kodansha, translated)"
+  },
+  {
+    "id": 165131,
+    "title": {
+      "romaji": "Mushoku Tensei: Dasoku-hen",
+      "english": "Mushoku Tensei: Redundant Reincarnation",
+      "native": "無職転生 ～蛇足編～"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Drama",
+      "Ecchi",
+      "Fantasy"
+    ],
+    "averageScore": 86,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx165131-R4pedWdbZiAW.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx165131-R4pedWdbZiAW.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Rifujin na Magonote"
+            }
+          }
+        },
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Sirotaka"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Rudeus Greyrat has finally emerged victorious from the showdown at Biheiril Kingdom. With his hard-fought battle over, he can finally rest easy and put his adventuring days behind him. Yeah right! The epic fight may be done, but the story of the Jobless Reincarnation cast is far from over. There’s still Norn’s wedding, Lucie’s first day at school, hunting down marriage partners for Dohga and Isolde, and then…is that Ghislaine?! Get ready for a bounty of antics and action from the Mushoku Tensei universe as the story continues!\n<br><br>\n(Source: Seven Seas Entertainment)"
+  },
+  {
+    "id": 174875,
+    "title": {
+      "romaji": "Kimi ni Okuru Eien",
+      "english": "Eternity for You",
+      "native": "君に贈る永遠"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Romance"
+    ],
+    "averageScore": 86,
+    "chapters": 1,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx174875-4dU2x0Rmtwqa.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx174875-4dU2x0Rmtwqa.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Yuama"
+            }
+          }
+        }
+      ]
+    },
+    "description": "<i>Note: Originally released as a booklet bundled with the limited edition release of Kimi to Tsuzuru Utakata Volume 6.</i>"
+  },
+  {
+    "id": 30145,
+    "title": {
+      "romaji": "BECK",
+      "english": "BECK",
+      "native": "BECK"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Music",
+      "Romance",
+      "Slice of Life"
+    ],
+    "averageScore": 86,
+    "chapters": 103,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30145-ipNuwNgD5AJS.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30145-ipNuwNgD5AJS.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Harold Sakuishi"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "John K. Pe-Ta"
+            }
+          }
+        },
+        {
+          "role": "Assistant",
+          "node": {
+            "name": {
+              "full": "Chikara Sakuma"
+            }
+          }
+        }
+      ]
+    },
+    "description": "For the first 14 years of his life, Yukio Tanaka has been one heck of a boring guy. He has no hobbies, a weak taste in music, and only a small vestige of a personality. He yearns for an exciting life, but his shy, and somewhat neurotic personality make him his own worst enemy. Little does he know that his life will be forever changed when he meets Ryusuke Minami, a wild and unpredictable 16 year-old fresh from America, who happens to be in a rock-and-roll band named after his Frankenstein-like patched dog&mdash;Beck.\n<br><br>\n(Source: TOKYOPOP)\n\n<br><br>\n<i>Note: Includes a one-shot \"\"THE LAST DAY OF EDDIE LEE\".</i>"
+  },
+  {
+    "id": 86569,
+    "title": {
+      "romaji": "Diamond no Ace Act II",
+      "english": "Ace of the Diamond Act II",
+      "native": "ダイヤのA act II"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Slice of Life",
+      "Sports"
+    ],
+    "averageScore": 86,
+    "chapters": 308,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86569-KC2nXAGtv0Cx.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx86569-KC2nXAGtv0Cx.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Yuuji Terajima"
+            }
+          }
+        }
+      ]
+    },
+    "description": "<i>I want to pitch to that mitt, just one more time…</i>\n<br><br>\nWhen Eijun Sawamura was just fifteen, he met someone who changed the course of his life forever—the catcher Kazuya Miyuki. Now, he's said goodbye to family and friends to travel to Seido High, where he can test his baseball skills alongside some of the best in the nation! \n<br><br>\n(Source: K MANGA)"
+  },
+  {
+    "id": 109285,
+    "title": {
+      "romaji": "Skip to Loafer",
+      "english": "Skip and Loafer",
+      "native": "スキップとローファー"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Slice of Life"
+    ],
+    "averageScore": 86,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx109285-HmBZpzsO2zxd.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx109285-HmBZpzsO2zxd.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Misaki Takamatsu"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Nicole Frasik"
+            }
+          }
+        },
+        {
+          "role": "Translator (Italian)",
+          "node": {
+            "name": {
+              "full": "Christine Minutoli"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Excellent student Iwakura Mitsumi has always dreamt about leaving her small town, going to a prestigious university, and making positive change in the world. But she’s so focused on reaching her goals that she’s not prepared for the very different (and overwhelming) city life that awaits her in a Tokyo high school. Luckily, she makes fast friends with Shima Sousuke, a handsome classmate who’s as laid-back as she is over-prepared. Can this naive country girl make it big in Tokyo with Sousuke by her side? \n<br><br>\n(Source: Seven Seas Entertainment)<br><br>\n<i>Notes:<br>\n- Nominated for the 2020 Manga Taisho Award.<br>\n- Winner of the Best General Manga category at the 47th Kodansha Manga Award in 2023.</i>"
+  },
+  {
+    "id": 114920,
+    "title": {
+      "romaji": "Tensei Oujo to Tensai Reijou no Mahou Kakumei",
+      "english": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady",
+      "native": "転生王女と天才令嬢の魔法革命"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Action",
+      "Drama",
+      "Fantasy",
+      "Romance"
+    ],
+    "averageScore": 86,
+    "chapters": 131,
+    "status": "FINISHED",
+    "format": "NOVEL",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx114920-aUJzJQuCq2FQ.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx114920-aUJzJQuCq2FQ.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Illustration",
+          "node": {
+            "name": {
+              "full": "Yuri Kisaragi"
+            }
+          }
+        },
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Piero Karasu"
+            }
+          }
+        },
+        {
+          "role": "Translator (Chinese)",
+          "node": {
+            "name": {
+              "full": "Qilei Lin"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Despite her supposed ineptitude with regular magic, Princess Anisphia defies the aristocracy’s expectations by developing “magicology,” a unique magical theory based on memories from her past life. One day, she witnesses the brilliant noblewoman Euphyllia unjustly stripped of her title as the kingdom’s next monarch. That’s when Anisphia concocts a plan to help Euphyllia regain her good name-which somehow involves them living together and researching magic!  Little do these two ladies know, however, that their chance encounter will alter not only their own futures, but those of the kingdom...and the entire world!\n<br><br>\n(Source: Yen Press)"
+  },
+  {
+    "id": 97553,
+    "title": {
+      "romaji": "Jumyou wo Kaitotte Moratta. Ichinen ni Tsuki, Ichimanen de.",
+      "english": "Three Days of Happiness",
+      "native": "寿命を買い取ってもらった。一年につき、一万円で。"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Romance",
+      "Supernatural"
+    ],
+    "averageScore": 86,
+    "chapters": 18,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx97553-vqJj5DFS8v2p.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx97553-vqJj5DFS8v2p.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Shouichi Taguchi"
+            }
+          }
+        },
+        {
+          "role": "Character Design",
+          "node": {
+            "name": {
+              "full": "Shouichi Taguchi"
+            }
+          }
+        },
+        {
+          "role": "Original Story",
+          "node": {
+            "name": {
+              "full": "Sugaru Miaki"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Kusunoki used to believe he was destined for great things. But now, approaching the age of twenty, he’s a completely mediocre college student with no motivation, no dreams, and no money. After learning he can sell his remaining years, he chooses to divest himself of all but his last three months. Spending this remaining time with his monitor, Miyagi, has Kusunoki truly destroyed his final chance to find happiness…or has he somehow found it?\n<br><br>\n(Source: Yen Press)\n<br><br>\n<i>Note: Includes two extra chapters.</i>"
+  },
+  {
+    "id": 187944,
+    "title": {
+      "romaji": "Nae Choeaeneun Makchareul Tanda",
+      "english": "My Bias Gets on the Last Train",
+      "native": "내 최애는 막차를 탄다"
+    },
+    "countryOfOrigin": "KR",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "averageScore": 86,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx187944-gzNbL7zeY7Ma.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx187944-gzNbL7zeY7Ma.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "JIXKSEE"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Every night, Yeo-Un takes the last train home—same route, same time, same routine. But one thing keeps catching his eye: a girl with a guitar and a presence that lingers in his mind. When a shared love for the indie band Long Afternoon sparks a conversation, their late-night encounters begin to turn into something more. But Hae-In isn’t just another fan—she’s the voice behind the band, a secret she can’t afford to reveal. As music draws them closer, the truth may threaten to pull them apart. When the final note plays, will their story end in harmony… or heartbreak?<br><br>(Source: WEBTOON)"
+  },
+  {
+    "id": 44483,
+    "title": {
+      "romaji": "Uchuu Kyoudai",
+      "english": "Space Brothers",
+      "native": "宇宙兄弟"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Sci-Fi",
+      "Slice of Life"
+    ],
+    "averageScore": 86,
+    "chapters": 432,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx44483-j8urUUmaCOaD.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx44483-j8urUUmaCOaD.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Chuuya Koyama"
+            }
+          }
+        },
+        {
+          "role": "Translator (English: chs 59-)",
+          "node": {
+            "name": {
+              "full": "Adam Lensenmayer"
+            }
+          }
+        },
+        {
+          "role": "Translator (English: chs 1-58)",
+          "node": {
+            "name": {
+              "full": "William Flanagan"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Two brothers looked to the starry skies as children and made a promise ... Now, in the year 2025, the younger brother, Hibito, is carrying his out. He is an astronaut who has been selected as a crew member for mankind’s first long-term base on the moon. Meanwhile, the older brother, Mutta, has just been fired from his job and is unemployed, but decides to trust himself just one last time. A text message from Hibito sends him applying to be an astronaut too and shooting for the stars …\n<br><br>(Source: Kodansha USA)\n<br><br>\n<i>Notes:<br> \n- Nominated for the 2nd and 3rd Manga Taisho Award <br>\n- Won the 56th Shogakukan Manga Award<br>\n- Won the 35th Kodansha Manga Award in the General Category.</i>\n"
+  },
+  {
+    "id": 86218,
+    "title": {
+      "romaji": "Yagate Kimi ni Naru",
+      "english": "Bloom Into You",
+      "native": "やがて君になる"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Slice of Life"
+    ],
+    "averageScore": 86,
+    "chapters": 53,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86218-sIl9tnqHZQyh.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx86218-sIl9tnqHZQyh.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Nio Nakatani"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Jenny McKeon"
+            }
+          }
+        },
+        {
+          "role": "Translator (French)",
+          "node": {
+            "name": {
+              "full": "Aline Kukor"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Yuu has always loved shoujo manga and awaits the day she gets a love confession that sends her heart aflutter with bubbles and hearts, and yet when a junior high classmate confesses his feelings to her…she feels nothing. Disappointed and confused, Yuu enters high school still unsure how to respond. That’s when Yuu sees the beautiful student council president Nanami turn down a suitor with such maturity that she’s inspired to ask her for help. But when the next person to confess to Yuu is Nanami herself, has her shoujo romance finally begun?\n<br><br>\n(Source: Seven Seas Entertainment)\n<br><br>\n<i>Note: Includes eight extra chapters.</i>"
+  },
+  {
+    "id": 166742,
+    "title": {
+      "romaji": "Koori no Jouheki",
+      "english": "The Ramparts of Ice",
+      "native": "氷の城壁"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance",
+      "Slice of Life"
+    ],
+    "averageScore": 86,
+    "chapters": 117,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx166742-io6yR2XeJiEh.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx166742-io6yR2XeJiEh.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Koucha Agasawa"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Koyuki Hikawa isn't great with people and always puts up a wall between others. She had been spending her high school days alone, but one day meets the overly friendly Minato Amamiya. The loner, Koyuki, the popular girl, Miki, the guy with no personal space, Minato, and the laid back member of the basketball team, Yota... The story of these four somewhat awkward students in their bloom of youth begins!\n<BR><BR>\n(Source: MangaPlaza)"
+  },
+  {
+    "id": 168509,
+    "title": {
+      "romaji": "Hae Tteuneun Jip",
+      "english": "Our Sunny Days",
+      "native": "해 뜨는 집"
+    },
+    "countryOfOrigin": "KR",
+    "genres": [
+      "Romance",
+      "Slice of Life"
+    ],
+    "averageScore": 86,
+    "chapters": null,
+    "status": "RELEASING",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx168509-POhQHRIJ8qPV.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx168509-POhQHRIJ8qPV.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Seok-Chan Jeong"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Sung Ho’s not the kind you’d typically expect to settle down in the countryside. He’s in his late 20s, ex-military, and…a single father with a year-old baby his ex-girlfriend pawned off on him. Jobless and without any prospects but a house, Sung Ho hopes the peaceful Nuldongmae village will make a good new home for him and his daughter. Rumor has it that the head of the village, despite his young age, is a real jerk… But he won’t have to deal with that, will he? But on the very day he moves in, Sung Ho clashes with a tall, good-looking guy who’s got quite the temper and accuses Sung Ho of stealing from his store. This new guy really gets on his nerves, but he does seem to know a lot about the village… Sung Ho’s always been a bit of a lone ranger wherever he goes, so will he be able to let someone else in his life for sunny days up ahead?\n<br><br>\n(Source: Lezhin US)"
+  },
+  {
+    "id": 30004,
+    "title": {
+      "romaji": "Yokohama Kaidashi Kikou",
+      "english": "Yokohama Kaidashi Kikou",
+      "native": "ヨコハマ買い出し紀行"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Sci-Fi",
+      "Slice of Life"
+    ],
+    "averageScore": 86,
+    "chapters": 144,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/b30004-k0YUnO94IB4x.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/b30004-k0YUnO94IB4x.jpg"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Hitoshi Ashinano"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Daniel Komen"
+            }
+          }
+        },
+        {
+          "role": "Lettering (English)",
+          "node": {
+            "name": {
+              "full": "Ludwig Sacramento"
+            }
+          }
+        }
+      ]
+    },
+    "description": "Set hundreds of years in the future after an environmental catastrophe, Yokohama Kaidashi Kikou (also known as Yokohama Shopping Log) centers on the simple life of Alpha, an android who runs a small coffee shop in coastal Japan. Alpha stands witness to chronicle the end of humanity’s days with coffee, a slice of watermelon, and the sound of her moon guitar backed by distant seagulls. Quiet and bittersweet, this tale is about the melancholy beauty that can be found even as the end approaches.\n<br><br>\n(Source: Seven Seas Entertainment)\n<br><br>\n<i>Note: Includes four extra chapters.</i>"
+  },
+  {
+    "id": 41054,
+    "title": {
+      "romaji": "Billy Bat",
+      "english": "Billy Bat",
+      "native": "ビリーバット"
+    },
+    "countryOfOrigin": "JP",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Supernatural",
+      "Thriller"
+    ],
+    "averageScore": 86,
+    "chapters": 165,
+    "status": "FINISHED",
+    "format": "MANGA",
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx41054-zXqZzpwjJCCR.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx41054-zXqZzpwjJCCR.png"
+    },
+    "staff": {
+      "edges": [
+        {
+          "role": "Story & Art",
+          "node": {
+            "name": {
+              "full": "Naoki Urasawa"
+            }
+          }
+        },
+        {
+          "role": "Story",
+          "node": {
+            "name": {
+              "full": "Takashi Nagasaki"
+            }
+          }
+        },
+        {
+          "role": "Translator (English)",
+          "node": {
+            "name": {
+              "full": "Kristi Fernandez"
+            }
+          }
+        }
+      ]
+    },
+    "description": "It’s 1949 Los Angeles, and Kevin Yamagata, a Japanese American comic book author, is drawing his bestselling character, Billy Bat: a quick-witted detective who is, unsurprisingly, a cartoon bat. Everything is going well for Kevin until he discovers an unfortunate truth: He may have unintentionally plagiarized his beloved character from a drawing he once saw in Japan. Devastated by the news, Kevin returns to war-torn Japan to find the drawing’s original artist . . . but the character’s origins turn out to be far older and more perplexing than he had ever imagined.<br><br>\n(Source: Kana)<br><br><i>Note: Won the Max und Moritz Prize for \"Best international Comic\" in 2014.</i>"
+  }
+]
