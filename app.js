@@ -1650,6 +1650,27 @@ function closeReader() {
   }
 }
 
+function exitReaderToSeries() {
+  if (AppState.activeReader && AppState.activeReader.manga) {
+    const mangaId = AppState.activeReader.manga.id;
+    closeReader();
+    openMangaDetails(mangaId);
+  } else {
+    closeReader();
+    showCatalogView();
+  }
+}
+
+function navigateToHome() {
+  closeReader();
+  const libModal = document.getElementById("libraryModal");
+  if (libModal) libModal.classList.remove("open");
+  const detailsModal = document.getElementById("mangaDetailsModal");
+  if (detailsModal) detailsModal.classList.remove("open");
+  showCatalogView();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 async function downloadCurrentChapterOffline() {
   const { manga, chapterNumber, totalPages } = AppState.activeReader;
   if (!manga) return;

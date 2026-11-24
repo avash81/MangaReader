@@ -941,6 +941,72 @@ main#mainContent {
   backdrop-filter: blur(8px);
 }
 
+/* Reader Breadcrumb Trail (replaces .reader-title-info) */
+.reader-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  flex-shrink: 1;
+  overflow: hidden;
+}
+
+.reader-breadcrumb-link {
+  background: none;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #a1a1aa;
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  transition: color 0.15s, background 0.15s;
+  font-family: inherit;
+  line-height: 1;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reader-breadcrumb-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.reader-breadcrumb-link.reader-manga-heading {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #f4f4f5;
+  max-width: 260px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.reader-breadcrumb-link.reader-manga-heading:hover {
+  color: #fb923c;
+  background: rgba(194, 65, 12, 0.1);
+}
+
+.reader-breadcrumb-sep {
+  color: #3f3f46;
+  font-size: 0.85rem;
+  font-weight: 400;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.reader-breadcrumb-chapter-wrap {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Legacy selector kept for compat */
 .reader-title-info {
   display: flex;
   align-items: center;
@@ -1014,6 +1080,19 @@ main#mainContent {
 .reader-modal.reader-theme-charcoal #readerMangaTitle {
   color: #ffffff !important;
 }
+.reader-modal.reader-theme-charcoal .reader-breadcrumb-link {
+  color: #71717a !important;
+}
+.reader-modal.reader-theme-charcoal .reader-breadcrumb-link:hover {
+  color: #f4f4f5 !important;
+  background: rgba(255,255,255,0.07) !important;
+}
+.reader-modal.reader-theme-charcoal .reader-breadcrumb-link.reader-manga-heading {
+  color: #f4f4f5 !important;
+}
+.reader-modal.reader-theme-charcoal .reader-breadcrumb-sep {
+  color: #3f3f46 !important;
+}
 
 .reader-modal.reader-theme-white,
 .reader-viewport-container.reader-theme-white {
@@ -1030,6 +1109,19 @@ main#mainContent {
 .reader-modal.reader-theme-white #readerMangaTitle,
 .reader-modal.reader-theme-white #readerPageNumLabel {
   color: #18181b !important;
+}
+.reader-modal.reader-theme-white .reader-breadcrumb-link {
+  color: #52525b !important;
+}
+.reader-modal.reader-theme-white .reader-breadcrumb-link:hover {
+  color: #18181b !important;
+  background: rgba(0,0,0,0.06) !important;
+}
+.reader-modal.reader-theme-white .reader-breadcrumb-link.reader-manga-heading {
+  color: #18181b !important;
+}
+.reader-modal.reader-theme-white .reader-breadcrumb-sep {
+  color: #d4d4d8 !important;
 }
 .reader-modal.reader-theme-white .reader-chapter-dropdown,
 .reader-modal.reader-theme-white .action-pill-btn {
@@ -1077,6 +1169,19 @@ main#mainContent {
 .reader-modal.reader-theme-sepia #readerMangaTitle,
 .reader-modal.reader-theme-sepia #readerPageNumLabel {
   color: #2c251d !important;
+}
+.reader-modal.reader-theme-sepia .reader-breadcrumb-link {
+  color: #7c6a52 !important;
+}
+.reader-modal.reader-theme-sepia .reader-breadcrumb-link:hover {
+  color: #2c251d !important;
+  background: rgba(0,0,0,0.05) !important;
+}
+.reader-modal.reader-theme-sepia .reader-breadcrumb-link.reader-manga-heading {
+  color: #2c251d !important;
+}
+.reader-modal.reader-theme-sepia .reader-breadcrumb-sep {
+  color: #c8b89a !important;
 }
 .reader-modal.reader-theme-sepia .reader-chapter-dropdown,
 .reader-modal.reader-theme-sepia .action-pill-btn {

@@ -94,7 +94,7 @@
     <div class="container header-container">
       
       <!-- Brand Logo -->
-      <a href="#mainContent" class="brand-wrapper" aria-label="MangaVerse Home">
+      <a href="javascript:void(0)" onclick="navigateToHome()" class="brand-wrapper" aria-label="MangaVerse Home" title="MangaVerse Home">
         <svg class="brand-icon-svg" viewBox="0 0 100 100">
           <rect width="100" height="100" rx="20" fill="#c2410c"/>
           <path d="M26 74 V28 L50 54 L74 28 V74" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -173,7 +173,6 @@
         <div class="section-title-wrap">
           <div class="section-title-line">
             <h2 class="section-title">Manga Directory</h2>
-            <span class="version-index-badge">v2.4 Index</span>
           </div>
           <p class="section-subtitle">
             Filter by genre, demographic, and format, or search by keyword.
@@ -310,12 +309,23 @@
     
     <!-- Top Nav Strip -->
     <div class="reader-top-bar">
-      <div class="reader-title-info">
-        <span id="readerMangaTitle" class="reader-manga-heading">Manga Title</span>
-        <select id="readerChapterSelect" class="reader-chapter-dropdown" onchange="openReader(AppState.activeReader.manga.id, parseInt(this.value))">
-          <!-- Chapters injected -->
-        </select>
-      </div>
+      <!-- Reader Breadcrumbs Navigation Trail -->
+      <nav class="reader-breadcrumbs" aria-label="Reader Breadcrumb Navigation">
+        <button class="reader-breadcrumb-link" onclick="closeReader(); showCatalogView();" title="Return to Catalog">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align:-2px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span class="hide-mobile" style="margin-left:4px;">Home</span>
+        </button>
+        <span class="reader-breadcrumb-sep">/</span>
+        <button class="reader-breadcrumb-link reader-manga-heading" id="readerMangaTitle" onclick="exitReaderToSeries()" title="View Manga Overview & Chapters">
+          Manga Title
+        </button>
+        <span class="reader-breadcrumb-sep">/</span>
+        <div class="reader-breadcrumb-chapter-wrap">
+          <select id="readerChapterSelect" class="reader-chapter-dropdown" onchange="openReader(AppState.activeReader.manga.id, parseInt(this.value))" title="Jump to Chapter">
+            <!-- Chapters injected -->
+          </select>
+        </div>
+      </nav>
 
       <!-- 4 Reading Mode Controls -->
       <div class="reader-mode-controls">
