@@ -34760,9 +34760,62 @@ function updateSeriesSEOMeta(manga) {
   });
 }
 
+function startTopProgress() {
+  const bar = document.getElementById("mvTopProgress");
+  if (!bar) return;
+  bar.classList.add("active");
+  bar.style.width = "65%";
+}
+
+function finishTopProgress() {
+  const bar = document.getElementById("mvTopProgress");
+  if (!bar) return;
+  bar.style.width = "100%";
+  setTimeout(() => {
+    bar.classList.remove("active");
+    setTimeout(() => { bar.style.width = "0%"; }, 200);
+  }, 180);
+}
+
+const LEGAL_DOCS = {
+  privacy: {
+    title: "Privacy Policy",
+    body: `<p><b>Data Minimization:</b> MangaVerse stores your reading history, bookmarks, and library preferences locally in your browser (IndexedDB / localStorage). We do not sell personal data or run invasive third-party ad trackers.</p>
+           <p><b>API &amp; Security Logs:</b> Server rate-limiting and error logs hash IP addresses with SHA-256 and never store raw IPs or credentials.</p>
+           <p><b>Contact:</b> privacy@mangaverse.app</p>`
+  },
+  terms: {
+    title: "Terms of Service",
+    body: `<p><b>Usage:</b> MangaVerse provides a catalog and online reader interface. Automated bulk scraping of our API endpoints or proxy routes is prohibited and enforced via rate limiting.</p>
+           <p><b>Content &amp; Attribution:</b> Metadata and covers are sourced from AniList; external chapter feeds are resolved via MangaDex without local redistribution. Creator Studio submissions remain the property of their respective creators under the selected license.</p>`
+  },
+  dmca: {
+    title: "DMCA & Rights Takedown Policy",
+    body: `<p><b>Respect for Copyright:</b> MangaVerse does not host third-party copyrighted chapter images on its servers. External chapter feeds are proxied on demand from MangaDex, and Creator Studio uploads are gated by our <code>RightsVerifier</code> engine.</p>
+           <p><b>Takedown Requests:</b> Rights holders may submit a takedown notice to <b>dmca@mangaverse.app</b> with the exact URL and proof of ownership. Verified notices are actioned within 48 hours.</p>`
+  }
+};
+
+function openLegalModal(type) {
+  const modal = document.getElementById("legalModal");
+  const titleEl = document.getElementById("legalModalTitle");
+  const bodyEl = document.getElementById("legalModalBody");
+  const doc = LEGAL_DOCS[type] || LEGAL_DOCS.terms;
+  if (!modal || !titleEl || !bodyEl) return;
+  titleEl.textContent = doc.title;
+  bodyEl.innerHTML = doc.body;
+  modal.style.display = "flex";
+}
+
+function closeLegalModal() {
+  const modal = document.getElementById("legalModal");
+  if (modal) modal.style.display = "none";
+}
+
 function openMangaDetails(mangaId) {
   const manga = MANGA_DATABASE.find(m => m.id === mangaId);
   if (!manga) return;
+  startTopProgress();
   updateSeriesSEOMeta(manga);
 
   const dirSec = document.getElementById("directorySection");
@@ -34775,6 +34828,7 @@ function openMangaDetails(mangaId) {
     window.location.hash = `#/series/${manga.id}`;
     window.scrollTo({ top: 0, behavior: "smooth" });
     renderSeriesPage(manga);
+    finishTopProgress();
     return;
   }
 
@@ -36094,6 +36148,7 @@ function setupEventListeners() {
       closeMangaDetails();
       closeCreatorStudio();
       closeBotScanner();
+      closeLegalModal();
       const dropdown = document.getElementById("searchAutocompleteDropdown");
       if (dropdown) dropdown.classList.remove("open");
     }
@@ -36126,6 +36181,26 @@ function setupEventListeners() {
       if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
         if (dx < 0) nextReaderPage();
         else prevReaderPage();
+      }
+    }, { passive: true });
+
+    // Prefetch next chapter metadata/API manifest at 80% vertical scroll
+    let lastPrefetchedKey = "";
+    readerVp.addEventListener("scroll", () => {
+      if (!AppState.activeReader.isOpen) return;
+      const maxScroll = readerVp.scrollHeight - readerVp.clientHeight;
+      if (maxScroll <= 0) return;
+      if (readerVp.scrollTop / maxScroll >= 0.8) {
+        const r = AppState.activeReader;
+        const nextNum = Number(r.chapterNum) + 1;
+        const key = `${r.mangaId}:${nextNum}`;
+        if (lastPrefetchedKey !== key && Array.isArray(AppState.activeSeriesChapters)) {
+          const nextCh = AppState.activeSeriesChapters.find(c => Number(c.chapter) === nextNum || Number(c.chapter_number) === nextNum);
+          if (nextCh && nextCh.id && typeof fetchMangaDexChapterPages === "function") {
+            lastPrefetchedKey = key;
+            fetchMangaDexChapterPages(nextCh.id).catch(() => {});
+          }
+        }
       }
     }, { passive: true });
   }

@@ -684,17 +684,38 @@
   <!-- Toast Center -->
   <div id="toastCenter" aria-live="polite"></div>
 
+  <!-- Top Page Transition Progress Bar -->
+  <div id="mvTopProgress" class="mv-top-progress" aria-hidden="true"></div>
+
   <!-- Global Footer -->
   <footer class="site-footer">
     <div class="container footer-content">
       <div>
         <b>MangaVerse</b> • Online Manga &amp; Webtoon Reader
       </div>
+      <div class="footer-legal-links">
+        <button type="button" class="footer-legal-btn" onclick="openLegalModal('privacy')">Privacy Policy</button>
+        <span>•</span>
+        <button type="button" class="footer-legal-btn" onclick="openLegalModal('terms')">Terms of Service</button>
+        <span>•</span>
+        <button type="button" class="footer-legal-btn" onclick="openLegalModal('dmca')">DMCA Takedown</button>
+      </div>
       <div>
         <span>Open Catalog</span> • <span>Offline Ready</span>
       </div>
     </div>
   </footer>
+
+  <!-- Legal Compliance Modal -->
+  <div id="legalModal" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle">
+    <div class="modal-card" style="max-width:640px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <h2 id="legalModalTitle" style="margin:0; font-size:1.25rem;">Legal Information</h2>
+        <button type="button" class="btn-icon" onclick="closeLegalModal()" aria-label="Close legal dialog">✕</button>
+      </div>
+      <div id="legalModalBody" style="color:var(--text-secondary, #94a3b8); line-height:1.6; font-size:0.92rem;"></div>
+    </div>
+  </div>
 
   <!-- Bottom Navigation Bar -->
   <nav class="bottom-nav" aria-label="Bottom Navigation">

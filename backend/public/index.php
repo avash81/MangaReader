@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../app/Helpers/Logger.php';
 require_once __DIR__ . '/../app/Services/RightsVerifier.php';
 require_once __DIR__ . '/../app/Services/MangaDexProxy.php';
 require_once __DIR__ . '/../app/Services/RateLimiter.php';
@@ -159,7 +160,9 @@ if (preg_match('#^/v1/manga/([^/]+)/chapters$#', $uri, $matches) && $method === 
 if (preg_match('#^/v1/proxy/pages/([A-Za-z0-9\-]+)$#', $uri, $matches) && $method === 'GET') {
     RateLimiter::check('proxy');
     $proxy = new MangaDexProxy(Database::connect());
-    jsonResponse($proxy->getPages($matches[1]));
+    $res = $proxy->getPages($matches[1]);
+    Logger::info('proxy_pages', ['chapter_id' => $matches[1], 'success' => !empty($res['success'])]);
+    jsonResponse($res);
 }
 
 // ----------------------------------------------------------------------------
