@@ -34812,6 +34812,19 @@ function closeLegalModal() {
   if (modal) modal.style.display = "none";
 }
 
+function syncReadingProgressToApi(slug, chapterNumber = 1, pageNumber = 1) {
+  const token = localStorage.getItem("mv_auth_token");
+  if (!token || typeof API_BASE === "undefined" || !API_BASE) return;
+  fetch(`${API_BASE}/user/progress`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`
+    },
+    body: JSON.stringify({ slug, chapter_number: chapterNumber, page_number: pageNumber })
+  }).catch(() => {});
+}
+
 function openMangaDetails(mangaId) {
   const manga = MANGA_DATABASE.find(m => m.id === mangaId);
   if (!manga) return;

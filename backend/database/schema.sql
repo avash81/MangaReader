@@ -345,4 +345,28 @@ CREATE TABLE IF NOT EXISTS import_batches (
   started_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   finished_at TIMESTAMP NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------------------------------------------------------
+-- 17. Reading History & User Bookmarks (Cross-device Web + Mobile Sync)
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS reading_history (
+  user_id BIGINT UNSIGNED NOT NULL,
+  manga_id BIGINT UNSIGNED NOT NULL,
+  chapter_number DECIMAL(8,2) NOT NULL DEFAULT 1,
+  page_number INT UNSIGNED NOT NULL DEFAULT 1,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (user_id, manga_id),
+  INDEX idx_rh_updated (updated_at DESC),
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (manga_id) REFERENCES manga(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS user_bookmarks (
+  user_id BIGINT UNSIGNED NOT NULL,
+  manga_id BIGINT UNSIGNED NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (user_id, manga_id),
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (manga_id) REFERENCES manga(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ('Creator Studio Submissions', 'creator-studio', NULL, 'creator');

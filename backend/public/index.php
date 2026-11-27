@@ -43,6 +43,35 @@ function jsonResponse($data, int $status = 200) {
     exit;
 }
 
+// Stateless HMAC-SHA256 Bearer Token Helpers (Web + Mobile shared auth)
+function issueAuthToken(int $userId, string $role = 'user'): string {
+    $secret = getenv('JWT_SECRET') ?: (getenv('ADMIN_API_KEY') ?: 'mv_dev_token_secret_change_me');
+    $payload = rtrim(strtr(base64_encode(json_encode([
+        'sub' => $userId,
+        'role' => $role,
+        'exp' => time() + (30 * 86400),
+    ])), '+/', '-_'), '=');
+    $sig = rtrim(strtr(base64_encode(hash_hmac('sha256', $payload, $secret, true)), '+/', '-_'), '=');
+    return "{$payload}.{$sig}";
+}
+
+function requireAuthUserId(): int {
+    $auth = $_SERVER['HTTP_AUTHORIZATION'] ?? '';
+    if (!preg_match('/^Bearer\s+([A-Za-z0-9\-_]+)\.([A-Za-z0-9\-_]+)$/', $auth, $m)) {
+        jsonResponse(['success' => false, 'error' => 'Unauthorized: Missing Bearer token'], 401);
+    }
+    $secret = getenv('JWT_SECRET') ?: (getenv('ADMIN_API_KEY') ?: 'mv_dev_token_secret_change_me');
+    $expected = rtrim(strtr(base64_encode(hash_hmac('sha256', $m[1], $secret, true)), '+/', '-_'), '=');
+    if (!hash_equals($expected, $m[2])) {
+        jsonResponse(['success' => false, 'error' => 'Unauthorized: Invalid token signature'], 401);
+    }
+    $data = json_decode(base64_decode(strtr($m[1], '-_', '+/')), true);
+    if (!is_array($data) || empty($data['sub']) || ($data['exp'] ?? 0) < time()) {
+        jsonResponse(['success' => false, 'error' => 'Unauthorized: Token expired'], 401);
+    }
+    return (int)$data['sub'];
+}
+
 // ----------------------------------------------------------------------------
 // 1. GET /v1/health
 // ----------------------------------------------------------------------------
@@ -275,6 +304,103 @@ if ($uri === '/v1/creator/upload' && $method === 'POST') {
     $result = $ingest->ingestUploadedFiles($mangaId, $chapterId, $files, $rightsEval);
     Logger::info('creator_chapter_upload', ['manga_id' => $mangaId, 'chapter_id' => $chapterId, 'pages' => $result['pages_ingested']]);
     jsonResponse(['success' => true, 'chapter_id' => $chapterId, 'ingest' => $result], 201);
+}
+
+// ----------------------------------------------------------------------------
+// 5e. POST /v1/auth/register & /v1/auth/login (Web + Mobile Auth)
+// ----------------------------------------------------------------------------
+if ($uri === '/v1/auth/register' && $method === 'POST') {
+    RateLimiter::check('admin');
+    $body = json_decode(file_get_contents('php://input'), true) ?? [];
+    $email = filter_var(trim($body['email'] ?? ''), FILTER_VALIDATE_EMAIL);
+    $username = trim($body['username'] ?? '');
+    $password = (string)($body['password'] ?? '');
+    if (!$email || $username === '' || strlen($password) < 8) {
+        jsonResponse(['success' => false, 'error' => 'Valid email, username, and password (8+ chars) required'], 400);
+    }
+    $db = Database::connect();
+    $chk = $db->prepare("SELECT id FROM users WHERE email = ? OR username = ? LIMIT 1");
+    $chk->execute([$email, $username]);
+    if ($chk->fetchColumn()) {
+        jsonResponse(['success' => false, 'error' => 'Email or username already registered'], 409);
+    }
+    $ins = $db->prepare("INSERT INTO users (username, email, password_hash, role) VALUES (?, ?, ?, 'user')");
+    $ins->execute([$username, $email, password_hash($password, PASSWORD_DEFAULT)]);
+    $uid = (int)$db->lastInsertId();
+    jsonResponse(['success' => true, 'token' => issueAuthToken($uid, 'user'), 'user' => ['id' => $uid, 'username' => $username]], 201);
+}
+
+if ($uri === '/v1/auth/login' && $method === 'POST') {
+    RateLimiter::check('admin');
+    $body = json_decode(file_get_contents('php://input'), true) ?? [];
+    $email = trim($body['email'] ?? '');
+    $password = (string)($body['password'] ?? '');
+    $db = Database::connect();
+    $stmt = $db->prepare("SELECT id, username, password_hash, role, is_active FROM users WHERE email = ? LIMIT 1");
+    $stmt->execute([$email]);
+    $user = $stmt->fetch();
+    if (!$user || empty($user['is_active']) || !password_verify($password, $user['password_hash'])) {
+        jsonResponse(['success' => false, 'error' => 'Invalid credentials'], 401);
+    }
+    jsonResponse(['success' => true, 'token' => issueAuthToken((int)$user['id'], $user['role']), 'user' => ['id' => (int)$user['id'], 'username' => $user['username']]]);
+}
+
+// ----------------------------------------------------------------------------
+// 5f. GET/POST /v1/user/progress & /v1/user/bookmarks (Cross-device Sync)
+// ----------------------------------------------------------------------------
+if ($uri === '/v1/user/progress' && $method === 'GET') {
+    $uid = requireAuthUserId();
+    $db = Database::connect();
+    $stmt = $db->prepare("SELECT m.slug, m.title, rh.chapter_number, rh.page_number, rh.updated_at FROM reading_history rh JOIN manga m ON rh.manga_id = m.id WHERE rh.user_id = ? ORDER BY rh.updated_at DESC LIMIT 100");
+    $stmt->execute([$uid]);
+    jsonResponse(['success' => true, 'progress' => $stmt->fetchAll()]);
+}
+
+if ($uri === '/v1/user/progress' && $method === 'POST') {
+    $uid = requireAuthUserId();
+    $body = json_decode(file_get_contents('php://input'), true) ?? [];
+    $slug = trim($body['slug'] ?? '');
+    $chapter = (float)($body['chapter_number'] ?? 1);
+    $page = max(1, (int)($body['page_number'] ?? 1));
+    $db = Database::connect();
+    $mStmt = $db->prepare("SELECT id FROM manga WHERE slug = ? LIMIT 1");
+    $mStmt->execute([$slug]);
+    $mangaId = (int)$mStmt->fetchColumn();
+    if (!$mangaId) {
+        jsonResponse(['success' => false, 'error' => 'Manga not found'], 404);
+    }
+    $up = $db->prepare("INSERT INTO reading_history (user_id, manga_id, chapter_number, page_number) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE chapter_number = VALUES(chapter_number), page_number = VALUES(page_number), updated_at = NOW()");
+    $up->execute([$uid, $mangaId, $chapter, $page]);
+    jsonResponse(['success' => true, 'slug' => $slug, 'chapter_number' => $chapter, 'page_number' => $page]);
+}
+
+if ($uri === '/v1/user/bookmarks' && $method === 'GET') {
+    $uid = requireAuthUserId();
+    $db = Database::connect();
+    $stmt = $db->prepare("SELECT m.slug, m.title, m.cover_url, ub.created_at FROM user_bookmarks ub JOIN manga m ON ub.manga_id = m.id WHERE ub.user_id = ? ORDER BY ub.created_at DESC");
+    $stmt->execute([$uid]);
+    jsonResponse(['success' => true, 'bookmarks' => $stmt->fetchAll()]);
+}
+
+if ($uri === '/v1/user/bookmarks' && $method === 'POST') {
+    $uid = requireAuthUserId();
+    $body = json_decode(file_get_contents('php://input'), true) ?? [];
+    $slug = trim($body['slug'] ?? '');
+    $db = Database::connect();
+    $mStmt = $db->prepare("SELECT id FROM manga WHERE slug = ? LIMIT 1");
+    $mStmt->execute([$slug]);
+    $mangaId = (int)$mStmt->fetchColumn();
+    if (!$mangaId) {
+        jsonResponse(['success' => false, 'error' => 'Manga not found'], 404);
+    }
+    $chk = $db->prepare("SELECT 1 FROM user_bookmarks WHERE user_id = ? AND manga_id = ?");
+    $chk->execute([$uid, $mangaId]);
+    if ($chk->fetchColumn()) {
+        $db->prepare("DELETE FROM user_bookmarks WHERE user_id = ? AND manga_id = ?")->execute([$uid, $mangaId]);
+        jsonResponse(['success' => true, 'bookmarked' => false]);
+    }
+    $db->prepare("INSERT INTO user_bookmarks (user_id, manga_id) VALUES (?, ?)")->execute([$uid, $mangaId]);
+    jsonResponse(['success' => true, 'bookmarked' => true]);
 }
 
 // ----------------------------------------------------------------------------

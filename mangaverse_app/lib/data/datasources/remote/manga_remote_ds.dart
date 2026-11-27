@@ -1,3 +1,5 @@
+import 'package:dio/dio.dart';
+
 import '../../core/network/api_client.dart';
 import '../models/manga_model.dart';
 
@@ -37,5 +39,22 @@ class MangaRemoteDataSource {
     final res = await _client.dio.get('/proxy/pages/$externalChapterId');
     final pages = (res.data['pageUrls'] as List?) ?? [];
     return pages.map((e) => e.toString()).toList();
+  }
+
+  Future<void> syncProgress({
+    required String token,
+    required String slug,
+    required double chapterNumber,
+    required int pageNumber,
+  }) async {
+    await _client.dio.post(
+      '/user/progress',
+      data: {
+        'slug': slug,
+        'chapter_number': chapterNumber,
+        'page_number': pageNumber,
+      },
+      options: Options(headers: {'Authorization': 'Bearer $token'}),
+    );
   }
 }
