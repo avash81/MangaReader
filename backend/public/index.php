@@ -131,6 +131,28 @@ if ($uri === '/v1/openapi.json' && $method === 'GET') {
 }
 
 // ----------------------------------------------------------------------------
+// 1c. GET /v1/docs (Interactive OpenAPI Documentation Explorer)
+// ----------------------------------------------------------------------------
+if ($uri === '/v1/docs' && $method === 'GET') {
+    header('Content-Type: text/html; charset=utf-8');
+    echo '<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>MangaVerse API Documentation & Explorer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@scalar/api-reference/dist/browser/standalone.min.css"/>
+  <style>body{margin:0;background:#0b0f19;color:#fff;font-family:system-ui,-apple-system,sans-serif;}</style>
+</head>
+<body>
+  <div id="api-reference" data-url="/api/v1/openapi.json"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+</body>
+</html>';
+    exit;
+}
+
+// ----------------------------------------------------------------------------
 // 2. GET /v1/genres
 // ----------------------------------------------------------------------------
 if ($uri === '/v1/genres' && $method === 'GET') {

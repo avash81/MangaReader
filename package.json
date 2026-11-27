@@ -5,7 +5,13 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node test-suite.js",
+    "test": "node test-all.js",
+    "test:core": "node test-suite.js",
+    "test:deep": "node test-deep-functions.js",
+    "test:subsystems": "node validate-one-by-one.js",
+    "test:ui": "node validate-recent-changes.js",
+    "test:perf": "node scripts/verify-enhancements.js",
+    "audit": "node audit-runner.js",
     "ingest": "node scripts/category-ingestor.js",
     "sync-real": "node scripts/sync-real-manga.js"
   },
