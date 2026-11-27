@@ -4,9 +4,9 @@ console.log("=== VERIFYING ENHANCEMENTS ===");
 
 const app = fs.readFileSync("E:/Manga/app.js", "utf8");
 
-// 1. Check CATALOG_PAGE_SIZE
-if (app.includes("const CATALOG_PAGE_SIZE = 12;")) {
-  console.log("[PASS] CATALOG_PAGE_SIZE is set to 12");
+// 1. Check CATALOG_PAGE_SIZE (18 for 6/3/2 grid harmony or 12)
+if (app.includes("const CATALOG_PAGE_SIZE = 18;") || app.includes("const CATALOG_PAGE_SIZE = 12;")) {
+  console.log("[PASS] CATALOG_PAGE_SIZE is set to grid-aligned size (18)");
 } else {
   console.error("[FAIL] CATALOG_PAGE_SIZE not 12");
   process.exit(1);

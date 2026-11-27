@@ -3685,7 +3685,13 @@ const MANGA_DATABASE = [
     "anilistId": 101517,
     "totalChapters": 179,
     "trailerUrl": "PKmnXrDlhEQ",
-    "mangadexId": "ade0306c-f4b6-4890-9edb-1ddf04df2039"
+    "mangadexId": "ade0306c-f4b6-4890-9edb-1ddf04df2039",
+    "latestChapter": {
+      "number": 179,
+      "title": "Chapter 179",
+      "views": "250K",
+      "dropTime": "Archive Drop"
+    }
   },
   {
     "id": "attack-on-titan",
@@ -3719,7 +3725,13 @@ const MANGA_DATABASE = [
     "anilistId": 53390,
     "totalChapters": 139,
     "trailerUrl": "MGRm4IzK1SQ",
-    "mangadexId": "b76d94b5-c787-46ff-9925-f4f729b1ed39"
+    "mangadexId": "b76d94b5-c787-46ff-9925-f4f729b1ed39",
+    "latestChapter": {
+      "number": 139,
+      "title": "Chapter 139",
+      "views": "250K",
+      "dropTime": "Archive Drop"
+    }
   },
   {
     "id": "death-note",
@@ -3753,7 +3765,13 @@ const MANGA_DATABASE = [
     "anilistId": 21519,
     "totalChapters": 108,
     "trailerUrl": "NlJZ-YgAt-c",
-    "mangadexId": "36bdbf91-5e57-4b81-a813-4c557091dbce"
+    "mangadexId": "36bdbf91-5e57-4b81-a813-4c557091dbce",
+    "latestChapter": {
+      "number": 108,
+      "title": "Chapter 108",
+      "views": "250K",
+      "dropTime": "Archive Drop"
+    }
   },
   {
     "id": "demon-slayer",
@@ -3786,7 +3804,13 @@ const MANGA_DATABASE = [
     "anilistId": 87216,
     "totalChapters": 205,
     "trailerUrl": "VQGCKyvzIM4",
-    "mangadexId": "789642f8-ca89-4e4e-8f7b-eee4d17ea08b"
+    "mangadexId": "789642f8-ca89-4e4e-8f7b-eee4d17ea08b",
+    "latestChapter": {
+      "number": 205,
+      "title": "Chapter 205",
+      "views": "250K",
+      "dropTime": "Archive Drop"
+    }
   },
   {
     "id": "naruto",
@@ -3819,7 +3843,13 @@ const MANGA_DATABASE = [
     "anilistId": 11061,
     "totalChapters": 700,
     "trailerUrl": "4TXF9hm3V7Q",
-    "mangadexId": "275c3ee8-bdeb-4070-a333-6add23a8415a"
+    "mangadexId": "275c3ee8-bdeb-4070-a333-6add23a8415a",
+    "latestChapter": {
+      "number": 700,
+      "title": "Chapter 700",
+      "views": "250K",
+      "dropTime": "Archive Drop"
+    }
   },
   {
     "id": "tower-of-god",
@@ -3852,7 +3882,13 @@ const MANGA_DATABASE = [
     "anilistId": 76044,
     "totalChapters": 600,
     "trailerUrl": "FhcbdEdvHr4",
-    "mangadexId": "57e1d491-1dc9-4854-83bf-7a9379566fb2"
+    "mangadexId": "57e1d491-1dc9-4854-83bf-7a9379566fb2",
+    "latestChapter": {
+      "number": 600,
+      "title": "Chapter 600",
+      "views": "250K",
+      "dropTime": "Latest Simulpub"
+    }
   },
   {
     "id": "mv-al-113869",
@@ -15051,7 +15087,11 @@ const MANGA_DATABASE = [
     "altTitle": "ベルセルク 深淵の神②",
     "type": "Manga",
     "demographic": "Seinen",
-    "genres": [],
+    "genres": [
+      "Action",
+      "Dark Fantasy",
+      "Supernatural"
+    ],
     "rating": 4.05,
     "totalChapters": 1,
     "releaseDay": "Archive",
@@ -32970,15 +33010,17 @@ const CAMPAIGN_PRESETS = {
 // ==========================================================================
 // 2. SVG DYNAMIC ARTWORK GENERATOR
 // ==========================================================================
-function generateCoverSVG(manga) {
-  if (manga.coverUrl) {
-    return manga.coverUrl;
-  }
-  if (manga.coverPath) {
-    return manga.coverPath;
-  }
-  if (manga.customCoverDataUrl) {
-    return manga.customCoverDataUrl;
+function generateCoverSVG(manga, forceSvg = false) {
+  if (!forceSvg) {
+    if (manga.coverUrl) {
+      return manga.coverUrl;
+    }
+    if (manga.coverPath) {
+      return manga.coverPath;
+    }
+    if (manga.customCoverDataUrl) {
+      return manga.customCoverDataUrl;
+    }
   }
   const c = manga.coverColor || { bg1: "#1e1b4b", bg2: "#0f172a", accent: "#00f2fe" };
   const seal = manga.kanjiSeal || "魁";
@@ -33185,13 +33227,16 @@ function updateBreadcrumb(crumbs) {
  *  - On localhost dev server: http://localhost:7890/backend/public/v1
  */
 function detectApiBase() {
+  if (typeof window === 'undefined' || !window.location || typeof window.location.hostname !== 'string') {
+    return '/api/v1';
+  }
   const h = window.location.hostname;
   if (h === 'localhost' || h === '127.0.0.1') return 'http://localhost:7890/backend/public/v1';
   if (h.endsWith('.vercel.app')) return null; // no backend on Vercel
   return '/api/v1'; // cPanel with .htaccess routing
 }
 
-const API_BASE_URL = window.MANGAVERSE_API_URL || detectApiBase();
+const API_BASE_URL = (typeof window !== 'undefined' && window.MANGAVERSE_API_URL) ? window.MANGAVERSE_API_URL : detectApiBase();
 
 async function apiFetch(path, timeoutMs = 3000) {
   if (!API_BASE_URL) return null;
@@ -33970,9 +34015,11 @@ function showMangaHoverPopover(cardEl, mangaId) {
 }
 
 // Hide popover on window scroll to prevent trailing
-window.addEventListener("scroll", () => {
-  hideMangaHoverPopover();
-}, { passive: true });
+if (typeof window !== "undefined" && typeof window.addEventListener === "function") {
+  window.addEventListener("scroll", () => {
+    hideMangaHoverPopover();
+  }, { passive: true });
+}
 
 // ==========================================================================
 // 8. ADVANCED 4-MODE FULLSCREEN READER ENGINE (MangaPlus Evolution)
@@ -35338,24 +35385,26 @@ function goToSeriesChapterPage(pageNum) {
 }
 
 // Support browser back/forward and deep-linking via URL hash
-window.addEventListener("hashchange", () => {
-  const hash = window.location.hash;
-  if (hash.startsWith("#/series/")) {
-    const mangaId = hash.replace("#/series/", "");
-    const manga = MANGA_DATABASE.find(m => m.id === mangaId);
-    if (manga) {
-      const dirSec = document.getElementById("directorySection");
-      const serSec = document.getElementById("seriesSection");
-      if (dirSec && serSec) {
-        dirSec.style.display = "none";
-        serSec.style.display = "block";
-        renderSeriesPage(manga);
+if (typeof window !== "undefined" && typeof window.addEventListener === "function") {
+  window.addEventListener("hashchange", () => {
+    const hash = window.location ? window.location.hash : "";
+    if (hash && hash.startsWith("#/series/")) {
+      const mangaId = hash.replace("#/series/", "");
+      const manga = MANGA_DATABASE.find(m => m.id === mangaId);
+      if (manga) {
+        const dirSec = document.getElementById("directorySection");
+        const serSec = document.getElementById("seriesSection");
+        if (dirSec && serSec) {
+          dirSec.style.display = "none";
+          serSec.style.display = "block";
+          renderSeriesPage(manga);
+        }
       }
+    } else if (!hash || hash === "#/catalog" || hash === "#directory") {
+      showCatalogView();
     }
-  } else if (!hash || hash === "#/catalog" || hash === "#directory") {
-    showCatalogView();
-  }
-});
+  });
+}
 
 function toggleShelfDropdown(event) {
   if (event) event.stopPropagation();
@@ -36007,19 +36056,24 @@ function runInteractiveBotScan() {
 }
 
 function toggleAutoSync(enabled) {
+  if (typeof setInterval !== "function" || typeof clearInterval !== "function") return;
   if (enabled) {
     autoSyncInterval = setInterval(() => {
       // Background silent auto-poll
-      const lastSync = document.getElementById("botLastSyncLabel");
-      if (lastSync) lastSync.textContent = `Monitoring 24+ feeds • Auto-polled: ${new Date().toLocaleTimeString()}`;
+      if (typeof document !== "undefined") {
+        const lastSync = document.getElementById("botLastSyncLabel");
+        if (lastSync) lastSync.textContent = `Monitoring 24+ feeds • Auto-polled: ${new Date().toLocaleTimeString()}`;
+      }
     }, 60000);
   } else {
     if (autoSyncInterval) clearInterval(autoSyncInterval);
   }
 }
 
-// Auto-start auto-sync
-toggleAutoSync(true);
+// Auto-start auto-sync in browser
+if (typeof window !== "undefined") {
+  toggleAutoSync(true);
+}
 
 // ==========================================================================
 // 12. TOAST NOTIFICATIONS & LISTENERS
