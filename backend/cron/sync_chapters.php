@@ -34,6 +34,42 @@ function httpGetJson(string $url): ?array {
     return is_array($decoded) ? $decoded : null;
 }
 
+function sendFcmNotification(int $mangaId, string $mangaTitle, float $chNum): bool {
+    $fcmKey = getenv('FCM_SERVER_KEY');
+    if (!$fcmKey) {
+        return false;
+    }
+
+    $payload = [
+        'to' => "/topics/manga_{$mangaId}",
+        'notification' => [
+            'title' => "{$mangaTitle} — New Chapter!",
+            'body' => "Chapter {$chNum} is now available to read.",
+        ],
+        'data' => [
+            'manga_id' => (string)$mangaId,
+            'chapter' => (string)$chNum,
+            'click_action' => 'FLUTTER_NOTIFICATION_CLICK',
+        ],
+    ];
+
+    $ch = curl_init('https://fcm.googleapis.com/fcm/send');
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT => 5,
+        CURLOPT_HTTPHEADER => [
+            'Authorization: key=' . $fcmKey,
+            'Content-Type: application/json',
+        ],
+        CURLOPT_POSTFIELDS => json_encode($payload),
+    ]);
+    $res = curl_exec($ch);
+    $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    return $status === 200;
+}
+
 // ----------------------------------------------------------------------------
 // 1. Sync New Chapters from MangaDex API
 // ----------------------------------------------------------------------------
@@ -75,6 +111,7 @@ foreach ($mangaList as $m) {
         ]);
         if ($insertCh->rowCount() > 0) {
             $newChapters++;
+            sendFcmNotification((int)$m['id'], (string)$m['title'], $chNum);
         }
     }
 

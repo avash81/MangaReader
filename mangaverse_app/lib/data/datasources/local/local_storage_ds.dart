@@ -22,10 +22,16 @@ class LocalStorageDataSource {
     return added;
   }
 
+  Future<Set<String>> getDownloadedChapters() async {
+    final prefs = await SharedPreferences.getInstance();
+    return (prefs.getStringList(_downloadedKey) ?? const []).toSet();
+  }
+
   Future<String> downloadChapter({
     required String mangaSlug,
     required String chapterUuid,
     required List<String> pageUrls,
+    void Function(int current, int total)? onProgress,
   }) async {
     final docsDir = await getApplicationDocumentsDirectory();
     final dir = Directory('${docsDir.path}/mangaverse/$mangaSlug/$chapterUuid');
@@ -41,6 +47,7 @@ class LocalStorageDataSource {
       if (res.data != null) {
         await file.writeAsBytes(res.data!);
       }
+      onProgress?.call(i + 1, pageUrls.length);
     }
 
     final prefs = await SharedPreferences.getInstance();

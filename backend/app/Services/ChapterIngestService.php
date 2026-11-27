@@ -74,8 +74,10 @@ class ChapterIngestService {
 
         $pageNum = 0;
         $stored = [];
+        $driver = getenv('STORAGE_DRIVER') ?: 'local';
+        $r2PublicUrl = rtrim(getenv('R2_PUBLIC_URL') ?: '', '/');
         $dupCheckStmt = $this->db->prepare("SELECT id FROM storage_assets WHERE sha256 = ? LIMIT 1");
-        $assetStmt = $this->db->prepare("INSERT INTO storage_assets (storage_provider, storage_key, mime_type, file_size, sha256, asset_type) VALUES ('local', ?, ?, ?, ?, 'page')");
+        $assetStmt = $this->db->prepare("INSERT INTO storage_assets (storage_provider, storage_key, mime_type, file_size, sha256, asset_type) VALUES (?, ?, ?, ?, ?, 'page')");
         $pageStmt = $this->db->prepare("INSERT INTO chapter_pages (chapter_id, page_number, image_url) VALUES (?, ?, ?)");
 
         foreach ($candidates as $item) {
@@ -91,11 +93,12 @@ class ChapterIngestService {
             if (!$existingAsset) {
                 file_put_contents($destPath, $item['bytes']);
                 $mime = $item['ext'] === 'pdf' ? 'application/pdf' : 'image/' . ($item['ext'] === 'jpg' ? 'jpeg' : $item['ext']);
-                $assetStmt->execute([$relKey, $mime, strlen($item['bytes']), $sha256]);
+                $assetStmt->execute([$driver, $relKey, $mime, strlen($item['bytes']), $sha256]);
             }
 
-            $pageStmt->execute([$chapterId, $pageNum, $relKey]);
-            $stored[] = ['page' => $pageNum, 'key' => $relKey, 'sha256' => $sha256, 'deduplicated' => (bool)$existingAsset];
+            $imageUrl = ($driver === 'r2' && $r2PublicUrl) ? "{$r2PublicUrl}/{$relKey}" : $relKey;
+            $pageStmt->execute([$chapterId, $pageNum, $imageUrl]);
+            $stored[] = ['page' => $pageNum, 'key' => $relKey, 'sha256' => $sha256, 'storage_provider' => $driver, 'deduplicated' => (bool)$existingAsset];
         }
 
         $quality = [

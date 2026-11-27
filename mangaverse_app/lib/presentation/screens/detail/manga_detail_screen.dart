@@ -28,13 +28,21 @@ class MangaDetailScreen extends ConsumerStatefulWidget {
 
 class _MangaDetailScreenState extends ConsumerState<MangaDetailScreen> {
   bool _bookmarked = false;
+  Set<String> _downloaded = {};
+  final Map<String, double> _downloadProgress = {};
 
   @override
   void initState() {
     super.initState();
-    ref.read(localStorageProvider).getBookmarks().then((set) {
+    final localDs = ref.read(localStorageProvider);
+    localDs.getBookmarks().then((set) {
       if (mounted) {
         setState(() => _bookmarked = set.contains(widget.manga.slug));
+      }
+    });
+    localDs.getDownloadedChapters().then((set) {
+      if (mounted) {
+        setState(() => _downloaded = set);
       }
     });
   }
@@ -43,6 +51,55 @@ class _MangaDetailScreenState extends ConsumerState<MangaDetailScreen> {
     final added =
         await ref.read(localStorageProvider).toggleBookmark(widget.manga.slug);
     if (mounted) setState(() => _bookmarked = added);
+  }
+
+  Future<void> _downloadChapter(String chapId, double chapterNumber) async {
+    if (_downloadProgress.containsKey(chapId)) return; // Already in progress
+    setState(() => _downloadProgress[chapId] = 0.0);
+
+    try {
+      final pages =
+          await ref.read(remoteDsProvider).fetchChapterPages(chapId);
+      if (pages.isEmpty) {
+        if (mounted) {
+          setState(() => _downloadProgress.remove(chapId));
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('No pages found for offline download.')),
+          );
+        }
+        return;
+      }
+
+      await ref.read(localStorageProvider).downloadChapter(
+            mangaSlug: widget.manga.slug,
+            chapterUuid: chapId,
+            pageUrls: pages,
+            onProgress: (current, total) {
+              if (mounted) {
+                setState(() {
+                  _downloadProgress[chapId] = current / total;
+                });
+              }
+            },
+          );
+
+      if (mounted) {
+        setState(() {
+          _downloadProgress.remove(chapId);
+          _downloaded.add(chapId);
+        });
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Saved Ch. $chapterNumber offline')),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        setState(() => _downloadProgress.remove(chapId));
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Download failed: $e')),
+        );
+      }
+    }
   }
 
   @override
@@ -134,6 +191,38 @@ class _MangaDetailScreenState extends ConsumerState<MangaDetailScreen> {
               return Column(
                 children: chapters.map((ch) {
                   final chapId = ch.externalChapterId ?? ch.id.toString();
+                  final isDownloading = _downloadProgress.containsKey(chapId);
+                  final progress = _downloadProgress[chapId];
+                  final isDownloaded = _downloaded.contains(chapId);
+
+                  Widget downloadActionWidget;
+                  if (isDownloading) {
+                    downloadActionWidget = Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        width: 20,
+                        height: 20,
+                        child: CircularProgressIndicator(
+                          value: (progress != null && progress > 0) ? progress : null,
+                          strokeWidth: 2.5,
+                          valueColor: const AlwaysStoppedAnimation(AppTheme.cyan),
+                        ),
+                      ),
+                    );
+                  } else if (isDownloaded) {
+                    downloadActionWidget = const IconButton(
+                      tooltip: 'Available Offline',
+                      icon: Icon(Icons.check_circle, color: AppTheme.cyan),
+                      onPressed: null,
+                    );
+                  } else {
+                    downloadActionWidget = IconButton(
+                      tooltip: 'Save for Offline',
+                      icon: const Icon(Icons.download_for_offline_outlined),
+                      onPressed: () => _downloadChapter(chapId, ch.chapterNumber),
+                    );
+                  }
+
                   return ListTile(
                     contentPadding: EdgeInsets.zero,
                     title: Text('Chapter ${ch.chapterNumber}'),
@@ -141,28 +230,7 @@ class _MangaDetailScreenState extends ConsumerState<MangaDetailScreen> {
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        IconButton(
-                          tooltip: 'Save for Offline',
-                          icon: const Icon(Icons.download_for_offline_outlined),
-                          onPressed: () async {
-                            final pages = await ref
-                                .read(remoteDsProvider)
-                                .fetchChapterPages(chapId);
-                            if (pages.isEmpty) return;
-                            await ref.read(localStorageProvider).downloadChapter(
-                                  mangaSlug: m.slug,
-                                  chapterUuid: chapId,
-                                  pageUrls: pages,
-                                );
-                            if (context.mounted) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content: Text('Saved Ch. ${ch.chapterNumber} offline'),
-                                ),
-                              );
-                            }
-                          },
-                        ),
+                        downloadActionWidget,
                         const Icon(Icons.chevron_right),
                       ],
                     ),
