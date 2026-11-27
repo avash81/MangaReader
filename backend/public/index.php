@@ -117,7 +117,7 @@ if ($uri === '/v1/manga' && $method === 'GET') {
     }
 
     $whereSql = implode(" AND ", $where);
-    $stmt = $db->prepare("SELECT id, slug, title, original_title, synopsis, author, artist, demographic, content_type, original_language, publication_status, reading_direction, cover_url, publication_year, mangadex_id, anilist_id, trailer_id, trailer_source, release_day, is_featured, rating FROM manga WHERE {$whereSql} ORDER BY id ASC LIMIT {$limit} OFFSET {$offset}");
+    $stmt = $db->prepare("SELECT m.id, m.slug, m.title, m.original_title, m.synopsis, m.author, m.artist, m.demographic, m.content_type, m.original_language, m.publication_status, m.reading_direction, m.cover_url, m.publication_year, m.mangadex_id, m.anilist_id, m.trailer_id, m.trailer_source, m.release_day, m.is_featured, m.rating, EXISTS(SELECT 1 FROM rights_records r WHERE r.manga_id = m.id AND r.verification_status = 'verified' AND r.commercial_use = 1 AND r.redistribution_allowed = 1) AS is_commercially_verified FROM manga m WHERE {$whereSql} ORDER BY m.id ASC LIMIT {$limit} OFFSET {$offset}");
     $stmt->execute($params);
     $items = $stmt->fetchAll();
 
@@ -160,6 +160,69 @@ if (preg_match('#^/v1/proxy/pages/([A-Za-z0-9\-]+)$#', $uri, $matches) && $metho
     RateLimiter::check('proxy');
     $proxy = new MangaDexProxy(Database::connect());
     jsonResponse($proxy->getPages($matches[1]));
+}
+
+// ----------------------------------------------------------------------------
+// 5c. POST /v1/creator/submit (Creator Studio intake + RightsVerifier gate)
+// ----------------------------------------------------------------------------
+if ($uri === '/v1/creator/submit' && $method === 'POST') {
+    RateLimiter::check('admin');
+    $body = json_decode(file_get_contents('php://input'), true);
+    if (!is_array($body) || empty($body['slug']) || empty($body['title']) || empty($body['license_code'])) {
+        jsonResponse(['success' => false, 'error' => 'Missing required fields: slug, title, license_code'], 400);
+    }
+
+    $rightsEval = RightsVerifier::evaluateRights([
+        'license_code' => $body['license_code'],
+        'commercial_use' => !empty($body['commercial_use']),
+        'redistribution_allowed' => !empty($body['redistribution_allowed']),
+        'valid_until' => $body['valid_until'] ?? null,
+    ]);
+
+    if ($rightsEval['status'] === 'rejected') {
+        jsonResponse([
+            'success' => false,
+            'error' => 'Submission rejected by RightsVerifier',
+            'rights' => $rightsEval
+        ], 403);
+    }
+
+    $db = Database::connect();
+    $mStmt = $db->prepare("SELECT id FROM manga WHERE slug = ? LIMIT 1");
+    $mStmt->execute([$body['slug']]);
+    $mangaId = $mStmt->fetchColumn();
+
+    if (!$mangaId) {
+        $insM = $db->prepare("INSERT INTO manga (slug, title, synopsis, author, content_type, publication_status, cover_url) VALUES (?, ?, ?, ?, ?, 'ongoing', ?)");
+        $insM->execute([
+            $body['slug'],
+            $body['title'],
+            $body['synopsis'] ?? null,
+            $body['rights_holder'] ?? ($body['author'] ?? 'Independent Creator'),
+            $body['content_type'] ?? 'Manga',
+            $body['cover_url'] ?? null,
+        ]);
+        $mangaId = (int)$db->lastInsertId();
+    }
+
+    $insR = $db->prepare("INSERT INTO rights_records (manga_id, rights_holder, license_code, license_url, commercial_use, redistribution_allowed, attribution_text, verification_status, verified_by, verified_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'RightsVerifier', NOW())");
+    $insR->execute([
+        $mangaId,
+        $body['rights_holder'] ?? 'Creator',
+        $body['license_code'],
+        $body['license_url'] ?? null,
+        $rightsEval['commercial_use'] ? 1 : 0,
+        $rightsEval['redistribution_allowed'] ? 1 : 0,
+        $body['attribution_text'] ?? null,
+        $rightsEval['status'],
+    ]);
+
+    jsonResponse([
+        'success' => true,
+        'manga_id' => (int)$mangaId,
+        'rights' => $rightsEval,
+        'auto_publish_eligible' => ($rightsEval['status'] === 'verified')
+    ], 201);
 }
 
 // ----------------------------------------------------------------------------

@@ -238,7 +238,7 @@ function writeToAppJs(newEntries) {
   if (toAdd.length === 0) { console.log('  No new entries to add.'); return 0; }
 
   const updated = [...db, ...toAdd];
-  const newSrc = src.replace(regex, 'const MANGA_DATABASE = ' + JSON.stringify(updated, null, 2) + ';');
+  const newSrc = src.replace(regex, () => 'const MANGA_DATABASE = ' + JSON.stringify(updated, null, 2) + ';');
 
   // Double-bracket safety check
   const lines = newSrc.split('\n');
