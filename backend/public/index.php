@@ -92,7 +92,41 @@ if ($uri === '/v1/health') {
         'db' => $dbStatus,
         'manga_count' => $mangaCount,
         'timestamp' => date('c'),
-        'version' => '1.0.0'
+        'version' => '2.0.0'
+    ]);
+}
+
+// ----------------------------------------------------------------------------
+// 1b. GET /v1/openapi.json (OpenAPI 3.0 Machine-Readable Contract)
+// ----------------------------------------------------------------------------
+if ($uri === '/v1/openapi.json' && $method === 'GET') {
+    jsonResponse([
+        'openapi' => '3.0.3',
+        'info' => [
+            'title' => 'MangaVerse REST API',
+            'version' => '2.0.0',
+            'description' => 'Official API contract for MangaVerse web & Flutter mobile platforms.'
+        ],
+        'paths' => [
+            '/v1/health' => ['get' => ['summary' => 'System health probe', 'responses' => ['200' => ['description' => 'OK']]]],
+            '/v1/manga' => ['get' => ['summary' => 'Catalog query', 'parameters' => [['name' => 'page', 'in' => 'query'], ['name' => 'search', 'in' => 'query'], ['name' => 'genre', 'in' => 'query'], ['name' => 'type', 'in' => 'query']]]],
+            '/v1/manga/{slug}/chapters' => ['get' => ['summary' => 'Chapter list for series', 'parameters' => [['name' => 'slug', 'in' => 'path', 'required' => true]]]],
+            '/v1/proxy/pages/{uuid}' => ['get' => ['summary' => 'Signed ephemeral CDN chapter pages', 'parameters' => [['name' => 'uuid', 'in' => 'path', 'required' => true]]]],
+            '/v1/creator/submit' => ['post' => ['summary' => 'Creator Studio series submission with rights verification']],
+            '/v1/creator/upload' => ['post' => ['summary' => 'Multipart chapter archive ingestion (ZIP/CBZ/images)']],
+            '/v1/auth/register' => ['post' => ['summary' => 'User registration']],
+            '/v1/auth/login' => ['post' => ['summary' => 'User login and HMAC token issuance']],
+            '/v1/user/progress' => [
+                'get' => ['summary' => 'Fetch user reading progress'],
+                'post' => ['summary' => 'Sync reading progress across devices']
+            ],
+            '/v1/user/bookmarks' => [
+                'get' => ['summary' => 'Fetch user bookmarks'],
+                'post' => ['summary' => 'Toggle / sync bookmarks']
+            ],
+            '/v1/admin/manga/import' => ['post' => ['summary' => 'Admin bulk import (API Key required)']],
+            '/v1/admin/discover' => ['post' => ['summary' => 'Trigger archive discovery connectors']]
+        ]
     ]);
 }
 
