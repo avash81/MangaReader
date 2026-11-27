@@ -4203,6 +4203,7 @@ async function fetchApiChapters(mangaId) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+  renderCatalogSkeleton(12);
   // Check for live published manga updates
   try {
     const liveList = await fetchLiveMangaCatalog();
@@ -4606,6 +4607,20 @@ function updateCatalogResultsCount() {
 const CATALOG_PAGE_SIZE = 18;
 const SERIES_CHAPTER_PAGE_SIZE = 16;
 
+function renderCatalogSkeleton(count = 12) {
+  const container = document.getElementById("catalogGrid");
+  if (!container) return;
+  container.innerHTML = Array.from({ length: count }, () => `
+    <div class="manga-card-skeleton" aria-hidden="true">
+      <div class="skeleton-cover"></div>
+      <div class="skeleton-body">
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line short"></div>
+      </div>
+    </div>
+  `).join("");
+}
+
 function renderCatalog() {
   const container = document.getElementById("catalogGrid");
   if (!container) return;
@@ -4633,14 +4648,15 @@ function renderCatalog() {
   const pageEnd   = Math.min(pageStart + CATALOG_PAGE_SIZE, total);
   const visible   = AppState.filteredManga.slice(pageStart, pageEnd);
 
-  container.innerHTML = visible.map(m => {
+  container.innerHTML = visible.map((m, idx) => {
     const cover = generateCoverSVG(m);
     const views = m.latestChapter ? m.latestChapter.views : "1.2M";
     const isFav = AppState.userFavorites && AppState.userFavorites.has(m.id);
+    const loadAttr = idx < 6 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
     return `
       <article class="manga-card" onclick="openMangaDetails('${m.id}')" onmouseenter="onMangaCardHoverEnter(event, '${m.id}')" onmouseleave="onMangaCardHoverLeave(event)">
         <div class="manga-cover-wrap">
-          <img class="manga-cover-img" src="${cover}" alt="${m.title}" loading="lazy" onerror="this.onerror=null;this.src=generateCoverSVG({...MANGA_DATABASE.find(x=>x.id==='${m.id}')||{id:'${m.id}',title:'${m.title}',rating:0,totalChapters:0},coverUrl:null});"/>
+          <img class="manga-cover-img" src="${cover}" alt="${m.title}" ${loadAttr} width="200" height="300" onerror="this.onerror=null;this.src=generateCoverSVG({...MANGA_DATABASE.find(x=>x.id==='${m.id}')||{id:'${m.id}',title:'${m.title}',rating:0,totalChapters:0},coverUrl:null});"/>
           <span class="manga-format-badge catalog-format-badge">${m.type.toUpperCase()}</span>
           <span class="manga-score-badge catalog-score-badge">★ ${m.rating}</span>
           <button class="card-fav-btn ${isFav ? 'active' : ''}" data-id="${m.id}" onclick="toggleCardFavorite(event, '${m.id}')" title="${isFav ? 'Remove from favorites' : 'Save to favorites'}" aria-label="Favorite">
@@ -6909,7 +6925,7 @@ function setupEventListeners() {
       debounceTimer = setTimeout(() => {
         AppState.activeSearchQuery = e.target.value;
         triggerSearch();
-      }, 120);
+      }, 300);
     });
 
     document.addEventListener("click", (e) => {
@@ -6927,8 +6943,11 @@ function setupEventListeners() {
   // Directory Quick Search Input (Screen 5)
   const dirSearch = document.getElementById("dirSearchInput");
   if (dirSearch) {
+    let dirDebounce;
     dirSearch.addEventListener("input", (e) => {
-      handleDirSearch(e.target.value);
+      clearTimeout(dirDebounce);
+      const val = e.target.value;
+      dirDebounce = setTimeout(() => handleDirSearch(val), 300);
     });
   }
 
@@ -6980,6 +6999,29 @@ function setupEventListeners() {
       }
     }
   });
+
+  // Mobile Swipe Gestures in Reader Viewport
+  const readerVp = document.getElementById("readerViewport");
+  if (readerVp) {
+    let touchStartX = 0;
+    let touchStartY = 0;
+    readerVp.addEventListener("touchstart", (e) => {
+      if (e.touches.length === 1) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      }
+    }, { passive: true });
+    readerVp.addEventListener("touchend", (e) => {
+      if (!AppState.activeReader.isOpen || e.changedTouches.length !== 1) return;
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      const dy = e.changedTouches[0].clientY - touchStartY;
+      // Only trigger horizontal page turn on clear horizontal swipe (> 60px and dominant X axis)
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        if (dx < 0) nextReaderPage();
+        else prevReaderPage();
+      }
+    }, { passive: true });
+  }
 }
 
 // ==========================================================================
