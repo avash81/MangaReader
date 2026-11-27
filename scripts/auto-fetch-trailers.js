@@ -2,28 +2,30 @@
  * auto-fetch-trailers.js
  * ─────────────────────
  * Automatically fetches official YouTube trailer IDs for every manga
- * in MANGA_DATABASE using two completely free, key-less APIs:
+ * in MANGA_DATABASE using free, key-less APIs:
  *
- *   1. AniList GraphQL API  → queries `trailer { id site }` for each anilistId
- *   2. Jikan v4 (MyAnimeList) → fallback for titles that have an anime adaptation
- *
- * No YouTube API key needed. No paid plan. Run any time to refresh.
+ *   1. AniList GraphQL API:
+ *      - Checks `Media(id, type: MANGA).trailer`
+ *      - Checks `relations` for official ANIME adaptations (`relationType == ADAPTATION`)
+ *        and grabs the anime's official `trailer { id site }`!
+ *      - If `anilistId` is missing, searches AniList by title first.
+ *   2. Jikan v4 (MyAnimeList) fallback:
+ *      - Searches for an official anime adaptation by title (with title-similarity check)
+ *        and extracts `trailer.youtube_id`.
  *
  * Usage:
  *   node scripts/auto-fetch-trailers.js
- *   node scripts/auto-fetch-trailers.js --dry-run   (shows what would change)
- *   node scripts/auto-fetch-trailers.js --overwrite  (replace existing trailerUrls)
+ *   node scripts/auto-fetch-trailers.js --dry-run
+ *   node scripts/auto-fetch-trailers.js --overwrite
  */
 
-const fs   = require('fs');
-const path = require('path');
+const fs    = require('fs');
+const path  = require('path');
 const https = require('https');
 
 const DRY_RUN   = process.argv.includes('--dry-run');
 const OVERWRITE = process.argv.includes('--overwrite');
 const APP_PATH  = path.join(__dirname, '..', 'app.js');
-
-// ─── Helpers ─────────────────────────────────────────────────────────────────
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
@@ -38,7 +40,7 @@ function httpsGet(url, postData, headers) {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'User-Agent': 'MangaVerse-TrailerFetcher/1.0',
+        'User-Agent': 'MangaVerse-TrailerFetcher/2.0',
         ...headers
       }
     };
@@ -58,13 +60,56 @@ function httpsGet(url, postData, headers) {
   });
 }
 
-// ─── Source 1: AniList GraphQL ───────────────────────────────────────────────
+function normalizeTitle(s) {
+  return (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
 
-async function fetchAniListTrailer(anilistId) {
+function titlesMatch(a, b) {
+  const na = normalizeTitle(a);
+  const nb = normalizeTitle(b);
+  if (!na || !nb) return false;
+  return na === nb || na.includes(nb) || nb.includes(na);
+}
+
+// ─── Source 1: AniList GraphQL (Manga trailer + Official Anime Adaptation) ────
+
+function extractTrailerFromMedia(media) {
+  if (!media) return null;
+  if (media.trailer && media.trailer.site === 'youtube' && media.trailer.id) {
+    return { videoId: media.trailer.id, source: 'AniList Manga' };
+  }
+  const edges = media.relations?.edges || [];
+  // Strictly require relationType === 'ADAPTATION' and exclude MUSIC videos so every trailer matches the actual manga's official anime
+  const animeEdges = edges.filter(
+    e => e.relationType === 'ADAPTATION' &&
+         e.node?.type === 'ANIME' &&
+         e.node?.format !== 'MUSIC' &&
+         e.node?.trailer?.site === 'youtube' &&
+         e.node?.trailer?.id
+  );
+  const tvEdge = animeEdges.find(e => e.node.format === 'TV') || animeEdges[0];
+  if (tvEdge) {
+    return { videoId: tvEdge.node.trailer.id, source: `AniList Anime (${tvEdge.node.format || 'ANIME'})` };
+  }
+  return null;
+}
+
+async function fetchAniListById(anilistId) {
   const query = `
     query ($id: Int) {
       Media(id: $id, type: MANGA) {
         trailer { id site }
+        relations {
+          edges {
+            relationType
+            node {
+              id
+              type
+              format
+              trailer { id site }
+            }
+          }
+        }
       }
     }`;
   try {
@@ -73,25 +118,58 @@ async function fetchAniListTrailer(anilistId) {
       JSON.stringify({ query, variables: { id: anilistId } })
     );
     if (res.status === 429) return { retry: true };
-    const trailer = res.body?.data?.Media?.trailer;
-    if (trailer && trailer.site === 'youtube' && trailer.id) {
-      return { videoId: trailer.id, source: 'AniList' };
-    }
-    return null;
+    return extractTrailerFromMedia(res.body?.data?.Media);
   } catch { return null; }
 }
 
-// ─── Source 2: Jikan v4 (MyAnimeList) ───────────────────────────────────────
-// Many manga have anime adaptations; Jikan returns the anime PV trailer.
+async function fetchAniListByTitle(title) {
+  const query = `
+    query ($search: String) {
+      Media(search: $search, type: MANGA) {
+        id
+        title { romaji english }
+        trailer { id site }
+        relations {
+          edges {
+            relationType
+            node {
+              id
+              type
+              format
+              trailer { id site }
+            }
+          }
+        }
+      }
+    }`;
+  try {
+    const res = await httpsGet(
+      'https://graphql.anilist.co',
+      JSON.stringify({ query, variables: { search: title } })
+    );
+    if (res.status === 429) return { retry: true };
+    const media = res.body?.data?.Media;
+    if (!media) return null;
+    if (!titlesMatch(title, media.title?.english) && !titlesMatch(title, media.title?.romaji)) {
+      return null;
+    }
+    return extractTrailerFromMedia(media);
+  } catch { return null; }
+}
+
+// ─── Source 2: Jikan v4 (MyAnimeList) ─────────────────────────────────────────
 
 async function fetchJikanTrailer(title) {
   try {
     const encoded = encodeURIComponent(title);
-    const res = await httpsGet(`https://api.jikan.moe/v4/anime?q=${encoded}&limit=1&order_by=score&sort=desc`);
+    const res = await httpsGet(`https://api.jikan.moe/v4/anime?q=${encoded}&limit=3`);
     if (res.status === 429) return { retry: true };
-    const anime = res.body?.data?.[0];
-    if (anime?.trailer?.youtube_id) {
-      return { videoId: anime.trailer.youtube_id, source: 'Jikan/MAL' };
+    const list = res.body?.data || [];
+    for (const anime of list) {
+      const candidates = [anime.title, anime.title_english, ...(anime.title_synonyms || [])].filter(Boolean);
+      if (candidates.some(c => titlesMatch(title, c)) && anime?.trailer?.youtube_id) {
+        return { videoId: anime.trailer.youtube_id, source: 'Jikan/MAL Anime' };
+      }
     }
     return null;
   } catch { return null; }
@@ -100,7 +178,6 @@ async function fetchJikanTrailer(title) {
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 (async () => {
-  // 1. Load DB
   const src = fs.readFileSync(APP_PATH, 'utf8');
   const regex = /const MANGA_DATABASE = (\[[\s\S]*?\n\]);/;
   const match = src.match(regex);
@@ -108,26 +185,23 @@ async function fetchJikanTrailer(title) {
   const db = eval(match[1]);
   console.log(`📚 Loaded ${db.length} titles. DRY_RUN=${DRY_RUN} OVERWRITE=${OVERWRITE}\n`);
 
-  // 2. Filter which titles need trailers
   const targets = db.filter(m => OVERWRITE ? true : !m.trailerUrl);
-  const withAnilistId = targets.filter(m => m.anilistId);
-  const withoutAnilistId = targets.filter(m => !m.anilistId);
+  console.log(`🎯 Need trailers: ${targets.length}\n`);
 
-  console.log(`🎯 Need trailers: ${targets.length} (${withAnilistId.length} have AniList ID, ${withoutAnilistId.length} don't)\n`);
+  let found = 0;
 
-  let found = 0, skipped = 0;
+  console.log('━━━ Pass 1: AniList (Manga + Official Anime Adaptations) ━━━');
+  for (const manga of targets) {
+    process.stdout.write(`  ${manga.title.substring(0, 48).padEnd(48)} → `);
 
-  // 3. AniList pass (batch by ID)
-  console.log('━━━ Pass 1: AniList API ━━━');
-  for (const manga of withAnilistId) {
-    process.stdout.write(`  ${manga.title.substring(0, 50).padEnd(50)} → `);
-    
     let result = null;
     let attempts = 0;
     while (attempts < 3) {
-      result = await fetchAniListTrailer(manga.anilistId);
+      result = manga.anilistId
+        ? await fetchAniListById(manga.anilistId)
+        : await fetchAniListByTitle(manga.title);
       if (result?.retry) {
-        process.stdout.write(`[rate limit, waiting 60s] `);
+        process.stdout.write(`[429 wait 60s] `);
         await sleep(60000);
         attempts++;
       } else { break; }
@@ -138,29 +212,25 @@ async function fetchJikanTrailer(title) {
       if (!DRY_RUN) manga.trailerUrl = result.videoId;
       found++;
     } else {
-      process.stdout.write(`— no trailer on AniList\n`);
-      skipped++;
+      process.stdout.write(`— not on AniList\n`);
     }
 
-    await sleep(600); // ~100 req/min AniList rate limit
+    await sleep(700);
   }
 
-  return; // Skip Jikan for now
-  // 4. Jikan fallback pass (for entries that still have no trailer)
+  // Pass 2: Jikan/MAL fallback (opt-in via --jikan)
+  if (process.argv.includes('--jikan')) {
   const stillMissing = db.filter(m => !m.trailerUrl);
-  const jikanTargets = stillMissing.filter(m => !withoutAnilistId.includes(m) || true);
-  
-  console.log(`\n━━━ Pass 2: Jikan/MAL fallback (${jikanTargets.length} remaining) ━━━`);
-  for (const manga of jikanTargets) {
-    if (manga.trailerUrl) continue; // already got one from AniList
-    process.stdout.write(`  ${manga.title.substring(0, 50).padEnd(50)} → `);
+  console.log(`\n━━━ Pass 2: Jikan/MAL Anime Fallback (${stillMissing.length} remaining) ━━━`);
+  for (const manga of stillMissing) {
+    process.stdout.write(`  ${manga.title.substring(0, 48).padEnd(48)} → `);
 
     let result = null;
     let attempts = 0;
     while (attempts < 3) {
       result = await fetchJikanTrailer(manga.title);
       if (result?.retry) {
-        process.stdout.write(`[rate limit, waiting 4s] `);
+        process.stdout.write(`[429 wait 4s] `);
         await sleep(4000);
         attempts++;
       } else { break; }
@@ -171,38 +241,33 @@ async function fetchJikanTrailer(title) {
       if (!DRY_RUN) manga.trailerUrl = result.videoId;
       found++;
     } else {
-      process.stdout.write(`— not found\n`);
+      process.stdout.write(`— no anime trailer\n`);
     }
 
-    await sleep(400); // Jikan rate limit: 3 req/sec
+    await sleep(450);
+  }
   }
 
-  // 5. Summary
   const totalWithTrailer = db.filter(m => m.trailerUrl).length;
   console.log(`\n━━━ RESULTS ━━━`);
   console.log(`✅ Newly found: ${found}`);
   console.log(`📊 Total with trailers: ${totalWithTrailer}/${db.length}`);
 
   if (DRY_RUN) {
-    console.log('\n🔍 DRY RUN — no files written. Remove --dry-run to apply.');
+    console.log('\n🔍 DRY RUN — no files written.');
     return;
   }
 
-  // 6. Write back to app.js (safe: JSON.stringify already includes [...])
   const newSrc = src.replace(regex, 'const MANGA_DATABASE = ' + JSON.stringify(db, null, 2) + ';');
-  
-  // Safety check: make sure no double-bracket was introduced
+
   const checkLines = newSrc.split('\n');
   for (let i = 0; i < checkLines.length - 1; i++) {
-    if (checkLines[i].trim() === ']' && checkLines[i+1].trim() === '];') {
+    if (checkLines[i].trim() === ']' && checkLines[i + 1].trim() === '];') {
       console.error('❌ Double-bracket detected! Aborting write.');
       process.exit(1);
     }
   }
 
   fs.writeFileSync(APP_PATH, newSrc, 'utf8');
-  console.log(`\n💾 Saved to app.js — ${totalWithTrailer} titles now have trailers.`);
-  console.log(`\n📋 Next steps:`);
-  console.log(`   node test-suite.js`);
-  console.log(`   git add app.js && git commit -m "feat(trailers): auto-fetch ${totalWithTrailer} official trailers via AniList + Jikan" && git push`);
+  console.log(`\n💾 Saved to app.js — ${totalWithTrailer}/${db.length} titles now have trailers.`);
 })();

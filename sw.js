@@ -3,7 +3,7 @@
  * Enables sub-100ms load times and offline reading for millions of concurrent users.
  */
 
-const CACHE_NAME = 'mangaverse-v2.1';
+const CACHE_NAME = 'mangaverse-v2.2';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -46,23 +46,18 @@ self.addEventListener('fetch', (event) => {
   // Ignore cross-origin non-GET requests
   if (event.request.method !== 'GET') return;
 
-  // Stale-While-Revalidate for app core assets
+  // Network-First for app core assets so deployments appear immediately
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      const fetchPromise = fetch(event.request).then((networkResponse) => {
-        if (networkResponse && networkResponse.status === 200) {
-          const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
-        }
-        return networkResponse;
-      }).catch(() => {
-        // Fallback to cache if offline
-        return cachedResponse;
-      });
-
-      return cachedResponse || fetchPromise;
+    fetch(event.request).then((networkResponse) => {
+      if (networkResponse && networkResponse.status === 200) {
+        const responseToCache = networkResponse.clone();
+        caches.open(CACHE_NAME).then((cache) => {
+          cache.put(event.request, responseToCache);
+        });
+      }
+      return networkResponse;
+    }).catch(() => {
+      return caches.match(event.request);
     })
   );
 });

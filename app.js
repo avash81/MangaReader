@@ -393,7 +393,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30051-5KJyPlO7z5F4.png",
     "author": "Takehiko Inoue",
     "artist": "Takehiko Inoue",
-    "synopsis": "Hanamichi Sakuragi's got no game with girls--none at all! It doesn't help that he's known for throwing down at a moment's notice and always coming out on top. A hopeless bruiser, he's been rejected by 50 girls in a row! All that changes when he meets the girl of his dreams, Haruko, and ..."
+    "synopsis": "Hanamichi Sakuragi's got no game with girls--none at all! It doesn't help that he's known for throwing down at a moment's notice and always coming out on top. A hopeless bruiser, he's been rejected by 50 girls in a row! All that changes when he meets the girl of his dreams, Haruko, and ...",
+    "trailerUrl": "0GGMhcs2v8Q"
   },
   {
     "id": "mv-al-74489",
@@ -424,7 +425,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx74489-5HtDCFfut8Be.jpg",
     "author": "Haruko Ichikawa",
     "artist": "Haruko Ichikawa",
-    "synopsis": "In a world inhabited by crystalline lifeforms called The Lustrous, every unique gem must fight for their way of life against the threat of lunarians who would turn them into decorations. Phosphophyllite, the most fragile and brittle of gems, longs to join the battle. When Phos is instea..."
+    "synopsis": "In a world inhabited by crystalline lifeforms called The Lustrous, every unique gem must fight for their way of life against the threat of lunarians who would turn them into decorations. Phosphophyllite, the most fragile and brittle of gems, longs to join the battle. When Phos is instea...",
+    "trailerUrl": "pwFpAyEuph8"
   },
   {
     "id": "mv-al-30657",
@@ -1176,7 +1178,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx98263-kIeaTXrAbGkj.jpg",
     "author": "Kamome Shirahama",
     "artist": "Kamome Shirahama",
-    "synopsis": "In a world where everyone takes wonders like magic spells and dragons for granted, Coco is a girl with a simple dream: she wants to be a witch. But everybody knows magicians are born, not made, and Coco was not born with a gift for magic. Resigned to her un-magical life, Coco is about t..."
+    "synopsis": "In a world where everyone takes wonders like magic spells and dragons for granted, Coco is a girl with a simple dream: she wants to be a witch. But everybody knows magicians are born, not made, and Coco was not born with a gift for magic. Resigned to her un-magical life, Coco is about t...",
+    "trailerUrl": "XM95k31NUts"
   },
   {
     "id": "mv-al-53900",
@@ -1382,7 +1385,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx39982-68LS2Z9075Kw.jpg",
     "author": "Toshio Sako",
     "artist": "Toshio Sako",
-    "synopsis": "Driven by his desire for quick money, young Kaji gets involved with a loan shark and soon finds himself hounded by debt collectors. One day, a mysterious man named Baku Madarame appears before him. Calling himself a gambler, Baku boldly declares that he’ll help Kaji repay his debt—and d..."
+    "synopsis": "Driven by his desire for quick money, young Kaji gets involved with a loan shark and soon finds himself hounded by debt collectors. One day, a mysterious man named Baku Madarame appears before him. Calling himself a gambler, Baku boldly declares that he’ll help Kaji repay his debt—and d...",
+    "trailerUrl": "zkfTL997dXM"
   },
   {
     "id": "mv-al-117620",
@@ -1593,7 +1597,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30081-oCRaPkTGq4vP.jpg",
     "author": "Kozue Amano",
     "artist": "Kozue Amano",
-    "synopsis": "On the planet Aqua, a world once known as Mars, Akari Mizunashi has just made her home in the town of Neo-Venezia, a futuristic imitation of the ancient city of Venice. In pursuit of her dream to become an Undine — a gondolier who leads high-end tours around the city — Akari joins as a ..."
+    "synopsis": "On the planet Aqua, a world once known as Mars, Akari Mizunashi has just made her home in the town of Neo-Venezia, a futuristic imitation of the ancient city of Venice. In pursuit of her dream to become an Undine — a gondolier who leads high-end tours around the city — Akari joins as a ...",
+    "trailerUrl": "tH4RPUZHHMc"
   },
   {
     "id": "mv-al-85412",
@@ -1622,7 +1627,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx85412-wzZ2QFwbZJED.jpg",
     "author": "Tsukumizu",
     "artist": "Tsukumizu",
-    "synopsis": "Civilization is dead, but Chito and Yuuri are still alive. So they hop aboard their beloved Kettenkrad motorbike and aimlessly wander the ruins of the world they once knew. Day after hopeless day, they look for their next meal and fuel for their ride. But as long as the two are together..."
+    "synopsis": "Civilization is dead, but Chito and Yuuri are still alive. So they hop aboard their beloved Kettenkrad motorbike and aimlessly wander the ruins of the world they once knew. Day after hopeless day, they look for their next meal and fuel for their ride. But as long as the two are together...",
+    "trailerUrl": "SuVVs4giZrI"
   },
   {
     "id": "mv-al-31133",
@@ -1744,7 +1750,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx136109-h4mux2toQJkD.jpg",
     "author": "Kuzushiro",
     "artist": "Kuzushiro",
-    "synopsis": "One day, while rushing to a piano lesson, a girl named Saki collides with someone on the street. As Saki collects herself, the stranger picks up the sheet music Saki dropped, hands it to Saki together with a band-aid, and continues on her way—all without saying a word. Saki is left wond..."
+    "synopsis": "One day, while rushing to a piano lesson, a girl named Saki collides with someone on the street. As Saki collects herself, the stranger picks up the sheet music Saki dropped, hands it to Saki together with a band-aid, and continues on her way—all without saying a word. Saki is left wond...",
+    "trailerUrl": "Q-W1E8Y9Jv0"
   },
   {
     "id": "mv-al-174875",
@@ -1804,7 +1811,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30145-ipNuwNgD5AJS.png",
     "author": "Harold Sakuishi",
     "artist": "Harold Sakuishi",
-    "synopsis": "For the first 14 years of his life, Yukio Tanaka has been one heck of a boring guy. He has no hobbies, a weak taste in music, and only a small vestige of a personality. He yearns for an exciting life, but his shy, and somewhat neurotic personality make him his own worst enemy. Little do..."
+    "synopsis": "For the first 14 years of his life, Yukio Tanaka has been one heck of a boring guy. He has no hobbies, a weak taste in music, and only a small vestige of a personality. He yearns for an exciting life, but his shy, and somewhat neurotic personality make him his own worst enemy. Little do...",
+    "trailerUrl": "GNgReTHy1EA"
   },
   {
     "id": "mv-al-86569",
@@ -1832,7 +1840,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86569-KC2nXAGtv0Cx.jpg",
     "author": "Yuuji Terajima",
     "artist": "Yuuji Terajima",
-    "synopsis": "I want to pitch to that mitt, just one more time…    When Eijun Sawamura was just fifteen, he met someone who changed the course of his life forever—the catcher Kazuya Miyuki. Now, he's said goodbye to family and friends to travel to Seido High, where he can test his baseball skills alo..."
+    "synopsis": "I want to pitch to that mitt, just one more time…    When Eijun Sawamura was just fifteen, he met someone who changed the course of his life forever—the catcher Kazuya Miyuki. Now, he's said goodbye to family and friends to travel to Seido High, where he can test his baseball skills alo...",
+    "trailerUrl": "rXeRBV9vNnE"
   },
   {
     "id": "mv-al-109285",
@@ -1948,7 +1957,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx44483-j8urUUmaCOaD.jpg",
     "author": "Chuuya Koyama",
     "artist": "Chuuya Koyama",
-    "synopsis": "Two brothers looked to the starry skies as children and made a promise ... Now, in the year 2025, the younger brother, Hibito, is carrying his out. He is an astronaut who has been selected as a crew member for mankind’s first long-term base on the moon. Meanwhile, the older brother, Mut..."
+    "synopsis": "Two brothers looked to the starry skies as children and made a promise ... Now, in the year 2025, the younger brother, Hibito, is carrying his out. He is an astronaut who has been selected as a crew member for mankind’s first long-term base on the moon. Meanwhile, the older brother, Mut...",
+    "trailerUrl": "HMm725pwSp8"
   },
   {
     "id": "mv-al-86218",
@@ -2270,7 +2280,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx100805-3DCHMdZ5blWl.jpg",
     "author": "DJUN",
     "artist": "DJUN",
-    "synopsis": "Sophomore Yu Yang is a real treasure. He has a cheerful, easy-going, and emphatic personality. Seniors look up to him, and he knows how to stand up for himself. Freshman Li Huan is moody and taciturn, haughty and, at times, outright rude. How will these two manage to get along, and wher..."
+    "synopsis": "Sophomore Yu Yang is a real treasure. He has a cheerful, easy-going, and emphatic personality. Seniors look up to him, and he knows how to stand up for himself. Freshman Li Huan is moody and taciturn, haughty and, at times, outright rude. How will these two manage to get along, and wher...",
+    "trailerUrl": "s9PRHSlDCaA"
   },
   {
     "id": "mv-al-114998",
@@ -2357,7 +2368,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx31859-mITgIaJFBzl4.png",
     "author": "Yuki Midorikawa",
     "artist": "Yuki Midorikawa",
-    "synopsis": "When Reiko was Takashi's age, she bound the names of demons and spirits in her Book of Friends, enslaving them to her capricious whim. Now Takashi is the owner of the book, and the creatures will do anything to get their names back.    (Source: VIZ Media)"
+    "synopsis": "When Reiko was Takashi's age, she bound the names of demons and spirits in her Book of Friends, enslaving them to her capricious whim. Now Takashi is the owner of the book, and the creatures will do anything to get their names back.    (Source: VIZ Media)",
+    "trailerUrl": "mea4xITAo_4"
   },
   {
     "id": "mv-al-85189",
@@ -2388,7 +2400,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx85189-06aXUBq5jwce.jpg",
     "author": "ONE",
     "artist": "ONE",
-    "synopsis": "Do you or someone you know need an exorcist who works cheap? Reigen's your guy! What's his secret to busting ghosts while keeping prices low? Well, first, he's a fraud, and second, he pays the guy who's got the real psychic power—his student assistant Shigeo—less than minimum wage. Shig..."
+    "synopsis": "Do you or someone you know need an exorcist who works cheap? Reigen's your guy! What's his secret to busting ghosts while keeping prices low? Well, first, he's a fraud, and second, he pays the guy who's got the real psychic power—his student assistant Shigeo—less than minimum wage. Shig...",
+    "trailerUrl": "mV39saBlBLI"
   },
   {
     "id": "mv-al-30651",
@@ -2419,7 +2432,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30651-xLufeLnDPqpn.jpg",
     "author": "Hayao Miyazaki",
     "artist": "Hayao Miyazaki",
-    "synopsis": "Humanity, in its hubris, has precipitated a devastating environmental disaster. Flourishing industrial civilizations have been swallowed up by the Sea of Corruption, an enormous forest of fungi releases a miasma of poisonous spores into the air. Nausicaa, a compassionate young princess,..."
+    "synopsis": "Humanity, in its hubris, has precipitated a devastating environmental disaster. Flourishing industrial civilizations have been swallowed up by the Sea of Corruption, an enormous forest of fungi releases a miasma of poisonous spores into the air. Nausicaa, a compassionate young princess,...",
+    "trailerUrl": "6zhLBe319KE"
   },
   {
     "id": "mv-al-121565",
@@ -2511,7 +2525,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30745-kueBpwriQkvZ.jpg",
     "author": "Makoto Tezuka",
     "artist": "Naoki Urasawa",
-    "synopsis": "In an ideal world where man and robots coexist, someone or something has destroyed the powerful Swiss robot Mont Blanc. Elsewhere a key figure in a robot rights group is murdered. The two incidents appear to be unrelated...except for one very conspicuous clue - the bodies of both victim..."
+    "synopsis": "In an ideal world where man and robots coexist, someone or something has destroyed the powerful Swiss robot Mont Blanc. Elsewhere a key figure in a robot rights group is murdered. The two incidents appear to be unrelated...except for one very conspicuous clue - the bodies of both victim...",
+    "trailerUrl": "9ez8lm9I26Y"
   },
   {
     "id": "mv-al-30756",
@@ -2600,7 +2615,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx35744-JB0ACECS2Ts2.png",
     "author": "Taiyou Matsumoto",
     "artist": "Deron Bennett",
-    "synopsis": "Makoto “Smile” Tsukimoto and his friend Yutaka “Peco” Hoshino have been playing table tennis since they were kids, but as they enter high school, they find that the game has changed. Seeing potential in them that they themselves don’t fully realize, the coach recruits them for the schoo..."
+    "synopsis": "Makoto “Smile” Tsukimoto and his friend Yutaka “Peco” Hoshino have been playing table tennis since they were kids, but as they enter high school, they find that the game has changed. Seeing potential in them that they themselves don’t fully realize, the coach recruits them for the schoo...",
+    "trailerUrl": "lmZVuMDlw-w"
   },
   {
     "id": "mv-al-41514",
@@ -2780,7 +2796,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx106929-flAUvHZDUz5v.jpg",
     "author": "Jae-Ho Son",
     "artist": "Hye-Jin Kim",
-    "synopsis": "Ji-U is a kind-hearted young man who harnesses the lightning quick reflexes of a cat to secretly make the world a better place – one saved little child or foster pet at a time. Kayden is a secret agent on the run, who finds himself stuck in the body of a…um…decidedly fat old fluffy cat...."
+    "synopsis": "Ji-U is a kind-hearted young man who harnesses the lightning quick reflexes of a cat to secretly make the world a better place – one saved little child or foster pet at a time. Kayden is a secret agent on the run, who finds himself stuck in the body of a…um…decidedly fat old fluffy cat....",
+    "trailerUrl": "-Vqya5QAqpc"
   },
   {
     "id": "mv-al-132288",
@@ -2841,7 +2858,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30102-MJuQ0e0k2CgU.png",
     "author": "Natsuki Takaya",
     "artist": "Natsuki Takaya",
-    "synopsis": "After a family tragedy turns her life upside down, plucky high schooler Tohru Honda takes matters into her own hands and moves out...into a tent! Unfortunately for her, she pitches her new home on private land belonging to the mysterious Sohma clan, and it isn't long before the owners d..."
+    "synopsis": "After a family tragedy turns her life upside down, plucky high schooler Tohru Honda takes matters into her own hands and moves out...into a tent! Unfortunately for her, she pitches her new home on private land belonging to the mysterious Sohma clan, and it isn't long before the owners d...",
+    "trailerUrl": "4jgVaA4bxDI"
   },
   {
     "id": "mv-al-33031",
@@ -2872,7 +2890,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx33031-LzNWgqS69qAj.jpg",
     "author": "Jun Mochizuki",
     "artist": "Jun Mochizuki",
-    "synopsis": "The air of celebration surrounding fifteen-year-old Oz Vessalius&rsquo;s coming-of-age ceremony quickly turns to horror when he is condemned for a sin about which he knows nothing. He is thrown into an eternal, inescapable prison known as the Abyss from which there is no escape. There, ..."
+    "synopsis": "The air of celebration surrounding fifteen-year-old Oz Vessalius&rsquo;s coming-of-age ceremony quickly turns to horror when he is condemned for a sin about which he knows nothing. He is thrown into an eternal, inescapable prison known as the Abyss from which there is no escape. There, ...",
+    "trailerUrl": "9Psc_hBkOoc"
   },
   {
     "id": "mv-al-86551",
@@ -2903,7 +2922,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86551-0EzmsMZiPSu9.jpg",
     "author": "Akihito Tsukushi",
     "artist": "Akihito Tsukushi",
-    "synopsis": "In an age when the corners of the world have been scoured for their secrets, only one place remains unexplored–a massive cave system known as the Abyss. Those who traverse its endless pits and labyrinth-like tunnels are known as Cave Raiders. A young orphan named Riko dreams of followin..."
+    "synopsis": "In an age when the corners of the world have been scoured for their secrets, only one place remains unexplored–a massive cave system known as the Abyss. Those who traverse its endless pits and labyrinth-like tunnels are known as Cave Raiders. A young orphan named Riko dreams of followin...",
+    "trailerUrl": "AQbaZeby2zA"
   },
   {
     "id": "mv-al-101563",
@@ -2963,7 +2983,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx171068-6ZG2cmpg2uBH.png",
     "author": "Jibung",
     "artist": "Jibung",
-    "synopsis": "When college student U-Yun meets the quiet and introverted TA Jin-Hyeong, he immediately asks him out, saying he wants to get to know him more. After just three days of dating, Jin-Hyeong moves in with him, and that’s when he starts showing a completely different wild side. All of his B..."
+    "synopsis": "When college student U-Yun meets the quiet and introverted TA Jin-Hyeong, he immediately asks him out, saying he wants to get to know him more. After just three days of dating, Jin-Hyeong moves in with him, and that’s when he starts showing a completely different wild side. All of his B...",
+    "trailerUrl": "MIGS_dy-teU"
   },
   {
     "id": "mv-al-30698",
@@ -2994,7 +3015,8 @@ const MANGA_DATABASE = [
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30698-0niTa3yn2rNK.png",
     "author": "Hideaki Anno",
     "artist": "Yoshiyuki Sadamoto",
-    "synopsis": "In 2015, the \"Angels\" have returned, and Shinji Ikari, a fourteen year-old child of the new Earth, is forced by his father Gendo--commander of the secret organization NERV--to pilot the monstrous biomechanical weapon called \"Evangelion\" to match the Angels' fearsome power...    (Source:..."
+    "synopsis": "In 2015, the \"Angels\" have returned, and Shinji Ikari, a fourteen year-old child of the new Earth, is forced by his father Gendo--commander of the secret organization NERV--to pilot the monstrous biomechanical weapon called \"Evangelion\" to match the Angels' fearsome power...    (Source:...",
+    "trailerUrl": "kOH2_8MkgZY"
   },
   {
     "id": "mv-59f47645",
@@ -3176,7 +3198,8 @@ const MANGA_DATABASE = [
     "coverUrl": "mangas/covers/mv-6114f59f.jpg",
     "author": "Rifujin na Magonote",
     "artist": "Fujikawa Yuka",
-    "synopsis": "A 34-year-old shut-in dies saving strangers and reincarnates in a world of swords and magic as baby Rudeus Greyrat. Keeping his memories, he resolves to live his new life to the absolute fullest and master powerful ancient magic."
+    "synopsis": "A 34-year-old shut-in dies saving strangers and reincarnates in a world of swords and magic as baby Rudeus Greyrat. Keeping his memories, he resolves to live his new life to the absolute fullest and master powerful ancient magic.",
+    "trailerUrl": "SYcTaxHuZI8"
   },
   {
     "id": "mv-77bee52c",
@@ -3206,7 +3229,8 @@ const MANGA_DATABASE = [
     "coverUrl": "mangas/covers/mv-77bee52c.jpg",
     "author": "Sakano Anri",
     "artist": "Sakano Anri",
-    "synopsis": "Just like how everyone adored heroes in their childhood, a certain young man adored those powers hidden in shadows. Ninjas, rogues, shadowy mentor types, that sort of deal.   After hiding his strength and living the mediocre life of a NPC by day while undergoing frenzied train..."
+    "synopsis": "Just like how everyone adored heroes in their childhood, a certain young man adored those powers hidden in shadows. Ninjas, rogues, shadowy mentor types, that sort of deal.   After hiding his strength and living the mediocre life of a NPC by day while undergoing frenzied train...",
+    "trailerUrl": "9pahhkIs4Ss"
   },
   {
     "id": "mv-4ec3e6b3",
@@ -3235,7 +3259,8 @@ const MANGA_DATABASE = [
     "coverUrl": "mangas/covers/mv-4ec3e6b3.jpg",
     "author": "HERO",
     "artist": "Hagiwara Daisuke",
-    "synopsis": "Hori is a popular high school girl who secretly looks after her home and younger brother. Miyamura seems like an aloof otaku at school, but outside he has piercings and tattoos. The two bond over their secret lives."
+    "synopsis": "Hori is a popular high school girl who secretly looks after her home and younger brother. Miyamura seems like an aloof otaku at school, but outside he has piercings and tattoos. The two bond over their secret lives.",
+    "trailerUrl": "tryurXgGqkI"
   },
   {
     "id": "mv-37f5cce0",
@@ -3324,7 +3349,8 @@ const MANGA_DATABASE = [
     "coverUrl": "mangas/covers/mv-eb2d1a45.jpg",
     "author": "Baba Okina",
     "artist": "Kakashi Asahiro",
-    "synopsis": "When a mysterious explosion killed an entire class full of high school students, the souls of everyone in class were transported into a fantasy world and reincarnated. While some students were reincarnated as princes or prodigies, others were not as blessed.   Our heroine, who..."
+    "synopsis": "When a mysterious explosion killed an entire class full of high school students, the souls of everyone in class were transported into a fantasy world and reincarnated. While some students were reincarnated as princes or prodigies, others were not as blessed.   Our heroine, who...",
+    "trailerUrl": "uWKJr7OnOYQ"
   },
   {
     "id": "mv-9d3d3403",
@@ -3354,7 +3380,8 @@ const MANGA_DATABASE = [
     "coverUrl": "mangas/covers/mv-9d3d3403.jpg",
     "author": "Arai Sumiko",
     "artist": "Arai Sumiko",
-    "synopsis": "Fashionable and upbeat high schooler Aya falls head over heels for an employee at a local CD shop. He’s got an air of mystery about him, always dressed well, and has impeccable taste in music. Little does she know — this supposedly male employee is actually her female classmat..."
+    "synopsis": "Fashionable and upbeat high schooler Aya falls head over heels for an employee at a local CD shop. He’s got an air of mystery about him, always dressed well, and has impeccable taste in music. Little does she know — this supposedly male employee is actually her female classmat...",
+    "trailerUrl": "kLO7KyjhGR0"
   },
   {
     "id": "mv-d7037b2a",
@@ -3384,7 +3411,8 @@ const MANGA_DATABASE = [
     "coverUrl": "mangas/covers/mv-d7037b2a.jpg",
     "author": "Nishi Osamu ",
     "artist": "Nishi Osamu ",
-    "synopsis": "Hopeless pushover Iruma Suzuki has found himself in a devil of a predicament... His trashy parents have sold off his soul, and he now has to live and attend school in the Netherworld. But with his unique survival skills and doting demon grandfather’s support, Iruma will surely..."
+    "synopsis": "Hopeless pushover Iruma Suzuki has found himself in a devil of a predicament... His trashy parents have sold off his soul, and he now has to live and attend school in the Netherworld. But with his unique survival skills and doting demon grandfather’s support, Iruma will surely...",
+    "trailerUrl": "jmr4ZSGk0mY"
   },
   {
     "id": "mv-878634d2",
@@ -3444,7 +3472,8 @@ const MANGA_DATABASE = [
     "coverUrl": "mangas/covers/mv-96471a2c.jpg",
     "author": "Otori Nana",
     "artist": "Hoonoki Sora",
-    "synopsis": "The engagement between Scarlet, a noblewoman from a ducal family, and Second Prince Kyle was suddenly annulled during a ball. She had been falsely accused of harassing a girl called Terenezza, daughter to a baron, whom the Prince doted on heavily. Condemned by everyone around ..."
+    "synopsis": "The engagement between Scarlet, a noblewoman from a ducal family, and Second Prince Kyle was suddenly annulled during a ball. She had been falsely accused of harassing a girl called Terenezza, daughter to a baron, whom the Prince doted on heavily. Condemned by everyone around ...",
+    "trailerUrl": "ZMcT7as-37o"
   },
   {
     "id": "mv-c6bbbeca",
@@ -3504,7 +3533,8 @@ const MANGA_DATABASE = [
     "coverUrl": "mangas/covers/mv-af38f328.jpg",
     "author": "Shiro Manta",
     "artist": "Shiro Manta",
-    "synopsis": "Futaba Igarashi is a diminutive office lady who finds that her towering and boisterous work senpai Harumi Takeda always gets in her hair, but he always has her back, he always keeps her company, and she starts noticing that her heart is slowly veering towards him… Won 1st plac..."
+    "synopsis": "Futaba Igarashi is a diminutive office lady who finds that her towering and boisterous work senpai Harumi Takeda always gets in her hair, but he always has her back, he always keeps her company, and she starts noticing that her heart is slowly veering towards him… Won 1st plac...",
+    "trailerUrl": "NtDoMdKusAM"
   },
   {
     "id": "mv-829fc3a7",
@@ -5605,14 +5635,18 @@ function renderSeriesPage(manga) {
       const videoId = ytMatch ? ytMatch[1] : (rawTrailer.length === 11 ? rawTrailer : null);
       if (!videoId) return '';
       return `<div class="series-trailer-strip">
-        <div class="trailer-strip-label">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="#ef4444"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-          Official Trailer
+        <div class="trailer-strip-info">
+          <div class="trailer-strip-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#ef4444"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            Official Trailer
+          </div>
+          <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" rel="noopener noreferrer" class="trailer-yt-link">Watch on YouTube ↗</a>
         </div>
         <div class="trailer-strip-frame">
           <iframe
-            src="https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1"
+            src="https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1"
             title="${safeTitle} Official Trailer"
+            referrerpolicy="strict-origin-when-cross-origin"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
             loading="lazy"
