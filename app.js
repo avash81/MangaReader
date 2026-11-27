@@ -5780,8 +5780,8 @@ function renderSeriesPage(manga) {
     </div>
 
     <!-- Official Trailer Strip (compact, below hero card) -->
-    ${(manga.trailerUrl) ? (() => {
-      const rawTrailer = manga.trailerUrl.trim();
+    ${(manga.trailerUrl || manga.trailer_id || manga.trailerId) ? (() => {
+      const rawTrailer = String(manga.trailerUrl || manga.trailer_id || manga.trailerId).trim();
       const ytMatch = rawTrailer.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
       const videoId = ytMatch ? ytMatch[1] : (rawTrailer.length === 11 ? rawTrailer : null);
       if (!videoId) return '';
@@ -5800,7 +5800,6 @@ function renderSeriesPage(manga) {
             referrerpolicy="strict-origin-when-cross-origin"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-            loading="lazy"
           ></iframe>
         </div>
       </div>`;

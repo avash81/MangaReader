@@ -307,5 +307,42 @@ INSERT INTO sources (name, connector_key, base_url, source_type) VALUES
 ('Wikimedia Commons', 'wikimedia-commons', 'https://commons.wikimedia.org', 'archive'),
 ('National Diet Library Japan', 'ndl-japan', 'https://ndlsearch.ndl.go.jp', 'library'),
 ('Digital Comic Museum', 'digital-comic-museum', 'https://digitalcomicmuseum.com', 'archive'),
-('Comic Book Plus', 'comic-book-plus', 'https://comicbookplus.com', 'archive'),
+('Comic Book Plus', 'comic-book-plus', 'https://comicbookplus.com', 'archive');
+
+-- ----------------------------------------------------------------------------
+-- 14. API Cache (20-min TTL for MangaDex @at-home manifests)
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS api_cache (
+  cache_key VARCHAR(255) NOT NULL PRIMARY KEY,
+  response_body MEDIUMTEXT NOT NULL,
+  expires_at DATETIME NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_expires (expires_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------------------------------------------------------
+-- 15. Rate Limits (MySQL-backed sliding window per hashed IP + endpoint)
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS rate_limits (
+  ip_hash VARCHAR(128) NOT NULL,
+  endpoint VARCHAR(100) NOT NULL,
+  request_count SMALLINT UNSIGNED DEFAULT 1,
+  window_start TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (ip_hash, endpoint),
+  INDEX idx_window (window_start)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------------------------------------------------------
+-- 16. Import Batches (Audit log for bulk AniList / MangaDex sync runs)
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS import_batches (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  source VARCHAR(50) NOT NULL,
+  batch_ref VARCHAR(255) NULL,
+  status ENUM('running','done','failed') DEFAULT 'running',
+  titles_found INT UNSIGNED DEFAULT 0,
+  titles_imported INT UNSIGNED DEFAULT 0,
+  started_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  finished_at TIMESTAMP NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ('Creator Studio Submissions', 'creator-studio', NULL, 'creator');

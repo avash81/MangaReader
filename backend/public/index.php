@@ -20,6 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../app/Services/RightsVerifier.php';
+require_once __DIR__ . '/../app/Services/MangaDexProxy.php';
+require_once __DIR__ . '/../app/Services/RateLimiter.php';
 require_once __DIR__ . '/../discovery/Connectors/InternetArchiveConnector.php';
 require_once __DIR__ . '/../discovery/Connectors/WikimediaConnector.php';
 require_once __DIR__ . '/../discovery/Connectors/NDLConnector.php';
@@ -43,9 +45,21 @@ function jsonResponse($data, int $status = 200) {
 // 1. GET /v1/health
 // ----------------------------------------------------------------------------
 if ($uri === '/v1/health') {
+    $dbStatus = 'disconnected';
+    $mangaCount = null;
+    try {
+        $db = Database::connect();
+        $db->query('SELECT 1');
+        $dbStatus = 'connected';
+        $mangaCount = (int)$db->query('SELECT COUNT(*) FROM manga')->fetchColumn();
+    } catch (Throwable $e) {
+        $dbStatus = 'error';
+    }
     jsonResponse([
         'status' => 'healthy',
         'service' => 'MangaVerse Content Automation Engine (MCAE)',
+        'db' => $dbStatus,
+        'manga_count' => $mangaCount,
         'timestamp' => date('c'),
         'version' => '1.0.0'
     ]);
@@ -79,6 +93,7 @@ if ($uri === '/v1/languages' && $method === 'GET') {
 // 4. GET /v1/manga (List/Search catalog)
 // ----------------------------------------------------------------------------
 if ($uri === '/v1/manga' && $method === 'GET') {
+    RateLimiter::check('catalog');
     $db = Database::connect();
     $limit = min((int)($_GET['limit'] ?? 24), 100);
     $offset = (int)($_GET['offset'] ?? 0);
@@ -119,6 +134,7 @@ if ($uri === '/v1/manga' && $method === 'GET') {
 // 5. GET /v1/manga/{id}/chapters
 // ----------------------------------------------------------------------------
 if (preg_match('#^/v1/manga/([^/]+)/chapters$#', $uri, $matches) && $method === 'GET') {
+    RateLimiter::check('catalog');
     $mangaId = $matches[1];
     $db = Database::connect();
 
@@ -138,12 +154,83 @@ if (preg_match('#^/v1/manga/([^/]+)/chapters$#', $uri, $matches) && $method === 
 }
 
 // ----------------------------------------------------------------------------
-// 6. POST /v1/admin/discover (Discover historical / open public domain material)
+// 5b. GET /v1/proxy/pages/{chapterId} (Secure MangaDex @at-home image proxy)
 // ----------------------------------------------------------------------------
-if ($uri === '/v1/admin/discover' && $method === 'POST') {
+if (preg_match('#^/v1/proxy/pages/([A-Za-z0-9\-]+)$#', $uri, $matches) && $method === 'GET') {
+    RateLimiter::check('proxy');
+    $proxy = new MangaDexProxy(Database::connect());
+    jsonResponse($proxy->getPages($matches[1]));
+}
+
+// ----------------------------------------------------------------------------
+// 6. POST /v1/admin/manga/import (Upsert manga metadata from seeder/cron)
+// ----------------------------------------------------------------------------
+if ($uri === '/v1/admin/manga/import' && $method === 'POST') {
+    RateLimiter::check('admin');
     $apiKey = $_SERVER['HTTP_X_API_KEY'] ?? '';
     $expectedKey = getenv('ADMIN_API_KEY') ?: 'mv_adm_secret_key_change_in_production';
-    if ($apiKey !== $expectedKey) {
+    if (!hash_equals($expectedKey, $apiKey)) {
+        jsonResponse(['success' => false, 'error' => 'Unauthorized: Invalid X-API-Key'], 401);
+    }
+
+    $body = json_decode(file_get_contents('php://input'), true);
+    if (!is_array($body) || empty($body['slug']) || empty($body['title'])) {
+        jsonResponse(['success' => false, 'error' => 'Missing required fields: slug, title'], 400);
+    }
+
+    $db = Database::connect();
+    $existsStmt = $db->prepare("SELECT id FROM manga WHERE slug = ? LIMIT 1");
+    $existsStmt->execute([$body['slug']]);
+    $existingId = $existsStmt->fetchColumn();
+
+    if ($existingId) {
+        $upd = $db->prepare("
+            UPDATE manga SET
+              title = ?, original_title = ?, synopsis = ?, author = ?, artist = ?,
+              demographic = ?, content_type = ?, publication_status = ?, reading_direction = ?,
+              cover_url = ?, mangadex_id = ?, anilist_id = ?, trailer_id = ?,
+              trailer_source = ?, release_day = ?
+            WHERE id = ?
+        ");
+        $upd->execute([
+            $body['title'], $body['original_title'] ?? null, $body['synopsis'] ?? null,
+            $body['author'] ?? null, $body['artist'] ?? null, $body['demographic'] ?? 'Unknown',
+            $body['content_type'] ?? 'Manga', $body['publication_status'] ?? 'ongoing',
+            $body['reading_direction'] ?? 'rtl', $body['cover_url'] ?? null,
+            $body['mangadex_id'] ?? null, $body['anilist_id'] ?? null,
+            $body['trailer_id'] ?? null, $body['trailer_source'] ?? null,
+            $body['release_day'] ?? null, $existingId
+        ]);
+        jsonResponse(['success' => true, 'action' => 'updated', 'id' => (int)$existingId]);
+    } else {
+        $ins = $db->prepare("
+            INSERT INTO manga (
+              slug, title, original_title, synopsis, author, artist, demographic,
+              content_type, publication_status, reading_direction, cover_url,
+              mangadex_id, anilist_id, trailer_id, trailer_source, release_day
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ");
+        $ins->execute([
+            $body['slug'], $body['title'], $body['original_title'] ?? null,
+            $body['synopsis'] ?? null, $body['author'] ?? null, $body['artist'] ?? null,
+            $body['demographic'] ?? 'Unknown', $body['content_type'] ?? 'Manga',
+            $body['publication_status'] ?? 'ongoing', $body['reading_direction'] ?? 'rtl',
+            $body['cover_url'] ?? null, $body['mangadex_id'] ?? null,
+            $body['anilist_id'] ?? null, $body['trailer_id'] ?? null,
+            $body['trailer_source'] ?? null, $body['release_day'] ?? null
+        ]);
+        jsonResponse(['success' => true, 'action' => 'inserted', 'id' => (int)$db->lastInsertId()], 201);
+    }
+}
+
+// ----------------------------------------------------------------------------
+// 7. POST /v1/admin/discover (Discover historical / open public domain material)
+// ----------------------------------------------------------------------------
+if ($uri === '/v1/admin/discover' && $method === 'POST') {
+    RateLimiter::check('admin');
+    $apiKey = $_SERVER['HTTP_X_API_KEY'] ?? '';
+    $expectedKey = getenv('ADMIN_API_KEY') ?: 'mv_adm_secret_key_change_in_production';
+    if (!hash_equals($expectedKey, $apiKey)) {
         jsonResponse(['success' => false, 'error' => 'Unauthorized: Invalid X-API-Key'], 401);
     }
 
