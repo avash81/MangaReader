@@ -7,7 +7,7 @@ import '../../../core/network/api_client.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../data/datasources/remote/manga_remote_ds.dart';
 import '../../../domain/entities/manga.dart';
-import '../reader/reader_screen.dart';
+import '../detail/manga_detail_screen.dart';
 
 final apiClientProvider = Provider<ApiClient>((ref) => ApiClient());
 
@@ -79,11 +79,7 @@ class HomeScreen extends ConsumerWidget {
             return InkWell(
               onTap: () => Navigator.of(ctx).push(
                 MaterialPageRoute(
-                  builder: (_) => ReaderScreen(
-                    title: m.title,
-                    externalChapterId: m.slug,
-                    isRtl: m.readingDirection == 'rtl',
-                  ),
+                  builder: (_) => MangaDetailScreen(manga: m),
                 ),
               ),
               child: Card(
