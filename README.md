@@ -65,7 +65,50 @@ The application will be accessible locally at `http://localhost:7890`.
 
 ### Running Tests
 ```bash
-npm test
+# Run core test suite (28 tests)
+node test-suite.js
+
+# Run deep functions & integration suite (16 tests)
+node test-deep-functions.js
+
+# Run individual subsystem validation suite (19 tests)
+node validate-one-by-one.js
+
+# Run recent changes & UI layout suite (7 tests)
+node validate-recent-changes.js
+
+# Run enhancement & performance suite (8 tests)
+node scripts/verify-enhancements.js
+
+# Comprehensive audit & payload footprint runner
+node audit-runner.js
+```
+
+---
+
+## 📚 Engineering Documentation & Playbooks
+
+The repository includes a comprehensive, publication-grade developer playbook in `docs/`:
+
+1. **[01-ENGINEERING-WORKFLOW.md](docs/01-ENGINEERING-WORKFLOW.md)**: 7-stage SDLC process (Requirements $\rightarrow$ Architecture $\rightarrow$ Construction $\rightarrow$ Testing $\rightarrow$ Deployment $\rightarrow$ SRE).
+2. **[02-ARCHITECTURE-AND-DATA.md](docs/02-ARCHITECTURE-AND-DATA.md)**: C4 architecture diagrams, 19-table 3NF schema, REST API contract, and mobile blueprint.
+3. **[03-CODING-STANDARDS-AND-SECURITY.md](docs/03-CODING-STANDARDS-AND-SECURITY.md)**: Clean Code rules, 5-layer security architecture (OWASP ASVS), Core Web Vitals targets.
+4. **[04-PROJECT-MANAGEMENT-AND-RUNBOOK.md](docs/04-PROJECT-MANAGEMENT-AND-RUNBOOK.md)**: Git conventions, Definition of Done (DoD), incident response, and live operations runbook.
+5. **[05-FLUTTER-PLAYBOOK.md](docs/05-FLUTTER-PLAYBOOK.md)**: Mobile Clean Architecture (Riverpod 2.5), offline caching engine, FCM topic push alerts, and app store release workflows.
+6. **[06-SOFTWARE-ENGINEERING-THEORY-AND-FORMAL-VERIFICATION.md](docs/06-SOFTWARE-ENGINEERING-THEORY-AND-FORMAL-VERIFICATION.md)**: IEEE 12207 & SWEBOK v4 alignment, ISO 25010 Quality Model, and 78-test verification matrix.
+7. **[DEPLOY-CPANEL.md](DEPLOY-CPANEL.md)**: 8-step production deployment guide for standard cPanel shared hosting (PHP 8.0+ & MySQL).
+
+---
+
+## 📱 Mobile App (Flutter)
+
+The `mangaverse_app/` directory contains the production-grade Flutter application sharing the same `/api/v1` backend:
+```bash
+cd mangaverse_app
+flutter create . --platforms=android,ios
+flutter pub get
+flutter test
+flutter run --dart-define=API_BASE_URL=https://yourdomain.com/api/v1
 ```
 
 ---
