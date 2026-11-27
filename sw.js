@@ -3,10 +3,11 @@
  * Enables sub-100ms load times and offline reading for millions of concurrent users.
  */
 
-const CACHE_NAME = 'mangaverse-v2.2';
+const CACHE_NAME = 'mangaverse-v2.3';
 const CORE_ASSETS = [
   './',
   './index.html',
+  './offline.html',
   './styles.css',
   './app.js',
   './db.js',
@@ -57,7 +58,13 @@ self.addEventListener('fetch', (event) => {
       }
       return networkResponse;
     }).catch(() => {
-      return caches.match(event.request);
+      return caches.match(event.request).then((cached) => {
+        if (cached) return cached;
+        if (event.request.mode === 'navigate') {
+          return caches.match('./offline.html');
+        }
+        return undefined;
+      });
     })
   );
 });

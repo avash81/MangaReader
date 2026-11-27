@@ -5654,9 +5654,41 @@ function upvoteComment(btn) {
 // ==========================================================================
 // 10. DEDICATED MANGA SERIES PAGE & OFFICIAL CHAPTER DIRECTORY
 // ==========================================================================
+function updateSeriesSEOMeta(manga) {
+  if (!manga) return;
+  const pageTitle = `${manga.title} — Read Online | MangaVerse`;
+  document.title = pageTitle;
+  const desc = (manga.synopsis || `Read ${manga.title} manga online on MangaVerse.`).replace(/\s+/g, " ").slice(0, 155);
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute("content", desc);
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute("content", pageTitle);
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute("content", desc);
+  const ogImg = document.querySelector('meta[property="og:image"]');
+  if (ogImg && manga.coverUrl) ogImg.setAttribute("content", manga.coverUrl);
+
+  let ldScript = document.getElementById("dynamic-series-jsonld");
+  if (!ldScript) {
+    ldScript = document.createElement("script");
+    ldScript.id = "dynamic-series-jsonld";
+    ldScript.type = "application/ld+json";
+    document.head.appendChild(ldScript);
+  }
+  ldScript.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": manga.title,
+    "image": manga.coverUrl || undefined,
+    "description": desc,
+    "genre": Array.isArray(manga.genres) ? manga.genres.join(", ") : undefined
+  });
+}
+
 function openMangaDetails(mangaId) {
   const manga = MANGA_DATABASE.find(m => m.id === mangaId);
   if (!manga) return;
+  updateSeriesSEOMeta(manga);
 
   const dirSec = document.getElementById("directorySection");
   const serSec = document.getElementById("seriesSection");

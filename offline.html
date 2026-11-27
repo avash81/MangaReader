@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offline — MangaVerse</title>
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0d0d1a;
+      color: #e2e8f0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 24px;
+      text-align: center;
+    }
+    .offline-card {
+      max-width: 440px;
+      background: #1a1a2e;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 32px 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+    }
+    p {
+      margin: 0 0 24px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+    button {
+      background: #6c63ff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 22px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #5a52d5;
+    }
+  </style>
+</head>
+<body>
+  <main class="offline-card">
+    <h1>You're Currently Offline</h1>
+    <p>MangaVerse needs an active internet connection to load new chapters and covers. Reconnect and try again.</p>
+    <button type="button" onclick="window.location.reload()">Retry Connection</button>
+  </main>
+</body>
+</html>
