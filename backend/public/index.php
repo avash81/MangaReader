@@ -102,7 +102,7 @@ if ($uri === '/v1/manga' && $method === 'GET') {
     }
 
     $whereSql = implode(" AND ", $where);
-    $stmt = $db->prepare("SELECT id, slug, title, original_title, synopsis, author, artist, demographic, content_type, original_language, publication_status, reading_direction, cover_url, publication_year, mangadex_id, rating FROM manga WHERE {$whereSql} ORDER BY id ASC LIMIT {$limit} OFFSET {$offset}");
+    $stmt = $db->prepare("SELECT id, slug, title, original_title, synopsis, author, artist, demographic, content_type, original_language, publication_status, reading_direction, cover_url, publication_year, mangadex_id, anilist_id, trailer_id, trailer_source, release_day, is_featured, rating FROM manga WHERE {$whereSql} ORDER BY id ASC LIMIT {$limit} OFFSET {$offset}");
     $stmt->execute($params);
     $items = $stmt->fetchAll();
 
@@ -130,7 +130,7 @@ if (preg_match('#^/v1/manga/([^/]+)/chapters$#', $uri, $matches) && $method === 
         jsonResponse(['success' => false, 'error' => 'Manga not found'], 404);
     }
 
-    $cStmt = $db->prepare("SELECT id, chapter_number, chapter_title, volume_number, language_code, status, page_count, external_chapter_id, external_url FROM chapters WHERE manga_id = ? AND status = 'published' ORDER BY chapter_number ASC");
+    $cStmt = $db->prepare("SELECT id, chapter_number, chapter_title, volume_number, language_code, release_date, status, page_count, external_chapter_id, external_url, pdf_url FROM chapters WHERE manga_id = ? AND status = 'published' ORDER BY chapter_number ASC");
     $cStmt->execute([$manga['id']]);
     $chapters = $cStmt->fetchAll();
 

@@ -1,0 +1,24 @@
+# MangaVerse cPanel Apache Configuration
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Route /api/v1/* to PHP API Gateway
+  RewriteRule ^api/v1/(.*)$ backend/public/index.php [QSA,L]
+</IfModule>
+
+# Protect sensitive backend config, env, and scripts
+<FilesMatch "^\.(env|git|htaccess)">
+  Require all denied
+</FilesMatch>
+
+RedirectMatch 403 ^/backend/(config|cron|database|app|discovery)/.*$
+RedirectMatch 403 ^/scripts/.*$
+
+# Security & Embed Headers
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

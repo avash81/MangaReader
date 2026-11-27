@@ -4102,34 +4102,104 @@ function updateBreadcrumb(crumbs) {
 // ==========================================================================
 // 2B. LIVE BACKEND API SYNCHRONIZATION WITH STATIC SAFE FALLBACK
 // ==========================================================================
-const API_BASE_URL = window.MANGAVERSE_API_URL || "http://localhost:7890/backend/public/v1";
 
-async function fetchLiveMangaCatalog() {
+/**
+ * Auto-detect backend API URL:
+ *  - On cPanel (any real domain): /api/v1
+ *  - On Vercel: skip (no PHP backend)
+ *  - On localhost dev server: http://localhost:7890/backend/public/v1
+ */
+function detectApiBase() {
+  const h = window.location.hostname;
+  if (h === 'localhost' || h === '127.0.0.1') return 'http://localhost:7890/backend/public/v1';
+  if (h.endsWith('.vercel.app')) return null; // no backend on Vercel
+  return '/api/v1'; // cPanel with .htaccess routing
+}
+
+const API_BASE_URL = window.MANGAVERSE_API_URL || detectApiBase();
+
+async function apiFetch(path, timeoutMs = 3000) {
+  if (!API_BASE_URL) return null;
   try {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 2500);
-    const res = await fetch(`${API_BASE_URL}/manga?limit=100`, {
-      signal: controller.signal,
+    const ctrl = new AbortController();
+    const tid = setTimeout(() => ctrl.abort(), timeoutMs);
+    const res = await fetch(`${API_BASE_URL}${path}`, {
+      signal: ctrl.signal,
       headers: { 'Accept': 'application/json' }
     });
-    clearTimeout(timeoutId);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    if (data && data.success && Array.isArray(data.manga) && data.manga.length > 0) {
-      // Merge live manga into database while keeping existing rich properties
-      const liveIds = new Set(data.manga.map(m => m.id));
-      const merged = [...data.manga];
-      MANGA_DATABASE.forEach(m => {
-        if (!liveIds.has(m.id)) {
-          merged.push(m);
-        }
-      });
-      return merged;
-    }
-  } catch (err) {
-    // Graceful offline & development fallback: uses built-in MANGA_DATABASE
+    clearTimeout(tid);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch { return null; }
+}
+
+async function fetchLiveMangaCatalog() {
+  const data = await apiFetch('/manga?limit=200');
+  if (data?.success && Array.isArray(data.manga) && data.manga.length > 0) {
+    // Map API shape → frontend shape (keep all static rich fields, merge in live values)
+    const liveMap = new Map(data.manga.map(m => [m.slug, m]));
+    const merged = MANGA_DATABASE.map(local => {
+      const live = liveMap.get(local.id) || liveMap.get(local.slug);
+      if (!live) return local;
+      return {
+        ...local,
+        // Override with fresh API values where useful
+        coverUrl: live.cover_url || local.coverUrl,
+        mangadexId: live.mangadex_id || local.mangadexId,
+        trailerUrl: live.trailer_id || local.trailerUrl,
+        totalChapters: live.total_chapters ?? local.totalChapters,
+        publicationStatus: live.publication_status || local.publicationStatus,
+        _fromApi: true
+      };
+    });
+    // Append any new titles from DB not yet in static database
+    data.manga.forEach(live => {
+      const exists = MANGA_DATABASE.some(l => l.id === live.slug || l.id === String(live.id));
+      if (!exists) {
+        merged.push({
+          id: live.slug || String(live.id),
+          title: live.title,
+          altTitle: live.original_title || '',
+          type: live.content_type || 'Manga',
+          demographic: live.demographic || 'Unknown',
+          genres: [],
+          rating: parseFloat(live.rating) || 4.5,
+          totalChapters: 0,
+          coverUrl: live.cover_url || null,
+          mangadexId: live.mangadex_id || null,
+          trailerUrl: live.trailer_id || null,
+          author: live.author || 'Unknown',
+          artist: live.artist || 'Unknown',
+          synopsis: live.synopsis || '',
+          releaseDay: live.release_day || 'Archive',
+          isSimulpub: live.publication_status === 'ongoing',
+          isFeatured: live.is_featured || false,
+          latestChapter: { number: 0, views: '0', dropTime: '' }
+        });
+      }
+    });
+    return merged;
   }
   return MANGA_DATABASE;
+}
+
+/**
+ * Fetch published chapters for a manga from the PHP API (cPanel only).
+ * Returns null if API unavailable or no results (fall through to MangaDex).
+ */
+async function fetchApiChapters(mangaId) {
+  const data = await apiFetch(`/manga/${mangaId}/chapters`);
+  if (data?.success && Array.isArray(data.chapters) && data.chapters.length > 0) {
+    return data.chapters.map(c => ({
+      id: c.external_chapter_id || String(c.id),
+      number: String(c.chapter_number),
+      title: c.chapter_title || `Chapter ${c.chapter_number}`,
+      pages: c.page_count || 0,
+      pdfUrl: c.pdf_url || null,
+      source: 'api'
+    }));
+  }
+  return null;
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -4866,6 +4936,19 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
     }
   }
 
+  // ── NEW: Try PHP API chapters first (cPanel) — provides pdf_url for local/Archive PDF chapters
+  if (!manga.pdfData) {
+    try {
+      const apiChapters = await fetchApiChapters(manga.id);
+      if (apiChapters) {
+        const apiCh = apiChapters.find(c => String(c.number) === String(chapterNum));
+        if (apiCh?.pdfUrl) {
+          manga.pdfData = apiCh.pdfUrl;
+        }
+      }
+    } catch (e) {}
+  }
+
   // Check if offline chapter is stored first
   try {
     const offlineCh = await MangaDB.getOfflineChapter(`${manga.id}-ch${chapterNum}`);
@@ -5059,6 +5142,79 @@ function switchReaderMode(mode) {
   renderReaderViewport();
 }
 
+let _pdfJsPromise = null;
+function loadPdfJs() {
+  if (window.pdfjsLib) return Promise.resolve(window.pdfjsLib);
+  if (_pdfJsPromise) return _pdfJsPromise;
+  _pdfJsPromise = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+    script.async = true;
+    script.onload = () => {
+      if (window.pdfjsLib) {
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+          "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+        resolve(window.pdfjsLib);
+      } else {
+        reject(new Error("pdfjsLib unavailable"));
+      }
+    };
+    script.onerror = () => reject(new Error("Failed to load PDF.js"));
+    document.head.appendChild(script);
+  });
+  return _pdfJsPromise;
+}
+
+async function renderPdfChapterCanvas(viewport, pdfUrl, manga) {
+  const pageLabel = document.getElementById("readerPageNumLabel");
+  const fill = document.getElementById("readerProgressFill");
+  viewport.innerHTML = `<div class="reader-loading-state"><div class="loader-spinner"></div><p>Loading ${escapeHtml(manga.title)}...</p></div>`;
+
+  try {
+    const pdfjsLib = await loadPdfJs();
+    const pdf = await pdfjsLib.getDocument({ url: pdfUrl, disableAutoFetch: false }).promise;
+    AppState.activeReader.totalPages = pdf.numPages;
+    if (pageLabel) pageLabel.textContent = `Page 1 / ${pdf.numPages}`;
+    if (fill) fill.style.width = `${Math.round((1 / pdf.numPages) * 100)}%`;
+
+    const stack = document.createElement("div");
+    stack.className = "reader-webtoon-stack pdf-canvas-stack";
+    stack.oncontextmenu = () => false;
+    viewport.innerHTML = "";
+    viewport.appendChild(stack);
+
+    const targetWidth = Math.min(860, Math.max(320, viewport.clientWidth - 32));
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+      const page = await pdf.getPage(pageNum);
+      const baseVp = page.getViewport({ scale: 1 });
+      const scale = targetWidth / baseVp.width;
+      const renderVp = page.getViewport({ scale: scale * dpr });
+
+      const canvas = document.createElement("canvas");
+      canvas.className = "reader-pdf-canvas";
+      canvas.width = Math.floor(renderVp.width);
+      canvas.height = Math.floor(renderVp.height);
+      canvas.style.width = `${Math.floor(targetWidth)}px`;
+      canvas.style.height = `${Math.floor(baseVp.height * scale)}px`;
+      canvas.dataset.page = String(pageNum);
+      stack.appendChild(canvas);
+
+      const ctx = canvas.getContext("2d");
+      await page.render({ canvasContext: ctx, viewport: renderVp }).promise;
+    }
+  } catch (err) {
+    console.warn("PDF.js fallback:", err);
+    viewport.innerHTML = `
+      <div class="reader-viewport-pdf" oncontextmenu="return false;">
+        <iframe src="${pdfUrl}#toolbar=0&navpanes=0&scrollbar=1" class="manga-pdf-frame" title="${escapeHtml(manga.title)}"></iframe>
+      </div>
+    `;
+    if (pageLabel) pageLabel.textContent = "PDF Reader";
+  }
+}
+
 function renderReaderViewport() {
   const viewport = document.getElementById("readerViewport");
   if (!viewport) return;
@@ -5075,12 +5231,7 @@ function renderReaderViewport() {
   if (fill) fill.style.width = `${Math.min(100, Math.round((currentPage / totalPages) * 100))}%`;
 
   if (manga.pdfData) {
-    viewport.innerHTML = `
-      <div class="reader-viewport-pdf">
-        <iframe src="${manga.pdfData}#toolbar=1" class="manga-pdf-frame" title="${escapeHtml(manga.title)}"></iframe>
-      </div>
-    `;
-    if (pageLabel) pageLabel.textContent = "PDF Active";
+    renderPdfChapterCanvas(viewport, manga.pdfData, manga);
     return;
   }
 
