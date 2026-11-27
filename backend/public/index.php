@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../app/Helpers/Logger.php';
 require_once __DIR__ . '/../app/Services/RightsVerifier.php';
+require_once __DIR__ . '/../app/Services/ChapterIngestService.php';
 require_once __DIR__ . '/../app/Services/MangaDexProxy.php';
 require_once __DIR__ . '/../app/Services/RateLimiter.php';
 require_once __DIR__ . '/../discovery/Connectors/InternetArchiveConnector.php';
@@ -226,6 +227,54 @@ if ($uri === '/v1/creator/submit' && $method === 'POST') {
         'rights' => $rightsEval,
         'auto_publish_eligible' => ($rightsEval['status'] === 'verified')
     ], 201);
+}
+
+// ----------------------------------------------------------------------------
+// 5d. POST /v1/creator/upload (Multipart ZIP/CBZ/PDF/image chapter intake)
+// ----------------------------------------------------------------------------
+if ($uri === '/v1/creator/upload' && $method === 'POST') {
+    RateLimiter::check('admin');
+    $slug = trim($_POST['slug'] ?? '');
+    $chapterNum = (float)($_POST['chapter_number'] ?? 1);
+    $licenseCode = trim($_POST['license_code'] ?? '');
+    if ($slug === '' || $licenseCode === '' || empty($_FILES['pages'])) {
+        jsonResponse(['success' => false, 'error' => 'Missing required multipart fields: slug, license_code, pages'], 400);
+    }
+
+    $rightsEval = RightsVerifier::evaluateRights([
+        'license_code' => $licenseCode,
+        'commercial_use' => !empty($_POST['commercial_use']),
+        'redistribution_allowed' => !empty($_POST['redistribution_allowed']),
+    ]);
+    if ($rightsEval['status'] === 'rejected') {
+        jsonResponse(['success' => false, 'error' => 'Rejected by RightsVerifier', 'rights' => $rightsEval], 403);
+    }
+
+    $db = Database::connect();
+    $mStmt = $db->prepare("SELECT id FROM manga WHERE slug = ? LIMIT 1");
+    $mStmt->execute([$slug]);
+    $mangaId = (int)$mStmt->fetchColumn();
+    if (!$mangaId) {
+        jsonResponse(['success' => false, 'error' => 'Manga slug not found; submit metadata first'], 404);
+    }
+
+    $chStmt = $db->prepare("INSERT INTO chapters (manga_id, chapter_number, chapter_title, language_code, status) VALUES (?, ?, ?, ?, 'pending_review')");
+    $chStmt->execute([$mangaId, $chapterNum, $_POST['chapter_title'] ?? null, $_POST['language_code'] ?? 'en']);
+    $chapterId = (int)$db->lastInsertId();
+
+    $files = [];
+    if (is_array($_FILES['pages']['name'])) {
+        foreach ($_FILES['pages']['name'] as $i => $n) {
+            $files[] = ['name' => $n, 'tmp_name' => $_FILES['pages']['tmp_name'][$i] ?? ''];
+        }
+    } else {
+        $files[] = $_FILES['pages'];
+    }
+
+    $ingest = new ChapterIngestService($db);
+    $result = $ingest->ingestUploadedFiles($mangaId, $chapterId, $files, $rightsEval);
+    Logger::info('creator_chapter_upload', ['manga_id' => $mangaId, 'chapter_id' => $chapterId, 'pages' => $result['pages_ingested']]);
+    jsonResponse(['success' => true, 'chapter_id' => $chapterId, 'ingest' => $result], 201);
 }
 
 // ----------------------------------------------------------------------------

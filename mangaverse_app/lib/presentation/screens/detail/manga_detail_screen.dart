@@ -138,12 +138,40 @@ class _MangaDetailScreenState extends ConsumerState<MangaDetailScreen> {
                     contentPadding: EdgeInsets.zero,
                     title: Text('Chapter ${ch.chapterNumber}'),
                     subtitle: ch.title != null ? Text(ch.title!) : null,
-                    trailing: const Icon(Icons.chevron_right),
+                    trailing: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        IconButton(
+                          tooltip: 'Save for Offline',
+                          icon: const Icon(Icons.download_for_offline_outlined),
+                          onPressed: () async {
+                            final pages = await ref
+                                .read(remoteDsProvider)
+                                .fetchChapterPages(chapId);
+                            if (pages.isEmpty) return;
+                            await ref.read(localStorageProvider).downloadChapter(
+                                  mangaSlug: m.slug,
+                                  chapterUuid: chapId,
+                                  pageUrls: pages,
+                                );
+                            if (context.mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text('Saved Ch. ${ch.chapterNumber} offline'),
+                                ),
+                              );
+                            }
+                          },
+                        ),
+                        const Icon(Icons.chevron_right),
+                      ],
+                    ),
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (_) => ReaderScreen(
                           title: '${m.title} — Ch. ${ch.chapterNumber}',
                           externalChapterId: chapId,
+                          mangaSlug: m.slug,
                           isRtl: m.readingDirection == 'rtl',
                         ),
                       ),
