@@ -33342,6 +33342,45 @@ async function fetchLiveMangaCatalog() {
   return MANGA_DATABASE;
 }
 
+// ===================== SUPABASE CLOUD DATABASE & STORAGE =====================
+const SUPABASE_CONFIG = {
+  url: "https://muoqixvulkijdsqvehou.supabase.co",
+  anonKey: "sb_publishable_53Qo-Ht3ZpeqPTl_e4Em8w_08_aWfeq",
+  bucket: "manga-pdfs"
+};
+
+/**
+ * Fetch manga chapters and cloud PDF links from Supabase PostgreSQL database
+ */
+async function fetchSupabaseChapters(mangaId) {
+  if (!SUPABASE_CONFIG.url || !SUPABASE_CONFIG.anonKey) return null;
+  try {
+    const endpoint = `${SUPABASE_CONFIG.url}/rest/v1/manga_chapters?manga_id=eq.${encodeURIComponent(mangaId)}&select=*&order=chapter_number.asc`;
+    const res = await fetch(endpoint, {
+      headers: {
+        'apikey': SUPABASE_CONFIG.anonKey,
+        'Authorization': `Bearer ${SUPABASE_CONFIG.anonKey}`
+      }
+    });
+    if (res.ok) {
+      const rows = await res.json();
+      if (Array.isArray(rows) && rows.length > 0) {
+        return rows.map(r => ({
+          id: r.id,
+          number: String(r.chapter_number),
+          title: r.title || `Chapter ${r.chapter_number}`,
+          pages: r.total_pages || 1,
+          pdfUrl: r.pdf_url,
+          source: 'supabase'
+        }));
+      }
+    }
+  } catch (e) {
+    console.warn("Supabase fetch error:", e);
+  }
+  return null;
+}
+
 /**
  * Fetch published chapters for a manga from the PHP API (cPanel only).
  * Returns null if API unavailable or no results (fall through to MangaDex).
@@ -34214,6 +34253,19 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
     if (activeChObj && activeChObj.pdfData) {
       manga.pdfData = activeChObj.pdfData;
     }
+  }
+
+  // ── NEW: Try Supabase Cloud chapters first (database & storage)
+  if (!manga.pdfData) {
+    try {
+      const sbChapters = await fetchSupabaseChapters(manga.id);
+      if (sbChapters) {
+        const sbCh = sbChapters.find(c => String(c.number) === String(chapterNum));
+        if (sbCh?.pdfUrl) {
+          manga.pdfData = sbCh.pdfUrl;
+        }
+      }
+    } catch (e) {}
   }
 
   // ── NEW: Try PHP API chapters first (cPanel) — provides pdf_url for local/Archive PDF chapters
@@ -35547,7 +35599,30 @@ async function _fetchAndRenderSeriesChapters(manga) {
     manga._externalMap = externalMap;
   }
 
-  // If no chapters from MangaDex, generate structured official chapters from totalChapters
+  // ── NEW: Try Supabase cloud chapters
+  try {
+    const sbChapters = await fetchSupabaseChapters(manga.id);
+    if (sbChapters && sbChapters.length > 0) {
+      const existingNums = new Set(normalizedChapters.map(c => String(c.number)));
+      sbChapters.forEach(sc => {
+        if (!existingNums.has(String(sc.number))) {
+          existingNums.add(String(sc.number));
+          normalizedChapters.push({
+            id: sc.id,
+            number: String(sc.number),
+            volume: String(Math.ceil((parseFloat(sc.number) || 1) / 15) || 1),
+            title: sc.title || `Chapter ${sc.number}`,
+            publishAt: null,
+            pages: sc.pages || 1,
+            externalUrl: null,
+            isOfficial: true
+          });
+        }
+      });
+    }
+  } catch (e) {}
+
+  // If no chapters from MangaDex or Supabase, generate structured official chapters from totalChapters
   if (normalizedChapters.length === 0) {
     const total = manga.totalChapters || 12;
     for (let i = 1; i <= total; i++) {
