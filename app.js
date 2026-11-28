@@ -33459,6 +33459,19 @@ function handleInitialRoute() {
     }
   }
 
+  // 1a. Clean SEO Reader URL: /manga/:slug/chapter-:num (or /chapter/:num or /:num)
+  const readerPathMatch = (window.location.pathname || "").match(/^\/(manga|series)\/([^/]+)\/(?:chapter-?|ch-?|)(\d+)/i);
+  if (readerPathMatch) {
+    const slugFromPath = decodeURIComponent(readerPathMatch[2]).trim();
+    const chNum = parseInt(readerPathMatch[3], 10) || 1;
+    const manga = MANGA_DATABASE.find(m => m.slug === slugFromPath || m.id === slugFromPath);
+    if (manga) {
+      openMangaDetails(manga.id);
+      openReader(manga.id, chNum);
+      return;
+    }
+  }
+
   // 1b. Clean SEO URL: /manga/:slug or /series/:slug
   const pathMatch = (window.location.pathname || "").match(/^\/(manga|series)\/([^/]+)/);
   if (pathMatch) {
@@ -33485,16 +33498,24 @@ function handleInitialRoute() {
   const readerId = urlParams.get("reader");
   if (readerId) {
     const chNum = parseInt(urlParams.get("chapter"), 10) || 1;
-    openReader(readerId, chNum);
-    return;
+    const manga = MANGA_DATABASE.find(m => m.id === readerId || m.slug === readerId);
+    if (manga) {
+      openMangaDetails(manga.id);
+      openReader(manga.id, chNum);
+      return;
+    }
   }
   if (hash.startsWith("#/reader/")) {
     const parts = hash.replace("#/reader/", "").split("/");
     const rId = parts[0];
     const rCh = parseInt(parts[1], 10) || 1;
     if (rId) {
-      openReader(rId, rCh);
-      return;
+      const manga = MANGA_DATABASE.find(m => m.id === rId || m.slug === rId);
+      if (manga) {
+        openMangaDetails(manga.id);
+        openReader(manga.id, rCh);
+        return;
+      }
     }
   }
 
@@ -34177,8 +34198,12 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
   AppState.activeReader.totalPages = 8; // placeholder until real pages load
   AppState.activeReader._offlinePages = null;
 
-  if (typeof window !== "undefined" && window.location) {
-    window.location.hash = `#/reader/${mangaId}/${chapterNum}`;
+  if (typeof window !== "undefined" && window.location && typeof history !== "undefined" && history.pushState) {
+    const slug = manga.slug || manga.id;
+    const cleanUrl = `/manga/${encodeURIComponent(slug)}/chapter-${chapterNum}`;
+    if (window.location.pathname !== cleanUrl || window.location.hash) {
+      history.pushState({ mangaId: manga.id, chapterNum }, "", cleanUrl);
+    }
   }
 
   // If series has chapters array with individual PDFs, resolve active chapter PDF
@@ -34332,8 +34357,14 @@ function closeReader() {
   const modal = document.getElementById("readerModal");
   if (modal) modal.classList.remove("open");
 
-  if (typeof window !== "undefined" && window.location && window.location.hash.startsWith("#/reader/")) {
-    window.location.hash = AppState.activeSeriesManga ? `#/series/${AppState.activeSeriesManga.id}` : "";
+  if (typeof window !== "undefined" && typeof history !== "undefined" && history.pushState) {
+    const curManga = AppState.activeSeriesManga || AppState.activeReader?.manga;
+    const targetUrl = curManga
+      ? `/manga/${encodeURIComponent(curManga.slug || curManga.id)}`
+      : "/";
+    if (window.location.pathname !== targetUrl || window.location.hash) {
+      history.pushState({ mangaId: curManga ? curManga.id : null }, "", targetUrl);
+    }
   }
 
   if (AppState.activeSeriesManga) {
@@ -34485,7 +34516,13 @@ function renderReaderViewport() {
   if (pageLabel) pageLabel.textContent = `Page ${currentPage} / ${totalPages}`;
 
   const subbarTitle = document.getElementById("readerSubbarTitle");
-  if (subbarTitle) subbarTitle.textContent = `${manga.title} - Ch. ${chapterNumber}: ${manga.latestChapter?.title || 'Daily Rhythms'}`;
+  if (subbarTitle) {
+    const activeCh = (manga.chapters && Array.isArray(manga.chapters))
+      ? manga.chapters.find(c => String(c.number) === String(chapterNumber))
+      : (String(manga.latestChapter?.number) === String(chapterNumber) ? manga.latestChapter : null);
+    const chSubtitle = (activeCh?.title && !/^chapter\s*\d+$/i.test(activeCh.title)) ? `: ${activeCh.title}` : "";
+    subbarTitle.textContent = `${manga.title} • Ch. ${chapterNumber}${chSubtitle}`;
+  }
 
   const fill = document.getElementById("readerProgressFill");
   if (fill) fill.style.width = `${Math.min(100, Math.round((currentPage / totalPages) * 100))}%`;
@@ -34547,7 +34584,7 @@ function renderReaderViewport() {
           </div>
           <span class="climax-badge milestone-label">MILESTONE COMPLETED</span>
           <h3 class="climax-title milestone-title">End of Chapter ${chapterNumber}</h3>
-          <p class="climax-desc milestone-desc">${manga.synopsis ? manga.synopsis.slice(0, 115) + '...' : `Chapter ${nextCh || (Number(chapterNumber) + 1)} continues the journey.`} Chapter ${nextCh || Math.min(manga.totalChapters, Number(chapterNumber) + 1)}: Official simulpub releases weekly on MangaVerse.</p>
+          <p class="climax-desc milestone-desc">${nextCh ? `Enjoyed Chapter ${chapterNumber}? Chapter ${nextCh} continues the journey. Save this title to your library to track new chapter drops automatically!` : `You have completed Chapter ${chapterNumber}. All caught up with the latest official releases!`}</p>
           <div class="climax-actions milestone-actions">
             <button class="climax-next-btn milestone-next-btn" ${nextAttr}>Next Chapter →</button>
             <button class="climax-fav-btn milestone-fav-btn" onclick="toggleCardFavorite(event, '${manga.id}')" title="Save to Favorites" aria-label="Favorite">
@@ -35710,7 +35747,31 @@ if (typeof window !== "undefined" && typeof window.addEventListener === "functio
   });
 
   window.addEventListener("popstate", () => {
-    const pathMatch = (window.location ? window.location.pathname : "").match(/^\/(manga|series)\/([^/]+)/);
+    const pathname = window.location ? window.location.pathname : "";
+
+    // 1. Reader route: /manga/:slug/chapter-:num
+    const readerMatch = pathname.match(/^\/(manga|series)\/([^/]+)\/(?:chapter-?|ch-?|)(\d+)/i);
+    if (readerMatch) {
+      const slug = decodeURIComponent(readerMatch[2]).trim();
+      const chNum = parseInt(readerMatch[3], 10) || 1;
+      const manga = MANGA_DATABASE.find(m => m.slug === slug || m.id === slug);
+      if (manga) {
+        if (!AppState.activeReader.isOpen || AppState.activeReader.manga?.id !== manga.id || AppState.activeReader.chapterNumber !== chNum) {
+          openReader(manga.id, chNum);
+        }
+        return;
+      }
+    }
+
+    // If leaving reader back to series or home, close reader modal
+    if (AppState.activeReader.isOpen) {
+      AppState.activeReader.isOpen = false;
+      const modal = document.getElementById("readerModal");
+      if (modal) modal.classList.remove("open");
+    }
+
+    // 2. Series route: /manga/:slug
+    const pathMatch = pathname.match(/^\/(manga|series)\/([^/]+)/);
     if (pathMatch) {
       const slugFromPath = decodeURIComponent(pathMatch[2]).trim();
       const manga = MANGA_DATABASE.find(m => m.slug === slugFromPath || m.id === slugFromPath);
@@ -35723,8 +35784,12 @@ if (typeof window !== "undefined" && typeof window.addEventListener === "functio
           renderSeriesPage(manga);
           updateSeriesSEOMeta(manga);
         }
+        return;
       }
-    } else if (!window.location || window.location.pathname === "/") {
+    }
+
+    // 3. Home / Catalog
+    if (!pathname || pathname === "/") {
       showCatalogView();
     }
   });
