@@ -32971,6 +32971,26 @@ const MANGA_DATABASE = [
   }
 ];
 
+// ── SEO: Assign unique canonical URL slugs to all manga ──────────────────
+(function assignMangaSlugs() {
+  function slugify(text) {
+    return String(text || "").toLowerCase().trim()
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^\w\s-]/g, "").replace(/[\s_-]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+  const seen = new Set();
+  MANGA_DATABASE.forEach((m) => {
+    let s = slugify(m.title) || String(m.id || "").toLowerCase();
+    if (seen.has(s)) {
+      const suffix = String(m.id || "").replace(/^mv-(?:al-)?/, "");
+      s = suffix ? `${s}-${suffix}` : `${s}-${seen.size + 1}`;
+    }
+    seen.add(s);
+    m.slug = s;
+  });
+})();
+
 // All 40+ Anime-Planet Style Filter Tags
 const ALL_GENRE_TAGS = [
   "Action", "Adventure", "Body Swap", "Comedy", "Cultivation", "Cyberpunk",
@@ -33343,7 +33363,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // 2. Initialize Web Worker Search Engine
   try {
-    AppState.searchWorker = new Worker("search-worker.js");
+    AppState.searchWorker = new Worker("/search-worker.js");
     AppState.searchWorker.postMessage({
       action: "INIT_DATABASE",
       payload: MANGA_DATABASE
@@ -33391,7 +33411,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // 4. Register PWA Service Worker
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js").catch(() => {});
+    navigator.serviceWorker.register("/sw.js").catch(() => {});
   }
 
   // 5. Network status + Continue Reading + Storage estimate
@@ -33417,6 +33437,17 @@ function handleInitialRoute() {
       searchInput.value = searchQuery;
       AppState.activeSearchQuery = searchQuery;
       triggerSearch();
+    }
+  }
+
+  // 1b. Clean SEO URL: /manga/:slug or /series/:slug
+  const pathMatch = (window.location.pathname || "").match(/^\/(manga|series)\/([^/]+)/);
+  if (pathMatch) {
+    const slugFromPath = decodeURIComponent(pathMatch[2]).trim();
+    const manga = MANGA_DATABASE.find(m => m.slug === slugFromPath || m.id === slugFromPath);
+    if (manga) {
+      openMangaDetails(manga.id);
+      return;
     }
   }
 
@@ -34850,7 +34881,7 @@ function updateSeriesSEOMeta(manga) {
   const pageTitle = `${manga.title} — Read Online | MangaVerse`;
   document.title = pageTitle;
   const desc = (manga.synopsis || `Read ${manga.title} manga online on MangaVerse.`).replace(/\s+/g, " ").slice(0, 155);
-  const seriesUrl = `https://www.managaa.website/?manga=${encodeURIComponent(manga.id)}`;
+  const seriesUrl = `https://www.managaa.website/manga/${encodeURIComponent(manga.slug || manga.id)}`;
 
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute("content", desc);
@@ -34999,7 +35030,14 @@ function openMangaDetails(mangaId) {
   if (dirSec && serSec) {
     dirSec.style.display = "none";
     serSec.style.display = "block";
-    window.location.hash = `#/series/${manga.id}`;
+    if (typeof history !== "undefined" && history.pushState) {
+      const targetPath = `/manga/${encodeURIComponent(manga.slug || manga.id)}`;
+      if (window.location.pathname !== targetPath) {
+        history.pushState({ mangaId: manga.id }, "", targetPath);
+      }
+    } else {
+      window.location.hash = `#/series/${manga.id}`;
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
     renderSeriesPage(manga);
     finishTopProgress();
@@ -35018,8 +35056,10 @@ function showCatalogView() {
   const serSec = document.getElementById("seriesSection");
   if (serSec) serSec.style.display = "none";
   if (dirSec) dirSec.style.display = "block";
-  if (typeof window !== "undefined" && window.location && (window.location.hash.startsWith("#/series/") || window.location.hash.startsWith("#/reader/"))) {
-    history.pushState(null, "", window.location.pathname + window.location.search);
+  if (typeof window !== "undefined" && window.location && typeof history !== "undefined" && history.pushState) {
+    if (/^\/(manga|series)\//.test(window.location.pathname) || window.location.hash.startsWith("#/series/") || window.location.hash.startsWith("#/reader/")) {
+      history.pushState(null, "", "/");
+    }
   }
 
   // Restore default SEO metadata for catalog view
@@ -35544,6 +35584,26 @@ if (typeof window !== "undefined" && typeof window.addEventListener === "functio
         openReader(rId, rCh);
       }
     } else if (!hash || hash === "#/catalog" || hash === "#directory") {
+      showCatalogView();
+    }
+  });
+
+  window.addEventListener("popstate", () => {
+    const pathMatch = (window.location ? window.location.pathname : "").match(/^\/(manga|series)\/([^/]+)/);
+    if (pathMatch) {
+      const slugFromPath = decodeURIComponent(pathMatch[2]).trim();
+      const manga = MANGA_DATABASE.find(m => m.slug === slugFromPath || m.id === slugFromPath);
+      if (manga) {
+        const dirSec = document.getElementById("directorySection");
+        const serSec = document.getElementById("seriesSection");
+        if (dirSec && serSec) {
+          dirSec.style.display = "none";
+          serSec.style.display = "block";
+          renderSeriesPage(manga);
+          updateSeriesSEOMeta(manga);
+        }
+      }
+    } else if (!window.location || window.location.pathname === "/") {
       showCatalogView();
     }
   });

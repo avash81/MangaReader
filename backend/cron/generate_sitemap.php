@@ -9,7 +9,7 @@
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../app/Helpers/Logger.php';
 
-$baseUrl = rtrim(getenv('APP_URL') ?: 'https://mangaverse.app', '/');
+$baseUrl = rtrim(getenv('APP_URL') ?: 'https://www.managaa.website', '/');
 $outputPath = __DIR__ . '/../../sitemap.xml';
 
 try {
@@ -25,7 +25,7 @@ try {
     foreach ($rows as $row) {
         $slug = rawurlencode($row['slug']);
         $lastmod = !empty($row['updated_at']) ? date('Y-m-d', strtotime($row['updated_at'])) : date('Y-m-d');
-        $loc = htmlspecialchars("{$baseUrl}/?manga={$slug}", ENT_XML1, 'UTF-8');
+        $loc = htmlspecialchars("{$baseUrl}/manga/{$slug}", ENT_XML1, 'UTF-8');
         $xml[] = "  <url><loc>{$loc}</loc><lastmod>{$lastmod}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>";
     }
 

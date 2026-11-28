@@ -62,8 +62,8 @@ xml.push('  </url>');
 
 // Real individual manga series canonical URLs
 for (const manga of db) {
-  const slug = encodeURIComponent(manga.id);
-  const loc = `${baseUrl}/?manga=${slug}`;
+  const slug = encodeURIComponent(manga.slug || manga.id);
+  const loc = `${baseUrl}/manga/${slug}`;
   xml.push('  <url>');
   xml.push(`    <loc>${loc}</loc>`);
   xml.push(`    <lastmod>${today}</lastmod>`);
