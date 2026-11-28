@@ -35020,23 +35020,6 @@ function updateSeriesSEOMeta(manga) {
     }
   ];
 
-  if (manga.trailerUrl || manga.trailerId || manga.trailer_id) {
-    const rawTrailer = String(manga.trailerUrl || manga.trailerId || manga.trailer_id).trim();
-    const ytMatch = rawTrailer.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
-    const videoId = ytMatch ? ytMatch[1] : (rawTrailer.length === 11 ? rawTrailer : null);
-    if (videoId) {
-      graph.push({
-        "@type": "VideoObject",
-        "@id": `${seriesUrl}#trailer`,
-        "name": `${manga.title} Official Trailer`,
-        "description": `Official anime/manga trailer for ${manga.title}`,
-        "thumbnailUrl": `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
-        "uploadDate": "2024-01-01T00:00:00Z",
-        "embedUrl": `https://www.youtube.com/embed/${videoId}`
-      });
-    }
-  }
-
   ldScript.textContent = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": graph
@@ -35303,32 +35286,6 @@ function renderSeriesPage(manga) {
         </div>
       </div>
     </div>
-
-    <!-- Official Trailer Strip (compact, below hero card) -->
-    ${(manga.trailerUrl || manga.trailer_id || manga.trailerId) ? (() => {
-      const rawTrailer = String(manga.trailerUrl || manga.trailer_id || manga.trailerId).trim();
-      const ytMatch = rawTrailer.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
-      const videoId = ytMatch ? ytMatch[1] : (rawTrailer.length === 11 ? rawTrailer : null);
-      if (!videoId) return '';
-      return `<div class="series-trailer-strip">
-        <div class="trailer-strip-info">
-          <div class="trailer-strip-label">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#ef4444"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-            Official Trailer
-          </div>
-          <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" rel="noopener noreferrer nofollow" class="trailer-yt-link">Watch on YouTube ↗</a>
-        </div>
-        <div class="trailer-strip-frame">
-          <iframe
-            src="https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1"
-            title="${safeTitle} Official Trailer"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>`;
-    })() : ''}
 
     <!-- Official Release Schedule Banner -->
     <div class="series-schedule-box">

@@ -16,7 +16,23 @@
   ],
   "rewrites": [
     {
-      "source": "/(series|manga|format|genre)/:path*",
+      "source": "/manga/:slug*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/series/:slug*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/format/:slug*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/genre/:slug*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/((?!api/|.*\\..*).*)",
       "destination": "/index.html"
     }
   ],
