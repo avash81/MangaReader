@@ -34310,6 +34310,18 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
   }
 
   // Fast direct chapter query from MangaDex if not in chapterMap
+  if (!resolvedChapterId && !manga.mangadexId && !manga.pdfData) {
+    try {
+      const searchRes = await fetch(`https://api.mangadex.org/manga?title=${encodeURIComponent(manga.title)}&limit=1`);
+      if (searchRes.ok) {
+        const searchJson = await searchRes.json();
+        if (searchJson.data && searchJson.data.length > 0) {
+          manga.mangadexId = searchJson.data[0].id;
+        }
+      }
+    } catch (e) {}
+  }
+
   if (!resolvedChapterId && manga.mangadexId) {
     try {
       const directRes = await fetch(`https://api.mangadex.org/chapter?manga=${manga.mangadexId}&chapter=${encodeURIComponent(chapterNum)}&translatedLanguage[]=en&limit=1`);
@@ -35748,11 +35760,24 @@ async function _fetchAndRenderSeriesChapters(manga) {
 
   if (manga._cachedChapters && manga._cachedChapters.length > 0) {
     allChapters = manga._cachedChapters;
-  } else if (manga.mangadexId) {
-    try {
-      let offset = 0;
-      const limit = 100;
-      while (true) {
+  } else {
+    if (!manga.mangadexId && !manga.pdfData) {
+      try {
+        const sRes = await fetch(`https://api.mangadex.org/manga?title=${encodeURIComponent(manga.title)}&limit=1`);
+        if (sRes.ok) {
+          const sJson = await sRes.json();
+          if (sJson.data && sJson.data.length > 0) {
+            manga.mangadexId = sJson.data[0].id;
+          }
+        }
+      } catch (e) {}
+    }
+
+    if (manga.mangadexId) {
+      try {
+        let offset = 0;
+        const limit = 100;
+        while (true) {
         const url = `https://api.mangadex.org/manga/${manga.mangadexId}/feed?translatedLanguage[]=en&order[chapter]=asc&limit=${limit}&offset=${offset}&contentRating[]=safe&contentRating[]=suggestive&contentRating[]=erotica&contentRating[]=pornographic`;
         const res = await fetch(url);
         if (!res.ok) break;
@@ -35769,6 +35794,7 @@ async function _fetchAndRenderSeriesChapters(manga) {
       console.warn("MangaDex feed error:", e);
     }
   }
+}
 
   // If MangaDex returned chapters, format them
   // Otherwise generate official catalog chapters from manga.totalChapters
