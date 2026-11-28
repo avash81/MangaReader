@@ -35305,14 +35305,33 @@ function renderSeriesPage(manga) {
       <div id="seriesChapterPagination" class="series-chapter-pagination"></div>
     </div>
 
-    <!-- Semantic SEO Reading Guide -->
-    <section class="series-seo-guide" aria-label="Reading Guide">
-      <h2>About Reading ${safeTitle} on MangaVerse</h2>
+    <!-- Semantic SEO Reading Guide (Intro, H3 Body, Bullet Facts, Conclusion & CTA) -->
+    <article class="series-seo-guide" aria-label="Reading Guide">
+      <h2>How to Read ${safeTitle} ${escapeHtml(manga.type)} Online Free</h2>
       <p>
-        Explore every chapter of <strong>${safeTitle}</strong> by ${safeAuthor} (${escapeHtml(manga.type)}, ${escapeHtml(manga.demographic)}) in high quality.
-        Categorized under ${manga.genres.map(g => escapeHtml(g)).join(", ")}, this ${isOngoing ? "ongoing simulpub" : "completed"} series supports MangaVerse's 4-mode reader (Webtoon Vertical, Right-to-Left, Double-Page, and Single-Page) plus instant offline chapter caching via IndexedDB.
+        If you want to <strong>read ${safeTitle} online free</strong>, MangaVerse provides a fast, distraction-free reader with ${manga.totalChapters} indexed chapters. Created by ${safeAuthor}${manga.artist && manga.artist !== manga.author ? ` with art by ${safeArtist}` : ""}, this ${escapeHtml(manga.demographic)} ${escapeHtml(manga.type.toLowerCase())} blends ${manga.genres.slice(0, 3).map(g => escapeHtml(g)).join(", ")} themes into a gripping story.
       </p>
-    </section>
+
+      <h3>${safeTitle} Key Series Details</h3>
+      <ul>
+        <li><strong>Format &amp; Demographic:</strong> ${escapeHtml(manga.type)} • ${escapeHtml(manga.demographic)}</li>
+        <li><strong>Status:</strong> ${isOngoing ? "Ongoing Simulpub Schedule" : "Completed Series Archive"}</li>
+        <li><strong>Reader Rating:</strong> ★ ${manga.rating} / 10 across ${manga.totalChapters} chapters</li>
+        <li><strong>Genres &amp; Themes:</strong> ${manga.genres.map(g => escapeHtml(g)).join(", ")}</li>
+      </ul>
+
+      <h3>Tips for the Best Reading Experience</h3>
+      <ol>
+        <li>Choose <strong>Vertical Webtoon</strong> or <strong>Right-to-Left</strong> mode inside the reader toolbar to match your screen.</li>
+        <li>Save chapters offline with one tap so you can continue reading ${safeTitle} anywhere with zero buffering.</li>
+        <li>Add ${safeTitle} to your personal shelf to resume right from your last read page.</li>
+      </ol>
+
+      <div class="series-cta-row" style="margin-top:12px;">
+        <button type="button" class="btn-primary-glow" onclick="openReader('${manga.id}', 1)">Read ${safeTitle} Chapter 1</button>
+        <button type="button" class="btn-shelf-trigger" onclick="openContactModal()">Report Missing Chapter</button>
+      </div>
+    </article>
 
     <!-- Internal Link Equity: Related Manga Recommendations -->
     ${(() => {
@@ -35326,8 +35345,8 @@ function renderSeriesPage(manga) {
         <h2>Similar ${escapeHtml(manga.genres[0] || manga.type)} Series You May Like</h2>
         <div class="related-manga-grid">
           ${related.map(r => `<a class="related-manga-link" href="/manga/${encodeURIComponent(r.slug || r.id)}" onclick="event.preventDefault(); openMangaDetails('${r.id}')">
-            <span class="related-manga-title">${escapeHtml(r.title)}</span>
-            <span class="related-manga-meta">${escapeHtml(r.type)} • ★ ${r.rating} • ${r.totalChapters} Ch</span>
+            <span class="related-manga-title">Read ${escapeHtml(r.title)} (${escapeHtml(r.type)})</span>
+            <span class="related-manga-meta">★ ${r.rating} • ${r.totalChapters} Chapters</span>
           </a>`).join("")}
         </div>
       </section>`;
