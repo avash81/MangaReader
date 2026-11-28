@@ -18,7 +18,7 @@ console.log('║            Aligned with IEEE 1012 & SWEBOK v4 V&V Standard     
 console.log('╚══════════════════════════════════════════════════════════════════════╝\n');
 
 const suites = [
-  { name: 'Core Architecture & Schema Suite', file: 'test-suite.js', count: 28 },
+  { name: 'Core Architecture & Schema Suite', file: 'test-suite.js', count: 33 },
   { name: 'Deep Functions & Integration Suite', file: 'test-deep-functions.js', count: 16 },
   { name: 'Subsystem Validation Suite', file: 'validate-one-by-one.js', count: 19 },
   { name: 'UI & Layout Regression Suite', file: 'validate-recent-changes.js', count: 7 },
@@ -34,7 +34,7 @@ const startTime = Date.now();
 suites.forEach((suite, idx) => {
   process.stdout.write(`[${idx + 1}/${suites.length}] Running ${suite.name} (${suite.count} tests)... `);
   try {
-    execSync(`node "${suite.file}"`, { stdio: 'pipe' });
+    execSync(`node "${suite.file}"`, { stdio: 'pipe', cwd: __dirname });
     process.stdout.write('PASSED \u2705\n');
     totalPassed += suite.count;
     results.push({ name: suite.name, status: 'PASSED', count: suite.count });
@@ -62,6 +62,6 @@ if (totalFailed > 0) {
   console.error('\u274c Verification Gate FAILED. One or more test suites reported errors.');
   process.exit(1);
 } else {
-  console.log('\u2705 Verification Gate PASSED. All 78 assertions verified successfully.\n');
+  console.log(`\u2705 Verification Gate PASSED. All ${totalPassed} assertions verified successfully.\n`);
   process.exit(0);
 }

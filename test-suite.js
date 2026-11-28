@@ -67,5 +67,21 @@ assert(htmlContent.includes('manifest.json'), 'PWA manifest linked');
 assert(htmlContent.includes('sw.js'), 'Service Worker logic present');
 assert(htmlContent.includes('class="skip-link"'), 'A11y skip-link present');
 
+// 6. Test App Links, Sitemap, GDPR, and Deep Routing
+const assetLinksPath = path.join(__dirname, '.well-known', 'assetlinks.json');
+assert(fs.existsSync(assetLinksPath) && JSON.parse(fs.readFileSync(assetLinksPath, 'utf8')), 'Android App Links assetlinks.json valid');
+
+const appleAssocPath = path.join(__dirname, '.well-known', 'apple-app-site-association');
+assert(fs.existsSync(appleAssocPath) && JSON.parse(fs.readFileSync(appleAssocPath, 'utf8')), 'iOS Universal Links apple-app-site-association valid');
+
+const sitemapContent = fs.readFileSync(path.join(__dirname, 'sitemap.xml'), 'utf8');
+const urlCount = (sitemapContent.match(/<url>/g) || []).length;
+assert(urlCount >= 1000, `Production sitemap.xml contains full catalog (${urlCount} URLs >= 1000)`);
+
+const phpApiContent = fs.readFileSync(path.join(__dirname, 'backend', 'public', 'index.php'), 'utf8');
+assert(phpApiContent.includes("'/v1/user/account'") && phpApiContent.includes("'DELETE'"), 'GDPR Article 17 user account erasure endpoint verified');
+
+assert(appJsContent.includes('function handleInitialRoute'), 'Cold-start and deep link routing handler defined in app.js');
+
 console.log(`\n=== TEST RESULTS: ${passed} PASSED, ${failed} FAILED ===`);
 if (failed > 0) process.exit(1);
