@@ -67,7 +67,9 @@ const MANGA_DATABASE = [
     },
     "isSimulpub": true,
     "isFeatured": false,
-    "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx113415-nMXNHGtRfSkN.jpg",
+    "coverUrl": null,
+    "coverColor": { "bg1": "#2e1065", "bg2": "#090514", "accent": "#a855f7" },
+    "kanjiSeal": "霊",
     "coverPath": null,
     "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-02.pdf",
     "chapters": [
@@ -33086,6 +33088,23 @@ function generateCoverSVG(manga, forceSvg = false) {
   return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 }
 
+// Global fallback handler for any manga covers that fail to load
+function handleCoverError(img, mangaId) {
+  if (!img) return;
+  img.onerror = null;
+  let manga = null;
+  if (typeof MANGA_DATABASE !== 'undefined' && Array.isArray(MANGA_DATABASE)) {
+    manga = MANGA_DATABASE.find(x => x.id === mangaId);
+  }
+  if (!manga && typeof AppState !== 'undefined' && AppState.activeSeriesManga && AppState.activeSeriesManga.id === mangaId) {
+    manga = AppState.activeSeriesManga;
+  }
+  const fallbackManga = manga
+    ? { ...manga, coverUrl: null, coverPath: null, customCoverDataUrl: null }
+    : { id: mangaId || 'manga', title: img.alt ? img.alt.replace(/ cover art.*$/i, '').trim() : 'Manga', rating: 4.8, totalChapters: 1 };
+  img.src = generateCoverSVG(fallbackManga, true);
+}
+
 // Generate Realistic Interior Manga Pages for the Reader
 function generateMangaPageSVG(manga, chapterNum, pageNum, totalPages) {
   if (AppState.activeReader && AppState.activeReader._offlinePages && AppState.activeReader._offlinePages[pageNum - 1]) {
@@ -33530,7 +33549,7 @@ function renderSimulpubGrid() {
     return `
       <article class="simulpub-card" onclick="openReader('${m.id}', ${m.latestChapter.number})">
         <div class="simulpub-thumb-wrap">
-          <img class="simulpub-thumb" src="${cover}" alt="${m.title}" loading="lazy"/>
+          <img class="simulpub-thumb" src="${cover}" alt="${m.title}" loading="lazy" onerror="handleCoverError(this, '${m.id}')"/>
           <span class="card-format-tag">${m.type.toUpperCase()}</span>
           <div class="simulpub-drop-badge">${m.latestChapter.dropTime.toUpperCase()}</div>
         </div>
@@ -33868,7 +33887,7 @@ function renderCatalog() {
     return `
       <article class="manga-card" onclick="openMangaDetails('${m.id}')" onmouseenter="onMangaCardHoverEnter(event, '${m.id}')" onmouseleave="onMangaCardHoverLeave(event)">
         <div class="manga-cover-wrap">
-          <img class="manga-cover-img" src="${cover}" alt="${m.title}" ${loadAttr} width="200" height="300" onerror="this.onerror=null;this.src=generateCoverSVG({...MANGA_DATABASE.find(x=>x.id==='${m.id}')||{id:'${m.id}',title:'${m.title}',rating:0,totalChapters:0},coverUrl:null});"/>
+          <img class="manga-cover-img" src="${cover}" alt="${m.title}" ${loadAttr} width="200" height="300" onerror="handleCoverError(this, '${m.id}')"/>
           <span class="manga-format-badge catalog-format-badge">${m.type.toUpperCase()}</span>
           <span class="manga-score-badge catalog-score-badge">★ ${m.rating}</span>
           <button class="card-fav-btn ${isFav ? 'active' : ''}" data-id="${m.id}" onclick="toggleCardFavorite(event, '${m.id}')" title="${isFav ? 'Remove from favorites' : 'Save to favorites'}" aria-label="Favorite">
@@ -34679,28 +34698,13 @@ function loadAndRenderChapterComments() {
   } catch (e) {}
 
   if (comments.length === 0) {
-    comments = [
-      {
-        id: "c-seed-1",
-        author: "Ren_Tokyo99",
-        role: "Reader",
-        avatarBg: "#ea580c",
-        text: `The artwork and pacing in Chapter ${chapterNumber} is top tier! Really enjoy how this story develops with such historical authenticity.`,
-        isSpoiler: false,
-        upvotes: 142,
-        timeAgo: "2h ago"
-      },
-      {
-        id: "c-seed-2",
-        author: "OtomeReader",
-        role: "Top Reviewer",
-        avatarBg: "#854d0e",
-        text: `The textile and cultural details drawn in every panel are breathtaking. The intricate tapestries and nomad tent motifs are masterworks. Can't wait for Ch. ${Number(chapterNumber) + 1} next week.`,
-        isSpoiler: false,
-        upvotes: 89,
-        timeAgo: "5h ago"
-      }
-    ];
+    if (countEl) countEl.textContent = "0";
+    listEl.innerHTML = `
+      <div style="text-align:center; padding:28px 16px; color:var(--text-muted); font-size:0.88rem;">
+        No comments yet on Chapter ${chapterNumber}. Be the first to share your thoughts!
+      </div>
+    `;
+    return;
   }
 
   if (countEl) countEl.textContent = comments.length;
@@ -35228,7 +35232,7 @@ function renderSeriesPage(manga) {
     <!-- Series Hero Card -->
     <div class="series-hero-card">
       <div class="series-poster-wrap">
-        <img src="${cover}" alt="${safeTitle} ${escapeHtml(manga.type)} cover art — Read Online on MangaVerse" class="series-poster-img" width="240" height="340"/>
+        <img src="${cover}" alt="${safeTitle} ${escapeHtml(manga.type)} cover art — Read Online on MangaVerse" class="series-poster-img" width="240" height="340" onerror="handleCoverError(this, '${manga.id}')"/>
         <div class="series-poster-badge">★ ${manga.rating} • ${manga.demographic}</div>
       </div>
 
@@ -35981,17 +35985,20 @@ async function refreshWalletBadge() {
 async function refreshLibraryCountBadge() {
   try {
     const lib = await MangaDB.getLibrary();
+    const count = Array.isArray(lib) ? lib.length : 0;
     const el = document.getElementById("libraryBadgeCount");
-    if (el) el.textContent = lib.length;
+    if (el) {
+      el.textContent = count;
+      el.style.display = count > 0 ? "inline-block" : "none";
+    }
+    const bnav = document.getElementById("bnavLibBadge");
+    if (bnav) {
+      bnav.textContent = count;
+      bnav.style.display = count > 0 ? "flex" : "none";
+    }
   } catch (err) {
     console.warn("Library count error:", err);
   }
-}
-
-async function refreshLibraryCountBadge() {
-  const lib = await MangaDB.getLibrary();
-  const el = document.getElementById("libraryBadgeCount");
-  if (el) el.textContent = lib.length;
 }
 
 // ==========================================================================

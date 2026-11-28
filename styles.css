@@ -825,8 +825,8 @@ main#mainContent {
 /* Manga Catalog Grid */
 .catalog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
   contain: content;
 }
 
@@ -1335,8 +1335,12 @@ main#mainContent {
 
 .page-scrubber-slider {
   width: 160px;
-  accent-color: var(--accent-crimson);
+  accent-color: var(--accent-terracotta);
   cursor: pointer;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+  outline: none;
 }
 
 /* Discussion Drawer (MangaPlus Live Discussions with Upvotes & Spoilers) */
@@ -1703,6 +1707,17 @@ main#mainContent {
   justify-content: center;
   cursor: pointer;
   font-size: 1.1rem;
+}
+
+.reader-top-bar .modal-close-icon {
+  position: static;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #d4d4d8;
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
+  flex-shrink: 0;
 }
 
 .modal-close-icon:hover {
