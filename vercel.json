@@ -16,24 +16,24 @@
   ],
   "rewrites": [
     {
-      "source": "/manga/:slug*",
-      "destination": "/index.html"
+      "source": "/manga/:path*",
+      "destination": "/"
     },
     {
-      "source": "/series/:slug*",
-      "destination": "/index.html"
+      "source": "/series/:path*",
+      "destination": "/"
     },
     {
-      "source": "/format/:slug*",
-      "destination": "/index.html"
+      "source": "/format/:path*",
+      "destination": "/"
     },
     {
-      "source": "/genre/:slug*",
-      "destination": "/index.html"
+      "source": "/genre/:path*",
+      "destination": "/"
     },
     {
-      "source": "/((?!api/|.*\\..*).*)",
-      "destination": "/index.html"
+      "source": "/((?!api/|.*\\.[A-Za-z0-9]+$).*)",
+      "destination": "/"
     }
   ],
   "headers": [
