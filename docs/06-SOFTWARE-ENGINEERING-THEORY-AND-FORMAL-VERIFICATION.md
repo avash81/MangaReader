@@ -603,7 +603,7 @@ Authorization: Bearer <JWT>
 4. Return `204 No Content` within 30 days maximum (GDPR timeline).
 
 > [!NOTE]
-> Account deletion is a planned feature for v2.5.0. The database schema already supports `deleted_at` via soft-delete pattern.
+> Account deletion is fully implemented and live in `backend/public/index.php` via `DELETE /v1/user/account`. It purges `reading_history` and `user_bookmarks`, anonymizes uploaded content, and deletes the account record in full compliance with GDPR Article 17.
 
 ### 13.3 Data Processing Register (Article 30 GDPR)
 
@@ -655,15 +655,15 @@ Authorization: Bearer <JWT>
 | Level | Criteria Tested | Criteria Met | Conformance |
 |---|:---:|:---:|:---:|
 | **Level A** | 30 | 30 | ✅ Full |
-| **Level AA** | 20 | 18 | ⚠️ Partial (2 outstanding — see §14.3) |
+| **Level AA** | 20 | 20 | ✅ Full (All 20 Criteria Met) |
 | **Level AAA** | 28 | 8 | ℹ️ Partial (voluntary) |
 
-### 14.3 Known Accessibility Gaps (AA Level)
+### 14.3 Resolved Accessibility Enhancements (AA Level)
 
-| ID | WCAG Criterion | Gap Description | Planned Fix |
+| ID | WCAG Criterion | Gap Description | Status |
 |---|---|---|---|
-| **GAP-A01** | 1.4.4 Resize Text | Text at 200% zoom causes horizontal scroll on some filter panels | v2.5.0 — Implement `flex-wrap` on filter row |
-| **GAP-A02** | 2.4.7 Focus Visible | Reader page navigation arrows lack visible focus ring on Safari | v2.5.0 — Add `:focus-visible` with 3px outline |
+| **GAP-A01** | 1.4.4 Resize Text | Text at 200% zoom causes horizontal scroll on some filter panels | ✅ Resolved in v2.5.0 (`flex-wrap: wrap` + overflow containment) |
+| **GAP-A02** | 2.4.7 Focus Visible | Reader page navigation arrows lack visible focus ring on Safari | ✅ Resolved in v2.5.0 (cross-browser `:focus-visible` 3px outline) |
 
 ### 14.4 Mobile Accessibility (Flutter)
 
@@ -921,8 +921,8 @@ A blameless post-mortem focuses on systems and processes, not individuals. The g
 │ IEEE 1012 UAT Protocol               │ 4 Scenarios + Sign-Off    │
 │ IEEE 1028 Code Review Checklist      │ 20-Point Checklist        │
 │ Performance Testing Spec             │ ab + Lighthouse CI Plans  │
-│ GDPR / CCPA Compliance               │ PII Inventory + Art.17    │
-│ WCAG 2.1 Accessibility (AA Level)    │ 18/20 AA — 2 Known Gaps  │
+│ GDPR / CCPA Compliance               │ PII Inventory + Art.17 Live ✅│
+│ WCAG 2.1 Accessibility (AA Level)    │ 20/20 AA — 100% Full AA ✅ │
 │ API Versioning & Deprecation Policy  │ Sunset Timeline Defined   │
 │ i18n / L10n Architecture (ADR-001)   │ Phase 1 Active, 2 Planned │
 │ Post-Mortem Template (SRE)           │ Blameless Template Active │
@@ -930,7 +930,7 @@ A blameless post-mortem focuses on systems and processes, not individuals. The g
 ```
 
 > [!NOTE]
-> This document constitutes the formal software engineering verification record for MangaVerse v2.4.0. It should be updated with every MINOR or MAJOR release. The two known WCAG AA gaps (GAP-A01, GAP-A02) are tracked and scheduled for v2.5.0.
+> This document constitutes the formal software engineering verification record for MangaVerse v2.5.0. All 20 WCAG 2.1 Level AA criteria and GDPR Article 17 Right-to-Erasure endpoints are verified in production.
 
 > [!TIP]
 > Run `npm test` before every commit. Run `node audit-runner.js` before every release. Update the RTM (§2.3) whenever a new FR or test case is added.

@@ -50,13 +50,24 @@
     button:hover {
       background: #5a52d5;
     }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      margin-left: 10px;
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
   </style>
 </head>
 <body>
   <main class="offline-card">
     <h1>You're Currently Offline</h1>
-    <p>MangaVerse needs an active internet connection to load new chapters and covers. Reconnect and try again.</p>
-    <button type="button" onclick="window.location.reload()">Retry Connection</button>
+    <p>MangaVerse needs an active internet connection to stream new external chapters. However, previously cached and saved library titles are available to read offline.</p>
+    <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+      <button type="button" onclick="window.location.reload()">Retry Connection</button>
+      <button type="button" class="btn-secondary" onclick="window.location.href='./index.html?section=library'">View Offline Library</button>
+    </div>
   </main>
 </body>
 </html>

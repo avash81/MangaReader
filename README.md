@@ -65,23 +65,18 @@ The application will be accessible locally at `http://localhost:7890`.
 
 ### Running Tests
 ```bash
-# Run core test suite (28 tests)
-node test-suite.js
+# Master IEEE 1012 verification runner (78 automated assertions across all 5 suites)
+npm test # or node test-all.js
 
-# Run deep functions & integration suite (16 tests)
-node test-deep-functions.js
-
-# Run individual subsystem validation suite (19 tests)
-node validate-one-by-one.js
-
-# Run recent changes & UI layout suite (7 tests)
-node validate-recent-changes.js
-
-# Run enhancement & performance suite (8 tests)
-node scripts/verify-enhancements.js
+# Run individual verification suites
+npm run test:core         # Core architecture & schema suite (28 tests)
+npm run test:deep         # Deep functions & worker integration suite (16 tests)
+npm run test:subsystems   # Individual subsystem validation suite (19 tests)
+npm run test:ui           # Recent changes & UI layout regression suite (7 tests)
+npm run test:perf         # Enhancement & performance suite (8 tests)
 
 # Comprehensive audit & payload footprint runner
-node audit-runner.js
+npm run audit             # or node audit-runner.js
 ```
 
 ---

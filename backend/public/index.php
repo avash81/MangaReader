@@ -124,6 +124,9 @@ if ($uri === '/v1/openapi.json' && $method === 'GET') {
                 'get' => ['summary' => 'Fetch user bookmarks'],
                 'post' => ['summary' => 'Toggle / sync bookmarks']
             ],
+            '/v1/user/account' => [
+                'delete' => ['summary' => 'GDPR Article 17 Right-to-Erasure: permanently erase account and reading history']
+            ],
             '/v1/admin/manga/import' => ['post' => ['summary' => 'Admin bulk import (API Key required)']],
             '/v1/admin/discover' => ['post' => ['summary' => 'Trigger archive discovery connectors']]
         ]
@@ -457,6 +460,29 @@ if ($uri === '/v1/user/bookmarks' && $method === 'POST') {
     }
     $db->prepare("INSERT INTO user_bookmarks (user_id, manga_id) VALUES (?, ?)")->execute([$uid, $mangaId]);
     jsonResponse(['success' => true, 'bookmarked' => true]);
+}
+
+// ----------------------------------------------------------------------------
+// 5g. DELETE /v1/user/account (GDPR Article 17 Right-to-Erasure)
+// ----------------------------------------------------------------------------
+if ($uri === '/v1/user/account' && $method === 'DELETE') {
+    $uid = requireAuthUserId();
+    $db = Database::connect();
+
+    // 1. Purge all user reading history and bookmarks
+    $db->prepare("DELETE FROM reading_history WHERE user_id = ?")->execute([$uid]);
+    $db->prepare("DELETE FROM user_bookmarks WHERE user_id = ?")->execute([$uid]);
+
+    // 2. Anonymize creator/uploader associations for compliance
+    $db->prepare("UPDATE chapters SET uploader_id = NULL WHERE uploader_id = ?")->execute([$uid]);
+    $db->prepare("UPDATE manga SET creator_id = NULL WHERE creator_id = ?")->execute([$uid]);
+
+    // 3. Purge or soft-delete user account record
+    $db->prepare("DELETE FROM users WHERE id = ?")->execute([$uid]);
+
+    Logger::info('gdpr_account_erasure', ['user_id' => $uid]);
+    http_response_code(204);
+    exit;
 }
 
 // ----------------------------------------------------------------------------

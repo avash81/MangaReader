@@ -3,7 +3,7 @@
  * Enables sub-100ms load times and offline reading for millions of concurrent users.
  */
 
-const CACHE_NAME = 'mangaverse-v2.3';
+const CACHE_NAME = 'mangaverse-v2.5';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -14,7 +14,9 @@ const CORE_ASSETS = [
   './search-worker.js',
   './manifest.json',
   './robots.txt',
-  './sitemap.xml'
+  './sitemap.xml',
+  './.well-known/assetlinks.json',
+  './.well-known/apple-app-site-association'
 ];
 
 self.addEventListener('install', (event) => {

@@ -146,10 +146,29 @@ body {
   outline: 3px solid var(--accent-cyan);
 }
 
-/* Focus Visibility Ring */
+/* Focus Visibility Ring (WCAG 2.1 AA §2.4.7) */
 *:focus-visible {
   outline: 2.5px solid var(--accent-cyan);
   outline-offset: 3px;
+}
+
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+.reader-mode-btn:focus-visible,
+.action-pill-btn:focus-visible,
+.reader-breadcrumb-link:focus-visible {
+  outline: 3px solid var(--accent-cyan) !important;
+  outline-offset: 2px !important;
+}
+
+/* 200% Zoom Responsive Reflow (WCAG 2.1 AA §1.4.4) */
+.filter-dashboard,
+.filter-row-inline,
+.compact-toolbar {
+  flex-wrap: wrap !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
 }
 
 /* Layout Utilities */
