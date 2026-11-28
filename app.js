@@ -34206,6 +34206,8 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
     }
   }
 
+  updateReaderSEOMeta(manga, chapterNum);
+
   // If series has chapters array with individual PDFs, resolve active chapter PDF
   if (manga.chapters && Array.isArray(manga.chapters)) {
     const activeChObj = manga.chapters.find(c => String(c.number) === String(chapterNum));
@@ -34368,12 +34370,14 @@ function closeReader() {
   }
 
   if (AppState.activeSeriesManga) {
+    updateSeriesSEOMeta(AppState.activeSeriesManga);
     updateBreadcrumb([
       { label: "MangaVerse", action: "showCatalogView()" },
       { label: "Manga Directory", action: "showCatalogView()" },
       { label: AppState.activeSeriesManga.title }
     ]);
   } else {
+    restoreDefaultSEOMeta();
     updateBreadcrumb([
       { label: "MangaVerse", action: "showCatalogView()" },
       { label: "Manga Directory" }
@@ -34996,6 +35000,8 @@ function updateSeriesSEOMeta(manga) {
     });
   }
 
+  if (typeof document === "undefined" || typeof document.querySelector !== "function") return;
+
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute("content", desc);
   const ogTitle = document.querySelector('meta[property="og:title"]');
@@ -35065,6 +35071,66 @@ function updateSeriesSEOMeta(manga) {
     "@context": "https://schema.org",
     "@graph": graph
   });
+}
+
+function updateReaderSEOMeta(manga, chapterNum) {
+  if (!manga) return;
+  const pageTitle = `Read ${manga.title} Chapter ${chapterNum} Online | MangaVerse`;
+  if (typeof document !== "undefined") document.title = pageTitle;
+
+  const readerUrl = `https://www.managaa.website/manga/${encodeURIComponent(manga.slug || manga.id)}/chapter-${chapterNum}`;
+  const desc = `Read ${manga.title} Chapter ${chapterNum} online free on MangaVerse with Tokyo simulpubs, 4-mode adaptive reader, and instant offline chapter loading.`;
+
+  if (typeof gtag === "function") {
+    gtag("event", "page_view", {
+      page_title: pageTitle,
+      page_location: readerUrl,
+      page_path: `/manga/${encodeURIComponent(manga.slug || manga.id)}/chapter-${chapterNum}`
+    });
+  }
+
+  if (typeof document === "undefined" || typeof document.querySelector !== "function") return;
+
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute("content", desc);
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute("content", pageTitle);
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute("content", desc);
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute("content", readerUrl);
+
+  const twTitle = document.querySelector('meta[name="twitter:title"]');
+  if (twTitle) twTitle.setAttribute("content", pageTitle);
+  const twDesc = document.querySelector('meta[name="twitter:description"]');
+  if (twDesc) twDesc.setAttribute("content", desc);
+
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute("href", readerUrl);
+}
+
+function restoreDefaultSEOMeta() {
+  if (typeof document === "undefined") return;
+  document.title = "Read Manga Online Free — Manhwa & Webtoons | MangaVerse";
+  if (typeof document.querySelector !== "function") return;
+
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute("content", "Read manga online free at MangaVerse. Enjoy 1,000+ manga, manhwa & webtoons with Tokyo simulpubs, 40+ genre filters, and instant offline chapter reading.");
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute("href", "https://www.managaa.website/");
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute("content", "Read Manga Online Free — Manhwa & Webtoons | MangaVerse");
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute("content", "Read manga online free at MangaVerse. Enjoy 1,000+ manga, manhwa & webtoons with Tokyo simulpubs, 40+ genre filters, and instant offline chapter reading.");
+  const ogImg = document.querySelector('meta[property="og:image"]');
+  if (ogImg) ogImg.setAttribute("content", "https://www.managaa.website/og-mangaverse.png");
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute("content", "https://www.managaa.website/");
+
+  const ldScript = document.getElementById("dynamic-series-jsonld");
+  if (ldScript && ldScript.parentNode) {
+    ldScript.parentNode.removeChild(ldScript);
+  }
 }
 
 function startTopProgress() {
@@ -35192,24 +35258,7 @@ function showCatalogView() {
   }
 
   // Restore default SEO metadata for catalog view
-  document.title = "Read Manga Online Free — Manhwa & Webtoons | MangaVerse";
-  const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) metaDesc.setAttribute("content", "Read manga online free at MangaVerse. Enjoy 1,000+ manga, manhwa & webtoons with Tokyo simulpubs, 40+ genre filters, and instant offline chapter reading.");
-  const canonical = document.querySelector('link[rel="canonical"]');
-  if (canonical) canonical.setAttribute("href", "https://www.managaa.website/");
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  if (ogTitle) ogTitle.setAttribute("content", "Read Manga Online Free — Manhwa & Webtoons | MangaVerse");
-  const ogDesc = document.querySelector('meta[property="og:description"]');
-  if (ogDesc) ogDesc.setAttribute("content", "Read manga online free at MangaVerse. Enjoy 1,000+ manga, manhwa & webtoons with Tokyo simulpubs, 40+ genre filters, and instant offline chapter reading.");
-  const ogImg = document.querySelector('meta[property="og:image"]');
-  if (ogImg) ogImg.setAttribute("content", "https://www.managaa.website/og-mangaverse.png");
-  const ogUrl = document.querySelector('meta[property="og:url"]');
-  if (ogUrl) ogUrl.setAttribute("content", "https://www.managaa.website/");
-
-  const ldScript = document.getElementById("dynamic-series-jsonld");
-  if (ldScript && ldScript.parentNode) {
-    ldScript.parentNode.removeChild(ldScript);
-  }
+  restoreDefaultSEOMeta();
 
   updateBreadcrumb([
     { label: "MangaVerse", action: "window.scrollTo({top:0,behavior:'smooth'})" },
