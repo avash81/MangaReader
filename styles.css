@@ -938,16 +938,20 @@ main#mainContent {
    ========================================================================== */
 .reader-modal {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: 99999;
   background: #000;
   display: none;
   flex-direction: column;
-  contain: strict;
 }
 
 .reader-modal.open {
-  display: flex;
+  display: flex !important;
 }
 
 .reader-top-bar {
@@ -1047,6 +1051,9 @@ main#mainContent {
   border-radius: var(--radius-sm);
   padding: 6px 12px;
   font-size: 0.85rem;
+  white-space: nowrap;
+  min-width: 120px;
+  cursor: pointer;
 }
 
 .reader-mode-controls {
@@ -1076,13 +1083,15 @@ main#mainContent {
 
 .reader-viewport-container {
   flex: 1;
+  width: 100%;
+  height: calc(100vh - 58px);
   overflow-y: auto;
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   background: #000;
-  contain: content;
 }
 
 /* Reader Color Themes */
@@ -1274,14 +1283,18 @@ main#mainContent {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  flex: 1;
+  min-height: calc(100vh - 160px);
   position: relative;
+  margin: 0 auto;
 }
 
 .paginated-img {
-  max-height: 90vh;
+  max-height: 85vh;
   max-width: 90vw;
   object-fit: contain;
+  display: block;
+  margin: 0 auto;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
 }
 
@@ -2749,14 +2762,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #121214;
+  background: #ffffff !important;
 }
 
 .manga-pdf-frame {
   width: 100%;
   height: 100%;
   border: none;
-  background: #18181b;
+  background: #ffffff !important;
 }
 
 /* ==========================================================================
@@ -4190,6 +4203,7 @@ body {
   height: auto !important;
   border-radius: 4px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  background: #ffffff !important;
 }
 
 /* ── Trailer Strip (below hero card) ─────────────────────────── */

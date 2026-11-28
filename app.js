@@ -33,11 +33,11 @@ const MANGA_DATABASE = [
     "isFeatured": false,
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx97853-FjGv1SbBl72P.jpg",
     "coverPath": null,
-    "pdfData": "mangas/Manga/Shonen/Chrono-Blade/ch-01.pdf",
+    "pdfData": "https://muoqixvulkijdsqvehou.supabase.co/storage/v1/object/public/manga-pdfs/chrono-blade/ch-1.pdf",
     "chapters": [
       {
         "number": 1,
-        "pdfData": "mangas/Manga/Shonen/Chrono-Blade/ch-01.pdf"
+        "pdfData": "https://muoqixvulkijdsqvehou.supabase.co/storage/v1/object/public/manga-pdfs/chrono-blade/ch-1.pdf"
       }
     ],
     "author": "Kenji Tachibana",
@@ -71,15 +71,15 @@ const MANGA_DATABASE = [
     "coverColor": { "bg1": "#2e1065", "bg2": "#090514", "accent": "#a855f7" },
     "kanjiSeal": "霊",
     "coverPath": null,
-    "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-02.pdf",
+    "pdfData": "https://muoqixvulkijdsqvehou.supabase.co/storage/v1/object/public/manga-pdfs/solo-necromancer/ch-2.pdf",
     "chapters": [
       {
         "number": 1,
-        "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-01.pdf"
+        "pdfData": "https://muoqixvulkijdsqvehou.supabase.co/storage/v1/object/public/manga-pdfs/solo-necromancer/ch-1.pdf"
       },
       {
         "number": 2,
-        "pdfData": "mangas/Manhwa/Seinen/Solo-Necromancer/ch-02.pdf"
+        "pdfData": "https://muoqixvulkijdsqvehou.supabase.co/storage/v1/object/public/manga-pdfs/solo-necromancer/ch-2.pdf"
       }
     ],
     "author": "Han Jin-Woo",
@@ -112,11 +112,11 @@ const MANGA_DATABASE = [
     "isFeatured": false,
     "coverUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx104458-nxiQF7yOEiKn.jpg",
     "coverPath": null,
-    "pdfData": "mangas/Manga/Shojo/Villainess-Tea-Empire/ch-01.pdf",
+    "pdfData": "https://muoqixvulkijdsqvehou.supabase.co/storage/v1/object/public/manga-pdfs/villainess-tea-empire/ch-1.pdf",
     "chapters": [
       {
         "number": 1,
-        "pdfData": "mangas/Manga/Shojo/Villainess-Tea-Empire/ch-01.pdf"
+        "pdfData": "https://muoqixvulkijdsqvehou.supabase.co/storage/v1/object/public/manga-pdfs/villainess-tea-empire/ch-1.pdf"
       }
     ],
     "author": "Haruka Shirasaki",
