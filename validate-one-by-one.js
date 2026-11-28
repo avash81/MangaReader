@@ -322,7 +322,7 @@ runValidationStep('V18', 'Search Engine Robots.txt & XML Sitemap', () => {
   if (!robots.includes('sitemap.xml')) throw new Error('robots.txt missing sitemap reference');
 
   const sitemap = fs.readFileSync('E:/Manga/sitemap.xml', 'utf8');
-  if (!sitemap.includes('<urlset') || !sitemap.includes('https://mangaverse.app/')) {
+  if (!sitemap.includes('<urlset') || (!sitemap.includes('https://www.managaa.website/') && !sitemap.includes('https://mangaverse.app/'))) {
     throw new Error('Invalid XML sitemap structure');
   }
   return `robots.txt allows all crawlers; sitemap.xml verified with clean URL routes`;

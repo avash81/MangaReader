@@ -34850,7 +34850,7 @@ function updateSeriesSEOMeta(manga) {
   const pageTitle = `${manga.title} — Read Online | MangaVerse`;
   document.title = pageTitle;
   const desc = (manga.synopsis || `Read ${manga.title} manga online on MangaVerse.`).replace(/\s+/g, " ").slice(0, 155);
-  const seriesUrl = `https://mangaverse.app/?manga=${encodeURIComponent(manga.id)}`;
+  const seriesUrl = `https://www.managaa.website/?manga=${encodeURIComponent(manga.id)}`;
 
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute("content", desc);
@@ -34901,13 +34901,13 @@ function updateSeriesSEOMeta(manga) {
             "@type": "ListItem",
             "position": 1,
             "name": "MangaVerse Home",
-            "item": "https://mangaverse.app/"
+            "item": "https://www.managaa.website/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Manga Directory",
-            "item": "https://mangaverse.app/#directorySection"
+            "item": "https://www.managaa.website/#directorySection"
           },
           {
             "@type": "ListItem",
@@ -35027,15 +35027,15 @@ function showCatalogView() {
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute("content", "Read manga, manhwa & webtoons free online. Tokyo synchronized simulpub drops, 4-mode reader, quest events & 40+ tag power filtering. Fast, offline-ready.");
   const canonical = document.querySelector('link[rel="canonical"]');
-  if (canonical) canonical.setAttribute("href", "https://mangaverse.app/");
+  if (canonical) canonical.setAttribute("href", "https://www.managaa.website/");
   const ogTitle = document.querySelector('meta[property="og:title"]');
   if (ogTitle) ogTitle.setAttribute("content", "MangaVerse — The Infinite Manga Universe");
   const ogDesc = document.querySelector('meta[property="og:description"]');
   if (ogDesc) ogDesc.setAttribute("content", "Experience Tokyo simulpubs, 4-mode reader, grand quest campaigns, and lightning-fast tag filtering with sub-100ms reading performance.");
   const ogImg = document.querySelector('meta[property="og:image"]');
-  if (ogImg) ogImg.setAttribute("content", "https://mangaverse.app/og-mangaverse.png");
+  if (ogImg) ogImg.setAttribute("content", "https://www.managaa.website/og-mangaverse.png");
   const ogUrl = document.querySelector('meta[property="og:url"]');
-  if (ogUrl) ogUrl.setAttribute("content", "https://mangaverse.app/");
+  if (ogUrl) ogUrl.setAttribute("content", "https://www.managaa.website/");
 
   const ldScript = document.getElementById("dynamic-series-jsonld");
   if (ldScript && ldScript.parentNode) {

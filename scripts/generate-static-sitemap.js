@@ -45,7 +45,7 @@ appScript.runInContext(sandbox);
 const db = sandbox.MANGA_DATABASE || [];
 console.log(`Loaded ${db.length} manga titles from MANGA_DATABASE.`);
 
-const baseUrl = 'https://mangaverse.app';
+const baseUrl = 'https://www.managaa.website';
 const today = new Date().toISOString().split('T')[0];
 
 const xml = [];
