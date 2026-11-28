@@ -34878,10 +34878,27 @@ function upvoteComment(btn) {
 // ==========================================================================
 function updateSeriesSEOMeta(manga) {
   if (!manga) return;
-  const pageTitle = `${manga.title} — Read Online | MangaVerse`;
+  let pageTitle = `Read ${manga.title} Manga Online | MangaVerse`;
+  if (pageTitle.length > 60) pageTitle = `${manga.title} — Read Manga | MangaVerse`;
+  if (pageTitle.length > 60) pageTitle = `${manga.title.slice(0, 46).trim()} | MangaVerse`;
   document.title = pageTitle;
-  const desc = (manga.synopsis || `Read ${manga.title} manga online on MangaVerse.`).replace(/\s+/g, " ").slice(0, 155);
+
+  const rawSynopsis = (manga.synopsis || "").replace(/\s+/g, " ").trim();
+  const baseDesc = `Read ${manga.title} manga online free on MangaVerse. ${rawSynopsis} Fast offline reading across all chapters.`;
+  let desc = baseDesc.slice(0, 155);
+  if (baseDesc.length > 155) {
+    const lastSpace = desc.lastIndexOf(" ");
+    if (lastSpace > 135) desc = desc.slice(0, lastSpace);
+  }
   const seriesUrl = `https://www.managaa.website/manga/${encodeURIComponent(manga.slug || manga.id)}`;
+
+  if (typeof gtag === "function") {
+    gtag("event", "page_view", {
+      page_title: pageTitle,
+      page_location: seriesUrl,
+      page_path: `/manga/${encodeURIComponent(manga.slug || manga.id)}`
+    });
+  }
 
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute("content", desc);
@@ -35051,11 +35068,25 @@ function openMangaDetails(mangaId) {
   modal.classList.add("open");
 }
 
+function swapHeadingTag(id, targetTag) {
+  const el = document.getElementById(id);
+  if (!el || el.tagName.toLowerCase() === targetTag.toLowerCase()) return;
+  const replacement = document.createElement(targetTag);
+  replacement.id = el.id;
+  replacement.className = el.className;
+  replacement.innerHTML = el.innerHTML;
+  el.parentNode.replaceChild(replacement, el);
+}
+
 function showCatalogView() {
   const dirSec = document.getElementById("directorySection");
   const serSec = document.getElementById("seriesSection");
-  if (serSec) serSec.style.display = "none";
+  if (serSec) {
+    serSec.style.display = "none";
+    serSec.innerHTML = "";
+  }
   if (dirSec) dirSec.style.display = "block";
+  swapHeadingTag("catalogMainH1", "h1");
   if (typeof window !== "undefined" && window.location && typeof history !== "undefined" && history.pushState) {
     if (/^\/(manga|series)\//.test(window.location.pathname) || window.location.hash.startsWith("#/series/") || window.location.hash.startsWith("#/reader/")) {
       history.pushState(null, "", "/");
@@ -35063,15 +35094,15 @@ function showCatalogView() {
   }
 
   // Restore default SEO metadata for catalog view
-  document.title = "MangaVerse | Read Manga Online Free • Simulpub & Power Catalog";
+  document.title = "Read Manga Online Free — Manhwa & Webtoons | MangaVerse";
   const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) metaDesc.setAttribute("content", "Read manga, manhwa & webtoons free online. Tokyo synchronized simulpub drops, 4-mode reader, quest events & 40+ tag power filtering. Fast, offline-ready.");
+  if (metaDesc) metaDesc.setAttribute("content", "Read manga online free at MangaVerse. Enjoy 1,000+ manga, manhwa & webtoons with Tokyo simulpubs, 40+ genre filters, and instant offline chapter reading.");
   const canonical = document.querySelector('link[rel="canonical"]');
   if (canonical) canonical.setAttribute("href", "https://www.managaa.website/");
   const ogTitle = document.querySelector('meta[property="og:title"]');
-  if (ogTitle) ogTitle.setAttribute("content", "MangaVerse — The Infinite Manga Universe");
+  if (ogTitle) ogTitle.setAttribute("content", "Read Manga Online Free — Manhwa & Webtoons | MangaVerse");
   const ogDesc = document.querySelector('meta[property="og:description"]');
-  if (ogDesc) ogDesc.setAttribute("content", "Experience Tokyo simulpubs, 4-mode reader, grand quest campaigns, and lightning-fast tag filtering with sub-100ms reading performance.");
+  if (ogDesc) ogDesc.setAttribute("content", "Read manga online free at MangaVerse. Enjoy 1,000+ manga, manhwa & webtoons with Tokyo simulpubs, 40+ genre filters, and instant offline chapter reading.");
   const ogImg = document.querySelector('meta[property="og:image"]');
   if (ogImg) ogImg.setAttribute("content", "https://www.managaa.website/og-mangaverse.png");
   const ogUrl = document.querySelector('meta[property="og:url"]');
@@ -35098,6 +35129,7 @@ function toggleSeriesShelfMenu(event) {
 function renderSeriesPage(manga) {
   const serSec = document.getElementById("seriesSection");
   if (!serSec) return;
+  swapHeadingTag("catalogMainH1", "h2");
 
   updateBreadcrumb([
     { label: "MangaVerse", action: "showCatalogView()" },
@@ -35139,7 +35171,7 @@ function renderSeriesPage(manga) {
     <!-- Series Hero Card -->
     <div class="series-hero-card">
       <div class="series-poster-wrap">
-        <img src="${cover}" alt="${safeTitle}" class="series-poster-img"/>
+        <img src="${cover}" alt="${safeTitle} ${escapeHtml(manga.type)} cover art — Read Online on MangaVerse" class="series-poster-img"/>
         <div class="series-poster-badge">★ ${manga.rating} • ${manga.demographic}</div>
       </div>
 
@@ -35150,7 +35182,7 @@ function renderSeriesPage(manga) {
           <span class="series-provider-badge">Verified Official Index</span>
         </div>
 
-        <h1 class="series-hero-title">${safeTitle}</h1>
+        <h1 class="series-hero-title">Read ${safeTitle} Manga Online</h1>
         <div class="series-alt-title-line">
           <span class="alt-label">Alt titles:</span> <span class="alt-val">${safeAlt}</span>
         </div>
@@ -35166,7 +35198,7 @@ function renderSeriesPage(manga) {
           ${manga.genres.map(g => `<span class="genre-pill">${escapeHtml(g)}</span>`).join("")}
         </div>
 
-        <p class="series-synopsis-text">${safeSynopsis}</p>
+        <p class="series-synopsis-text"><strong>Read ${safeTitle} ${escapeHtml(manga.type.toLowerCase())} online free</strong> on MangaVerse. ${safeSynopsis}</p>
 
         <div class="series-cta-row">
           <button class="btn-primary-glow btn-series-start" onclick="openReader('${manga.id}', 1)">
@@ -35188,6 +35220,13 @@ function renderSeriesPage(manga) {
             </div>
           </div>
         </div>
+
+        <div class="series-share-bar" aria-label="Share this series">
+          <span class="series-share-label">Share:</span>
+          <a class="btn-share-pill" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(`Read ${manga.title} online free on MangaVerse`)}&url=${encodeURIComponent(`https://www.managaa.website/manga/${manga.slug || manga.id}`)}" target="_blank" rel="noopener noreferrer nofollow" onclick="trackShareEvent('${manga.id}', 'twitter')">X / Twitter</a>
+          <a class="btn-share-pill" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://www.managaa.website/manga/${manga.slug || manga.id}`)}" target="_blank" rel="noopener noreferrer nofollow" onclick="trackShareEvent('${manga.id}', 'facebook')">Facebook</a>
+          <button type="button" class="btn-share-pill" onclick="copySeriesShareLink('${manga.slug || manga.id}', '${manga.id}')">Copy Link</button>
+        </div>
       </div>
     </div>
 
@@ -35203,7 +35242,7 @@ function renderSeriesPage(manga) {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="#ef4444"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
             Official Trailer
           </div>
-          <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" rel="noopener noreferrer" class="trailer-yt-link">Watch on YouTube ↗</a>
+          <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" rel="noopener noreferrer nofollow" class="trailer-yt-link">Watch on YouTube ↗</a>
         </div>
         <div class="trailer-strip-frame">
           <iframe
@@ -35265,6 +35304,34 @@ function renderSeriesPage(manga) {
       <!-- Chapter Pagination Controls -->
       <div id="seriesChapterPagination" class="series-chapter-pagination"></div>
     </div>
+
+    <!-- Semantic SEO Reading Guide -->
+    <section class="series-seo-guide" aria-label="Reading Guide">
+      <h2>About Reading ${safeTitle} on MangaVerse</h2>
+      <p>
+        Explore every chapter of <strong>${safeTitle}</strong> by ${safeAuthor} (${escapeHtml(manga.type)}, ${escapeHtml(manga.demographic)}) in high quality.
+        Categorized under ${manga.genres.map(g => escapeHtml(g)).join(", ")}, this ${isOngoing ? "ongoing simulpub" : "completed"} series supports MangaVerse's 4-mode reader (Webtoon Vertical, Right-to-Left, Double-Page, and Single-Page) plus instant offline chapter caching via IndexedDB.
+      </p>
+    </section>
+
+    <!-- Internal Link Equity: Related Manga Recommendations -->
+    ${(() => {
+      const related = MANGA_DATABASE.filter(m =>
+        m.id !== manga.id &&
+        Array.isArray(m.genres) &&
+        m.genres.some(g => manga.genres.includes(g))
+      ).slice(0, 6);
+      if (related.length === 0) return "";
+      return `<section class="series-related-section" aria-label="Related Manga">
+        <h2>Similar ${escapeHtml(manga.genres[0] || manga.type)} Series You May Like</h2>
+        <div class="related-manga-grid">
+          ${related.map(r => `<a class="related-manga-link" href="/manga/${encodeURIComponent(r.slug || r.id)}" onclick="event.preventDefault(); openMangaDetails('${r.id}')">
+            <span class="related-manga-title">${escapeHtml(r.title)}</span>
+            <span class="related-manga-meta">${escapeHtml(r.type)} • ★ ${r.rating} • ${r.totalChapters} Ch</span>
+          </a>`).join("")}
+        </div>
+      </section>`;
+    })()}
   `;
 
   // Fetch chapters async
@@ -36579,4 +36646,78 @@ async function updateStorageUsageLabel() {
     const lbl = document.getElementById("storageUsageLabel");
     if (lbl) lbl.textContent = text;
   } catch (e) { /* silently ignore */ }
+}
+
+// ── GDPR Cookie Consent, Social Share & GA4 Contact Form Tracking ──
+function showCookieConsentBanner(force = false) {
+  const banner = document.getElementById("gdprCookieBanner");
+  if (!banner) return;
+  const saved = localStorage.getItem("mv_cookie_consent");
+  if (!saved || force) {
+    banner.style.display = "flex";
+  }
+}
+
+function setCookieConsent(choice) {
+  localStorage.setItem("mv_cookie_consent", choice);
+  const banner = document.getElementById("gdprCookieBanner");
+  if (banner) banner.style.display = "none";
+  if (typeof gtag === "function") {
+    gtag("event", "cookie_consent_update", { consent_choice: choice });
+  }
+  showToast(choice === "accepted" ? "Cookie preferences saved." : "Essential cookies only enabled.", "success");
+}
+
+function openContactModal() {
+  const modal = document.getElementById("contactModal");
+  if (modal) modal.style.display = "flex";
+}
+
+function closeContactModal() {
+  const modal = document.getElementById("contactModal");
+  if (modal) modal.style.display = "none";
+}
+
+function handleContactSubmit(event) {
+  if (event) event.preventDefault();
+  const name = (document.getElementById("contactName")?.value || "").trim();
+  const email = (document.getElementById("contactEmail")?.value || "").trim();
+  const topic = document.getElementById("contactTopic")?.value || "general";
+  const message = (document.getElementById("contactMessage")?.value || "").trim();
+  if (!name || !email || !message) return;
+
+  try {
+    const existing = JSON.parse(localStorage.getItem("mv_contact_submissions") || "[]");
+    existing.push({ name, email, topic, message, submittedAt: new Date().toISOString() });
+    localStorage.setItem("mv_contact_submissions", JSON.stringify(existing.slice(-20)));
+  } catch (e) { /* ignore storage quota errors */ }
+
+  if (typeof gtag === "function") {
+    gtag("event", "form_submit", { form_name: "contact_request", topic });
+  }
+
+  document.getElementById("contactForm")?.reset();
+  closeContactModal();
+  showToast("Thank you! Your request has been recorded.", "success");
+}
+
+function trackShareEvent(mangaId, method) {
+  if (typeof gtag === "function") {
+    gtag("event", "share", { method, content_type: "manga", item_id: mangaId });
+  }
+}
+
+function copySeriesShareLink(slug, mangaId) {
+  const url = `https://www.managaa.website/manga/${encodeURIComponent(slug)}`;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).catch(() => {});
+  }
+  trackShareEvent(mangaId, "copy_link");
+  showToast("Series link copied to clipboard!", "success");
+}
+
+if (typeof document !== "undefined" && typeof document.addEventListener === "function") {
+  document.addEventListener("DOMContentLoaded", () => {
+    showCookieConsentBanner(false);
+  });
 }

@@ -14,8 +14,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ===================== PRIMARY SEO ===================== -->
-  <title>MangaVerse | Read Manga Online Free • Simulpub &amp; Power Catalog</title>
-  <meta name="description" content="Read manga, manhwa &amp; webtoons free online. Tokyo synchronized simulpub drops, 4-mode reader, quest events &amp; 40+ tag power filtering. Fast, offline-ready.">
+  <title>Read Manga Online Free — Manhwa &amp; Webtoons | MangaVerse</title>
+  <meta name="description" content="Read manga online free at MangaVerse. Enjoy 1,000+ manga, manhwa &amp; webtoons with Tokyo simulpubs, 40+ genre filters, and instant offline chapter reading.">
   <meta name="keywords" content="MangaVerse, read manga free, manga simulpub, MangaPlus updates, MangaPlaza special, anime-planet power filter, villainess manga, solo leveling, shonen jump, webtoons online">
   <meta name="author" content="MangaVerse Global">
   <meta name="robots" content="index, follow">
@@ -40,14 +40,18 @@
   <meta property="og:description" content="Experience Tokyo simulpubs, 4-mode reader, grand quest campaigns, and lightning-fast tag filtering with sub-100ms reading performance.">
   <meta property="og:url" content="https://www.managaa.website/">
   <meta property="og:image" content="https://www.managaa.website/og-mangaverse.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MangaVerse — Read Manga, Manhwa & Webtoons Online Free">
   <meta property="og:locale" content="en_US">
 
   <!-- ===================== TWITTER CARD ===================== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@MangaVerseApp">
-  <meta name="twitter:title" content="MangaVerse | Read Free Manga Online">
-  <meta name="twitter:description" content="Tokyo simulpubs, 4-mode reader, seasonal quests, and Anime-Planet power tag filtering in one seamless platform.">
+  <meta name="twitter:title" content="Read Manga Online Free — Manhwa &amp; Webtoons | MangaVerse">
+  <meta name="twitter:description" content="Read manga online free at MangaVerse. Enjoy 1,000+ manga, manhwa &amp; webtoons with Tokyo simulpubs, 40+ genre filters, and instant offline chapter reading.">
   <meta name="twitter:image" content="https://www.managaa.website/og-mangaverse.png">
+  <meta name="twitter:image:alt" content="MangaVerse — Read Manga Online Free">
 
   <!-- ===================== JSON-LD STRUCTURED DATA ===================== -->
   <script type="application/ld+json">
@@ -118,7 +122,7 @@
           <path d="M26 74 V28 L50 54 L74 28 V74" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <div class="brand-title-group">
-          <h1>MangaVerse</h1>
+          <span class="brand-name">MangaVerse</span>
           <div class="brand-sub">Manga Reader</div>
         </div>
       </a>
@@ -190,10 +194,10 @@
       <div class="section-header-row">
         <div class="section-title-wrap">
           <div class="section-title-line">
-            <h2 class="section-title">Manga Directory</h2>
+            <h1 id="catalogMainH1" class="section-title">Read Manga, Manhwa &amp; Webtoons Online Free</h1>
           </div>
           <p class="section-subtitle">
-            Filter by genre, demographic, and format, or search by keyword.
+            Read manga online free across 1,000+ manga, manhwa, and webtoon titles. Filter by genre, demographic, and format, or search by title and author.
           </p>
         </div>
       </div>
@@ -712,17 +716,62 @@
         <b>MangaVerse</b> • Online Manga &amp; Webtoon Reader
       </div>
       <div class="footer-legal-links">
+        <button type="button" class="footer-legal-btn" onclick="openContactModal()">Contact &amp; Requests</button>
+        <span>•</span>
         <button type="button" class="footer-legal-btn" onclick="openLegalModal('privacy')">Privacy Policy</button>
         <span>•</span>
         <button type="button" class="footer-legal-btn" onclick="openLegalModal('terms')">Terms of Service</button>
         <span>•</span>
         <button type="button" class="footer-legal-btn" onclick="openLegalModal('dmca')">DMCA Takedown</button>
+        <span>•</span>
+        <button type="button" class="footer-legal-btn" onclick="showCookieConsentBanner(true)">Cookie Settings</button>
       </div>
       <div>
         <span>Open Catalog</span> • <span>Offline Ready</span>
       </div>
     </div>
   </footer>
+
+  <!-- Contact & Manga Request Modal (GA4 Tracked Conversion) -->
+  <div id="contactModal" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="modal-card" style="max-width:540px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <h2 id="contactModalTitle" style="margin:0; font-size:1.25rem;">Contact MangaVerse &amp; Title Requests</h2>
+        <button type="button" class="btn-icon" onclick="closeContactModal()" aria-label="Close contact dialog">✕</button>
+      </div>
+      <p style="font-size:0.88rem; color:var(--text-secondary, #94a3b8); margin-bottom:14px;">
+        Request a manga/manhwa title, report a broken chapter, or reach our team directly at <b>support@managaa.website</b>.
+      </p>
+      <form id="contactForm" class="contact-form-grid" onsubmit="handleContactSubmit(event)">
+        <label for="contactName" class="sr-only">Your Name</label>
+        <input type="text" id="contactName" name="name" placeholder="Your Name" required maxlength="80" class="contact-input"/>
+        <label for="contactEmail" class="sr-only">Your Email</label>
+        <input type="email" id="contactEmail" name="email" placeholder="Your Email (e.g. reader@example.com)" required maxlength="120" class="contact-input"/>
+        <label for="contactTopic" class="sr-only">Topic</label>
+        <select id="contactTopic" name="topic" class="contact-input">
+          <option value="manga_request">Manga / Manhwa Title Request</option>
+          <option value="bug_report">Report Broken Chapter / Link</option>
+          <option value="dmca">Copyright / DMCA Inquiry</option>
+          <option value="general">General Feedback</option>
+        </select>
+        <label for="contactMessage" class="sr-only">Message</label>
+        <textarea id="contactMessage" name="message" rows="3" placeholder="Share the title name or details..." required maxlength="1000" class="contact-input"></textarea>
+        <button type="submit" class="btn-primary-glow" style="width:100%;">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- GDPR Cookie Consent Banner -->
+  <aside id="gdprCookieBanner" class="gdpr-cookie-banner" style="display:none;" role="region" aria-label="Cookie consent">
+    <div class="gdpr-cookie-text">
+      <strong>Your Privacy Choices:</strong> MangaVerse uses local storage/IndexedDB for offline reading and Google Analytics 4 cookies to improve catalog performance.
+      <button type="button" class="gdpr-link-btn" onclick="openLegalModal('privacy')">Privacy Policy</button>
+    </div>
+    <div class="gdpr-cookie-actions">
+      <button type="button" class="btn-secondary-pill" onclick="setCookieConsent('essential')">Essential Only</button>
+      <button type="button" class="btn-primary-glow" onclick="setCookieConsent('accepted')">Accept All</button>
+    </div>
+  </aside>
 
   <!-- Legal Compliance Modal -->
   <div id="legalModal" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle">
