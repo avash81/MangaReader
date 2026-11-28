@@ -34359,9 +34359,10 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
 
   const slider = document.getElementById("pageScrubber");
 
-  // Show loading state in viewport immediately
+  // Show loading state in viewport immediately and reset scroll to top
   const viewport = document.getElementById("readerViewport");
   if (viewport) {
+    viewport.scrollTop = 0;
     viewport.innerHTML = `<div class="reader-pages-loading"><div class="chapter-spinner"></div><span>Loading chapter pages...</span></div>`;
   }
 
@@ -34685,6 +34686,10 @@ function renderReaderViewport() {
         </button>
       </div>
     `;
+
+    if (AppState.activeReader.currentPage === 1) {
+      viewport.scrollTop = 0;
+    }
 
     viewport.onscroll = () => {
       const scrollPercent = viewport.scrollTop / (viewport.scrollHeight - viewport.clientHeight);

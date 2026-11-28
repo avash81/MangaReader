@@ -1080,7 +1080,7 @@ main#mainContent {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background: #000;
   contain: content;
 }
@@ -4642,10 +4642,10 @@ body {
 
 /* ── 1. Secondary Chapter Header & Dynamic Progress Line ── */
 .reader-chapter-subbar {
+  display: none; /* Hidden on desktop to prevent duplicate header bars */
   height: 40px;
   background: rgba(18, 18, 20, 0.98);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
@@ -4654,6 +4654,12 @@ body {
   position: relative;
   z-index: 10;
   backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+  .reader-chapter-subbar {
+    display: flex;
+  }
 }
 
 .chapter-subbar-left {
