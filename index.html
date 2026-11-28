@@ -412,6 +412,19 @@
       </div>
     </div>
 
+    <!-- Secondary Chapter Status Strip (Stitch screen) -->
+    <div class="reader-chapter-subbar">
+      <div class="chapter-subbar-left">
+        <span class="subbar-icon">⏸</span>
+        <span class="subbar-chapter-title" id="readerSubbarTitle">Chapter Progress</span>
+      </div>
+      <div class="chapter-subbar-right">
+        <button type="button" class="subbar-btn" onclick="toggleDiscussionsDrawer()" title="Chapter Discussion" aria-label="Comments">💬</button>
+        <button type="button" class="subbar-btn" onclick="closeReader()" title="Exit Reader" aria-label="Exit">✕</button>
+      </div>
+    </div>
+    <div class="reader-subbar-progress"><div id="readerProgressFill" class="reader-progress-fill"></div></div>
+
     <!-- Reader Viewport Container -->
     <div id="readerViewport" class="reader-viewport-container">
       <!-- Injected via JavaScript -->
@@ -419,11 +432,11 @@
 
     <!-- Bottom Scrubber & Progress Strip -->
     <div class="reader-bottom-strip">
-      <div class="scrubber-container">
-        <button class="action-pill-btn" style="padding:4px 10px; font-size:0.78rem;" onclick="prevReaderPage()">◀ Prev</button>
+      <div class="scrubber-container reader-floating-scrubber">
+        <button class="action-pill-btn scrubber-btn" onclick="prevReaderPage()">‹ Prev</button>
         <input type="range" id="pageScrubber" class="page-scrubber-slider" min="1" max="8" value="1" oninput="jumpToPage(this.value)" title="Page Scrubber"/>
-        <button class="action-pill-btn" style="padding:4px 10px; font-size:0.78rem;" onclick="nextReaderPage()">Next ▶</button>
-        <span id="readerPageNumLabel" style="font-weight:700; color:#fff;">Page 1 / 8</span>
+        <button class="action-pill-btn scrubber-btn primary" onclick="nextReaderPage()">Next ›</button>
+        <span id="readerPageNumLabel" class="scrubber-page-label">Page 1 / 8</span>
       </div>
 
       <div style="display:flex; align-items:center; gap:12px;">
@@ -744,6 +757,45 @@
 
   <!-- Global Footer -->
   <footer class="site-footer">
+    <!-- MangaPlus Style App Download Banner -->
+    <div class="footer-app-banner">
+      <div class="container footer-app-container">
+        <div class="footer-app-brand">
+          <div class="footer-app-logo">
+            <svg viewBox="0 0 100 100" width="36" height="36"><rect width="100" height="100" rx="20" fill="#c2410c"/><path d="M26 74 V28 L50 54 L74 28 V74" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="footer-app-text">
+            <strong>Install MangaVerse &amp; Read Offline Anytime</strong>
+            <span>Progressive Web App • Sub-100ms Instant Page Turns • Zero Data Waste</span>
+          </div>
+        </div>
+        <div class="footer-app-badges">
+          <button type="button" class="btn-store-badge" onclick="openLibraryModal()" id="footerInstallPwaBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+            <span>Install Web App</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social & Community Links Row (MangaPlus Style) -->
+    <div class="container footer-social-row">
+      <div class="footer-social-links">
+        <a href="https://twitter.com/MangaVerseApp" target="_blank" rel="noopener noreferrer nofollow" class="social-icon-btn" aria-label="X / Twitter" title="X / Twitter">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://discord.gg" target="_blank" rel="noopener noreferrer nofollow" class="social-icon-btn" aria-label="Discord" title="Discord">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer nofollow" class="social-icon-btn" aria-label="YouTube" title="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer nofollow" class="social-icon-btn" aria-label="Instagram" title="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+
     <div class="container footer-content">
       <div>
         <b>MangaVerse</b> • Online Manga &amp; Webtoon Reader
@@ -817,16 +869,24 @@
     </div>
   </div>
 
-  <!-- Bottom Navigation Bar -->
+  <!-- Bottom Navigation Bar (Stitch App Style: Releases, Browse, Library, Publish) -->
   <nav class="bottom-nav" aria-label="Bottom Navigation">
+    <button type="button" class="bottom-nav-item" onclick="selectDailySchedule('Today'); switchBottomNav('releases')" id="bnav-releases">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <span>Releases</span>
+    </button>
     <a href="#directorySection" class="bottom-nav-item active" id="bnav-browse" onclick="switchBottomNav('browse')">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
       <span>Browse</span>
     </a>
-    <button class="bottom-nav-item" onclick="openLibraryModal(); switchBottomNav('library')" id="bnav-library">
+    <button type="button" class="bottom-nav-item" onclick="openLibraryModal(); switchBottomNav('library')" id="bnav-library">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
       <span>Library</span>
       <span id="bnavLibBadge" class="bnav-badge" style="display:none;">0</span>
+    </button>
+    <button type="button" class="bottom-nav-item" onclick="openContactModal(); switchBottomNav('publish')" id="bnav-publish">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      <span>Publish</span>
     </button>
   </nav>
 

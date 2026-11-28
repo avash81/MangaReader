@@ -34465,6 +34465,9 @@ function renderReaderViewport() {
   const pageLabel = document.getElementById("readerPageNumLabel");
   if (pageLabel) pageLabel.textContent = `Page ${currentPage} / ${totalPages}`;
 
+  const subbarTitle = document.getElementById("readerSubbarTitle");
+  if (subbarTitle) subbarTitle.textContent = `${manga.title} - Ch. ${chapterNumber}: ${manga.latestChapter?.title || 'Daily Rhythms'}`;
+
   const fill = document.getElementById("readerProgressFill");
   if (fill) fill.style.width = `${Math.min(100, Math.round((currentPage / totalPages) * 100))}%`;
 
@@ -34510,19 +34513,31 @@ function renderReaderViewport() {
         ${Array.from({ length: totalPages }, (_, i) => {
           const pageNum = i + 1;
           const pageSrc = getReaderPageSrc(manga, chapterNumber, pageNum, totalPages);
-          return `<img class="manga-page-img" src="${pageSrc}" alt="Page ${pageNum}" loading="lazy" referrerpolicy="no-referrer"/>`;
+          return `
+            <div class="reader-page-card">
+              <img class="manga-page-img" src="${pageSrc}" alt="Page ${pageNum}" loading="lazy" referrerpolicy="no-referrer"/>
+              <div class="reader-page-pill">Page ${pageNum} / ${totalPages}</div>
+            </div>
+          `;
         }).join("")}
 
-        <!-- Screen 4 Chapter Climax Card -->
-        <div class="reader-climax-card">
-          <span class="climax-badge">CHAPTER CLIMAX</span>
-          <h3 class="climax-title">TO BE CONTINUED</h3>
-          <p class="climax-desc">Chapter ${nextCh || Math.min(manga.totalChapters, Number(chapterNumber) + 1)}: Official simulpub releases weekly on MangaVerse.</p>
-          <div class="climax-actions">
-            <button class="climax-next-btn" ${nextAttr}>Next Chapter →</button>
-            <button class="climax-fav-btn" onclick="setMangaShelf('${manga.id}', 'favorites')" title="Favorite" aria-label="Favorite">
+        <!-- Screen 4 Chapter Climax / Milestone Completed Card (Stitch design system) -->
+        <div class="reader-climax-card reader-milestone-card">
+          <div class="milestone-badge-circle">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <span class="climax-badge milestone-label">MILESTONE COMPLETED</span>
+          <h3 class="climax-title milestone-title">End of Chapter ${chapterNumber}</h3>
+          <p class="climax-desc milestone-desc">${manga.synopsis ? manga.synopsis.slice(0, 115) + '...' : `Chapter ${nextCh || (Number(chapterNumber) + 1)} continues the journey.`} Chapter ${nextCh || Math.min(manga.totalChapters, Number(chapterNumber) + 1)}: Official simulpub releases weekly on MangaVerse.</p>
+          <div class="climax-actions milestone-actions">
+            <button class="climax-next-btn milestone-next-btn" ${nextAttr}>Next Chapter →</button>
+            <button class="climax-fav-btn milestone-fav-btn" onclick="toggleCardFavorite(event, '${manga.id}')" title="Save to Favorites" aria-label="Favorite">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </button>
+          </div>
+          <div class="milestone-status-line">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Saved to Reading History • 100% Chapter Progress</span>
           </div>
         </div>
 
@@ -34668,7 +34683,9 @@ function loadAndRenderChapterComments() {
       {
         id: "c-seed-1",
         author: "Ren_Tokyo99",
-        text: `The artwork and pacing in Chapter ${chapterNumber} is top tier! Really enjoy how this story develops.`,
+        role: "Reader",
+        avatarBg: "#ea580c",
+        text: `The artwork and pacing in Chapter ${chapterNumber} is top tier! Really enjoy how this story develops with such historical authenticity.`,
         isSpoiler: false,
         upvotes: 142,
         timeAgo: "2h ago"
@@ -34676,8 +34693,10 @@ function loadAndRenderChapterComments() {
       {
         id: "c-seed-2",
         author: "OtomeReader",
-        text: `Keep an eye on the background panels on the final page! Such subtle foreshadowing.`,
-        isSpoiler: true,
+        role: "Top Reviewer",
+        avatarBg: "#854d0e",
+        text: `The textile and cultural details drawn in every panel are breathtaking. The intricate tapestries and nomad tent motifs are masterworks. Can't wait for Ch. ${Number(chapterNumber) + 1} next week.`,
+        isSpoiler: false,
         upvotes: 89,
         timeAgo: "5h ago"
       }
@@ -34695,9 +34714,12 @@ function loadAndRenderChapterComments() {
       <div class="reader-comment-card">
         <div class="comment-author-bar">
           <div class="comment-author-info">
-            <span class="comment-avatar">${safeAuthor.charAt(0).toUpperCase()}</span>
-            <span class="comment-author-name">${safeAuthor}</span>
-            <span class="comment-time">${c.timeAgo || "Just now"}</span>
+            <span class="comment-avatar" style="background:${c.avatarBg || '#ea580c'}">${safeAuthor.charAt(0).toUpperCase()}</span>
+            <div class="comment-name-badge-group">
+              <span class="comment-author-name">${safeAuthor}</span>
+              ${c.role ? `<span class="comment-role-pill ${c.role === 'Top Reviewer' ? 'reviewer' : ''}">${escapeHtml(c.role)}</span>` : ''}
+              <span class="comment-time">• ${c.timeAgo || "Just now"}</span>
+            </div>
           </div>
           <button class="comment-upvote-pill" onclick="upvoteInlineComment('${c.id}')" title="Upvote">
             ▲ <span>${c.upvotes || 0}</span>
@@ -34706,6 +34728,11 @@ function loadAndRenderChapterComments() {
         ${spoilerBadge}
         <div class="comment-content${spoilerClass}" onclick="this.classList.toggle('spoiler-hidden')">
           ${safeText}
+        </div>
+        <div class="comment-actions-bar">
+          <button type="button" class="comment-action-btn" onclick="replyToComment('${safeAuthor}')">↰ Reply</button>
+          <button type="button" class="comment-action-btn" onclick="shareComment('${c.id}')">Share</button>
+          <button type="button" class="comment-action-btn" onclick="reportComment('${c.id}')">Report</button>
         </div>
       </div>
     `;
@@ -34789,6 +34816,34 @@ function upvoteInlineComment(commentId) {
       localStorage.setItem(storageKey, JSON.stringify(comments));
     } catch (e) {}
     loadAndRenderChapterComments();
+  }
+}
+
+function replyToComment(author) {
+  const input = document.getElementById("chapterCommentInput");
+  if (input) {
+    input.value = `@${author} `;
+    input.focus();
+    input.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}
+
+function shareComment(commentId) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(window.location.href).catch(() => {});
+  }
+  showToast("Comment link copied to clipboard!", "success");
+}
+
+function reportComment(commentId) {
+  showToast("Thank you. This comment has been flagged for moderation.", "info");
+}
+
+function toggleReaderSettings() {
+  const themeSelect = document.getElementById("readerThemeSelect");
+  if (themeSelect) {
+    themeSelect.focus();
+    showToast("Adjust reading theme, mode, and zoom from the top bar.", "info");
   }
 }
 
