@@ -10,11 +10,11 @@ Options -Indexes
   # Allow .well-known (App Links / SSL challenges)
   RewriteRule ^\.well-known/ - [L]
 
-  # SPA PushState fallback for /series/* and /manga/* routes
+  # SPA PushState fallback for clean SEO routes
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !^/api/
-  RewriteRule ^(series|manga)/.*$ index.html [L,QSA]
+  RewriteRule ^(series|manga|format|genre)/.*$ index.html [L,QSA]
 </IfModule>
 
 # Protect sensitive backend config, env, and scripts
