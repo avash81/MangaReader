@@ -34309,6 +34309,24 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
     resolvedChapterId = manga._chapterMap[String(chapterNum)];
   }
 
+  // Fast direct chapter query from MangaDex if not in chapterMap
+  if (!resolvedChapterId && manga.mangadexId) {
+    try {
+      const directRes = await fetch(`https://api.mangadex.org/chapter?manga=${manga.mangadexId}&chapter=${encodeURIComponent(chapterNum)}&translatedLanguage[]=en&limit=1`);
+      if (directRes.ok) {
+        const directJson = await directRes.json();
+        if (directJson.data && directJson.data.length > 0) {
+          const directCh = directJson.data[0];
+          if (directCh.attributes?.externalUrl) {
+            window.open(directCh.attributes.externalUrl, "_blank", "noopener,noreferrer");
+            return;
+          }
+          resolvedChapterId = directCh.id;
+        }
+      }
+    } catch (e) {}
+  }
+
   // If chapterMap is not yet loaded and this manga is from MangaDex, fetch it
   if (!resolvedChapterId && manga.mangadexId) {
     try {
