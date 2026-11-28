@@ -1023,6 +1023,41 @@ main#mainContent {
   background: rgba(194, 65, 12, 0.1);
 }
 
+.reader-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f4f4f5;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  font-family: inherit;
+  line-height: 1;
+}
+
+.reader-back-btn:hover {
+  background: var(--accent-terracotta, #c2410c);
+  border-color: var(--accent-terracotta, #c2410c);
+  color: #ffffff;
+}
+
+.reader-breadcrumb-page {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fb923c;
+  background: rgba(194, 65, 12, 0.15);
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .reader-breadcrumb-sep {
   color: #3f3f46;
   font-size: 0.85rem;
@@ -1677,6 +1712,82 @@ main#mainContent {
   color: #ef4444;
   margin-top: 4px;
   font-style: italic;
+}
+
+/* Nested Comment Replies UI */
+.comment-replies-list {
+  margin-top: 10px;
+  margin-left: 18px;
+  padding-left: 12px;
+  border-left: 2px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comment-reply-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.inline-reply-box {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reply-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  border-radius: 4px;
+  color: #fff;
+  padding: 8px 10px;
+  font-size: 0.82rem;
+  resize: vertical;
+  margin-bottom: 6px;
+  font-family: inherit;
+}
+
+.reply-actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.reply-btn-submit {
+  padding: 4px 12px;
+  background: var(--accent-terracotta, #c2410c);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.reply-btn-submit:hover {
+  background: #9a3412;
+}
+
+.reply-btn-cancel {
+  padding: 4px 10px;
+  background: transparent;
+  border: 1px solid #3f3f46;
+  border-radius: 4px;
+  color: #a1a1aa;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.reply-btn-cancel:hover {
+  color: #fff;
 }
 
 /* ==========================================================================

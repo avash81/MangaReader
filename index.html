@@ -371,9 +371,15 @@
     
     <!-- Top Nav Strip -->
     <div class="reader-top-bar">
+      <!-- Back Navigation Button -->
+      <button class="reader-back-btn" onclick="exitReaderBack()" title="Go Back (Backspace)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        <span>Back</span>
+      </button>
+
       <!-- Reader Breadcrumbs Navigation Trail -->
       <nav class="reader-breadcrumbs" aria-label="Reader Breadcrumb Navigation">
-        <button class="reader-breadcrumb-link" onclick="closeReader(); showCatalogView();" title="Return to Catalog">
+        <button class="reader-breadcrumb-link" onclick="navigateToHome()" title="Return to Catalog">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align:-2px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           <span class="hide-mobile" style="margin-left:4px;">Home</span>
         </button>
@@ -387,29 +393,15 @@
             <!-- Chapters injected -->
           </select>
         </div>
+        <span class="reader-breadcrumb-sep">/</span>
+        <span class="reader-breadcrumb-page" id="readerBreadcrumbPageBadge">Page 1</span>
       </nav>
-
-      <!-- 4 Reading Mode Controls -->
-      <div class="reader-mode-controls">
-        <button class="reader-mode-btn active" data-mode="vertical" onclick="switchReaderMode('vertical')" title="Continuous Vertical Webtoon Scroll">Webtoon</button>
-        <button class="reader-mode-btn" data-mode="single-rtl" onclick="switchReaderMode('single-rtl')" title="Paginated Right-to-Left (Traditional Manga)">RTL</button>
-        <button class="reader-mode-btn" data-mode="single-ltr" onclick="switchReaderMode('single-ltr')" title="Paginated Left-to-Right (Western / Manhwa)">LTR</button>
-        <button class="reader-mode-btn" data-mode="double-spread" onclick="switchReaderMode('double-spread')" title="Double-Page Spread (Desktop Widescreen)">Spread</button>
-      </div>
 
       <!-- Right Action Controls -->
       <div style="display:flex; align-items:center; gap:10px;">
-        <!-- Theme Selector -->
-        <select class="reader-chapter-dropdown" onchange="setReaderTheme(this.value)" id="readerThemeSelect">
-          <option value="charcoal" selected>Theme: Soft Dark</option>
-          <option value="white">Theme: Clean Paper</option>
-          <option value="sepia">Theme: Warm Sepia</option>
-          <option value="oled">Theme: Deep Black</option>
-        </select>
-
         <!-- Discussions Button -->
         <button class="action-pill-btn" onclick="toggleDiscussionsDrawer()" title="Chapter Comments">
-          Comments
+          💬 Comments (<span id="readerCommentsPillCount">0</span>)
         </button>
 
         <!-- Exit Reader Button -->
@@ -448,22 +440,7 @@
         <button style="background:transparent; border:none; color:#fff; cursor:pointer;" onclick="toggleDiscussionsDrawer()">✕</button>
       </div>
       <div class="discussions-body" id="discussionsBody">
-        <div class="discussion-msg">
-          <div class="discussion-author-row">
-            <span class="discussion-author">Ren_Tokyo99</span>
-            <button class="upvote-btn" onclick="upvoteComment(this)">Upvote <span>142</span></button>
-          </div>
-          <div class="discussion-text">That double spread page was great. One of the best chapters of this arc.</div>
-        </div>
-        <div class="discussion-msg">
-          <div class="discussion-author-row">
-            <span class="discussion-author">OtomeHeroine</span>
-            <button class="upvote-btn" onclick="upvoteComment(this)">Upvote <span>89</span></button>
-          </div>
-          <div class="discussion-text spoiler-text" onclick="this.classList.toggle('revealed')">
-            [SPOILER]: When the duke revealed his ancient seal, I screamed!
-          </div>
-        </div>
+        <!-- Dynamically loaded real-time chapter comments & replies -->
       </div>
       <div class="discussions-input-wrap">
         <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px; font-size:0.78rem; color:var(--text-secondary);">

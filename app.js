@@ -34415,6 +34415,7 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
   }
 
   renderReaderViewport();
+  loadAndRenderChapterComments();
   MangaDB.saveProgress(manga.id, chapterNum, 1, AppState.activeReader.totalPages);
 
   updateBreadcrumb([
@@ -34589,6 +34590,11 @@ function renderReaderViewport() {
   // Update page number label
   const pageLabel = document.getElementById("readerPageNumLabel");
   if (pageLabel) pageLabel.textContent = `Page ${currentPage} / ${totalPages}`;
+
+  const breadcrumbPage = document.getElementById("readerBreadcrumbPageBadge");
+  if (breadcrumbPage) {
+    breadcrumbPage.textContent = mode === "vertical" ? "All Pages" : `Page ${currentPage} / ${totalPages}`;
+  }
 
   const subbarTitle = document.getElementById("readerSubbarTitle");
   if (subbarTitle) {
@@ -34863,63 +34869,93 @@ function setReaderTheme(theme) {
   renderReaderViewport();
 }
 
-function toggleDiscussionsDrawer() {
-  const drawer = document.getElementById("discussionsDrawer");
-  const inlineSec = document.getElementById("chapterDiscussionSection");
-  if (AppState.activeReader.mode === "vertical" && inlineSec) {
-    inlineSec.scrollIntoView({ behavior: "smooth" });
-  } else if (drawer) {
-    drawer.classList.toggle("open");
-  }
+// Cross-tab real-time comment synchronization
+const commentsBroadcast = typeof BroadcastChannel !== "undefined" ? new BroadcastChannel("mv_chapter_comments_sync") : null;
+if (commentsBroadcast) {
+  commentsBroadcast.onmessage = (e) => {
+    if (e.data && AppState.activeReader?.isOpen && e.data.mangaId === AppState.activeReader.manga?.id && String(e.data.chapterNumber) === String(AppState.activeReader.chapterNumber)) {
+      loadAndRenderChapterComments();
+    }
+  };
 }
 
 function getChapterCommentsKey(mangaId, chapterNum) {
   return `mv_comments_${mangaId}_ch${chapterNum}`;
 }
 
+function toggleDiscussionsDrawer() {
+  const drawer = document.getElementById("discussionsDrawer");
+  if (drawer) {
+    drawer.classList.toggle("open");
+    if (drawer.classList.contains("open")) {
+      loadAndRenderChapterComments();
+    }
+  }
+}
+
+function exitReaderBack() {
+  if (!AppState.activeReader.isOpen) return;
+  const { mode, currentPage } = AppState.activeReader;
+  if (mode !== "vertical" && currentPage > 1) {
+    prevReaderPage();
+    return;
+  }
+  exitReaderToSeries();
+}
+
 function loadAndRenderChapterComments() {
   const listEl = document.getElementById("chapterCommentsList");
+  const drawerEl = document.getElementById("discussionsBody");
   const countEl = document.getElementById("chapterCommentCount");
+  const pillCountEl = document.getElementById("readerCommentsPillCount");
   const { manga, chapterNumber } = AppState.activeReader;
-  if (!listEl || !manga) return;
+  if (!manga) return;
 
   const storageKey = getChapterCommentsKey(manga.id, chapterNumber);
-  let comments = [];
+  let allComments = [];
   try {
     const saved = localStorage.getItem(storageKey);
-    if (saved) comments = JSON.parse(saved);
+    if (saved) allComments = JSON.parse(saved);
   } catch (e) {}
 
-  if (comments.length === 0) {
-    if (countEl) countEl.textContent = "0";
-    listEl.innerHTML = `
+  const totalCount = allComments.length;
+  if (countEl) countEl.textContent = totalCount;
+  if (pillCountEl) pillCountEl.textContent = totalCount;
+
+  if (totalCount === 0) {
+    const emptyHtml = `
       <div style="text-align:center; padding:28px 16px; color:var(--text-muted); font-size:0.88rem;">
-        No comments yet on Chapter ${chapterNumber}. Be the first to share your thoughts!
+        No comments yet on Chapter ${chapterNumber}. Be the first to share your thoughts on ${escapeHtml(manga.title)}!
       </div>
     `;
+    if (listEl) listEl.innerHTML = emptyHtml;
+    if (drawerEl) drawerEl.innerHTML = emptyHtml;
     return;
   }
 
-  if (countEl) countEl.textContent = comments.length;
+  const rootComments = allComments.filter(c => !c.parentId);
+  const replies = allComments.filter(c => c.parentId);
 
-  listEl.innerHTML = comments.map(c => {
-    const safeAuthor = escapeHtml(c.author);
-    const safeText = escapeHtml(c.text);
-    const spoilerClass = c.isSpoiler ? " spoiler-hidden" : "";
-    const spoilerBadge = c.isSpoiler ? `<span class="spoiler-tag">Spoiler • Click to reveal</span>` : "";
+  function renderCommentHtml(comment, isReply = false) {
+    const safeAuthor = escapeHtml(comment.author);
+    const safeText = escapeHtml(comment.text);
+    const spoilerClass = comment.isSpoiler ? " spoiler-hidden" : "";
+    const spoilerBadge = comment.isSpoiler ? `<span class="spoiler-tag">Spoiler • Click to reveal</span>` : "";
+    const childReplies = replies.filter(r => r.parentId === comment.id);
+
     return `
-      <div class="reader-comment-card">
+      <div class="${isReply ? 'comment-reply-card' : 'reader-comment-card'}" id="comment-card-${comment.id}">
         <div class="comment-author-bar">
           <div class="comment-author-info">
-            <span class="comment-avatar" style="background:${c.avatarBg || '#ea580c'}">${safeAuthor.charAt(0).toUpperCase()}</span>
+            <span class="comment-avatar" style="background:${comment.avatarBg || '#ea580c'}">${safeAuthor.charAt(0).toUpperCase()}</span>
             <div class="comment-name-badge-group">
               <span class="comment-author-name">${safeAuthor}</span>
-              ${c.role ? `<span class="comment-role-pill ${c.role === 'Top Reviewer' ? 'reviewer' : ''}">${escapeHtml(c.role)}</span>` : ''}
-              <span class="comment-time">• ${c.timeAgo || "Just now"}</span>
+              ${comment.role ? `<span class="comment-role-pill ${comment.role === 'Top Reviewer' ? 'reviewer' : ''}">${escapeHtml(comment.role)}</span>` : ''}
+              <span class="comment-time">• ${comment.timeAgo || "Just now"}</span>
             </div>
           </div>
-          <button class="comment-upvote-pill" onclick="upvoteInlineComment('${c.id}')" title="Upvote">
-            ▲ <span>${c.upvotes || 0}</span>
+          <button class="comment-upvote-pill" onclick="upvoteInlineComment('${comment.id}')" title="Upvote">
+            ▲ <span>${comment.upvotes || 0}</span>
           </button>
         </div>
         ${spoilerBadge}
@@ -34927,13 +34963,32 @@ function loadAndRenderChapterComments() {
           ${safeText}
         </div>
         <div class="comment-actions-bar">
-          <button type="button" class="comment-action-btn" onclick="replyToComment('${safeAuthor}')">↰ Reply</button>
-          <button type="button" class="comment-action-btn" onclick="shareComment('${c.id}')">Share</button>
-          <button type="button" class="comment-action-btn" onclick="reportComment('${c.id}')">Report</button>
+          <button type="button" class="comment-action-btn" onclick="toggleInlineReplyBox('${comment.id}')">↰ Reply</button>
+          <button type="button" class="comment-action-btn" onclick="shareComment('${comment.id}')">Share</button>
         </div>
+
+        <!-- Inline Reply Input Container -->
+        <div id="replyBox-${comment.id}" class="inline-reply-box" style="display:none;">
+          <textarea id="replyInput-${comment.id}" class="reply-textarea" placeholder="Reply to ${safeAuthor}..." rows="2" maxlength="500"></textarea>
+          <div class="reply-actions-row">
+            <button type="button" class="reply-btn-cancel" onclick="toggleInlineReplyBox('${comment.id}')">Cancel</button>
+            <button type="button" class="reply-btn-submit" onclick="submitInlineReply('${comment.id}', '${safeAuthor}')">Post Reply</button>
+          </div>
+        </div>
+
+        <!-- Nested Child Replies -->
+        ${childReplies.length > 0 ? `
+          <div class="comment-replies-list">
+            ${childReplies.map(cr => renderCommentHtml(cr, true)).join("")}
+          </div>
+        ` : ""}
       </div>
     `;
-  }).join("");
+  }
+
+  const fullHtml = rootComments.map(c => renderCommentHtml(c, false)).join("");
+  if (listEl) listEl.innerHTML = fullHtml;
+  if (drawerEl) drawerEl.innerHTML = fullHtml;
 }
 
 function postInlineChapterComment() {
@@ -34955,44 +35010,88 @@ function postInlineChapterComment() {
     if (saved) comments = JSON.parse(saved);
   } catch (e) {}
 
-  if (comments.length === 0) {
-    comments = [
-      {
-        id: "c-seed-1",
-        author: "Ren_Tokyo99",
-        text: `The artwork and pacing in Chapter ${chapterNumber} is top tier! Really enjoy how this story develops.`,
-        isSpoiler: false,
-        upvotes: 142,
-        timeAgo: "2h ago"
-      },
-      {
-        id: "c-seed-2",
-        author: "OtomeReader",
-        text: `Keep an eye on the background panels on the final page! Such subtle foreshadowing.`,
-        isSpoiler: true,
-        upvotes: 89,
-        timeAgo: "5h ago"
-      }
-    ];
-  }
-
-  const newComment = {
-    id: "c-" + Date.now(),
+  const comment = {
+    id: "c-" + Date.now() + "-" + Math.random().toString(36).substr(2, 4),
+    chapterKey: `${manga.id}-ch${chapterNumber}`,
+    mangaId: manga.id,
+    chapterNumber: chapterNumber,
     author: "MangaVerseReader",
     text: text,
     isSpoiler: spoilerCheck ? spoilerCheck.checked : false,
-    upvotes: 1,
-    timeAgo: "Just now"
+    upvotes: 0,
+    createdAt: Date.now(),
+    timeAgo: "Just now",
+    parentId: null
   };
 
-  comments.unshift(newComment);
+  comments.unshift(comment);
   try {
     localStorage.setItem(storageKey, JSON.stringify(comments));
   } catch (e) {}
 
+  if (commentsBroadcast) {
+    commentsBroadcast.postMessage({ mangaId: manga.id, chapterNumber });
+  }
+
   input.value = "";
   if (spoilerCheck) spoilerCheck.checked = false;
   showToast("Comment posted!");
+  loadAndRenderChapterComments();
+}
+
+function toggleInlineReplyBox(commentId) {
+  const box = document.getElementById(`replyBox-${commentId}`);
+  if (!box) return;
+  const isHidden = box.style.display === "none";
+  box.style.display = isHidden ? "block" : "none";
+  if (isHidden) {
+    const ta = document.getElementById(`replyInput-${commentId}`);
+    if (ta) ta.focus();
+  }
+}
+
+function submitInlineReply(parentId, parentAuthor) {
+  const input = document.getElementById(`replyInput-${parentId}`);
+  const { manga, chapterNumber } = AppState.activeReader;
+  if (!input || !manga) return;
+
+  const text = (input.value || "").trim();
+  if (!text) {
+    showToast("Please enter a reply before posting.", "warn");
+    return;
+  }
+
+  const storageKey = getChapterCommentsKey(manga.id, chapterNumber);
+  let comments = [];
+  try {
+    const saved = localStorage.getItem(storageKey);
+    if (saved) comments = JSON.parse(saved);
+  } catch (e) {}
+
+  const replyObj = {
+    id: "c-" + Date.now() + "-" + Math.random().toString(36).substr(2, 4),
+    chapterKey: `${manga.id}-ch${chapterNumber}`,
+    mangaId: manga.id,
+    chapterNumber: chapterNumber,
+    author: "MangaVerseReader",
+    text: text,
+    isSpoiler: false,
+    upvotes: 0,
+    createdAt: Date.now(),
+    timeAgo: "Just now",
+    parentId: parentId
+  };
+
+  comments.push(replyObj);
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(comments));
+  } catch (e) {}
+
+  if (commentsBroadcast) {
+    commentsBroadcast.postMessage({ mangaId: manga.id, chapterNumber });
+  }
+
+  showToast("Reply posted!");
   loadAndRenderChapterComments();
 }
 
@@ -35012,6 +35111,9 @@ function upvoteInlineComment(commentId) {
     try {
       localStorage.setItem(storageKey, JSON.stringify(comments));
     } catch (e) {}
+    if (commentsBroadcast) {
+      commentsBroadcast.postMessage({ mangaId: manga.id, chapterNumber });
+    }
     loadAndRenderChapterComments();
   }
 }
@@ -35037,11 +35139,7 @@ function reportComment(commentId) {
 }
 
 function toggleReaderSettings() {
-  const themeSelect = document.getElementById("readerThemeSelect");
-  if (themeSelect) {
-    themeSelect.focus();
-    showToast("Adjust reading theme, mode, and zoom from the top bar.", "info");
-  }
+  showToast("Use Back, Chapter selector, or Scrubber to navigate chapters and pages.", "info");
 }
 
 function escapeHtml(str) {
@@ -35059,10 +35157,10 @@ async function postReaderComment() {
   const input = document.getElementById("commentTextInput");
   if (!input || !input.value.trim()) return;
 
-  // Rate limiting — 10-second cooldown
+  // Rate limiting — 3-second cooldown
   const now = Date.now();
-  if (now - lastCommentTimestamp < 10000) {
-    showToast("Please wait 10 seconds before posting another comment.", "warn");
+  if (now - lastCommentTimestamp < 3000) {
+    showToast("Please wait 3 seconds before posting another comment.", "warn");
     return;
   }
   lastCommentTimestamp = now;
@@ -35074,39 +35172,47 @@ async function postReaderComment() {
   }
 
   const isSpoiler = document.getElementById("commentSpoilerCheck")?.checked;
-  const mangaId = AppState.activeReader.manga?.id || "general";
-  const chapterKey = `${mangaId}-ch${AppState.activeReader.chapterNumber}`;
+  const { manga, chapterNumber } = AppState.activeReader;
+  const mangaId = manga?.id || "general";
+  const chNum = chapterNumber || 1;
+  const storageKey = getChapterCommentsKey(mangaId, chNum);
 
   const comment = {
-    chapterKey,
+    id: "c-" + Date.now() + "-" + Math.random().toString(36).substr(2, 4),
+    chapterKey: `${mangaId}-ch${chNum}`,
+    mangaId: mangaId,
+    chapterNumber: chNum,
     author: "MangaFan_" + Math.floor(Math.random() * 899 + 100),
     text: input.value.trim(),
-    isSpoiler: !!isSpoiler
+    isSpoiler: !!isSpoiler,
+    upvotes: 0,
+    createdAt: Date.now(),
+    timeAgo: "Just now",
+    parentId: null
   };
 
   try {
-    await MangaDB.addDiscussion(comment);
+    const safeAuthor = escapeHtml(comment.author);
+    const safeText = escapeHtml(comment.text);
 
-    const body = document.getElementById("discussionsBody");
-    if (body) {
-      const el = document.createElement("div");
-      el.className = "discussion-msg";
-      const safeAuthor = escapeHtml(comment.author);
-      const safeText = escapeHtml(comment.text);
-      el.innerHTML = `
-        <div class="discussion-author-row">
-          <span class="discussion-author">${safeAuthor}</span>
-          <button class="upvote-btn" onclick="upvoteComment(this)">Upvote <span>0</span></button>
-        </div>
-        <div class="discussion-text ${comment.isSpoiler ? 'spoiler-text' : ''}" onclick="this.classList.toggle('revealed')">
-          ${safeText}
-        </div>
-      `;
-      body.appendChild(el);
+    let comments = [];
+    try {
+      const saved = localStorage.getItem(storageKey);
+      if (saved) comments = JSON.parse(saved);
+    } catch (e) {}
+
+    comments.unshift(comment);
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(comments));
+    } catch (e) {}
+
+    if (commentsBroadcast) {
+      commentsBroadcast.postMessage({ mangaId, chapterNumber: chNum });
     }
 
     input.value = "";
     showToast("Comment posted.");
+    loadAndRenderChapterComments();
   } catch (err) {
     console.error("Failed to post comment:", err);
     showToast("Could not save comment: " + (err.message || "Storage error"), "warn");
@@ -36836,6 +36942,13 @@ function setupEventListeners() {
       if (dropdown) dropdown.classList.remove("open");
     }
     if (AppState.activeReader.isOpen) {
+      if (e.key === "Backspace") {
+        const activeTag = document.activeElement ? document.activeElement.tagName : "";
+        if (activeTag !== "INPUT" && activeTag !== "TEXTAREA" && !document.activeElement?.isContentEditable) {
+          e.preventDefault();
+          exitReaderBack();
+        }
+      }
       if (e.key === "ArrowRight") nextReaderPage();
       if (e.key === "ArrowLeft") prevReaderPage();
       if (e.key === "f" || e.key === "F") {
