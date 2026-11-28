@@ -34983,44 +34983,63 @@ function updateSeriesSEOMeta(manga) {
     ldScript.type = "application/ld+json";
     document.head.appendChild(ldScript);
   }
+  const graph = [
+    {
+      "@type": "Book",
+      "@id": `${seriesUrl}#book`,
+      "name": manga.title,
+      "image": manga.coverUrl || undefined,
+      "description": desc,
+      "genre": Array.isArray(manga.genres) ? manga.genres.join(", ") : undefined,
+      "inLanguage": "en",
+      "url": seriesUrl
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${seriesUrl}#breadcrumbs`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "MangaVerse Home",
+          "item": "https://www.managaa.website/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Manga Directory",
+          "item": "https://www.managaa.website/#directorySection"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": manga.title,
+          "item": seriesUrl
+        }
+      ]
+    }
+  ];
+
+  if (manga.trailerUrl || manga.trailerId || manga.trailer_id) {
+    const rawTrailer = String(manga.trailerUrl || manga.trailerId || manga.trailer_id).trim();
+    const ytMatch = rawTrailer.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+    const videoId = ytMatch ? ytMatch[1] : (rawTrailer.length === 11 ? rawTrailer : null);
+    if (videoId) {
+      graph.push({
+        "@type": "VideoObject",
+        "@id": `${seriesUrl}#trailer`,
+        "name": `${manga.title} Official Trailer`,
+        "description": `Official anime/manga trailer for ${manga.title}`,
+        "thumbnailUrl": `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+        "uploadDate": "2024-01-01T00:00:00Z",
+        "embedUrl": `https://www.youtube.com/embed/${videoId}`
+      });
+    }
+  }
+
   ldScript.textContent = JSON.stringify({
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Book",
-        "@id": `${seriesUrl}#book`,
-        "name": manga.title,
-        "image": manga.coverUrl || undefined,
-        "description": desc,
-        "genre": Array.isArray(manga.genres) ? manga.genres.join(", ") : undefined,
-        "inLanguage": "en",
-        "url": seriesUrl
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": `${seriesUrl}#breadcrumbs`,
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "MangaVerse Home",
-            "item": "https://www.managaa.website/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Manga Directory",
-            "item": "https://www.managaa.website/#directorySection"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": manga.title,
-            "item": seriesUrl
-          }
-        ]
-      }
-    ]
+    "@graph": graph
   });
 }
 
@@ -35226,7 +35245,7 @@ function renderSeriesPage(manga) {
     <!-- Series Hero Card -->
     <div class="series-hero-card">
       <div class="series-poster-wrap">
-        <img src="${cover}" alt="${safeTitle} ${escapeHtml(manga.type)} cover art — Read Online on MangaVerse" class="series-poster-img"/>
+        <img src="${cover}" alt="${safeTitle} ${escapeHtml(manga.type)} cover art — Read Online on MangaVerse" class="series-poster-img" width="240" height="340"/>
         <div class="series-poster-badge">★ ${manga.rating} • ${manga.demographic}</div>
       </div>
 
