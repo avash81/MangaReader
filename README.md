@@ -4,7 +4,7 @@ A high-performance web platform and directory for reading Manga, Manhwa, and Man
 
 ## Live Deployment
 
-Production website: **[https://manga-reader-tau-six.vercel.app](https://manga-reader-tau-six.vercel.app)**
+Production website: **[https://www.managaa.website](https://www.managaa.website)**
 
 * Infrastructure: Vercel Global Edge Network
 * Deployment: Automated Git CI/CD on every push to `main`

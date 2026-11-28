@@ -1,6 +1,19 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "manga-reader-tau-six.vercel.app"
+        }
+      ],
+      "destination": "https://www.managaa.website/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(series|manga|format|genre)/:path*",
