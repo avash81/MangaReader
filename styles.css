@@ -961,18 +961,22 @@ main#mainContent {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 12px 0 16px;
   z-index: 100;
   backdrop-filter: blur(8px);
+  gap: 8px;
+  overflow: hidden;
 }
 
 /* Reader Breadcrumb Trail (replaces .reader-title-info) */
 .reader-breadcrumbs {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   min-width: 0;
+  flex: 1 1 0;
   flex-shrink: 1;
+  overflow: hidden;
   overflow: hidden;
 }
 
@@ -1006,10 +1010,12 @@ main#mainContent {
   font-size: 0.9rem;
   font-weight: 800;
   color: #f4f4f5;
-  max-width: 260px;
+  max-width: min(260px, 30vw);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .reader-breadcrumb-link.reader-manga-heading:hover {
@@ -4181,6 +4187,51 @@ body {
     width: 100%;
     order: -1;
     font-size: 0.8rem;
+  }
+}
+
+/* ── Reader top-bar responsive overrides ─────────────────── */
+@media (max-width: 600px) {
+  .reader-top-bar {
+    padding: 0 8px;
+    gap: 4px;
+  }
+  .reader-breadcrumb-link.reader-manga-heading {
+    max-width: min(120px, 25vw);
+    font-size: 0.78rem;
+  }
+  .reader-breadcrumb-link {
+    font-size: 0.74rem;
+    padding: 3px 4px;
+  }
+  .reader-mode-controls {
+    gap: 2px;
+  }
+  .reader-mode-btn {
+    padding: 4px 6px;
+    font-size: 0.72rem;
+  }
+  .reader-chapter-dropdown {
+    min-width: 90px;
+    font-size: 0.74rem;
+  }
+  .modal-close-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+  .action-pill-btn {
+    padding: 4px 8px;
+    font-size: 0.74rem;
+  }
+}
+@media (max-width: 400px) {
+  .reader-breadcrumb-link.reader-manga-heading {
+    max-width: 80px;
+    font-size: 0.72rem;
+  }
+  .reader-mode-controls {
+    display: none;
   }
 }
 

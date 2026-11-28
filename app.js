@@ -34748,25 +34748,102 @@ function renderReaderViewport() {
   }
 }
 
+function _resolveAdjacentChapter(manga, chapterNumber, direction) {
+  // direction: +1 = next, -1 = prev
+  let targetCh = null;
+  if (AppState.activeSeriesChapters && AppState.activeSeriesChapters.length > 0) {
+    const sorted = AppState.activeSeriesChapters
+      .map(c => c.number)
+      .sort((a, b) => parseFloat(a) - parseFloat(b));
+    const idx = sorted.findIndex(n => String(n) === String(chapterNumber));
+    if (direction === 1 && idx !== -1 && idx < sorted.length - 1) targetCh = sorted[idx + 1];
+    if (direction === -1 && idx > 0) targetCh = sorted[idx - 1];
+  }
+  if (!targetCh) {
+    if (direction === 1 && Number(chapterNumber) < manga.totalChapters) targetCh = String(Number(chapterNumber) + 1);
+    if (direction === -1 && Number(chapterNumber) > 1) targetCh = String(Number(chapterNumber) - 1);
+  }
+  return targetCh;
+}
+
 function nextReaderPage() {
-  const { currentPage, totalPages, manga, chapterNumber } = AppState.activeReader;
-  const step = AppState.activeReader.mode === "double-spread" ? 2 : 1;
+  const { currentPage, totalPages, manga, chapterNumber, mode } = AppState.activeReader;
+
+  // Webtoon (vertical scroll) mode: scroll by page-height; advance chapter at bottom
+  if (mode === "vertical") {
+    const vp = document.getElementById("readerViewport");
+    if (vp) {
+      const nearBottom = vp.scrollTop + vp.clientHeight >= vp.scrollHeight - 80;
+      if (!nearBottom) {
+        vp.scrollBy({ top: vp.clientHeight * 0.9, behavior: "smooth" });
+        return;
+      }
+    }
+    // At bottom — advance to next chapter
+    const nextCh = _resolveAdjacentChapter(manga, chapterNumber, 1);
+    if (nextCh) {
+      showToast(`Loading Chapter ${nextCh}…`);
+      openReader(manga.id, nextCh);
+    } else {
+      showToast("You've reached the latest chapter! 🎉");
+    }
+    return;
+  }
+
+  const step = mode === "double-spread" ? 2 : 1;
   if (currentPage + step <= totalPages) {
     AppState.activeReader.currentPage += step;
     renderReaderViewport();
     MangaDB.saveProgress(manga.id, chapterNumber, AppState.activeReader.currentPage, totalPages);
   } else {
-    showToast(`Reached end of Chapter ${chapterNumber}. Loading next chapter...`);
+    // Last page — seamlessly advance to next chapter
+    const nextCh = _resolveAdjacentChapter(manga, chapterNumber, 1);
+    if (nextCh) {
+      showToast(`Loading Chapter ${nextCh}…`);
+      openReader(manga.id, nextCh);
+    } else {
+      showToast("You've reached the latest chapter! 🎉");
+    }
   }
 }
 
 function prevReaderPage() {
-  const { currentPage, totalPages, manga, chapterNumber } = AppState.activeReader;
-  const step = AppState.activeReader.mode === "double-spread" ? 2 : 1;
+  const { currentPage, totalPages, manga, chapterNumber, mode } = AppState.activeReader;
+
+  // Webtoon (vertical scroll) mode: scroll up; rewind chapter at top
+  if (mode === "vertical") {
+    const vp = document.getElementById("readerViewport");
+    if (vp) {
+      const atTop = vp.scrollTop <= 80;
+      if (!atTop) {
+        vp.scrollBy({ top: -vp.clientHeight * 0.9, behavior: "smooth" });
+        return;
+      }
+    }
+    const prevCh = _resolveAdjacentChapter(manga, chapterNumber, -1);
+    if (prevCh) {
+      showToast(`Loading Chapter ${prevCh}…`);
+      openReader(manga.id, prevCh);
+    } else {
+      showToast("You're at the first chapter.");
+    }
+    return;
+  }
+
+  const step = mode === "double-spread" ? 2 : 1;
   if (currentPage - step >= 1) {
     AppState.activeReader.currentPage -= step;
     renderReaderViewport();
     MangaDB.saveProgress(manga.id, chapterNumber, AppState.activeReader.currentPage, totalPages);
+  } else {
+    // First page — seamlessly rewind to previous chapter
+    const prevCh = _resolveAdjacentChapter(manga, chapterNumber, -1);
+    if (prevCh) {
+      showToast(`Loading Chapter ${prevCh}…`);
+      openReader(manga.id, prevCh);
+    } else {
+      showToast("You're at the first chapter.");
+    }
   }
 }
 
