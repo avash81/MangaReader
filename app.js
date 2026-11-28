@@ -33398,7 +33398,68 @@ document.addEventListener("DOMContentLoaded", async () => {
   initNetworkStatusListener();
   initContinueReadingBar();
   updateStorageUsageLabel();
+
+  // 6. Deep linking & cold-start route dispatch (Google Sitelinks & Social shares)
+  handleInitialRoute();
 });
+
+function handleInitialRoute() {
+  if (typeof window === "undefined" || !window.location) return;
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const hash = window.location.hash || "";
+
+  // 1. Google Sitelinks Searchbox / direct query: ?q=TERM
+  const searchQuery = urlParams.get("q");
+  if (searchQuery) {
+    const searchInput = document.getElementById("mainSearchInput");
+    if (searchInput) {
+      searchInput.value = searchQuery;
+      AppState.activeSearchQuery = searchQuery;
+      triggerSearch();
+    }
+  }
+
+  // 2. Deep linking to Series: ?manga=ID or ?series=ID or #/series/ID
+  const mangaId = urlParams.get("manga") || urlParams.get("series") || (hash.startsWith("#/series/") ? hash.replace("#/series/", "") : null);
+  if (mangaId) {
+    const cleanId = decodeURIComponent(mangaId).trim();
+    const manga = MANGA_DATABASE.find(m => m.id === cleanId || m.slug === cleanId);
+    if (manga) {
+      openMangaDetails(manga.id);
+      return;
+    }
+  }
+
+  // 3. Deep linking to Reader: ?reader=ID&chapter=NUM or #/reader/ID/NUM
+  const readerId = urlParams.get("reader");
+  if (readerId) {
+    const chNum = parseInt(urlParams.get("chapter"), 10) || 1;
+    openReader(readerId, chNum);
+    return;
+  }
+  if (hash.startsWith("#/reader/")) {
+    const parts = hash.replace("#/reader/", "").split("/");
+    const rId = parts[0];
+    const rCh = parseInt(parts[1], 10) || 1;
+    if (rId) {
+      openReader(rId, rCh);
+      return;
+    }
+  }
+
+  // 4. Quick section navigation: ?section=simulpub|library|directory
+  const section = urlParams.get("section");
+  if (section === "simulpub") {
+    const el = document.getElementById("simulpubSection");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  } else if (section === "library") {
+    openLibraryModal();
+  } else if (section === "directory") {
+    const el = document.getElementById("directorySection");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  }
+}
 
 // ==========================================================================
 // 5. TOKYO SYNCHRONIZED SIMULPUB CLOCK
@@ -34066,6 +34127,10 @@ async function openReader(mangaId, chapterNum = 1, mangadexChapterId = null) {
   AppState.activeReader.totalPages = 8; // placeholder until real pages load
   AppState.activeReader._offlinePages = null;
 
+  if (typeof window !== "undefined" && window.location) {
+    window.location.hash = `#/reader/${mangaId}/${chapterNum}`;
+  }
+
   // If series has chapters array with individual PDFs, resolve active chapter PDF
   if (manga.chapters && Array.isArray(manga.chapters)) {
     const activeChObj = manga.chapters.find(c => String(c.number) === String(chapterNum));
@@ -34216,6 +34281,10 @@ function closeReader() {
   AppState.activeReader.isOpen = false;
   const modal = document.getElementById("readerModal");
   if (modal) modal.classList.remove("open");
+
+  if (typeof window !== "undefined" && window.location && window.location.hash.startsWith("#/reader/")) {
+    window.location.hash = AppState.activeSeriesManga ? `#/series/${AppState.activeSeriesManga.id}` : "";
+  }
 
   if (AppState.activeSeriesManga) {
     updateBreadcrumb([
@@ -34781,6 +34850,8 @@ function updateSeriesSEOMeta(manga) {
   const pageTitle = `${manga.title} — Read Online | MangaVerse`;
   document.title = pageTitle;
   const desc = (manga.synopsis || `Read ${manga.title} manga online on MangaVerse.`).replace(/\s+/g, " ").slice(0, 155);
+  const seriesUrl = `https://mangaverse.app/?manga=${encodeURIComponent(manga.id)}`;
+
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute("content", desc);
   const ogTitle = document.querySelector('meta[property="og:title"]');
@@ -34789,6 +34860,18 @@ function updateSeriesSEOMeta(manga) {
   if (ogDesc) ogDesc.setAttribute("content", desc);
   const ogImg = document.querySelector('meta[property="og:image"]');
   if (ogImg && manga.coverUrl) ogImg.setAttribute("content", manga.coverUrl);
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute("content", seriesUrl);
+
+  const twTitle = document.querySelector('meta[name="twitter:title"]');
+  if (twTitle) twTitle.setAttribute("content", pageTitle);
+  const twDesc = document.querySelector('meta[name="twitter:description"]');
+  if (twDesc) twDesc.setAttribute("content", desc);
+  const twImg = document.querySelector('meta[name="twitter:image"]');
+  if (twImg && manga.coverUrl) twImg.setAttribute("content", manga.coverUrl);
+
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute("href", seriesUrl);
 
   let ldScript = document.getElementById("dynamic-series-jsonld");
   if (!ldScript) {
@@ -34799,11 +34882,42 @@ function updateSeriesSEOMeta(manga) {
   }
   ldScript.textContent = JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "Book",
-    "name": manga.title,
-    "image": manga.coverUrl || undefined,
-    "description": desc,
-    "genre": Array.isArray(manga.genres) ? manga.genres.join(", ") : undefined
+    "@graph": [
+      {
+        "@type": "Book",
+        "@id": `${seriesUrl}#book`,
+        "name": manga.title,
+        "image": manga.coverUrl || undefined,
+        "description": desc,
+        "genre": Array.isArray(manga.genres) ? manga.genres.join(", ") : undefined,
+        "inLanguage": "en",
+        "url": seriesUrl
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${seriesUrl}#breadcrumbs`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "MangaVerse Home",
+            "item": "https://mangaverse.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Manga Directory",
+            "item": "https://mangaverse.app/#directorySection"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": manga.title,
+            "item": seriesUrl
+          }
+        ]
+      }
+    ]
   });
 }
 
@@ -34904,9 +35018,30 @@ function showCatalogView() {
   const serSec = document.getElementById("seriesSection");
   if (serSec) serSec.style.display = "none";
   if (dirSec) dirSec.style.display = "block";
-  if (window.location.hash.startsWith("#/series/")) {
+  if (typeof window !== "undefined" && window.location && (window.location.hash.startsWith("#/series/") || window.location.hash.startsWith("#/reader/"))) {
     history.pushState(null, "", window.location.pathname + window.location.search);
   }
+
+  // Restore default SEO metadata for catalog view
+  document.title = "MangaVerse | Read Manga Online Free • Simulpub & Power Catalog";
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute("content", "Read manga, manhwa & webtoons free online. Tokyo synchronized simulpub drops, 4-mode reader, quest events & 40+ tag power filtering. Fast, offline-ready.");
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute("href", "https://mangaverse.app/");
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute("content", "MangaVerse — The Infinite Manga Universe");
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute("content", "Experience Tokyo simulpubs, 4-mode reader, grand quest campaigns, and lightning-fast tag filtering with sub-100ms reading performance.");
+  const ogImg = document.querySelector('meta[property="og:image"]');
+  if (ogImg) ogImg.setAttribute("content", "https://mangaverse.app/og-mangaverse.png");
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute("content", "https://mangaverse.app/");
+
+  const ldScript = document.getElementById("dynamic-series-jsonld");
+  if (ldScript && ldScript.parentNode) {
+    ldScript.parentNode.removeChild(ldScript);
+  }
+
   updateBreadcrumb([
     { label: "MangaVerse", action: "window.scrollTo({top:0,behavior:'smooth'})" },
     { label: "Manga Directory" }
@@ -35390,7 +35525,7 @@ if (typeof window !== "undefined" && typeof window.addEventListener === "functio
     const hash = window.location ? window.location.hash : "";
     if (hash && hash.startsWith("#/series/")) {
       const mangaId = hash.replace("#/series/", "");
-      const manga = MANGA_DATABASE.find(m => m.id === mangaId);
+      const manga = MANGA_DATABASE.find(m => m.id === mangaId || m.slug === mangaId);
       if (manga) {
         const dirSec = document.getElementById("directorySection");
         const serSec = document.getElementById("seriesSection");
@@ -35398,7 +35533,15 @@ if (typeof window !== "undefined" && typeof window.addEventListener === "functio
           dirSec.style.display = "none";
           serSec.style.display = "block";
           renderSeriesPage(manga);
+          updateSeriesSEOMeta(manga);
         }
+      }
+    } else if (hash && hash.startsWith("#/reader/")) {
+      const parts = hash.replace("#/reader/", "").split("/");
+      const rId = parts[0];
+      const rCh = parseInt(parts[1], 10) || 1;
+      if (rId && (!AppState.activeReader.isOpen || AppState.activeReader.mangaId !== rId || AppState.activeReader.chapterNumber !== rCh)) {
+        openReader(rId, rCh);
       }
     } else if (!hash || hash === "#/catalog" || hash === "#directory") {
       showCatalogView();

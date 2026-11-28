@@ -1,13 +1,35 @@
 {
+  "id": "com.mangaverse.app",
   "name": "MangaVerse - The Infinite Manga Universe",
   "short_name": "MangaVerse",
   "description": "Next-generation manga reader combining real-time Tokyo simulpubs, seasonal quest events, and power-tag filtering with offline reading capabilities.",
   "start_url": "./index.html",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#07090e",
-  "theme_color": "#ff2a5f",
+  "theme_color": "#c2410c",
   "orientation": "any",
   "categories": ["entertainment", "comics", "books"],
+  "shortcuts": [
+    {
+      "name": "Tokyo Simulpubs",
+      "short_name": "Simulpub",
+      "description": "Read today's live Tokyo simulpub releases",
+      "url": "/?section=simulpub"
+    },
+    {
+      "name": "My Library",
+      "short_name": "Library",
+      "description": "View bookmarked and offline manga",
+      "url": "/?section=library"
+    },
+    {
+      "name": "Manga Directory",
+      "short_name": "Directory",
+      "description": "Browse the full catalog with 40+ tag filters",
+      "url": "/?section=directory"
+    }
+  ],
   "icons": [
     {
       "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%23ff2a5f'/><stop offset='100%' stop-color='%237928ca'/></linearGradient></defs><rect width='192' height='192' rx='36' fill='%2307090e'/><rect x='8' y='8' width='176' height='176' rx='30' fill='none' stroke='url(%23g)' stroke-width='4'/><path d='M48 144 V52 L96 108 L144 52 V144' fill='none' stroke='url(%23g)' stroke-width='16' stroke-linecap='round' stroke-linejoin='round'/><circle cx='96' cy='134' r='8' fill='%2300f2fe'/></svg>",

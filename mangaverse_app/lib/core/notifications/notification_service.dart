@@ -5,6 +5,8 @@
 //   2. Add google-services.json (Android) / GoogleService-Info.plist (iOS)
 //   3. Call NotificationService.init() from main.dart BEFORE runApp()
 
+import 'dart:async';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -14,6 +16,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();
   final localNotif = FlutterLocalNotificationsPlugin();
+  final slug = message.data['manga_id'] ?? message.data['slug'] ?? '';
   await localNotif.show(
     message.hashCode,
     message.notification?.title ?? 'New Chapter',
@@ -28,12 +31,19 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
       ),
       iOS: DarwinNotificationDetails(presentAlert: true, presentBadge: true),
     ),
+    payload: slug.toString(),
   );
 }
 
 class NotificationService {
   static final _fcm = FirebaseMessaging.instance;
   static final _localNotif = FlutterLocalNotificationsPlugin();
+
+  static final StreamController<String> _notificationTapStream =
+      StreamController<String>.broadcast();
+
+  /// Stream of manga slugs tapped by the user from notifications
+  static Stream<String> get onNotificationTap => _notificationTapStream.stream;
 
   static String topicForManga(int mangaId) => 'manga_$mangaId';
 
@@ -53,10 +63,16 @@ class NotificationService {
     const iosInit = DarwinInitializationSettings();
     await _localNotif.initialize(
       const InitializationSettings(android: androidInit, iOS: iosInit),
+      onDidReceiveNotificationResponse: (NotificationResponse response) {
+        if (response.payload != null && response.payload!.isNotEmpty) {
+          _notificationTapStream.add(response.payload!);
+        }
+      },
     );
 
     // Foreground message handler
     FirebaseMessaging.onMessage.listen((RemoteMessage message) async {
+      final slug = message.data['manga_id'] ?? message.data['slug'] ?? '';
       if (message.notification != null) {
         await _localNotif.show(
           message.hashCode,
@@ -72,9 +88,28 @@ class NotificationService {
             ),
             iOS: DarwinNotificationDetails(presentAlert: true, presentBadge: true),
           ),
+          payload: slug.toString(),
         );
       }
     });
+
+    // Handle notification tap when app opened from background
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+      final slug = message.data['manga_id'] ?? message.data['slug'];
+      if (slug != null && slug.toString().isNotEmpty) {
+        _notificationTapStream.add(slug.toString());
+      }
+    });
+  }
+
+  /// Returns initial notification slug if app was launched by tapping a notification
+  static Future<String?> getInitialNotificationSlug() async {
+    final initialMessage = await _fcm.getInitialMessage();
+    if (initialMessage != null) {
+      final slug = initialMessage.data['manga_id'] ?? initialMessage.data['slug'];
+      if (slug != null) return slug.toString();
+    }
+    return null;
   }
 
   /// Subscribe device to new-chapter alerts for a specific manga.

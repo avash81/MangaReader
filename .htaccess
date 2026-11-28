@@ -6,6 +6,15 @@ Options -Indexes
 
   # Route /api/v1/* to PHP API Gateway
   RewriteRule ^api/v1/(.*)$ backend/public/index.php [QSA,L]
+
+  # Allow .well-known (App Links / SSL challenges)
+  RewriteRule ^\.well-known/ - [L]
+
+  # SPA PushState fallback for /series/* and /manga/* routes
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !^/api/
+  RewriteRule ^(series|manga)/.*$ index.html [L,QSA]
 </IfModule>
 
 # Protect sensitive backend config, env, and scripts

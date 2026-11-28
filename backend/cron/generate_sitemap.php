@@ -25,7 +25,7 @@ try {
     foreach ($rows as $row) {
         $slug = rawurlencode($row['slug']);
         $lastmod = !empty($row['updated_at']) ? date('Y-m-d', strtotime($row['updated_at'])) : date('Y-m-d');
-        $loc = htmlspecialchars("{$baseUrl}/#/series/{$slug}", ENT_XML1, 'UTF-8');
+        $loc = htmlspecialchars("{$baseUrl}/?manga={$slug}", ENT_XML1, 'UTF-8');
         $xml[] = "  <url><loc>{$loc}</loc><lastmod>{$lastmod}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>";
     }
 

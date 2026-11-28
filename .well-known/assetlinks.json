@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.mangaverse.mangaverse_app",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7D:0F:52:AB:E8:85:4F:2E:9D:92:1F:B4:42:F6:4F:9E:5F:9C:A4:4A:25:28:C2:5E:2A:E0:4F:19:1E"
+      ]
+    }
+  }
+]
